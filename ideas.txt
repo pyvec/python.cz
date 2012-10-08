@@ -21,5 +21,7 @@ design
     draw a coding snake
     draw a rolled up snake for the footer
 
+    redraw top snake to form CZ letters with his tail instead of flags
+
 rubyslava
     api search on https://www.facebook.com/search/results.php?q=rubyslava%20%2B%20pyvo&type=events&init=quick&tas=0.43446311761731526
