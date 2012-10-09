@@ -2,6 +2,7 @@
 html, body {
     margin: 0;
     padding: 0;
+    color: #222;
 }
 
 body {
@@ -25,6 +26,10 @@ a:hover, a:focus {
     text-decoration: none;
 }
 
+strong {
+    color: #366993;
+}
+
 h1, h2, .lead {
     text-align: center;
 }
@@ -37,25 +42,53 @@ h1 {
 
 h2 {
     font-size: 2em;
-    margin: 0.5em 0 1.5em 0;
+    margin: 1.2em 0 0.8em 0;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+ul.list, ul.list li {
+    line-height: 1.8em;
+}
+
+ul.list li {
+    margin-left: 2em;
+    position: relative;
+}
+
+ul.list li:before {
+    content: '•';
+    font-size: 1.3em;
+    font-weight: bold;
+    vertical-align: middle;
+    position: absolute;
+    left: -1em;
+    top: 0;
+    color: #ffd33a;
 }
 
 .lead {
     font-size: 1.4em;
-    margin: 1em 0 4em 0;
+    margin: 1em 0 5em 0;
 }
 
-.map, .map ul, .map li {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
+.note {
+    color: #666;
+}
+
+.note a {
+    color: #666;
 }
 
 .map {
     background: url('./images/map.png') center no-repeat;
     height: 400px;
     position: relative;
-    margin: -50px 0 90px 0;
+    margin: -50px 0 80px 0;
 }
 
 .map li {
@@ -101,6 +134,7 @@ h2 {
     height: 20px;
     overflow: hidden;
     position: absolute;
+
     border-radius: 10px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -110,6 +144,97 @@ h2 {
 .brno:after { left: -15px; top: 95px; }
 .bratislava:after { right: -15px; top: 25px; }
 
-strong {
-    color: #366993;
+.icons {
+    text-align: center;
+    margin: 2em 0 4em 0;
+}
+
+.icons li {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 1em;
+    margin: 0 1em;
+
+    /* For IE 7 */
+    zoom: 1;
+    *display: inline;
+}
+
+.icons a {
+    background-position: center top;
+    background-repeat: no-repeat;
+    display: block;
+    width: 100px;
+    padding-top: 55px;
+}
+
+.icons .email a { background-image: url('./images/icon-email.png'); }
+.icons .facebook a { background-image: url('./images/icon-facebook.png'); }
+.icons .twitter a { background-image: url('./images/icon-twitter.png'); }
+.icons .vimeo a { background-image: url('./images/icon-vimeo.png'); }
+.icons .irc a { background-image: url('./images/icon-irc.png'); }
+
+.pyvec {
+    margin: 0;
+    width: 230px;
+    float: right;
+    text-align: right;
+    font-size: 0.9em;
+    position: relative;
+    z-index: 1000;
+}
+
+.pyvec a {
+    color: #666;
+}
+
+.pyvec img {
+    display: block;
+    margin-left: auto;
+}
+
+.sources {
+    column-count: 2;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+}
+
+.sources h3 {
+    margin: 1em 0 0.3em 0;
+}
+
+.sources .coding {
+    padding-top: 120px;
+    background: url('./images/coding.png') center 5px no-repeat;
+}
+
+.sources .reading {
+    padding-top: 140px;
+    background: url('./images/reading.png') center top no-repeat;
+}
+
+.companies ul, .companies .note {
+    text-align: center;
+}
+
+.companies li {
+    font-size: 1.3em;
+    display: inline;
+    margin: 0 0.5em;
+}
+
+.footer, .footer a {
+    color: #888;
+}
+
+.footer {
+    margin-top: 6em;
+    padding-bottom: 4em;
+    padding-right: 200px;
+    background: url('./images/footer.png') right 1em no-repeat;
+}
+
+.footer p, .footer h2 {
+    margin: 0 0 0.5em 0;
+    text-align: left;
 }
