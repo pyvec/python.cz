@@ -1,7 +1,7 @@
 
 # python.cz
 
-Source of small summary website about Czech Python community.
+Source of small summary website about Czech (and Slovak) Python community.
 
 ## Status: ACTIVE
 
