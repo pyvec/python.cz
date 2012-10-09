@@ -15,7 +15,7 @@ body {
     text-align: left;
     margin: 0 auto;
     width: 700px;
-    background: url('./images/header-left.png') left top no-repeat;
+    background: url('../images/header-left.png') left top no-repeat;
 }
 
 a {
@@ -37,7 +37,7 @@ h1, h2, .lead {
 h1 {
     font-size: 4em;
     margin: 0.2em 0 0.5em 0;
-    background: url('./images/header-right.png') right top no-repeat;
+    background: url('../images/header-right.png') right top no-repeat;
 }
 
 h2 {
@@ -87,7 +87,7 @@ ul.list li:before {
 }
 
 .map {
-    background: url('./images/map.png') center no-repeat;
+    background: url('../images/map.png') center no-repeat;
     height: 400px;
     position: relative;
     margin: -50px 0 80px 0;
@@ -170,11 +170,11 @@ ul.list li:before {
     padding-top: 55px;
 }
 
-.icons .email a { background-image: url('./images/icon-email.png'); }
-.icons .facebook a { background-image: url('./images/icon-facebook.png'); }
-.icons .twitter a { background-image: url('./images/icon-twitter.png'); }
-.icons .vimeo a { background-image: url('./images/icon-vimeo.png'); }
-.icons .irc a { background-image: url('./images/icon-irc.png'); }
+.icons .email a { background-image: url('../images/icon-email.png'); }
+.icons .facebook a { background-image: url('../images/icon-facebook.png'); }
+.icons .twitter a { background-image: url('../images/icon-twitter.png'); }
+.icons .vimeo a { background-image: url('../images/icon-vimeo.png'); }
+.icons .irc a { background-image: url('../images/icon-irc.png'); }
 
 .pyvec {
     margin: 0;
@@ -207,12 +207,12 @@ ul.list li:before {
 
 .sources .coding {
     padding-top: 120px;
-    background: url('./images/coding.png') center 5px no-repeat;
+    background: url('../images/coding.png') center 5px no-repeat;
 }
 
 .sources .reading {
     padding-top: 140px;
-    background: url('./images/reading.png') center top no-repeat;
+    background: url('../images/reading.png') center top no-repeat;
 }
 
 .companies ul, .companies .note {
@@ -233,7 +233,7 @@ ul.list li:before {
     margin-top: 6em;
     padding-bottom: 4em;
     padding-right: 160px;
-    background: url('./images/footer.png') right 1em no-repeat;
+    background: url('../images/footer.png') right 1em no-repeat;
 }
 
 .footer p, .footer h2 {
