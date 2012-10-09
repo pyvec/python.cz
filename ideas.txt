@@ -1,27 +1,17 @@
 twitter bot
     https://gist.github.com/2401048
 
-merchandise
-    http://www.cafepress.com/pydotorg/
-
-group
-    http://stackoverflow.com/a/7768449/325365
-
-lanyrd series
-    http://lanyrd.com/series/django-cs/
-    http://lanyrd.com/2012/pyvo-september/
-    http://srazy.info/brnenske-pyvo/terminy/
-
 design
-    css, colors, ... http://www.python.org/community/logos/
-    draw a background - a snake hanging down from the top of the page, having czech and slovak flag in his mouth
-    draw a map - map of czech republic and half of slovakia
-    draw icons - email, facebook, twitter, video/vimeo, irc
-    draw a reading snake
-    draw a coding snake
-    draw a rolled up snake for the footer
-
     redraw top snake to form CZ letters with his tail instead of flags
 
-rubyslava
-    api search on https://www.facebook.com/search/results.php?q=rubyslava%20%2B%20pyvo&type=events&init=quick&tas=0.43446311761731526
+map
+    group
+        http://stackoverflow.com/a/7768449/325365
+
+    lanyrd series
+        http://lanyrd.com/series/django-cs/
+        http://lanyrd.com/2012/pyvo-september/
+        http://srazy.info/brnenske-pyvo/terminy/
+
+    rubyslava
+        api search on https://www.facebook.com/search/results.php?q=rubyslava%20%2B%20pyvo&type=events&init=quick&tas=0.43446311761731526
