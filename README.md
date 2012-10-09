@@ -7,10 +7,6 @@ Source of small summary website about Czech (and Slovak) Python community.
 
 Under active development and maintenance.
 
-## Installation
-
-Nothing to install yet :-)
-
 ## License: ISC
 
 © 2012 Jan Javorek &lt;<a
