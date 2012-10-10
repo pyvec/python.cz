@@ -130,7 +130,7 @@ p.note {
 }
 
 .prague { right: 457px; top: 100px; }
-.brno { left: 380px; top: 110px; }
+.brno { left: 380px; top: 120px; }
 .bratislava { right: 305px; top: 280px; }
 
 .map li:after {
@@ -148,7 +148,7 @@ p.note {
 }
 
 .prague:after { right: -15px; top: 30px; }
-.brno:after { left: -15px; top: 95px; }
+.brno:after { left: -15px; top: 85px; }
 .bratislava:after { right: -15px; top: 25px; }
 
 .icons {
