@@ -82,6 +82,10 @@ ul.list li:before {
     color: #666;
 }
 
+p.note {
+    text-align: center;
+}
+
 .note a {
     color: #666;
 }
@@ -116,8 +120,9 @@ ul.list li:before {
     font-weight: bold;
 }
 
-.map .place {
+.map .venue {
     display: block;
+    color: #222;
 }
 
 .map .sep {
@@ -215,7 +220,7 @@ ul.list li:before {
     background: url('../images/reading.png') center top no-repeat;
 }
 
-.companies ul, .companies .note {
+.companies ul {
     text-align: center;
 }
 

@@ -1,76 +1,103 @@
 
-(function($){
-     $.extend(
-         {
-            _escape: function (str) {
-                return str.replace(/"/g, '\'');
-            },
-            scrape: function (url, xpath, successCallback, errorCallback) {
-                var query = 'SELECT * FROM html WHERE url="' +
-                    this._escape(url) + '" AND xpath="' +
-                    this._escape(xpath) + '"';
+function parseConferenceList(response) {
+    var $html = $(response);
 
-                var ajaxSettings = {
-                    'url': 'http://query.yahooapis.com/v1/public/yql',
-                    'dataType': 'jsonp',
-                    'success': successCallback,
-                    'async': true,
-                    'data': {
-                        'q': query,
-                        'format': 'json',
-                        'env': 'store://datatables.org/alltableswithkeys',
-                        'callback': '?'
-                    }
-                };
+    var dates = [];
+    $('.dtstart', $html).each(function() {
+        dates.push($(this).attr('title'));
+    });
+    dates.sort();
 
-                if (errorCallback) {
-                    ajaxSettings.error = errorCallback;
-                }
+    var latest = dates.pop();
+    var selector = '.dtstart[title="' + latest + '"]';
 
-                $.ajax(ajaxSettings);
+    var $container = $(selector, $html).closest('.conference');
+    var url = 'http://lanyrd.com' + $('h4 a', $container).attr('href');
+
+    return {
+        'date': latest,
+        'url': url
+    };
+}
+
+
+function parseConferenceDetail(response) {
+    var $html = $(response);
+    var $venue = $('.venue', $html);
+
+    return {
+        'venue': $.trim($('h3', $venue).text()),
+        'map': $('.map-icon', $venue).attr('href')
+    };
+}
+
+
+function ajaxSettingsFactory(url, xpath, callback) {
+    var query = 'SELECT * FROM html WHERE url="' + url +
+        '" AND xpath="' + xpath + '"';
+    return {
+        'url': 'http://query.yahooapis.com/v1/public/yql',
+        'dataType': 'xml',
+        'success': callback,
+        'async': true,
+        'data': {
+            'q': query,
+            'format': 'xml'
+        }
+    };
+}
+
+
+function scrape(url, callback) {
+
+    // ask conference listing for some basic info
+    var xpath = '//*[contains(@class, \'conference-listing\')]';
+    $.ajax(ajaxSettingsFactory(url, xpath, function(response) {
+        var data = parseConferenceList(response);
+
+        // ask detail page about some further info
+        var xpath = '//*[contains(@class, \'venue\')]';
+        $.ajax(ajaxSettingsFactory(data.url, xpath, function(response) {
+            var moreData = parseConferenceDetail(response);
+
+            // merge data
+            for (var attr in moreData) {
+                data[attr] = moreData[attr];
             }
-         }
-     );
- })(jQuery);
 
-$(document).ready(function() {
-    // Prague
-    var $prague = $('.prague');
-    var pragueSrc = 'http://lanyrd.com/series/django-cs/';
+            callback(data);
+        }));
+    }));
+}
 
-    $.scrape(pragueSrc, '//*[contains(@class, "conference-listing")]//h4', function (response) {
-        var url = 'http://lanyrd.com' + response.query.results.h4[0].a.href;
-        $('h3 a', $prague).attr('href', url);
-    });
 
-    $.scrape(pragueSrc, '//*[contains(@class, "dtstart")]', function (response) {
-        var date = response.query.results.abbr[0].title;
-        date = date.split('-');
-        date = date[2] + '. ' + date[1] + '.';
+function formatDate(date) {
+    date = date.split('-');
 
-        $('.date', $prague).text(date);
-    });
+    day = date[2].replace(/^0+/, '');
+    month = date[1].replace(/^0+/, '');
 
-    // Brno
-    /*
+    date = day + '. ' + month + '.';
+    return date;
+}
 
-        TODO
 
-    */
-});
+$(function() {
+    $('.map li').each(function() {
+        var $city = $(this);
 
-$(document).on('fbload', function() {
-    // Bratislava
-    // var uid = 666004183; // Ján Suchal
-    var uid = 721972706; // Honza Javorek
-    var fql = 'SELECT name FROM event WHERE eid IN ' +
-        '(SELECT eid FROM event_member WHERE uid = ' + uid + ')';
-
-    FB.api('/fql?q=' + encodeURIComponent(fql), function(response) {
-        console.log(response);
-    });
-
-    FB.api('/721972706', function(response) {
-        console.log(response);
+        var url = $('.lanyrd_link', $city).attr('href');
+        scrape(url, function (data) {
+            if (data.date) {
+                // console.log(data);
+                $('h3 a', $city).attr('href', data.url);
+                $('.date', $city).text(formatDate(data.date));
+                $('.venue', $city).replaceWith($('<a>', {
+                    'href': data.map,
+                    'class': 'venue',
+                    'text': data.venue
+                }));
+            }
+        });
     });
 });
