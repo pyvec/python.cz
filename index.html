@@ -24,13 +24,34 @@
         _gaq.push(['_trackPageview']);
 
         (function() {
-          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
     </script>
 </head>
     <body>
+        <div id="fb-root"></div>
+        <script>
+            window.fbAsyncInit = function() {
+                FB.init({
+                    'appId': '427002570689328',
+                    'status': true,
+                    'cookie': true,
+                    'xfbml': true
+                });
+                $(document).trigger('fbload');
+            };
+
+            (function(d) {
+                var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement('script'); js.id = id; js.async = true;
+                js.src = '//connect.facebook.net/en_US/all.js';
+                ref.parentNode.insertBefore(js, ref);
+            }(document));
+        </script>
+
         <div class="document">
             <h1>
                 <img src="./images/logo.png" alt="Python" width="250" height="250">
