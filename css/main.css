@@ -246,6 +246,19 @@ p.note {
     text-align: left;
 }
 
+dl {
+    margin: 1em 0 2em 0;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin: 0 0 1em 1em;
+    color: #666;
+}
+
 @media screen and (max-width: 720px) {
     .document {
         width: auto;
