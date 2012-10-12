@@ -21,14 +21,14 @@ body {
 
 a {
     color: #366993;
-}
-
-a:hover, a:focus {
     text-decoration: none;
 }
 
+a:hover, a:focus {
+    text-decoration: underline;
+}
+
 strong {
-    color: #366993;
 }
 
 h1, h2, .lead {
@@ -87,7 +87,6 @@ p.note {
 }
 
 .note a {
-    color: #666;
 }
 
 .map {
@@ -111,7 +110,6 @@ p.note {
 }
 
 .map p a {
-    color: #666;
 }
 
 .map .date {
@@ -192,7 +190,6 @@ p.note {
 }
 
 .pyvec a {
-    color: #666;
 }
 
 .pyvec img {
@@ -230,7 +227,7 @@ p.note {
     margin: 0 0.5em;
 }
 
-.footer, .footer a {
+.footer {
     color: #888;
 }
 
