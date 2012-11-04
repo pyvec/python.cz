@@ -1,4 +1,3 @@
-
 function parseConferenceList(response) {
     var $html = $(response);
 
@@ -13,6 +12,11 @@ function parseConferenceList(response) {
 
     var $container = $(selector, $html).closest('.conference');
     var url = 'http://lanyrd.com' + $('h4 a', $container).attr('href');
+
+    if (new Date(Date.parse(latest)) < new Date) {
+        // this prevents showing dates in the past
+        latest = null;
+    }
 
     return {
         'date': latest,
