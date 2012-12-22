@@ -7,7 +7,7 @@ html, body {
 }
 
 body {
-    font-family: 'Arbutus Slab', Georgia, serif;
+    font-family: 'Open Sans Condensed', sans-serif;
     font-size: 1em;
     text-align: center;
 }
@@ -21,9 +21,11 @@ body {
 
 a {
     color: #366993;
+    text-decoration: none;
 }
 
 a:hover, a:focus {
+    color: #ffd33a;
     text-decoration: none;
 }
 
