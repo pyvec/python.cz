@@ -129,9 +129,10 @@ p.note {
     display: none;
 }
 
-.prague { right: 457px; top: 100px; }
+.prague { right: 262px; top: 35px; }
 .brno { left: 380px; top: 120px; }
 .bratislava { right: 305px; top: 280px; }
+.plzen { left: 3px; top: 150px; }
 
 .map li:after {
     content: ' ';
@@ -147,9 +148,10 @@ p.note {
     -webkit-border-radius: 10px;
 }
 
-.prague:after { right: -15px; top: 30px; }
+.prague:after { right: 180px; top: 95px; }
 .brno:after { left: -15px; top: 85px; }
 .bratislava:after { right: -15px; top: 25px; }
+.plzen:after { top: 20px; right: -12px; }
 
 .icons {
     text-align: center;
