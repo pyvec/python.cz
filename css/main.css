@@ -94,7 +94,7 @@ p.note {
     background: url('../images/map.png') center no-repeat;
     height: 400px;
     position: relative;
-    margin: -50px 0 80px 0;
+    margin: -10px 0 80px 0;
 }
 
 .map li {
@@ -129,10 +129,10 @@ p.note {
     display: none;
 }
 
-.prague { right: 262px; top: 35px; }
-.brno { left: 380px; top: 120px; }
-.bratislava { right: 305px; top: 280px; }
-.plzen { left: 3px; top: 150px; }
+.prague { right: 430px; bottom: 260px; }
+.brno { left: 375px; bottom: 125px; }
+.bratislava { right: 295px; top: 295px; }
+.plzen { right: 510px; top: 160px; }
 
 .map li:after {
     content: ' ';
@@ -148,10 +148,10 @@ p.note {
     -webkit-border-radius: 10px;
 }
 
-.prague:after { right: 180px; top: 95px; }
-.brno:after { left: -15px; top: 85px; }
-.bratislava:after { right: -15px; top: 25px; }
-.plzen:after { top: 20px; right: -12px; }
+.prague:after { right: 12px; bottom: -10px; }
+.brno:after { left: -11px; bottom: 55px; }
+.bratislava:after { right: -11px; top: 10px; }
+.plzen:after { right: -10px; top: 10px; }
 
 .icons {
     text-align: center;
