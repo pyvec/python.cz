@@ -13,11 +13,6 @@ function parseConferenceList(response) {
     var $container = $(selector, $html).closest('.conference');
     var url = 'http://lanyrd.com' + $('h4 a', $container).attr('href');
 
-    if (new Date(Date.parse(latest)) < new Date) {
-        // this prevents showing dates in the past
-        latest = null;
-    }
-
     return {
         'date': latest,
         'url': url
@@ -93,7 +88,6 @@ $(function() {
         var url = $('.lanyrd_link', $city).attr('href');
         scrape(url, function (data) {
             if (data.date) {
-                // console.log(data);
                 $('h3 a', $city).attr('href', data.url);
                 $('.date', $city).text(formatDate(data.date));
                 $('.venue', $city).replaceWith($('<a>', {
@@ -101,6 +95,10 @@ $(function() {
                     'class': 'venue',
                     'text': data.venue
                 }));
+
+                if (new Date(Date.parse(data.date)) < new Date) {
+                    $city.addClass('in-past');
+                }
             }
         });
     });

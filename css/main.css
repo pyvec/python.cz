@@ -129,6 +129,14 @@ p.note {
     display: none;
 }
 
+.map .in-past {
+    color: #999;
+}
+
+.map .in-past .venue {
+    color: #666;
+}
+
 .prague { right: 457px; top: 100px; }
 .brno { left: 380px; top: 120px; }
 .bratislava { right: 305px; top: 280px; }
