@@ -1,4 +1,3 @@
-
 function parseConferenceList(response) {
     var $html = $(response);
 
@@ -89,7 +88,6 @@ $(function() {
         var url = $('.lanyrd_link', $city).attr('href');
         scrape(url, function (data) {
             if (data.date) {
-                // console.log(data);
                 $('h3 a', $city).attr('href', data.url);
                 $('.date', $city).text(formatDate(data.date));
                 $('.venue', $city).replaceWith($('<a>', {
@@ -97,6 +95,10 @@ $(function() {
                     'class': 'venue',
                     'text': data.venue
                 }));
+
+                if (new Date(Date.parse(data.date)) < new Date) {
+                    $city.addClass('in-past');
+                }
             }
         });
     });
