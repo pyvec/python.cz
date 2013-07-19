@@ -82,6 +82,7 @@ function formatDate(date) {
 
 
 $(function() {
+    var venue_prefix = $('.map').attr('data-venue-prefix') || '';
     $('.map li').each(function() {
         var $city = $(this);
 
@@ -90,11 +91,15 @@ $(function() {
             if (data.date) {
                 $('h3 a', $city).attr('href', data.url);
                 $('.date', $city).text(formatDate(data.date));
-                $('.venue', $city).replaceWith($('<a>', {
-                    'href': data.map,
-                    'class': 'venue',
-                    'text': data.venue
-                }));
+                $('.venue', $city).replaceWith(
+                    $('<span>', {
+                        text: venue_prefix + ' ',
+                        class: 'venue'
+                    }).append($('<a>', {
+                        'href': data.map,
+                        'text': data.venue
+                    }))
+                );
 
                 if (new Date(Date.parse(data.date)) < new Date) {
                     $city.addClass('in-past');

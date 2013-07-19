@@ -75,11 +75,16 @@ ul.list li:before {
 
 .lead {
     font-size: 1.4em;
-    margin: 1em 0 5em 0;
+    margin: 1em 0 2em 0;
 }
 
 .note {
     color: #666;
+}
+
+.lead.note {
+    font-size: inherit;
+    margin: 0 0 4em 0;
 }
 
 p.note {
