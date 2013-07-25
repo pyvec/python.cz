@@ -95,6 +95,10 @@ p.note {
     color: #666;
 }
 
+h2 .note {
+    font-size: 0.4em;
+}
+
 .map {
     background: url('../images/map.png') center no-repeat;
     height: 400px;
