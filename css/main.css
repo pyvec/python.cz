@@ -146,10 +146,12 @@ h2 .note {
     color: #666;
 }
 
+/* whole area: 700x400px */
 .prague { right: 430px; bottom: 260px; }
-.brno { left: 375px; bottom: 125px; }
-.bratislava { right: 295px; top: 295px; }
+.brno { right: 310px; top: 208px; }
+.bratislava { left: 405px; top: 280px; }
 .plzen { right: 510px; top: 160px; }
+.ostrava { left: 455px; bottom: 233px; }
 
 .map li:after {
     content: ' ';
@@ -166,9 +168,10 @@ h2 .note {
 }
 
 .prague:after { right: 12px; bottom: -10px; }
-.brno:after { left: -11px; bottom: 55px; }
-.bratislava:after { right: -11px; top: 10px; }
+.brno:after { right: 2px; top: -10px; }
+.bratislava:after { left: -11px; top: 25px; }
 .plzen:after { right: -10px; top: 10px; }
+.ostrava:after { left: 10px; bottom: -10px; }
 
 .icons {
     text-align: center;
