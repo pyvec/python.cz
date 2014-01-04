@@ -205,6 +205,7 @@ h2 .note {
 
 .pyvec {
     margin: 0;
+    margin-left: 2em;
     width: 230px;
     float: right;
     text-align: right;
