@@ -103,7 +103,7 @@ h2 .note {
     background: url('../images/map.png') center no-repeat;
     height: 400px;
     position: relative;
-    margin: -10px 0 80px 0;
+    margin: 10px 0 80px 0;
 }
 
 .map li {
@@ -205,6 +205,7 @@ h2 .note {
 
 .pyvec {
     margin: 0;
+    margin-left: 2em;
     width: 230px;
     float: right;
     text-align: right;
