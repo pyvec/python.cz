@@ -75,11 +75,16 @@ ul.list li:before {
 
 .lead {
     font-size: 1.4em;
-    margin: 1em 0 5em 0;
+    margin: 1em 0 2em 0;
 }
 
 .note {
     color: #666;
+}
+
+.lead.note {
+    font-size: inherit;
+    margin: 0 0 4em 0;
 }
 
 p.note {
@@ -90,11 +95,15 @@ p.note {
     color: #666;
 }
 
+h2 .note {
+    font-size: 0.4em;
+}
+
 .map {
     background: url('../images/map.png') center no-repeat;
     height: 400px;
     position: relative;
-    margin: -50px 0 80px 0;
+    margin: 10px 0 80px 0;
 }
 
 .map li {
@@ -129,9 +138,20 @@ p.note {
     display: none;
 }
 
-.prague { right: 457px; top: 100px; }
-.brno { left: 380px; top: 120px; }
-.bratislava { right: 305px; top: 280px; }
+.map .in-past {
+    color: #999;
+}
+
+.map .in-past .venue {
+    color: #666;
+}
+
+/* whole area: 700x400px */
+.prague { right: 430px; bottom: 260px; }
+.brno { right: 310px; top: 208px; }
+.bratislava { left: 405px; top: 280px; }
+.plzen { right: 510px; top: 160px; }
+.ostrava { left: 455px; bottom: 233px; }
 
 .map li:after {
     content: ' ';
@@ -147,9 +167,11 @@ p.note {
     -webkit-border-radius: 10px;
 }
 
-.prague:after { right: -15px; top: 30px; }
-.brno:after { left: -15px; top: 85px; }
-.bratislava:after { right: -15px; top: 25px; }
+.prague:after { right: 12px; bottom: -10px; }
+.brno:after { right: 2px; top: -10px; }
+.bratislava:after { left: -11px; top: 25px; }
+.plzen:after { right: -10px; top: 10px; }
+.ostrava:after { left: 10px; bottom: -10px; }
 
 .icons {
     text-align: center;
@@ -178,11 +200,12 @@ p.note {
 .icons .email a { background-image: url('../images/icon-email.png'); }
 .icons .facebook a { background-image: url('../images/icon-facebook.png'); }
 .icons .twitter a { background-image: url('../images/icon-twitter.png'); }
-.icons .vimeo a { background-image: url('../images/icon-vimeo.png'); }
+.icons .vimeo a { background-image: url('../images/icon-youtube.png'); }
 .icons .irc a { background-image: url('../images/icon-irc.png'); }
 
 .pyvec {
     margin: 0;
+    margin-left: 2em;
     width: 230px;
     float: right;
     text-align: right;
