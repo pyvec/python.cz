@@ -9,14 +9,14 @@
     <meta name="description" content="Czech (and Slovak) community around the Python programming language.">
     <meta property="og:description" content="Czech (and Slovak) community around the Python programming language.">
 
-    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
-    <meta property="og:image" content="http://python.cz/images/logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <meta property="og:image" content="{{ url_for('static', filename='images/logo.png') }}">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://python.cz">
 
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Arbutus+Slab&amp;subset=latin,latin-ext">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
     <script>
@@ -55,7 +55,7 @@
 
         <div class="document">
             <h1>
-                <img src="./images/logo.png" alt="Python" width="250" height="250">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Python" width="250" height="250">
             </h1>
             <p class="lead">
                 Python is a&nbsp;modern <strong>programming language</strong>.
@@ -65,7 +65,7 @@
             </p>
 
             <p class="lead note">
-                Umíš česky? Na <a href="index.html">české verzi</a> této stránky je více informací!
+                Umíš česky? Na <a href="{{ url_for('index') }}">české verzi</a> této stránky je více informací!
             </p>
 
             <h2 id="icons">Ask, Learn, Keep in Touch</h2>
@@ -161,7 +161,7 @@
 
             <h2 id="sources">Start with Python</h2>
             <p>
-                The <a href="index.html">Czech version</a> of this page has a lot of information for Czech Python learners.
+                The <a href="{{ url_for('index') }}">Czech version</a> of this page has a lot of information for Czech Python learners.
                 English speakers can start with the <a href="http://docs.python.org/tutorial/">official Python tutorial</a>.
             </p>
 
@@ -188,7 +188,7 @@
             <h2 id="pyvec">Organization</h2>
             <p class="pyvec">
                 <a href="http://pyvec.org">
-                    <img src="./images/pyvec.png" alt="pyvec.org">
+                    <img src="{{ url_for('static', filename='images/pyvec.png') }}" alt="pyvec.org">
                 </a>
             </p>
             <p>
@@ -284,7 +284,7 @@
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.js"></script>
-        <script>window.jQuery || document.write('<script src="./js/jquery-1.8.2.min.js">\x3C/script>')</script>
-        <script src="./js/main.js?v=0.0.0"></script>
+        <script>window.jQuery || document.write('<script src="{{ url_for('static', filename='js/jquery-1.8.2.min.js') }}">\x3C/script>')</script>
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
     </body>
 </html>
