@@ -18,8 +18,12 @@ $ python web.py
 ### Production (Heroku)
 
 There's ready-made `Procfile` in the repository. For more details,
-read [this](https://devcenter.heroku.com/articles/getting-started-with-python)
-and [this](http://docs.travis-ci.com/user/deployment/heroku/).
+see...
+
+- [Heroku Docs](https://devcenter.heroku.com/articles/getting-started-with-python)
+- [Travis CI](https://travis-ci.org/pyvec/python.cz) and its
+  [docs](http://docs.travis-ci.com/user/deployment/heroku/) about deploying to Heroku
+- [live preview of the app](http://pythoncz.herokuapp.com/)
 
 ## License: MIT
 
