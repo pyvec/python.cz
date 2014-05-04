@@ -15,16 +15,11 @@ $ pip install -r requirements.txt
 $ python web.py
 ```
 
-### Heroku
+### Production (Heroku)
 
-Read [this](https://devcenter.heroku.com/articles/getting-started-with-python).
-There's ready-made `Procfile` in the repository.
-
-### Production
-
-```bash
-$ gunicorn web:app
-```
+There's ready-made `Procfile` in the repository. For more details,
+read [this](https://devcenter.heroku.com/articles/getting-started-with-python)
+and [this](http://docs.travis-ci.com/user/deployment/heroku/).
 
 ## License: MIT
 

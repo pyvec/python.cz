@@ -1,3 +1,5 @@
 flask==0.10.1        # Lightweight web framework
 flask-misaka==0.3.0  # Markdown integration
+
+pytest               # Test suite
 gunicorn             # Web server

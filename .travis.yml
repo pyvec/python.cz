@@ -1,1 +1,16 @@
-script: ":" # bash NOOP
+language: python
+python:
+    - "2.6"
+    - "2.7"
+    - "3.3"
+    - "3.4"
+install:
+    - "pip install -r requirements.txt"
+script: "py.test"
+deploy:
+    provider: "heroku"
+    api_key:
+        secure: "wYkuNGIT0OUdnV9FMUqpWhQQvaL+pOe1iQqviG85t5H1iSOlU0JPhytKPQv9Qmb+dmqBqbRgjo//pQybRkG7B3TiAcBCEZW+enPRMqgUYyf+h7GMxB6sUJUaeGqDS0WFK+P/sgL0+dQNDpdu09gd5RHbwtPjgg+QK/rTlx9YAAQ="
+    app: "pythoncz"
+    on:
+        branch: "new-pythoncz"
