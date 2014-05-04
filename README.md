@@ -1,15 +1,34 @@
 
 # python.cz
 
-Source of small summary website about Czech (and Slovak) Python community.
+Small summary website about Czech Python community.
 
-## Status: ACTIVE
+## Installation
 
-Under active development and maintenance.
+```bash
+$ pip install -r requirements.txt
+```
 
-## License: ISC
+### Development
 
-© 2012 Jan Javorek &lt;<a
-href="mailto:jan.javorek&#64;gmail.com">jan.javorek&#64;gmail.com</a>&gt;
+```bash
+$ python web.py
+```
 
-This work is licensed under [ISC license](https://en.wikipedia.org/wiki/ISC_license).
+### Heroku
+
+Read [this](https://devcenter.heroku.com/articles/getting-started-with-python).
+There's ready-made `Procfile` in the repository.
+
+### Production
+
+```bash
+$ gunicorn web:app
+```
+
+## License: MIT
+
+© 2014 Jan Javorek &lt;<a
+href="mailto:mail&#64;honzajavorek.cz">mail&#64;honzajavorek.cz</a>&gt;
+
+This work is licensed under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
