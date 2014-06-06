@@ -146,6 +146,12 @@ h2 .note {
     color: #666;
 }
 
+.map .now {
+    color: #366993;
+    box-shadow: #ffd33a 0px 0px 4px,
+                #ffd33a 0px 0px 4px;
+}
+
 /* whole area: 700x400px */
 .prague { right: 430px; bottom: 260px; }
 .brno { right: 310px; top: 208px; }

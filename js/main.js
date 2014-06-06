@@ -101,7 +101,11 @@ $(function() {
                     }))
                 );
 
-                if (new Date(Date.parse(data.date)) < new Date) {
+                var mdate = new Date(Date.parse(data.date));
+                var today = new Date();
+                if (mdate.toDateString() == today.toDateString()) {
+                    $city.addClass('now');
+                } else if (mdate < today) {
                     $city.addClass('in-past');
                 }
             }
