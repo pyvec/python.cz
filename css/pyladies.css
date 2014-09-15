@@ -98,6 +98,8 @@ a:hover, a:focus {
 .jumbotron h1 {
     font-size: 200%;
     font-weight: bold;
+    margin-bottom: 1em;
+    margin-top: 0.5em;
 }
 
 .jumbotron small {
