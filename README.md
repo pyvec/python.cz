@@ -1,7 +1,7 @@
 
 # python.cz
 
-Small summary website about Czech Python community.
+Small summary website for Czech Python community.
 
 ## Installation
 
@@ -22,7 +22,7 @@ see...
 
 - [Heroku Docs](https://devcenter.heroku.com/articles/getting-started-with-python)
 - [Travis CI](https://travis-ci.org/pyvec/python.cz) and its
-  [docs](http://docs.travis-ci.com/user/deployment/heroku/) about deploying to Heroku
+  [docs](http://docs.travis-ci.com/user/deployment/heroku/) about auto-deployment to Heroku
 - [live preview of the app](http://pythoncz.herokuapp.com/)
 
 ## License: MIT
