@@ -4,7 +4,10 @@
 from flask import Flask, render_template, url_for, redirect
 
 
-app = Flask(__name__, static_folder='static', static_url_path='')
+app = Flask(__name__,
+            static_folder='.',
+            static_url_path='',
+            template_folder='.')
 
 
 @app.route('/')
