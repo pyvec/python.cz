@@ -1,25 +1,131 @@
 <!doctype html>
 <html lang="cs">
 <head>
-    <meta charset="utf-8">
+    {% include 'head.html' %}
 
     <title>Python, programovací jazyk</title>
     <meta property="og:title" content="Python, programovací jazyk">
 
     <meta name="description" content="Česká (a tak trochu i slovenská) komunita kolem programovacího jazyka Python.">
     <meta property="og:description" content="Česká (a tak trochu i slovenská) komunita kolem programovacího jazyka Python.">
-
-    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
-    <meta property="og:image" content="{{ url_for('static', filename='images/logo.png') }}">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="http://python.cz">
-
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Arbutus+Slab&amp;subset=latin,latin-ext">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
     <body>
         {% include 'ga.html' %}
+
+        <h1>Python</h1>
+        <p>
+            Python je&nbsp;moderní <strong>programovací jazyk</strong>. Naučit se&nbsp;dá&nbsp;<strong>za&nbsp;týden</strong>
+            a&nbsp;vytvoříš v&nbsp;něm velice <strong>snadno</strong> prakticky <strong>cokoliv</strong>. U&nbsp;nás
+            má&nbsp;navíc silnou a&nbsp;přátelskou <strong>komunitu</strong>.
+        </p>
+        <p>
+            <a href="{{ url_for('index_en') }}">English, please!</a>
+        </p>
+
+        <hr>
+
+        <ul>
+            <li>
+                <a href="#srazy">Srazy (Pyvo)</a>
+            </li>
+            <li>
+                <a href="#diskuse">Diskuse a&nbsp;sociálno</a>
+            </li>
+            <li>
+                <a href="#zacatecnici">Pro&nbsp;začátečníky</a>
+            </li>
+            <li>
+                <a href="#prace">Práce</a>
+            </li>
+            <li>
+                <a href="#zapojse">Zapoj&nbsp;se!</a>
+            </li>
+        </ul>
+
+        <hr>
+
+        <div id="srazy">
+            <h2>Srazy (Pyvo)</h2>
+            <p>
+                Srazy Python programátorů zvané <strong>Pyvo</strong> se pořádají po celé republice. Přijď si poslechnout přednášky od chytrých lidí a popovídat si nejen o Pythonu!
+            </p>
+
+            <!-- mapa s odkazy na jednotlivá pyva -->
+
+            <noscript>
+                <!-- alt. odkazy na pyva -->
+            </noscript>
+
+            <h3>Co očekávat na Pyvu?</h3>
+            <ul>
+                <li>Srazy jsou většinou velice neformální a konají se v hospodě u piva. Nejdřív jsou přednášky, pak volná zábava.</li>
+                <li>I když nebudeš některým přednáškám rozumět, poznáš alespoň u piva spoustu lidí, kteří ti mohou v budoucnu pomoci a z nichž se jednou mohou vyklubat noví kamarádi.</li>
+                <li>Většinou se vybere nějaké téma a účastníci pak dobrovolně přihlašují související přednášky.</li>
+                <li>Je úplně v pořádku přijít na Pyvo bez ohlášení a na konci přidat pětiminutovou přednášku (“lightning talk”) o čemkoliv.</li>
+                <li>Pyva se snaží být vlídným a přátelským prostředím. Přečti si naše <a href="">pravidla chování</a>.</li>
+            </ul>
+        </div>
+
+        <div id="diskuse">
+            <h2>Diskuse a&nbsp;sociálno</h2>
+            <ul>
+                <li><a href="https://groups.google.com/group/django-cs/">django-cs diskuse</a></li>
+                <li><a href="http://www.py.cz/mailman/listinfo/python">py.cz diskuse</a></li>
+                <li><a href="https://www.facebook.com/groups/pyonieri/">Facebooková skupina Pyonýři</a></li>
+                <li><a href="https://twitter.com/naPyvo">Twitter @naPyvo o srazech</a></li>
+                <li><a href="irc://irc.freenode.net/python-cs">IRC python-cs</a></li>
+                <li><a href="irc://irc.freenode.net/django-cs">IRC django-cs</a></li>
+            </ul>
+        </div>
+
+        <div id="zacatecnici">
+            <h2>Pro&nbsp;začátečníky</h2>
+            <p>
+                Základy Pythonu se dají naučit i z prohlížeče. Máme pro tebe odkazy na výukové hry, online kurzy, videa, články, knihy, a další.
+            </p>
+            <p>
+                <a href="">
+                    <button>Prahnu po vědění</button>
+                </a>
+            </p>
+
+            <h3>Pro&nbsp;dámy</h3>
+            <ul>
+                <li><a href="http://pyladies.cz">Pravidelné srazy PyLadies</a></li>
+                <li><a href="http://djangogirls.org/events/">Jednorázové workshopy DjangoGirls</a></li>
+            </ul>
+
+            <h3>Pro&nbsp;studenty</h3>
+            <ul>
+                <li><a href="http://is.muni.cz/vyhledavani/?search=python%20agenda:pr">Kurzy MU Brno</a></li>
+            </ul>
+        </div>
+
+        <div id="prace">
+            <h2>Práce</h2>
+            <p>
+                Jakou práci seženeš, když se naučíš Python? Kdo jej používá? Jak a kam napsat nabídku práce pro Pythonisty?
+            </p>
+
+            <!-- osekaná mapa s pythonisty a firmami -->
+
+            <a href="">
+                <button>Kariéra a Python, to zní dobře</button>
+            </a>
+        </div>
+
+        <div id="zapojse">
+            <h2>Zapoj&nbsp;se!</h2>
+            <p>
+                Líbí se ti Python? Pomoz nám ho rozšířit i mezi ostatní. Pro lenochy s penězi máme <a href="https://www.fio.cz/scgi-bin/hermes/dz-transparent.cgi?ID_ucet=2600260438">číslo účtu</a>, ale spíš oceníme, když se chopíš nějakého připraveného úkolu a dotlačíš jej do konce. Věčná sláva zaručena!
+            </p>
+            <a href="">
+                <button>Toužím po věčné slávě</button>
+            </a>
+        </div>
+
+        <hr>
+
+        {% include 'footer.html' %}
     </body>
 </html>
