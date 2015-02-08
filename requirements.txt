@@ -1,5 +1,12 @@
-flask==0.10.1        # Lightweight web framework
-flask-misaka==0.3.0  # Markdown integration
-
-pytest               # Test suite
-gunicorn             # Web server
+Flask==0.10.1
+Flask-Misaka==0.3.0
+Jinja2==2.7.2
+MarkupSafe==0.21
+Werkzeug==0.9.4
+argparse==1.2.1
+itsdangerous==0.24
+misaka==1.0.2
+py==1.4.20
+pytest==2.5.2
+wsgiref==0.1.2
+waitress==0.8.9
