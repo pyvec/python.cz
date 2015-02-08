@@ -10,6 +10,13 @@ app = Flask(__name__,
             template_folder='.')
 
 
+@app.context_processor
+def inject_context():
+    return {
+        'debug': app.debug
+    }
+
+
 @app.route('/')
 def index():
     return render_template('index.html')
