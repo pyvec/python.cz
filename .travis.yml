@@ -14,6 +14,6 @@ deploy:
         secure: "wYkuNGIT0OUdnV9FMUqpWhQQvaL+pOe1iQqviG85t5H1iSOlU0JPhytKPQv9Qmb+dmqBqbRgjo//pQybRkG7B3TiAcBCEZW+enPRMqgUYyf+h7GMxB6sUJUaeGqDS0WFK+P/sgL0+dQNDpdu09gd5RHbwtPjgg+QK/rTlx9YAAQ="
     app: "pythoncz"
     on:
-        branch: "new-pythoncz"
+        branch: "master"
         python: "2.7"
-        repo: pyvec/python.cz
+        repo: honzajavorek/python.cz
