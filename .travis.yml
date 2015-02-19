@@ -15,5 +15,5 @@ deploy:
     app: "pythoncz"
     on:
         branch: "master"
-        python: "2.7"
+        python: "3.4"
         repo: honzajavorek/python.cz
