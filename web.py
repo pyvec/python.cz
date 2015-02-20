@@ -5,16 +5,15 @@ from flask import (Flask, render_template as _render_template, url_for,
                    redirect, request)
 
 
-# This settings ensure that Flask templates are in the root of the application
 app = Flask(__name__,
-            static_folder='.',
+            static_folder='files',
             static_url_path='',
-            template_folder='.')
+            template_folder='pages')
 
 
 def render_template(filename, **kwargs):
     kwargs['github_url'] = (
-        'https://github.com/pyvec/python.cz/blob/master/' + filename
+        'https://github.com/pyvec/python.cz/blob/master/pages/' + filename
     )
     return _render_template(filename, **kwargs)
 
