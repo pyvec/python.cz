@@ -3,6 +3,8 @@
 
 Small summary website for Czech Python community.
 
+[![Build Status](https://travis-ci.org/honzajavorek/python.cz.svg?branch=master)](https://travis-ci.org/honzajavorek/python.cz)
+
 ## Installation
 
 ```bash
