@@ -11,7 +11,7 @@ script: "py.test"
 deploy:
     provider: "heroku"
     api_key:
-        secure: "k6MrvzAG8doCYdS0ncp9FRrX+05aspgLFMWwUJUkt80AINUk9WXWwf/sIeCBZ1OQd3JejqAScM/PR5FQJ2ShLJMbDUSmHgrZoLD5cG+FIDkfhBMv3LAZ1Co3h6oXQq9RaavlXeYRRheLFm4QaNMoRFu9ug/LbyE9m22P0Q01Vzk="
+        secure: "TkF6T+X2vU+18X2/ERSvg056SIaCT+JjpcjXfC4Fwc1Fx07VYNAiD0m6ZEucpq9L9uUUqXXgcsLqwYoei9PBPGOd2CrEilw56zwWFwA7JKm3FvKw2gDrxDE/ckmLU+F8hgJle06A6cbGhx+MbsrVz7EeQ/njwLRlPYJW2Xtnzqw="
     app: "pythoncz"
     on:
         branch: "master"
