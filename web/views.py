@@ -9,20 +9,14 @@ from flask import (render_template as _render_template, url_for,
 from . import app
 
 
-GITHUB_URL = (
-    'https://github.com/honzajavorek/python.cz/'
-    'blob/master/{template_folder}/{filename}'
-)
-
-
 # Templating
 
 def render_template(filename, **kwargs):
     template_folder = app.template_folder
     template_folder = template_folder.replace(app.config['ROOT_DIR'], '')
 
-    kwargs['github_url'] = GITHUB_URL.format(
-        template_folder=template_folder,
+    kwargs['github_url'] = app.config['GITHUB_URL'].format(
+        template_folder=template_folder.strip('/'),
         filename=filename
     )
     return _render_template(filename, **kwargs)
@@ -32,7 +26,7 @@ def render_template(filename, **kwargs):
 def inject_context():
     return {
         'debug': app.debug,
-        'url': 'http://python.cz' + request.path
+        'url': path.join(app.config['ROOT_URL'], request.path)
     }
 
 
