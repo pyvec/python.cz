@@ -14,7 +14,7 @@ $ pip install -r requirements.txt
 ### Development
 
 ```bash
-$ python web.py
+$ python runserver.py
 ```
 
 ### Production (Heroku)
