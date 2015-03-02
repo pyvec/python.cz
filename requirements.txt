@@ -5,7 +5,6 @@ MarkupSafe==0.21
 Werkzeug==0.9.4
 argparse==1.2.1
 flake8==2.3.0
-foo==0.0
 itsdangerous==0.24
 mccabe==0.3
 misaka==1.0.2
@@ -14,5 +13,4 @@ py==1.4.20
 pyflakes==0.8.1
 pytest==2.5.2
 requests==2.5.3
-test-pkg==0.0
 waitress==0.8.9
