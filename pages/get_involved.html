@@ -1,0 +1,25 @@
+
+<h1>Trello</h1>
+{% for list in trello_board %}
+    <h2>Seznam: {{ list.name }}</h2>
+    <ul>
+    {% for card in list.cards %}
+        <li>
+            <a href="{{ card.url }}">{{ card.name }}</a><br>
+            <strong>Hlasů: {{ card.badges.votes }}</strong>
+        </li>
+    {% endfor %}
+    </ul>
+{% endfor %}
+
+- Jak hlasovat
+- Jak se registrovat na Trello
+- Jak to funguje, priradit se vs. subscribe
+- Co muzu udelat...
+
+Seradit podle poctu hlasu
+Call to action
+Cover images
+
+Cislo uctu
+Co / kdo je Pyvec

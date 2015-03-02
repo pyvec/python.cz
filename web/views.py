@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 
 
-from os import path
-
+import requests
 from flask import (render_template as _render_template, url_for,
                    redirect, request)
 
@@ -26,7 +25,7 @@ def render_template(filename, **kwargs):
 def inject_context():
     return {
         'debug': app.debug,
-        'url': path.join(app.config['ROOT_URL'], request.path)
+        'url': request.url,
     }
 
 
@@ -40,6 +39,20 @@ def index():
 @app.route('/index-en.html')
 def index_en():
     return render_template('index-en.html')
+
+
+@app.route('/zapoj-se')
+def get_involved():
+    # https://trello.com/docs/api/board/index.html#get-1-boards-board-id-lists
+    # https://trello.com/1/boards/JHXkZGHZ/lists?cards=open
+
+    board_id = app.config['TRELLO_BOARD_ID']
+    url = 'https://trello.com/1/boards/{}/lists?cards=open'.format(board_id)
+
+    resp = requests.get(url)
+    trello_board = resp.json()
+
+    return render_template('get_involved.html', trello_board=trello_board)
 
 
 # Legacy redirects

@@ -9,12 +9,11 @@ from flask import Flask
 PACKAGE_DIR = path.dirname(path.realpath(__file__))
 ROOT_DIR = path.realpath(path.join(PACKAGE_DIR, '..'))
 
-ROOT_URL = 'http://pythoncz.herokuapp.com'
-
 GITHUB_URL = (
     'https://github.com/honzajavorek/python.cz/'
     'blob/master/{template_folder}/{filename}'
 )
+TRELLO_BOARD_ID = 'JHXkZGHZ'
 
 
 app = Flask('web',
