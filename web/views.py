@@ -41,7 +41,7 @@ def index_en():
     return render_template('index-en.html')
 
 
-@app.route('/zapoj-se')
+@app.route('/zapojse')
 def get_involved():
     # https://trello.com/docs/api/board/index.html#get-1-boards-board-id-lists
     # https://trello.com/1/boards/JHXkZGHZ/lists?cards=open
@@ -52,7 +52,17 @@ def get_involved():
     resp = requests.get(url)
     trello_board = resp.json()
 
+    trello_board = [sort_by_votes(l) for l in trello_board]
     return render_template('get_involved.html', trello_board=trello_board)
+
+
+def sort_by_votes(trello_list):
+    def card_key(card):
+        return card['badges']['votes']
+
+    cards = sorted(trello_list['cards'], key=card_key, reverse=True)
+    trello_list['cards'] = cards
+    return trello_list
 
 
 # Legacy redirects

@@ -1,27 +1,92 @@
+<!doctype html>
+<html lang="cs">
+<head>
+    {% include 'fragments/head.html' %}
 
-<h1>Trello</h1>
-{% for list in trello_board %}
-    <h2>Seznam: {{ list.name }}</h2>
-    <ul>
-    {% for card in list.cards %}
-        <li>
-            <a href="{{ card.url }}">{{ card.name }}</a><br>
-            <strong>Hlasů: {{ card.badges.votes }}</strong>
-        </li>
-    {% endfor %}
-    </ul>
-{% endfor %}
+    <title>Python v ČR: Zapoj se!</title>
+    <meta property="og:title" content="Python v ČR: Zapoj se!">
 
-- Jak hlasovat
-- Jak se registrovat na Trello
-- Jak to funguje, priradit se vs. subscribe
-- Co muzu udelat...
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+    <body>
+        {% include 'fragments/ga.html' %}
 
-Seradit podle poctu hlasu
-Call to action
-Cover images
+        <h1>Zapoj se!</h1>
+        <p>
+            Líbí se ti Python? <strong>Pomoz nám ho rozšířit i mezi ostatní.</strong> Pro lenochy s penězi máme <a href="https://www.fio.cz/scgi-bin/hermes/dz-transparent.cgi?ID_ucet=2600260438">číslo účtu</a>, ale spíš oceníme, když se chopíš nějakého připraveného úkolu a dotlačíš jej do konce.
+        </p>
+        <p>
+            Máme sice <a href="http://pyvec.org/">Pyvec</a>, tedy neziskovku, která má rozšiřování a podporu Pythonu u nás jako misi, ale to je jen nějaká formální obálka. Reálně hýbou věci dopředu <strong>lidi, kteří přiloží ruku k dílu</strong> a ti v žádné neziskovce být nemusí - nakonec to všichni stejně děláme po večerech, po střípcích volného času. Konkrétní peníze sehnat umíme, ale potřebujeme <strong>hrdiny</strong>, kteří se chytnou projektu a <strong>uskuteční jej</strong>. Nemusí to být žádní známí profíci, nemusí být z Prahy nebo Brna a ani Python nemusí umět nijak skvěle. <strong>Kontakty, reference a zkušenosti</strong> jsou odměnou, ne požadavkem!
+        </p>
 
-Cislo uctu
-Co / kdo je Pyvec
+        <h2 id="nekonecneukoly">Nekonečné úkoly</h2>
+        <ul>
+            <li>
+                <strong>Vysvětluj</strong> nováčkům na <a href="">diskusích</a>.
+            </li>
+            <li>
+                <strong>Pomoz</strong> organizátorům <a href="">srazů</a> nebo <a href="">založ vlastní sraz</a> ve svém městě.
+            </li>
+            <li>
+                <strong>Přednášej</strong> na <a href="">srazech</a>! Pětiminutový <em>lightning talk</em> většinou není potřeba oznamovat předem, stačí přijít na sraz a&nbsp;něco říct. Delší přednášky je dobré s&nbsp;předstihem nahlásit organizátorům srazu.
+            </li>
+            <li>
+                <strong>Piš</strong> a překládej! Články můžeš publikovat třeba na <a href="http://www.zdrojak.cz/n/python/">Zdroják.cz</a>.
+            </li>
+            <li>
+                <strong>Programuj</strong> open source! Zajímavých projektů, které uvítají pomoc na jakékoli úrovni, je spousta. Inspirovat se můžeš na <a href="https://github.com/trending?l=python">GitHubu</a>.
+            </li>
+        </ul>
 
-Vymyslet, jak muze nekdo prispet napad
+        <h2 id="ukoly">Jednorázové úkoly</h2>
+        <p>
+            Když nic, tak aspoň <a href="#jakhlasovat">hlasuj</a> nebo <a href="#jakpridat">přidej vlastní nápad</a>! Díky hlasům budeme mít aspoň přehled o tom, co si přeje nejvíc lidí.
+        </p>
+        <ul>
+            {% for list in trello_board %}
+                {% for card in list.cards %}
+                    <li>
+                        <a href="{{ card.url }}" target="_blank">{{ card.name }}</a><br>
+                        <strong>Status: {{ list.name }}</strong><br>
+                        <strong>Hlasů: {{ card.badges.votes }}</strong><br>
+                        <a href="mailto:info&#64;pyvec.org?subject={{ ('Jdu do toho! [' + card.name + ']')|urlencode }}">
+                            <button>Jdu do toho!</button>
+                        </a>
+                    </li>
+                {% endfor %}
+            {% endfor %}
+            <li>
+                <a href="#jakpridat">Tvůj nápad?</a><br>
+                <strong>Status: Nikdo o něm ještě neví</strong><br>
+                <strong>Hlasů: 0</strong><br>
+                <a href="#jakpridat">
+                    <button>Přidám ho!</button>
+                </a>
+            </li>
+        </ul>
+
+        <h2>Máš otázky?</h2>
+        <h3 id="trello">Co je Trello?</h3>
+        odkaz na board a co je trello (nastenka s kartickami)
+        Prihlaseni, co jsou sloupecky
+
+        <h3 id="jaksezapojit">Jak se zapojit?</h3>
+
+        <h3 id="jakpridat">Jak přidat vlastní úkol?</h3>
+
+        <h3 id="jakhlasovat">Jak hlasovat pro úkoly?</h3>
+
+        <h3 id="jakkomentovat">Jak komentovat pod úkoly?</h3>
+
+        <h3 id="jaksledovat">Jak sledovat úkoly?</h3>
+        jeden vs. board, subscribe vs. prirazeni
+
+        <h3 id="pyvec">Jak je to s tou neziskovkou?</h2>
+        (soucast PSF, ucetni entita, par lidi, zapis jako o.s., co se stane s penezi na uctu, kdo porada srazy)
+
+        <hr>
+
+        {% include 'fragments/footer.html' %}
+    </body>
+</html>
