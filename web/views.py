@@ -33,7 +33,10 @@ def inject_context():
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    context = {
+        'pyvec_account_url': app.config['PYVEC_ACCOUNT_URL'],
+    }
+    return render_template('index.html', **context)
 
 
 @app.route('/index-en.html')
@@ -43,17 +46,18 @@ def index_en():
 
 @app.route('/zapojse')
 def get_involved():
-    # https://trello.com/docs/api/board/index.html#get-1-boards-board-id-lists
-    # https://trello.com/1/boards/JHXkZGHZ/lists?cards=open
-
     board_id = app.config['TRELLO_BOARD_ID']
     url = 'https://trello.com/1/boards/{}/lists?cards=open'.format(board_id)
 
     resp = requests.get(url)
     trello_board = resp.json()
 
-    trello_board = [sort_by_votes(l) for l in trello_board]
-    return render_template('get_involved.html', trello_board=trello_board)
+    context = {
+        'trello_board': [sort_by_votes(l) for l in trello_board],
+        'trello_board_url': 'https://trello.com/b/{}/'.format(board_id),
+        'pyvec_account_url': app.config['PYVEC_ACCOUNT_URL'],
+    }
+    return render_template('get_involved.html', **context)
 
 
 def sort_by_votes(trello_list):

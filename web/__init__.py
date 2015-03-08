@@ -13,6 +13,11 @@ GITHUB_URL = (
     'https://github.com/honzajavorek/python.cz/'
     'blob/master/{template_folder}/{filename}'
 )
+PYVEC_ACCOUNT_URL = (
+    'https://www.fio.cz/scgi-bin/hermes/'
+    'dz-transparent.cgi?ID_ucet=2600260438'
+)
+
 TRELLO_BOARD_ID = 'JHXkZGHZ'
 
 
