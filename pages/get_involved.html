@@ -50,8 +50,8 @@
                         <a href="{{ card.url }}" target="_blank">{{ card.name }}</a><br>
                         <strong>Status: {{ list.name }}</strong><br>
                         <strong>Hlasů: {{ card.badges.votes }}</strong><br>
-                        <a href="mailto:info&#64;pyvec.org?subject={{ ('Jdu do toho! [' + card.name + ']')|urlencode }}">
-                            <button>Jdu do toho!</button>
+                        <a href="mailto:info&#64;pyvec.org?subject={{ ('Jdu do toho! [' + card.name + ']')|urlencode }}" class="btn btn-primary btn-sm">
+                            Jdu do toho!
                         </a>
                     </li>
                 {% endfor %}
@@ -60,8 +60,8 @@
                 <a href="#jakpridat">Tvůj nápad?</a><br>
                 <strong>Status: Nikdo o něm ještě neví</strong><br>
                 <strong>Hlasů: 0</strong><br>
-                <a href="#jakpridat">
-                    <button>Přidám ho!</button>
+                <a href="#jakpridat" class="btn btn-primary btn-sm">
+                    Přidám ho!
                 </a>
             </li>
         </ul>
