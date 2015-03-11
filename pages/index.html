@@ -8,6 +8,8 @@
 
     <meta name="description" content="Česká (a tak trochu i slovenská) komunita kolem programovacího jazyka Python.">
     <meta property="og:description" content="Česká (a tak trochu i slovenská) komunita kolem programovacího jazyka Python.">
+
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
 </head>
     <body>
         {% include 'fragments/ga.html' %}
@@ -50,7 +52,7 @@
                 Srazy Python programátorů zvané <strong>Pyvo</strong> se pořádají po celé republice. Přijď si poslechnout přednášky od chytrých lidí a popovídat si nejen o Pythonu!
             </p>
 
-            <!-- mapa s odkazy na jednotlivá pyva -->
+            <div id="map" style="height: 300px" data-src="{{ url_for('static', filename='data/meetups.geojson') }}"></div>
 
             <noscript>
                 <!-- alt. odkazy na pyva -->
@@ -136,6 +138,11 @@
         </div>
 
         <hr>
+
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+        <script src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
+        <script src="{{ url_for('static', filename='js/maps.js') }}"></script>
 
         {% include 'fragments/footer.html' %}
     </body>
