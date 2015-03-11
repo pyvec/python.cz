@@ -5,8 +5,6 @@ import json
 from os import path
 from glob import glob
 
-import pytest
-
 
 def test_valid_json():
     """Tests whether all JSON data files are valid JSON documents."""
