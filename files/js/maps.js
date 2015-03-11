@@ -2,10 +2,14 @@
 
 var map = L.map('map').setView([49.8, 15.55], 7);
 
-L.tileLayer('http://129.206.74.245:8001/tms_r.ashx?x={x}&y={y}&z={z}', {
+// http://wiki.openstreetmap.org/wiki/Tile_servers
+// http://wiki.openstreetmap.org/wiki/WikiProject_Czech_Republic/freemap
+// http://mapbox.com/
+var layer = new L.StamenTileLayer('toner', {
     maxZoom: 18,
-    attribution: '<a href="http://openmapsurfer.uni-hd.de/contact.html">GIScience</a> | &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+    detectRetina: true
+})
+map.addLayer(layer);
 
 function onEachFeature(feature, marker) {
     if (feature.properties) {
