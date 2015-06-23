@@ -80,3 +80,9 @@ def index_legacy():
 @app.route('/english.html')
 def index_en_legacy():
     return redirect(url_for('index_en'), code=301)
+
+
+@app.route('/pyladies/', defaults={'target': ''})
+@app.route('/pyladies/<path:target>')
+def pyladies(target):
+    return redirect('http://pyladies.cz/' + target, code=301)
