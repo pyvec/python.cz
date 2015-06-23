@@ -50,6 +50,7 @@ def get_involved():
     url = 'https://trello.com/1/boards/{}/lists?cards=open'.format(board_id)
 
     resp = requests.get(url)
+    resp.raise_for_status()  # TODO better error handling
     trello_board = resp.json()
 
     context = {
