@@ -1,0 +1,39 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Rubyslava + Pyvo",
+                "venue": "Kafé Nervosa",
+                "lanyrd_url": "http://lanyrd.com/series/rubyslava/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [17.1012218, 48.1448129]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Vienna.rb",
+                "venue": "Sektor5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [16.35521, 48.18649]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "PyUGAT",
+                "venue": "Metalab"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [16.35619, 48.20982]
+            }
+        }
+    ]
+}
