@@ -149,8 +149,7 @@
             "type": "Feature",
             "properties": {
                 "name": "Jozef Simo",
-                "url": "http://www.wtfall.com/",
-                "company": true
+                "url": "http://www.wtfall.com/"
             }
         },
         {
@@ -463,6 +462,39 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [17.1261600, 48.1686100]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Vladimír Macek",
+                "url": "http://macek.sandbox.cz/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [15.0957467, 50.7451942]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Tomáš Ehrlich",
+                "url": "http://www.tomasehrlich.cz/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [16.616667, 49.2]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Vítek Pliska",
+                "url": "http://creatiweb.cz/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.5155167, 50.0333536]
             }
         }
     ]
