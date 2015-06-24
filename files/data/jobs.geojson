@@ -167,7 +167,7 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "user technologies",
+                "name": "User Technologies",
                 "url": "http://usertechnologies.com/",
                 "company": true
             },

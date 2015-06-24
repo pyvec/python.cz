@@ -4,6 +4,7 @@
 import os
 import json
 
+import icu
 import requests
 from flask import (render_template as _render_template, url_for,
                    redirect, request)
@@ -98,10 +99,16 @@ def group_jobs_data(data):
         groups.setdefault(name, [])
         groups[name].append(point)
 
+    key_func = get_czech_sort_key_func()
     for name, group in groups.items():
-        group.sort(key=lambda point: point['name'])
+        group.sort(key=lambda point: key_func(point['name']))
 
     return groups
+
+
+def get_czech_sort_key_func():
+    collator = icu.Collator.createInstance(icu.Locale('cs_CZ.UTF-8'))
+    return collator.getSortKey
 
 
 def load_jobs_data(data_file):
