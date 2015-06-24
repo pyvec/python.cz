@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 
 
+import os
+import json
+
 import requests
 from flask import (render_template as _render_template, url_for,
                    redirect, request)
@@ -68,6 +71,53 @@ def sort_by_votes(trello_list):
     cards = sorted(trello_list['cards'], key=card_key, reverse=True)
     trello_list['cards'] = cards
     return trello_list
+
+
+@app.route('/prace')
+def jobs():
+    return render_template('jobs.html', data=get_jobs_data())
+
+
+@app.route('/jobs')
+def jobs_en():
+    return render_template('jobs-en.html', data=get_jobs_data())
+
+
+def get_jobs_data():
+    return group_jobs_data(load_jobs_data('jobs.geojson'))
+
+
+def group_jobs_data(data):
+    groups = {}
+    for point in data:
+        if point.get('company'):
+            name = 'companies'
+        else:
+            name = 'individuals'
+
+        groups.setdefault(name, [])
+        groups[name].append(point)
+
+    for name, group in groups.items():
+        group.sort(key=lambda point: point['name'])
+
+    return groups
+
+
+def load_jobs_data(data_file):
+    path = os.path.join(app.config['ROOT_DIR'], 'files/data', data_file)
+
+    with open(path) as f:
+        data = json.load(f)
+
+    for feature in data['features']:
+        point = feature['properties']
+
+        geometry = feature.get('geometry')
+        if geometry:
+            point['coordinates'] = geometry['coordinates']
+
+        yield point
 
 
 # Legacy redirects
