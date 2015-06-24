@@ -132,12 +132,11 @@
             <p>
                 Jakou práci seženeš, když se naučíš Python? Kdo jej používá? Jak a kam napsat nabídku práce pro Pythonisty?
             </p>
-
-            <!-- osekaná mapa s pythonisty a firmami -->
-
-            <a href="" class="btn btn-primary">
-                Kariéra a Python, to zní dobře
-            </a>
+            <p>
+                <a href="{{ url_for('jobs') }}" class="btn btn-primary">
+                    Python a kariéra, to zní dobře
+                </a>
+            </p>
         </div>
 
         <div id="zapojse">
@@ -154,7 +153,6 @@
 
         <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
         <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
-        <script src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
         <script src="{{ url_for('static', filename='js/maps.js') }}"></script>
 
         {% include 'fragments/footer.html' %}
