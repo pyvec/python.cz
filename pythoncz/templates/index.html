@@ -8,8 +8,6 @@
 
     <meta name="description" content="Česká (a tak trochu i slovenská) komunita kolem programovacího jazyka Python.">
     <meta property="og:description" content="Česká (a tak trochu i slovenská) komunita kolem programovacího jazyka Python.">
-
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
 </head>
     <body>
         {% include 'fragments/ga.html' %}
@@ -52,14 +50,22 @@
         <div id="srazy">
             <h2>Srazy (Pyvo)</h2>
             <p>
-                Srazy Python programátorů zvané <strong>Pyvo</strong> se pořádají po celé republice. Přijď si poslechnout přednášky od chytrých lidí a popovídat si nejen o Pythonu!
+                <a href="http://pyvo.cz">Srazy Python programátorů</a> zvané <strong>Pyvo</strong> se pořádají po celé republice. Přijď si poslechnout přednášky od chytrých lidí a popovídat si nejen o Pythonu!
             </p>
-
-            <div id="map" style="height: 300px" data-src="{{ url_for('static', filename='data/meetups.geojson') }}"></div>
-
-            <noscript>
-                <!-- alt. odkazy na pyva -->
-            </noscript>
+            <ul>
+                <li>
+                    <img src="{{ url_for('static', filename='images/pyvo-praha.png') }}" width="100">
+                    <a href="http://pyvo.cz/praha">Praha</a>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='images/pyvo-brno.png') }}" width="100">
+                    <a href="http://pyvo.cz/brno">Brno</a>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='images/pyvo-ostrava.png') }}" width="100">
+                    <a href="http://pyvo.cz/ostrava">Ostrava</a>
+                </li>
+            </ul>
         </div>
 
         <div id="diskuse">
@@ -141,10 +147,6 @@
         </div>
 
         <hr>
-
-        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-        <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
-        <script src="{{ url_for('static', filename='js/maps.js') }}"></script>
 
         {% include 'fragments/footer.html' %}
     </body>
