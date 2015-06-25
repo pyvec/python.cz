@@ -6,6 +6,12 @@
 {% block content %}
     <h1>Zapoj se!</h1>
     <p>
+        <a href="{{ url_for('index_cs') }}" class="btn btn-default">
+            Zpět na hlavní stránku
+        </a>
+    </p>
+
+    <p>
         Líbí se ti Python? <strong>Pomoz nám ho rozšířit i mezi ostatní.</strong> Pro lenochy s penězi máme <a href="{{ config.PYVEC_ACCOUNT_URL }}">číslo účtu</a>, ale spíš oceníme, když se chopíš nějakého připraveného úkolu a dotlačíš jej do konce.
     </p>
     <p>
