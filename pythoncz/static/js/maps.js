@@ -11,7 +11,7 @@ map.addLayer(layer);
 
 
 var icon = L.icon({
-    iconUrl: '/images/icon.png',
+    iconUrl: '/static/images/icon.png',
     iconSize: [16, 16],
     shadowSize: [0, 0],
     iconAnchor: [8, 8],

@@ -29,7 +29,7 @@
         <div id="map" style="height: 350px" data-src="{{ url_for('static', filename='data/business.geojson') }}"></div>
 
         <h3>Firmy a instituce</h3>
-        {% for company in data['companies'] %}
+        {% for company in business_groups.companies %}
             <li>
                 <a href="{{ company.url }}" target="_blank">
                     {{ company.name }}
@@ -38,7 +38,7 @@
         {% endfor %}
 
         <h3>Osoby</h3>
-        {% for individual in data['individuals'] %}
+        {% for individual in business_groups.individuals %}
             <li>
                 <a href="{{ individual.url }}" target="_blank">
                     {{ individual.name }}
@@ -47,7 +47,7 @@
         {% endfor %}
 
         <p>
-            <a href="{{ business_list_url }}" class="btn btn-default">
+            <a href="{{ config.BUSINESS_LIST_URL }}" class="btn btn-default">
                 Chci se přidat na seznam
             </a>
         </p>
@@ -95,7 +95,7 @@
             My taky! Máme na to dokonce <a href="http://pyvec.org/">neziskovku</a>. Můžeš se <a href="{{ url_for('get_involved') }}">zapojit</a> a s naší misí nám pomoci.
         </p>
         <p>
-            Pokud zastupuješ nějakou firmu, můžeš nás sponzorovat (<a href="{{ pyvec_account_url }}">číslo účtu</a>). Přes Pyvec se peníze rozdělí na dílčí projekty. Podporujeme např. srazy a workshopy pro dámy &ndash; <a href="http://pyladies.cz">PyLadies</a>, <a href="http://djangogirls.org">DjangoGirls</a>.
+            Pokud zastupuješ nějakou firmu, můžeš nás sponzorovat (<a href="{{ config.PYVEC_ACCOUNT_URL }}">číslo účtu</a>). Přes Pyvec se peníze rozdělí na dílčí projekty. Podporujeme např. srazy a workshopy pro dámy &ndash; <a href="http://pyladies.cz">PyLadies</a>, <a href="http://djangogirls.org">DjangoGirls</a>.
         </p>
         <p>
             Budeme také rádi, pokud nám napíšete <em>success story</em> o tom, jak jste Python použili u vás a jak vám to usnadnilo práci a co vše jste s ním dokázali. Takovou zkušenost zde rádi uveřejníme, klidně i na samostatné stránce, s logem apod.

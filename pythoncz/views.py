@@ -1,15 +1,10 @@
 # -*- coding: utf-8 -*-
 
 
-import os
-import json
-
-import icu
-import requests
 from flask import (render_template as _render_template, url_for,
                    redirect, request)
 
-from . import app
+from . import app, trello, business
 
 
 # Templating
@@ -33,99 +28,34 @@ def inject_context():
 
 @app.route('/')
 def index():
-    context = {
-        'pyvec_account_url': app.config['PYVEC_ACCOUNT_URL'],
-    }
-    return render_template('index.html', **context)
+    return render_template('index.html')
 
 
-@app.route('/index-en.html')
+@app.route('/en')
 def index_en():
     return render_template('index-en.html')
 
 
 @app.route('/zapojse')
 def get_involved():
-    board_id = app.config['TRELLO_BOARD_ID']
-    url = 'https://trello.com/1/boards/{}/lists?cards=open'.format(board_id)
-
-    resp = requests.get(url)
-    resp.raise_for_status()  # TODO better error handling
-    trello_board = resp.json()
-
+    trello_board_id = app.config['TRELLO_BOARD_ID']
     context = {
-        'trello_board': [sort_by_votes(l) for l in trello_board],
-        'trello_board_url': 'https://trello.com/b/{}/'.format(board_id),
-        'pyvec_account_url': app.config['PYVEC_ACCOUNT_URL'],
+        'trello_board': trello.get_board(trello_board_id),
+        'trello_board_url': 'https://trello.com/b/{}/'.format(trello_board_id),
     }
     return render_template('get_involved.html', **context)
 
 
-def sort_by_votes(trello_list):
-    def card_key(card):
-        return card['badges']['votes']
-
-    cards = sorted(trello_list['cards'], key=card_key, reverse=True)
-    trello_list['cards'] = cards
-    return trello_list
-
-
 @app.route('/prace')
 def jobs():
-    context = {
-        'data': get_jobs_data(),
-        'business_list_url': app.config['BUSINESS_LIST_URL'],
-        'pyvec_account_url': app.config['PYVEC_ACCOUNT_URL'],
-    }
-    return render_template('jobs.html', **context)
+    groups = business.get_groups(app.config['DATA_DIR'])
+    return render_template('jobs.html', business_groups=groups)
 
 
-@app.route('/jobs')
+@app.route('/en/jobs')
 def jobs_en():
-    return render_template('jobs-en.html', data=get_jobs_data())
-
-
-def get_jobs_data():
-    return group_jobs_data(load_jobs_data('business.geojson'))
-
-
-def group_jobs_data(data):
-    groups = {}
-    for point in data:
-        if point.get('company'):
-            name = 'companies'
-        else:
-            name = 'individuals'
-
-        groups.setdefault(name, [])
-        groups[name].append(point)
-
-    key_func = get_czech_sort_key_func()
-    for name, group in groups.items():
-        group.sort(key=lambda point: key_func(point['name']))
-
-    return groups
-
-
-def get_czech_sort_key_func():
-    collator = icu.Collator.createInstance(icu.Locale('cs_CZ.UTF-8'))
-    return collator.getSortKey
-
-
-def load_jobs_data(data_file):
-    path = os.path.join(app.config['DATA_DIR'], data_file)
-
-    with open(path) as f:
-        data = json.load(f)
-
-    for feature in data['features']:
-        point = feature['properties']
-
-        geometry = feature.get('geometry')
-        if geometry:
-            point['coordinates'] = geometry['coordinates']
-
-        yield point
+    groups = business.get_groups(app.config['DATA_DIR'])
+    return render_template('jobs-en.html', business_groups=groups)
 
 
 # Legacy redirects
