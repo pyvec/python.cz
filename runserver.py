@@ -4,7 +4,7 @@
 
 import os
 
-from web import app
+from pythoncz import app
 
 
 if __name__ == '__main__':

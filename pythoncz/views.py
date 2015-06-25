@@ -15,13 +15,8 @@ from . import app
 # Templating
 
 def render_template(filename, **kwargs):
-    template_folder = app.template_folder
-    template_folder = template_folder.replace(app.config['ROOT_DIR'], '')
-
-    kwargs['github_url'] = app.config['GITHUB_URL'].format(
-        template_folder=template_folder.strip('/'),
-        filename=filename
-    )
+    template_url = app.config['TEMPLATE_URL'].format(filename=filename)
+    kwargs['template_url'] = template_url
     return _render_template(filename, **kwargs)
 
 
@@ -29,6 +24,7 @@ def render_template(filename, **kwargs):
 def inject_context():
     return {
         'debug': app.debug,
+        'config': app.config,
         'url': request.url,
     }
 
@@ -78,7 +74,7 @@ def sort_by_votes(trello_list):
 def jobs():
     context = {
         'data': get_jobs_data(),
-        'github_geojson_url': app.config['GITHUB_GEOJSON_URL'],
+        'business_list_url': app.config['BUSINESS_LIST_URL'],
         'pyvec_account_url': app.config['PYVEC_ACCOUNT_URL'],
     }
     return render_template('jobs.html', **context)
@@ -90,7 +86,7 @@ def jobs_en():
 
 
 def get_jobs_data():
-    return group_jobs_data(load_jobs_data('jobs.geojson'))
+    return group_jobs_data(load_jobs_data('business.geojson'))
 
 
 def group_jobs_data(data):
@@ -117,7 +113,7 @@ def get_czech_sort_key_func():
 
 
 def load_jobs_data(data_file):
-    path = os.path.join(app.config['ROOT_DIR'], 'files/data', data_file)
+    path = os.path.join(app.config['DATA_DIR'], data_file)
 
     with open(path) as f:
         data = json.load(f)

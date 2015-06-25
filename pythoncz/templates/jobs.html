@@ -26,7 +26,7 @@
             Ve světě jsou to např. Bitbucket, Blender 3D, Canonical, Google (např. YouTube je v Pythonu), Dropbox, Disqus, IBM, NASA, Nokia, Rackspace, Spotify, Walt Disney, <a href="https://www.python.org/about/success/">a další</a> &ndash; mimo jiné také spousta vědeckých organizací. U nás a na Slovensku Python používají následující subjekty:
         </p>
 
-        <div id="map" style="height: 350px" data-src="{{ url_for('static', filename='data/jobs.geojson') }}"></div>
+        <div id="map" style="height: 350px" data-src="{{ url_for('static', filename='data/business.geojson') }}"></div>
 
         <h3>Firmy a instituce</h3>
         {% for company in data['companies'] %}
@@ -47,7 +47,7 @@
         {% endfor %}
 
         <p>
-            <a href="{{ github_geojson_url }}" class="btn btn-default">
+            <a href="{{ business_list_url }}" class="btn btn-default">
                 Chci se přidat na seznam
             </a>
         </p>
