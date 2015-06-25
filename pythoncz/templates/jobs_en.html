@@ -1,0 +1,75 @@
+{% extends '_base.html' %}
+{% block head %}
+    <title>Python in the Czech Republic: Jobs</title>
+    <meta property="og:title" content="Python in the Czech Republic: Jobs">
+
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+{% endblock %}
+{% block content %}
+    <h1>Python jobs in Czech Republic</h1>
+
+    <h2 id="who">Who uses Python?</h2>
+    <p>
+        Following Czech and Slovak subjects use Python:
+    </p>
+
+    <div id="map" style="height: 350px" data-src="{{ url_for('static', filename='data/business.geojson') }}"></div>
+
+    <h3>Companies and institutions</h3>
+    {% for company in business_groups.companies %}
+        <li>
+            <a href="{{ company.url }}" target="_blank">
+                {{ company.name }}
+            </a>
+        </li>
+    {% endfor %}
+
+    <h3>Individuals</h3>
+    {% for individual in business_groups.individuals %}
+        <li>
+            <a href="{{ individual.url }}" target="_blank">
+                {{ individual.name }}
+            </a>
+        </li>
+    {% endfor %}
+
+    <p>
+        <a href="{{ config.BUSINESS_LIST_URL }}" class="btn btn-default">
+            I want to be on the list
+        </a>
+    </p>
+
+    <h2 id="offer">How to find Czech Python software engineers?</h2>
+    <ul>
+        <li>
+            Attend a <a href="{{ url_for('index_en') }}#meetups">meetup</a> and ask around. Speak to real people, get them hooked for your ideas, learn about their options and requirements.
+        </li>
+        <li>
+            Write down a job offer. <strong>Honest story instead of boring bullet points</strong> will bring you larger audience. <strong>Don't forget to mention how much is it possible to work remotely.</strong>
+        </li>
+        <li>
+            Send the offer to <code>django-cs&#64;<!---->googlegroups.com</code> and <code>python&#64;<!---->py.cz</code> (see <a href="{{ url_for('index_en') }}#discussions">discussions</a>). Almost everyone in Czech Republic who works with Python reads at least one of them.
+        </li>
+        <li>
+            Post the offer to <a href="https://www.facebook.com/groups/pyonieri/">Facebook group</a> and to a <a href="https://www.python.org/community/jobs/howto/">global job board</a> &ndash; the board is free, only registration is needed. The offer then appears also on <a href="https://twitter.com/pyjobo">@pyjobo</a> Twitter account.
+        </li>
+        <li>
+            In case you're headhunter, please do not overuse any of the discussions. Job offers are welcome, they're free and without limitations, but if it starts to be annoying, it doesn't have to be like this forever.
+        </li>
+    </ul>
+
+    <h2 id="more">I wish more Czech Pythonistas would exist!</h2>
+    <p>
+        We too and it's also the main goal of <a href="http://pyvec.org/">Pyvec</a>, our non-profit. Pyvec is <a href="https://www.python.org/psf/">Python Software Foundation</a> Working Group in Czech Republic and supports all sorts of activities focused on introducing more people to Python. Pyvec also supports local chapters of <a href="http://pyladies.cz">PyLadies</a> and <a href="http://djangogirls.org">DjangoGirls</a>. If you wish to sponsor our activities, please drop an e-mail to <a
+    href="mailto:info&#64;pyvec.org">info&#64;<!---->pyvec.org</a>.
+    </p>
+
+    {% block scripts %}
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+        <script src="{{ url_for('static', filename='js/maps.js') }}"></script>
+    {% endblock %}
+{% endblock %}

@@ -21,44 +21,45 @@ def inject_context():
         'debug': app.debug,
         'config': app.config,
         'url': request.url,
+        'lang': 'cs',
     }
 
 
 # Regular views
 
 @app.route('/')
-def index():
-    return render_template('index.html')
+def index_cs():
+    return render_template('index_cs.html')
 
 
 @app.route('/en')
 def index_en():
-    return render_template('index-en.html')
+    return render_template('index_en.html', lang='en')
 
 
 @app.route('/zapojse')
-def get_involved():
+def get_involved_cs():
     trello_board_id = app.config['TRELLO_BOARD_ID']
     context = {
         'trello_board': trello.get_board(trello_board_id),
         'trello_board_url': 'https://trello.com/b/{}/'.format(trello_board_id),
     }
-    return render_template('get_involved.html', **context)
+    return render_template('get_involved_cs.html', **context)
 
 
 @app.route('/prace')
-def jobs():
+def jobs_cs():
     groups = business.get_groups(app.config['DATA_DIR'])
-    return render_template('jobs.html', business_groups=groups)
+    return render_template('jobs_cs.html', business_groups=groups)
 
 
 @app.route('/en/jobs')
 def jobs_en():
     groups = business.get_groups(app.config['DATA_DIR'])
-    return render_template('jobs-en.html', business_groups=groups)
+    return render_template('jobs_en.html', lang='en', business_groups=groups)
 
 
-# Legacy redirects
+# Redirects of legacy stuff
 
 @app.route('/index.html')
 def index_legacy():

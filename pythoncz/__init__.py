@@ -17,7 +17,9 @@ PYVEC_ACCOUNT_URL = (
     'https://www.fio.cz/scgi-bin/hermes/'
     'dz-transparent.cgi?ID_ucet=2600260438'
 )
+
 TRELLO_BOARD_ID = 'JHXkZGHZ'
+GOOGLE_ANALYTICS_CODE = 'UA-1316071-13'
 
 
 app = Flask('pythoncz')
