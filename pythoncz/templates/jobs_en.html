@@ -7,11 +7,10 @@
 {% endblock %}
 {% block content %}
     <h1>Python jobs in Czech Republic</h1>
-    <p>
-        <a href="{{ url_for('index_cs') }}" class="btn btn-default">
-            Back to homepage
-        </a>
-    </p>
+    <ol class="breadcrumb">
+        <li><a href="{{ url_for('index_en') }}">Home</a></li>
+        <li class="active">Jobs</li>
+    </ol>
 
     <h2 id="who">Who uses Python?</h2>
     <p>

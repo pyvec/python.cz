@@ -5,11 +5,10 @@
 {% endblock %}
 {% block content %}
     <h1>Učíme se Python</h1>
-    <p>
-        <a href="{{ url_for('index_cs') }}" class="btn btn-default">
-            Zpět na hlavní stránku
-        </a>
-    </p>
+    <ol class="breadcrumb">
+        <li><a href="{{ url_for('index_cs') }}">Domů</a></li>
+        <li class="active">Pro začátečníky</li>
+    </ol>
 
     <h2 id="proc">Proč se učit zrovna Python?</h2>
     <ul>
