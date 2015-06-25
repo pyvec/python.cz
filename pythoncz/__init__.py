@@ -7,7 +7,7 @@ from flask import Flask
 
 
 PACKAGE_DIR = path.dirname(path.realpath(__file__))
-DATA_DIR = path.join(PACKAGE_DIR, 'static', 'data')
+DATA_DIR = path.join(PACKAGE_DIR, 'static')
 
 GITHUB_URL = 'https://github.com/honzajavorek/python.cz'
 TEMPLATE_URL = GITHUB_URL + '/blob/master/pythoncz/templates/{filename}'
