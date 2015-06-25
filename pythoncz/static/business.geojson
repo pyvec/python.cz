@@ -512,6 +512,17 @@
                 "type": "Point",
                 "coordinates": [16.5930000, 49.1870000]
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Věroš Kaplan",
+                "url": "http://veroskaplan.cz"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [16.62073, 49.19031]
+            }
         }
     ]
 }
