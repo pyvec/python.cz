@@ -144,3 +144,9 @@ def index_en_legacy():
 @app.route('/pyladies/<path:target>')
 def pyladies(target):
     return redirect('http://pyladies.cz/' + target, code=301)
+
+
+@app.route('/talks/<path:target>')
+def talks(target):
+    base_url = 'https://github.com/pyvec/talks-archive/raw/master/'
+    return redirect(base_url + target, code=301)
