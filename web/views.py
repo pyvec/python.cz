@@ -76,7 +76,12 @@ def sort_by_votes(trello_list):
 
 @app.route('/prace')
 def jobs():
-    return render_template('jobs.html', data=get_jobs_data())
+    context = {
+        'data': get_jobs_data(),
+        'github_geojson_url': app.config['GITHUB_GEOJSON_URL'],
+        'pyvec_account_url': app.config['PYVEC_ACCOUNT_URL'],
+    }
+    return render_template('jobs.html', **context)
 
 
 @app.route('/jobs')

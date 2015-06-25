@@ -13,6 +13,10 @@ GITHUB_URL = (
     'https://github.com/honzajavorek/python.cz/'
     'blob/master/{template_folder}/{filename}'
 )
+GITHUB_GEOJSON_URL = (
+    'https://github.com/honzajavorek/python.cz/'
+    'edit/master/files/data/jobs.geojson'
+)
 PYVEC_ACCOUNT_URL = (
     'https://www.fio.cz/scgi-bin/hermes/'
     'dz-transparent.cgi?ID_ucet=2600260438'
