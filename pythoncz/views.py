@@ -10,8 +10,7 @@ from . import app, trello, business
 # Templating
 
 def render_template(filename, **kwargs):
-    template_url = app.config['TEMPLATE_URL'].format(filename=filename)
-    kwargs['template_url'] = template_url
+    kwargs['template_url'] = app.config['TEMPLATES_DIR_URL'] + filename
     return _render_template(filename, **kwargs)
 
 
@@ -45,6 +44,11 @@ def get_involved_cs():
         'trello_board_url': 'https://trello.com/b/{}/'.format(trello_board_id),
     }
     return render_template('get_involved_cs.html', **context)
+
+
+@app.route('/zacatecnici')
+def beginners_cs():
+    return render_template('beginners_cs.html')
 
 
 @app.route('/prace')

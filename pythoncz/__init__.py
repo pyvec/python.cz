@@ -10,8 +10,10 @@ PACKAGE_DIR = path.dirname(path.realpath(__file__))
 DATA_DIR = path.join(PACKAGE_DIR, 'static')
 
 GITHUB_URL = 'https://github.com/honzajavorek/python.cz'
-TEMPLATE_URL = GITHUB_URL + '/blob/master/pythoncz/templates/{filename}'
-BUSINESS_LIST_URL = GITHUB_URL + '/edit/master/pythoncz/data/business.geojson'
+GITHUB_EDIT_URL = GITHUB_URL + '/edit/master/pythoncz'
+
+TEMPLATES_DIR_URL = GITHUB_EDIT_URL + '/templates/'
+BUSINESS_LIST_URL = GITHUB_EDIT_URL + '/static/business.geojson'
 
 PYVEC_ACCOUNT_URL = (
     'https://www.fio.cz/scgi-bin/hermes/'
