@@ -23,13 +23,13 @@
         <h2 id="nekonecneukoly">Nekonečné úkoly</h2>
         <ul>
             <li>
-                <strong>Vysvětluj</strong> nováčkům na <a href="">diskusích</a>.
+                <strong>Vysvětluj</strong> nováčkům na <a href="{{ url_for('index') }}#diskuse">diskusích</a>.
             </li>
             <li>
-                <strong>Pomoz</strong> organizátorům <a href="">srazů</a> nebo <a href="">založ vlastní sraz</a> ve svém městě.
+                <strong>Pomoz</strong> organizátorům <a href="{{ url_for('index') }}#srazy">srazů</a> nebo <a href="http://pyvo.cz/zaloz">založ vlastní sraz</a> ve svém městě.
             </li>
             <li>
-                <strong>Přednášej</strong> na <a href="">srazech</a>! Pětiminutový <em>lightning talk</em> většinou není potřeba oznamovat předem, stačí přijít na sraz a&nbsp;něco říct. Delší přednášky je dobré s&nbsp;předstihem nahlásit organizátorům srazu.
+                <strong>Přednášej</strong> na <a href="{{ url_for('index') }}#srazy">srazech</a>! Pětiminutový <em>lightning talk</em> většinou není potřeba oznamovat předem, stačí přijít na sraz a&nbsp;něco říct. Delší přednášky je dobré s&nbsp;předstihem nahlásit organizátorům srazu.
             </li>
             <li>
                 <strong>Piš</strong> a překládej! Články můžeš publikovat třeba na <a href="http://www.zdrojak.cz/n/python/">Zdroják.cz</a>.
@@ -41,7 +41,7 @@
 
         <h2 id="ukoly">Jednorázové úkoly</h2>
         <p>
-            Pro organizaci jednorázových úkolů používáme <a href="{{ trello_board_url }}" target="_blank">tuto veřejnou Trello nástěnku</a> (<a href="#trello">co je Trello?</a>). Když nic, tak aspoň <a href="#jakhlasovat">hlasuj</a> nebo <a href="#jakpridat">přidej vlastní nápad</a>. Díky hlasům budeme mít aspoň přehled o tom, co si přeje nejvíc lidí.
+            Pro organizaci jednorázových úkolů používáme <a href="{{ trello_board_url }}" target="_blank">tuto veřejnou Trello nástěnku</a> (<a href="#trello">co je Trello?</a>). Když nic, tak aspoň <a href="#jakhlasovat">hlasuj</a> nebo <a href="#jakpridat">přidej vlastní nápad</a>. Díky hlasům budeme mít přinejmenším přehled o tom, co si přeje nejvíc lidí.
         </p>
         <ul>
             {% for list in trello_board %}
@@ -79,7 +79,7 @@
 
         <h3 id="jaksezapojit">Jak se zapojit?</h3>
         <p>
-            Kromě odvahu a odhodlání potřebuješ ještě <a href="#trello">účet na Trellu</a>. Pokud se chci chopit nějakého projektu, kliknu na něj a přiřadím se k jeho Trello kartičce.
+            Kromě odvahy a odhodlání potřebuješ ještě <a href="#trello">účet na Trellu</a>. Pokud se chci chopit nějakého projektu, kliknu na něj a přiřadím se k jeho Trello kartičce.
         </p>
         <p>
             <img src="{{ url_for('static', filename='images/trello-members.png') }}" alt="Jak se přidat na kartičku jako realizátor?">
