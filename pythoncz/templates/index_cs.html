@@ -7,132 +7,194 @@
     <meta property="og:description" content="Česká (a tak trochu i slovenská) komunita kolem programovacího jazyka Python.">
 {% endblock %}
 {% block content %}
-    <h1>Python</h1>
-    <ul>
-        <li>Python je&nbsp;moderní <strong>programovací jazyk</strong>. Je <strong>univerzální</strong> &ndash; pohání weby i rakety.</li>
-        <li>Dobře se čte a dá se velice <strong>rychle naučit</strong>. Je skvělý pro <strong>výuku</strong> programování.</li>
-        <li><strong>Česká komunita</strong> je aktivní. Najdeš v ní <strong>pomoc, kamarády i práci</strong>.</li>
-    </ul>
-    <p>
-        <a href="{{ url_for('index_en') }}">English, please!</a>
-    </p>
-
-    <hr>
-
-    <ul>
-        <li>
-            <a href="#srazy">Srazy (Pyvo)</a>
-        </li>
-        <li>
-            <a href="#diskuse">Diskuse</a>
-        </li>
-        <li>
-            <a href="#konference">Konference</a>
-        </li>
-        <li>
-            <a href="#knihovna">Knihovna</a>
-        </li>
-        <li>
-            <a href="#zacatecnici">Pro&nbsp;začátečníky</a>
-        </li>
-        <li>
-            <a href="#prace">Práce</a>
-        </li>
-        <li>
-            <a href="#zapojse">Zapoj&nbsp;se!</a>
-        </li>
-    </ul>
-
-    <hr>
-
-    <div id="srazy">
-        <h2>Srazy (Pyvo)</h2>
-        <p>
-            <a href="http://pyvo.cz">Srazy Python programátorů</a> zvané <strong>Pyvo</strong> se pořádají po celé republice. Přijď si poslechnout přednášky od chytrých lidí a popovídat si nejen o Pythonu!
-        </p>
-        <ul>
-            <li>
-                <img src="{{ url_for('static', filename='images/pyvo-praha.png') }}" width="100">
-                <a href="http://pyvo.cz/praha">Praha</a>
-            </li>
-            <li>
-                <img src="{{ url_for('static', filename='images/pyvo-brno.png') }}" width="100">
-                <a href="http://pyvo.cz/brno">Brno</a>
-            </li>
-            <li>
-                <img src="{{ url_for('static', filename='images/pyvo-ostrava.png') }}" width="100">
-                <a href="http://pyvo.cz/ostrava">Ostrava</a>
-            </li>
-        </ul>
-    </div>
-
-    <div id="diskuse">
-        <h2>Diskuse</h2>
-        <ul>
-            <li><a href="https://groups.google.com/group/django-cs/">django-cs diskuse</a></li>
-            <li><a href="http://www.py.cz/mailman/listinfo/python">py.cz diskuse</a></li>
-            <li>Facebooková skupina <a href="https://www.facebook.com/groups/pyonieri/">Pyonýři</a></li>
-            <li>Twitter <a href="https://twitter.com/naPyvo">@naPyvo</a></li>
-            <li>IRC <a href="irc://irc.freenode.net/python-cs">python-cs</a>, <a href="irc://irc.freenode.net/django-cs">django-cs</a></li>
-        </ul>
-    </div>
-
-    <hr>
-
-    <div id="konference">
-        <h2>PyCon CZ</h2>
-        <p>
-            Na podzim 2015 připravujeme úplně první ryze českou konferenci o Pythonu, <a href="http://cz.pycon.org">PyCon&nbsp;CZ</a>. Pomoz nám s přípravami a měj i ty svou zásluhu na tom, že se akce povede zorganizovat &ndash; byť třeba malinkatou. Nejen každá ruka a noha, ale i rada je dobrá!
-        </p>
-        <a href="https://github.com/pyvec/cz.pycon.org-2015" class="btn btn-primary">
-            Jasně, pomůžu!
-        </a>
-    </div>
-
-    <div id="knihovna">
-        <h2>Knihovna</h2>
-        <p>
-            Máme knihovničku s literaturou o Pythonu a podobných technologiích. Kdokoliv si může knihy zdarma půjčovat &ndash; stačí dát vědět a přijít si knížku vyzvednout na nejbližším <a href="#srazy">srazu</a>.
-        </p>
-        <p>
-            Mimochodem, znáš <a href="http://pythonbooks.revolunet.com/">Python Books</a>?
-        </p>
-        <a href="http://github.com/pyvec/bookshelf" class="btn btn-primary">
-            Co si můžu půjčit?
-        </a>
-    </div>
-
-    <div id="zacatecnici">
-        <h2>Pro&nbsp;začátečníky</h2>
-        <p>
-            Základy Pythonu se dají naučit i z prohlížeče. Máme pro tebe odkazy na výukové hry, online kurzy, videa, články, knihy a další.
-        </p>
-        <p>
-            <a href="{{ url_for('beginners_cs') }}" class="btn btn-primary">
-                Prahnu po vědění
+    <div class="header clearfix">
+        <nav>
+            <ul class="nav nav-pills pull-right">
+                <li>
+                    <a href="{{ url_for('index_en') }}">
+                        <i class="fa fa-globe"></i>
+                        English, please!
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <p class="title">
+            <a href="{{ url_for('index_cs') }}">
+                <img src="{{ url_for('static', filename='images/logo-plain.png') }}" height="30">
+                Python v&nbsp;ČR
             </a>
         </p>
     </div>
 
-    <div id="prace">
-        <h2>Práce</h2>
-        <p>
-            Jakou práci seženeš, když se naučíš Python? Kdo jej používá? Jak a kam napsat nabídku práce pro Pythonisty?
-        </p>
-        <p>
-            <a href="{{ url_for('jobs_cs') }}" class="btn btn-primary">
-                Python a kariéra, to zní dobře
-            </a>
-        </p>
+    <div class="jumbotron">
+        <div class="row">
+            <h1 class="col-md-6 col-md-offset-3">
+                <img alt="Python" src="{{ url_for('static', filename='images/logo.svg') }}" onerror="this.onerror = null; this.src = '{{ url_for('static', filename='images/logo.png') }}'">
+            </h1>
+        </div>
+        <ul class="lead">
+            <li>
+                Python je&nbsp;moderní <strong>programovací jazyk</strong>.
+                Je <strong>univerzální</strong> &ndash; pohání weby i rakety.
+            </li>
+            <li>
+                Dobře se čte a dá se velice <strong>rychle naučit</strong>.
+                Je skvělý pro <strong>výuku</strong> programování.
+            </li>
+            <li>
+                <strong>Česká komunita</strong> je aktivní.
+                Najdeš v ní <strong>pomoc, kamarády i práci</strong>.
+            </li>
+        </ul>
     </div>
 
-    <div id="zapojse">
-        <h2>Zapoj&nbsp;se!</h2>
-        <p>
-            Líbí se ti Python? Pomoz nám ho rozšířit i mezi ostatní. Pro lenochy s penězi máme <a href="{{ config.PYVEC_ACCOUNT_URL }}">číslo účtu</a>, ale spíš oceníme, když se chopíš nějakého připraveného úkolu a dotlačíš jej do konce. Věčná sláva zaručena!
-        </p>
-        <a href="{{ url_for('get_involved_cs') }}" class="btn btn-primary">
-            Toužím po věčné slávě
-        </a>
+    <div class="row">
+        <div id="srazy" class="meetups">
+            <h2>Srazy</h2>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <p>
+                        <a href="http://pyvo.cz">Srazy Python programátorů</a> zvané <strong>Pyvo</strong> se pořádají po celé republice. Přijď si poslechnout <strong>přednášky</strong> od chytrých lidí a <strong>popovídat si</strong> nejen o Pythonu!
+                    </p>
+                    <ul class="row">
+                        <a class="meetups-city lead col-md-4 col-sm-4 col-xs-4" href="http://pyvo.cz/praha">
+                            <img src="{{ url_for('static', filename='images/pyvo-praha.png') }}" height="100">
+                            Praha
+                        </a>
+                        <a class="meetups-city lead col-md-4 col-sm-4 col-xs-4" href="http://pyvo.cz/brno">
+                            <img src="{{ url_for('static', filename='images/pyvo-brno.png') }}" height="100">
+                            Brno
+                        </a>
+                        <a class="meetups-city lead col-md-4 col-sm-4 col-xs-4" href="http://pyvo.cz/ostrava">
+                            <img src="{{ url_for('static', filename='images/pyvo-ostrava.png') }}" height="100">
+                            Ostrava
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div id="diskuse" class="box col-md-4 col-sm-6">
+            <div class="box-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <i class="fa fa-envelope"></i>
+                        <a href="https://groups.google.com/group/django-cs/">django-cs diskuse</a>
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fa fa-envelope"></i>
+                        <a href="http://www.py.cz/mailman/listinfo/python">py.cz diskuse</a>
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fa fa-facebook-official"></i>
+                        Facebooková skupina <a href="https://www.facebook.com/groups/pyonieri/">Pyonýři</a>
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fa fa-twitter"></i>
+                        Twitter <a href="https://twitter.com/naPyvo">@naPyvo</a>
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fa fa-slack"></i>
+                        IRC <a href="irc://irc.freenode.net/python-cs">python-cs</a>, <a href="irc://irc.freenode.net/django-cs">django-cs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="zacatecnici" class="box col-md-4 col-sm-6">
+            <div class="box-body">
+                <h2>
+                    <i class="fa fa-heart"></i>
+                    Pro&nbsp;začátečníky
+                </h2>
+                <p>
+                    Základy Pythonu se dají <strong>naučit i z prohlížeče</strong>. Máme pro tebe odkazy na výukové hry, online kurzy, videa, články, knihy a další.
+                </p>
+                <p class="call-to-action">
+                    <a href="{{ url_for('beginners_cs') }}" class="btn btn-primary">
+                        <i class="fa fa-arrow-right"></i>
+                        Prahnu po vědění
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <div class="clearfix visible-sm-block"></div>
+
+        <div id="prace" class="box col-md-4 col-sm-6">
+            <div class="box-body">
+                <h2>
+                    <i class="fa fa-briefcase"></i>
+                    Práce
+                </h2>
+                <p>
+                    Jakou práci seženeš, když se naučíš Python? Kdo jej používá? Jak a kam napsat <strong>nabídku práce</strong> pro Pythonisty?
+                </p>
+                <p class="call-to-action">
+                    <a href="{{ url_for('jobs_cs') }}" class="btn btn-primary">
+                        <i class="fa fa-arrow-right"></i>
+                        Nabízím, poptávám
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <div class="clearfix visible-md-block"></div>
+
+        <div id="zapojse" class="box col-md-4 col-sm-6">
+            <div class="box-body">
+                <h2>
+                    <i class="fa fa-bullhorn"></i>
+                    Zapoj&nbsp;se!
+                </h2>
+                <p>
+                    Pomoz nám <strong>rozšířit Python</strong> mezi ostatní. Pro lenochy s penězi máme <a href="{{ config.PYVEC_ACCOUNT_URL }}">číslo účtu</a>, ale spíš oceníme, když se <strong>chopíš nějakého připraveného úkolu</strong> a dotlačíš jej do konce. Věčná sláva zaručena!
+                </p>
+                <p class="call-to-action">
+                    <a href="{{ url_for('get_involved_cs') }}" class="btn btn-primary">
+                        <i class="fa fa-arrow-right"></i>
+                        Toužím po věčné slávě
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <div class="clearfix visible-sm-block"></div>
+
+        <div id="konference" class="box col-md-4 col-sm-6">
+            <div class="box-body">
+                <h2>
+                    <i class="fa fa-comments"></i>
+                    PyCon CZ 2015
+                </h2>
+                <p>
+                    Připravujeme první českou <strong>konferenci o Pythonu</strong>, <a href="http://cz.pycon.org">PyCon&nbsp;CZ</a>. Pomoz nám a měj i ty svou zásluhu na tom, že se akce povede &ndash; byť třeba malou. Nejen každá ruka, ale <strong>i rada je dobrá</strong>!
+                </p>
+                <p class="call-to-action">
+                    <a href="https://github.com/pyvec/cz.pycon.org-2015" class="btn btn-primary">
+                        <i class="fa fa-arrow-right"></i>
+                        Jasně, pomůžu!
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div id="knihovna" class="box col-md-4 col-sm-6">
+            <div class="box-body">
+                <h2>
+                    <i class="fa fa-book"></i>
+                    Knihovna
+                </h2>
+                <p>
+                    Máme knihovničku s literaturou o Pythonu a podobných technologiích. Knihy si lze <strong>zdarma půjčit</strong> &ndash; ozvi se a přijď si knížku vyzvednout na nejbližším <a href="#srazy">srazu</a>. Mimochodem, <a href="http://pythonbooks.revolunet.com/">Python Books</a> znáš, že?
+                </p>
+                <p class="call-to-action">
+                    <a href="http://github.com/pyvec/bookshelf" class="btn btn-primary">
+                        <i class="fa fa-arrow-right"></i>
+                        Co si můžu půjčit?
+                    </a>
+                </p>
+            </div>
+        </div>
     </div>
 {% endblock %}

@@ -9,8 +9,9 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url }}">
 
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Arbutus+Slab&amp;subset=latin,latin-ext">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arbutus+Slab&amp;subset=latin,latin-ext">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,48 +32,47 @@
     {% endblock %}
 </head>
     <body>
-        {% if not debug %}
-            <script>
-                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        <div class="container">
+            {% if not debug %}
+                <script>
+                    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-                ga('create', '{{ config.GOOGLE_ANALYTICS_CODE }}', 'auto');
-                ga('send', 'pageview');
-            </script>
-        {% endif %}
+                    ga('create', '{{ config.GOOGLE_ANALYTICS_CODE }}', 'auto');
+                    ga('send', 'pageview');
+                </script>
+            {% endif %}
 
-        {% block content %}{% endblock %}
+            {% block content %}{% endblock %}
 
-        <hr>
-
-        {% if lang == 'cs' %}
-            <div>
-                <p>
+            <div class="row footer">
+            {% if lang == 'cs' %}
+                <p class="col-sm-8">
                     Spravuje <a href="http://pyvec.org">Pyvec o.s.</a>, pracovní skupina <a href="https://www.python.org/psf/">Python Software Foundation</a>. Pište na <a
                     href="mailto:info&#64;pyvec.org">info&#64;<!---->pyvec.org</a>, tweetujte na <a href="https://twitter.com/pyvec">@pyvec</a>.
                 </p>
-                <p>
+                <p class="edit col-sm-4">
                     <a href="{{ template_url }}" class="btn btn-default">
+                        <i class="fa fa-edit"></i>
                         Upravit tuto stránku
                     </a>
                 </p>
-            </div>
-        {% else %}
-            <div>
-                <p>
+            {% else %}
+                <p class="col-sm-8">
                     Managed by <a href="http://pyvec.org">pyvec.org</a>, <a href="https://www.python.org/psf/">Python Software Foundation</a> Working Group in Czech Republic. Send e-mails to <a
                     href="mailto:info&#64;pyvec.org">info&#64;<!---->pyvec.org</a>, tweet to <a href="https://twitter.com/pyvec">@pyvec</a>.
                 </p>
-                <p>
+                <p class="edit col-sm-4">
                     <a href="{{ template_url }}" class="btn btn-default">
                         Edit this page
                     </a>
                 </p>
+            {% endif %}
             </div>
-        {% endif %}
 
-        {% block scripts %}{% endblock %}
+            {% block scripts %}{% endblock %}
+        </div>
     </body>
 </html>

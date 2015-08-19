@@ -1,2 +1,124 @@
 
-h1, h2, h3, h4 { font-family: 'Arbutus Slab', serif; }
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.header, .marketing, .footer {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+h1, h2, h3, h4, .title { font-family: 'Arbutus Slab', serif; }
+
+.header {
+  padding-bottom: 1.5em;
+}
+
+.header .title {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 2em;
+  font-size: 1.5em;
+}
+
+.header .title a {
+    text-decoration: none;
+    color: #646464;
+}
+
+.header .title img {
+    vertical-align: text-top;
+    margin-right: 0.1em;
+}
+
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+  background: none;
+  padding-top: 0;
+}
+
+.jumbotron h1 img {
+    width: 100%;
+}
+
+.jumbotron .lead {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 2.5em;
+}
+
+.box-body {
+    min-height: 18em;
+    padding: 1em 0;
+}
+
+.box h2 {
+    margin-top: 0;
+}
+
+.call-to-action {
+    text-align: right;
+}
+
+.call-to-action .btn {
+    margin: 1em 0.5em 0 auto;
+}
+
+.list-group {
+    margin: 0;
+}
+
+.list-group .list-group-item {
+    border: none;
+}
+
+i.fa {
+    margin-right: 0.3em;
+}
+
+h2 i.fa {
+    margin-right: 0.1em;
+}
+
+.footer {
+    border-top: 1px solid #e5e5e5;
+    margin-top: 2em;
+    padding: 2em 1em;
+}
+
+.footer p {
+    line-height: 2em;
+}
+
+.footer .edit {
+    text-align: right;
+}
+
+.footer .edit a {
+    text-align: left;
+}
+
+.meetups-city img {
+    display: block;
+    margin: 1em auto;
+}
+
+.meetups {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+}
+
+.meetups p {
+    margin: 2em 0;
+}
