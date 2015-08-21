@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 
 
+import random
+
 from flask import (render_template as _render_template, url_for,
                    redirect, request)
 
-from . import app, trello, business
+from . import app, trello, business, photos
 
 
 # Templating
@@ -14,6 +16,15 @@ def render_template(filename, **kwargs):
     return _render_template(filename, **kwargs)
 
 
+@app.template_filter()
+def pop_random(iterable):
+    if not iterable:
+        raise ValueError
+
+    index = random.randint(0, len(iterable) - 1)
+    return iterable.pop(index)
+
+
 @app.context_processor
 def inject_context():
     return {
@@ -21,6 +32,7 @@ def inject_context():
         'config': app.config,
         'url': request.url,
         'lang': 'cs',
+        'photos_urls': photos.get_urls(app.static_folder)
     }
 
 

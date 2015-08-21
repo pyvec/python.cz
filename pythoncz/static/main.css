@@ -6,7 +6,6 @@ body {
 }
 
 .container {
-    width: 90%;
     margin: 0 auto;
     text-align: left;
 }
@@ -41,7 +40,6 @@ h1, h2, h3, h4, .title { font-family: 'Arbutus Slab', serif; }
 
 .jumbotron {
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
   background: none;
   padding-top: 0;
 }
@@ -63,6 +61,10 @@ h1, h2, h3, h4, .title { font-family: 'Arbutus Slab', serif; }
 
 .box h2 {
     margin-top: 0;
+}
+
+.boxes {
+  margin: 2em 0;
 }
 
 .call-to-action {
@@ -90,7 +92,6 @@ h2 i.fa {
 }
 
 .footer {
-    border-top: 1px solid #e5e5e5;
     margin-top: 2em;
     padding: 2em 1em;
 }
@@ -107,18 +108,82 @@ h2 i.fa {
     text-align: left;
 }
 
+.meetups-city {
+  font-weight: bold;
+}
+
 .meetups-city img {
     display: block;
     margin: 1em auto;
 }
 
 .meetups {
-    text-align: center;
-    border-bottom: 1px solid #e5e5e5;
-    padding-bottom: 2em;
-    margin-bottom: 2em;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .meetups p {
     margin: 2em 0;
+}
+
+.meetups-container {
+  margin-bottom: 2em;
+  padding: 2em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo {
+    width: 100%;
+    position: absolute;
+    z-index: -100;
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+    margin: auto;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.photo-container {
+    position: relative;
+    overflow: hidden;
+    min-height: 32em;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 213, 32, 0.6) 5%,
+        rgba(255, 213, 32, 0.6) 95%,
+        rgba(255, 255, 255, 1) 100%
+    );
+}
+
+@media only screen and (max-width: 992px) {
+  .footer {
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .jumbotron, .meetups {
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .meetups {
+    padding-bottom: 2em;
+  }
+
+  .boxes {
+    margin: 0;
+  }
+
+  .photo {
+    display: none;
+  }
+
+  .photo-container {
+    min-height: auto;
+    background: none;
+  }
 }

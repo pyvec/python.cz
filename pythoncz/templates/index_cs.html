@@ -49,10 +49,12 @@
     </div>
 
     <div class="row">
-        <div id="srazy" class="meetups">
-            <h2>Srazy</h2>
+        <div class="photo-container meetups-container">
+            <img class="photo" src="{{ photos_urls|pop_random }}">
+
             <div class="row">
-                <div class="col-md-6 col-md-offset-3">
+                <div class="col-md-6 col-md-offset-3 meetups" id="srazy">
+                    <h2>Srazy</h2>
                     <p>
                         <a href="http://pyvo.cz">Srazy Python programátorů</a> zvané <strong>Pyvo</strong> se pořádají po celé republice. Přijď si poslechnout <strong>přednášky</strong> od chytrých lidí a <strong>popovídat si</strong> nejen o Pythonu!
                     </p>
@@ -75,7 +77,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row boxes">
         <div id="diskuse" class="box col-md-4 col-sm-6">
             <div class="box-body">
                 <ul class="list-group">
@@ -195,6 +197,12 @@
                     </a>
                 </p>
             </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="photo-container">
+            <img class="photo" src="{{ photos_urls|pop_random }}">
         </div>
     </div>
 {% endblock %}
