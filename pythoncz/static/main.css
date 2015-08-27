@@ -10,13 +10,37 @@ body {
     text-align: left;
 }
 
-.header, .marketing, .footer {
+.header,
+.marketing,
+.footer {
   padding-right: 15px;
   padding-left: 15px;
 }
 
-h1, h2, h3, h4, .title {
+h1,
+h2,
+h3,
+h4,
+.title {
   font-family: 'Arbutus Slab', serif;
+}
+
+a.permalink {
+  visibility: hidden;
+  font-family: sans-serif;
+  margin-left: 0.1em;
+  padding: 0 0.3em;
+  text-decoration: none;
+  color: #d5d5d5;
+}
+
+h1[id]:hover .permalink,
+h2[id]:hover .permalink,
+h3[id]:hover .permalink,
+h4[id]:hover .permalink,
+h5[id]:hover .permalink,
+h6[id]:hover .permalink {
+  visibility: visible;
 }
 
 .header {
@@ -166,7 +190,8 @@ h2 i.fa {
 }
 
 @media only screen and (max-width: 992px) {
-  .jumbotron, .meetups {
+  .jumbotron,
+  .meetups {
     border-bottom: 1px solid #e5e5e5;
   }
 
