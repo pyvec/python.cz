@@ -58,20 +58,9 @@
                     <p>
                         <a href="http://pyvo.cz">Srazy Python programátorů</a> zvané <strong>Pyvo</strong> se pořádají po celé republice. Přijď si poslechnout <strong>přednášky</strong> od chytrých lidí a <strong>popovídat si</strong> nejen o Pythonu!
                     </p>
-                    <ul class="row">
-                        <a class="meetups-city lead col-md-4 col-sm-4 col-xs-4" href="http://pyvo.cz/praha">
-                            <img src="{{ url_for('static', filename='images/pyvo-praha.png') }}" height="100">
-                            Praha
-                        </a>
-                        <a class="meetups-city lead col-md-4 col-sm-4 col-xs-4" href="http://pyvo.cz/brno">
-                            <img src="{{ url_for('static', filename='images/pyvo-brno.png') }}" height="100">
-                            Brno
-                        </a>
-                        <a class="meetups-city lead col-md-4 col-sm-4 col-xs-4" href="http://pyvo.cz/ostrava">
-                            <img src="{{ url_for('static', filename='images/pyvo-ostrava.png') }}" height="100">
-                            Ostrava
-                        </a>
-                    </ul>
+                    <div class="row">
+                        {% include '_meetups.html' %}
+                    </div>
                 </div>
             </div>
         </div>
@@ -81,26 +70,7 @@
         <div id="diskuse" class="box col-md-4 col-sm-6">
             <div class="box-body">
                 <ul class="list-group">
-                    <li class="list-group-item">
-                        <i class="fa fa-envelope"></i>
-                        <a href="https://groups.google.com/group/django-cs/">django-cs diskuse</a>
-                    </li>
-                    <li class="list-group-item">
-                        <i class="fa fa-envelope"></i>
-                        <a href="http://www.py.cz/mailman/listinfo/python">py.cz diskuse</a>
-                    </li>
-                    <li class="list-group-item">
-                        <i class="fa fa-facebook-official"></i>
-                        Facebooková skupina <a href="https://www.facebook.com/groups/pyonieri/">Pyonýři</a>
-                    </li>
-                    <li class="list-group-item">
-                        <i class="fa fa-twitter"></i>
-                        Twitter <a href="https://twitter.com/naPyvo">@naPyvo</a>
-                    </li>
-                    <li class="list-group-item">
-                        <i class="fa fa-slack"></i>
-                        IRC <a href="irc://irc.freenode.net/python-cs">python-cs</a>, <a href="irc://irc.freenode.net/django-cs">django-cs</a>
-                    </li>
+                    {% include '_discussions.html' %}
                 </ul>
             </div>
         </div>
