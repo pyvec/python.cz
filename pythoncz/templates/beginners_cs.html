@@ -11,6 +11,8 @@
     Pro začátečníky
 {% endblock %}
 
+{% set en = '<i class="fa fa-globe help" title="Anglicky"></i>'|safe %}
+
 {% block content %}
     <h1>Učíme se Python</h1>
 
@@ -25,7 +27,7 @@
     <h3>Pro&nbsp;dámy</h3>
     <ul>
         <li><a href="http://pyladies.cz">Pravidelné srazy PyLadies</a></li>
-        <li><a href="http://djangogirls.org/events/">Jednorázové workshopy DjangoGirls</a></li>
+        <li><a href="http://djangogirls.org/events/">Jednorázové workshopy DjangoGirls</a> {{ en }}</li>
     </ul>
 
     <h3>Pro&nbsp;studenty</h3>
@@ -51,7 +53,7 @@
 
     <h4>Chci vytvořit webovou stránku</h4>
     <p>
-        <a href="http://tutorial.djangogirls.org/" class="btn btn-primary">Návod pro Django Girls</a>
+        <a href="http://tutorial.djangogirls.org/" class="btn btn-primary">Návod pro Django Girls {{ en }}</a>
     </p>
 
     <h3>Programovat trochu umím</h3>
@@ -62,10 +64,10 @@
         -->
 
         <li><a href="http://repl.it/">Python konzole v prohlížeči</a></li>
-        <li><a href="http://www.checkio.org">Programovací hra</a> (EN)</li>
-        <li><a href="http://www.codecademy.com/tracks/python">Python na Codecademy, interaktivní online kurz</a> (EN)</li>
-        <li><a href="https://www.coursera.org/course/pythonlearn">Programming for Everybody, interaktivní online kurz</a> (EN)</li>
-        <li><a href="http://www.pythontutor.com/">Interaktivní vysvětlení toho, co se děje v kódu</a> (EN)</li>
+        <li><a href="http://www.checkio.org">Programovací hra</a> {{ en }}</li>
+        <li><a href="http://www.codecademy.com/tracks/python">Python na Codecademy, interaktivní online kurz</a> {{ en }}</li>
+        <li><a href="https://www.coursera.org/course/pythonlearn">Programming for Everybody, interaktivní online kurz</a> {{ en }}</li>
+        <li><a href="http://www.pythontutor.com/">Interaktivní vysvětlení toho, co se děje v kódu</a> {{ en }}</li>
     </ul>
 
     <h4>Přecházím z jiného jazyka</h4>
@@ -75,17 +77,17 @@
         -->
 
         <!-- České návody -->
-        <li><a href="http://www.zdrojak.cz/clanky/jak-napisu-webovou-aplikaci-v-pythonu/">Jak přejít z PHP</a> (<a href="http://www.zdrojak.cz/clanky/jak-napisu-webovou-aplikaci-v-pythonu-2/">2. díl</a>) (CS)</li>
+        <li><a href="http://www.zdrojak.cz/clanky/jak-napisu-webovou-aplikaci-v-pythonu/">Jak přejít z PHP</a> (<a href="http://www.zdrojak.cz/clanky/jak-napisu-webovou-aplikaci-v-pythonu-2/">2. díl</a>)</li>
 
         <!-- Anglické návody -->
-        <li><a href="https://speakerdeck.com/u/pydanny/p/intro-to-python">Úvod do Pythonu pro programátory</a> (EN)</li>
-        <li><a href="http://hyperpolyglot.org/scripting">Tahák na podobné konstrukce v PHP, Perlu, Pythonu a Ruby</a> (EN)</li>
-        <li><a href="http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html">Jak psát Python tak, aby to vypadalo jako Python (a ne třeba Java)</a> (EN)</li>
-        <li><a href="http://blog.jmoz.co.uk/learning-python-the-pragmatic-way/">Pragmatické tipy na to jak začít a co použít</a> (EN)</li>
-        <li><a href="http://docs.python-guide.org/">Průvodce Python ekosystémem</a> (EN)</li>
-        <li><a href="https://docs.python.org/3/tutorial/">Oficiální návod k Pythonu</a> (EN)</li>
-        <li><a href="http://stephensugden.com/crash_into_python/">Rychlokurz Pythonu pro programátory</a> (EN)</li>
-        <li><a href="http://mirnazim.org/writings/python-ecosystem-introduction/">pip, balíčky, a tak dále</a> (EN)</li>
+        <li><a href="https://speakerdeck.com/u/pydanny/p/intro-to-python">Úvod do Pythonu pro programátory</a> {{ en }}</li>
+        <li><a href="http://hyperpolyglot.org/scripting">Tahák na podobné konstrukce v PHP, Perlu, Pythonu a Ruby</a> {{ en }}</li>
+        <li><a href="http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html">Jak psát Python tak, aby to vypadalo jako Python (a ne třeba Java)</a> {{ en }}</li>
+        <li><a href="http://blog.jmoz.co.uk/learning-python-the-pragmatic-way/">Pragmatické tipy na to jak začít a co použít</a> {{ en }}</li>
+        <li><a href="http://docs.python-guide.org/">Průvodce Python ekosystémem</a> {{ en }}</li>
+        <li><a href="https://docs.python.org/3/tutorial/">Oficiální návod k Pythonu</a> {{ en }}</li>
+        <li><a href="http://stephensugden.com/crash_into_python/">Rychlokurz Pythonu pro programátory</a> {{ en }}</li>
+        <li><a href="http://mirnazim.org/writings/python-ecosystem-introduction/">pip, balíčky, a tak dále</a> {{ en }}</li>
     </ul>
 
     <h4>Návody pro začátečníky</h4>
@@ -95,22 +97,22 @@
         -->
 
         <!-- České návody -->
-        <li><a href="http://diveintopython3.py.cz/index.html">Kniha Ponořme se do Pythonu 3</a> (<a href="http://knihy.nic.cz/files/nic/edice/mark_pilgrim_dip3_ver3.pdf">PDF</a>) (CS)</li>
-        <li><a href="http://howto.py.cz/">Učíme se&nbsp;programovat v&nbsp;jazyce Python&nbsp;3</a> (CS)</li>
+        <li><a href="http://diveintopython3.py.cz/index.html">Kniha Ponořme se do Pythonu 3</a> (<a href="http://knihy.nic.cz/files/nic/edice/mark_pilgrim_dip3_ver3.pdf">PDF</a>)</li>
+        <li><a href="http://howto.py.cz/">Učíme se&nbsp;programovat v&nbsp;jazyce Python&nbsp;3</a></li>
 
         <!-- Anglické návody -->
-        <li><a href="http://net.tutsplus.com/tutorials/the-best-way-to-learn-python/">Seznam nejlepších materiálů</a> (EN)</li>
-        <li><a href="https://www.cbtnuggets.com/it-training/python-programming">Sada krátkých videí jako úvod do Pythonu</a> (EN)</li>
-        <li><a href="http://www.neckbeardrepublic.com/screencasts/">Sada screencastů k vylepšení dovedností s Pythonem</a> (EN)</li>
-        <li><a href="https://godjango.com/">Screencasty pro webový framework Django</a> (EN)</li>
-        <li><a href="https://docs.djangoproject.com/">Dokumentace k webovému frameworku Django</a> (EN)</li>
+        <li><a href="http://net.tutsplus.com/tutorials/the-best-way-to-learn-python/">Seznam nejlepších materiálů</a> {{ en }}</li>
+        <li><a href="https://www.cbtnuggets.com/it-training/python-programming">Sada krátkých videí jako úvod do Pythonu</a> {{ en }}</li>
+        <li><a href="http://www.neckbeardrepublic.com/screencasts/">Sada screencastů k vylepšení dovedností s Pythonem</a> {{ en }}</li>
+        <li><a href="https://godjango.com/">Screencasty pro webový framework Django</a> {{ en }}</li>
+        <li><a href="https://docs.djangoproject.com/">Dokumentace k webovému frameworku Django</a> {{ en }}</li>
         <li><a href="http://interactivepython.org/runestone/static/pythonds/index.html">Základní algoritmy - v Pythonu a interaktivně</a></li>
-        <li><a href="http://inventwithpython.com/blog/2012/07/09/16-common-python-runtime-errors/">Vysvětlení nejčastějších chyb začátečníků</a> (EN)</li>
-        <li><a href="http://jessenoller.com/good-to-great-python-reads/">Odkazy na vysvětlení zajímavých či pokročilých detailů jazyka</a> (EN)</li>
+        <li><a href="http://inventwithpython.com/blog/2012/07/09/16-common-python-runtime-errors/">Vysvětlení nejčastějších chyb začátečníků</a> {{ en }}</li>
+        <li><a href="http://jessenoller.com/good-to-great-python-reads/">Odkazy na vysvětlení zajímavých či pokročilých detailů jazyka</a> {{ en }}</li>
 
         <!-- Návody, které mají hodnotu i přesto, že jsou pro Python 2 -->
-        <li><a href="http://newcoder.io/">Syntaxi už umím, co dál?</a> (EN)</li>
-        <li><a href="http://learnpythonthehardway.org/">Learn Python The Hard Way</a> (EN)</li>
+        <li><a href="http://newcoder.io/">Syntaxi už umím, co dál?</a> {{ en }}</li>
+        <li><a href="http://learnpythonthehardway.org/">Learn Python The Hard Way</a> {{ en }}</li>
     </ul>
 
     <h4>Knihy</h4>
