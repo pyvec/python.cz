@@ -94,6 +94,7 @@ h2 i.fa {
 .footer {
     margin-top: 2em;
     padding: 2em 1em;
+    border-top: 1px solid #e5e5e5;
 }
 
 .footer p {
@@ -155,17 +156,13 @@ h2 i.fa {
     background: linear-gradient(
         to right,
         rgba(255, 255, 255, 1) 0%,
-        rgba(255, 213, 32, 0.6) 5%,
-        rgba(255, 213, 32, 0.6) 95%,
+        rgba(255, 255, 255, 0.6) 5%,
+        rgba(255, 255, 255, 0.6) 95%,
         rgba(255, 255, 255, 1) 100%
     );
 }
 
 @media only screen and (max-width: 992px) {
-  .footer {
-    border-top: 1px solid #e5e5e5;
-  }
-
   .jumbotron, .meetups {
     border-bottom: 1px solid #e5e5e5;
   }
