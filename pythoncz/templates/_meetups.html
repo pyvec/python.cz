@@ -1,6 +1,6 @@
 <a class="meetups-city lead col-md-4 col-sm-4 col-xs-4" href="http://pyvo.cz/praha">
     <img src="{{ url_for('static', filename='images/pyvo-praha.png') }}" height="100">
-    Praha
+    {% if lang == 'cs' %}Praha{% else %}Prague{% endif %}
 </a>
 <a class="meetups-city lead col-md-4 col-sm-4 col-xs-4" href="http://pyvo.cz/brno">
     <img src="{{ url_for('static', filename='images/pyvo-brno.png') }}" height="100">
