@@ -3,12 +3,13 @@
     <title>Python v ČR: Pro začátečníky</title>
     <meta name="description" content="">
 {% endblock %}
+
+{% block breadcrumb %}
+    Pro začátečníky
+{% endblock %}
+
 {% block content %}
     <h1>Učíme se Python</h1>
-    <ol class="breadcrumb">
-        <li><a href="{{ url_for('index_cs') }}">Domů</a></li>
-        <li class="active">Pro začátečníky</li>
-    </ol>
 
     <h2 id="proc">Proč se učit zrovna Python?</h2>
     <ul>
@@ -129,13 +130,11 @@
     <h4>Spolehlivý hosting</h4>
     <ul>
         <!--
-            Hostingy, na kterých je radost něco v Pythonu hostovat. Ne takové,
-            kde se dají omylem spustit i Python skripty, nebo kde si člověk
-            koupí VPS a může si tam nainstalovat co chce.
+            Hostingy, na kterých je radost něco v Pythonu hostovat. Ne takové, kde se dají omylem spustit i Python skripty, nebo kde si člověk koupí VPS a může si tam nainstalovat co chce.
         -->
+        <li><a href="https://rosti.cz/python-hosting/">Roští.cz</a></li>
         <li><a href="https://www.heroku.com/">Heroku</a></li>
         <li><a href="https://developers.google.com/appengine/">Google App Engine</a></li>
-        <li><a href="http://rosti.cz/python-hosting/">Roští.cz</a></li>
         <li><a href="https://www.pythonanywhere.com/">PythonAnywhere</a></li>
         <li><a href="https://www.alwaysdata.com/">AlwaysData</a></li>
     </ul>

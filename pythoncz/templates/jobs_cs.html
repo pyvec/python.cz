@@ -5,12 +5,13 @@
 
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
 {% endblock %}
+
+{% block breadcrumb %}
+    Práce
+{% endblock %}
+
 {% block content %}
     <h1>Python a práce</h1>
-    <ol class="breadcrumb">
-        <li><a href="{{ url_for('index_cs') }}">Domů</a></li>
-        <li class="active">Práce</li>
-    </ol>
 
     <h2 id="smysl">Používá to vůbec někdo?</h2>
     <p>

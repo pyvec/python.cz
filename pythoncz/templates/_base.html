@@ -1,3 +1,4 @@
+{% set is_homepage = request.path in ['/', '/' + lang] %}
 <!doctype html>
 <html lang="{{ lang }}">
 <head>
@@ -31,7 +32,7 @@
         <meta property="og:description" content="Česká (a tak trochu i slovenská) komunita kolem programovacího jazyka Python.">
     {% endblock %}
 </head>
-    <body>
+    <body{% if is_homepage %} class="homepage"{% endif %}>
         <div class="container">
             {% if not debug %}
                 <script>
@@ -43,6 +44,49 @@
                     ga('create', '{{ config.GOOGLE_ANALYTICS_CODE }}', 'auto');
                     ga('send', 'pageview');
                 </script>
+            {% endif %}
+
+            <div class="header clearfix">
+                <nav>
+                    <ul class="nav nav-pills pull-right">
+                        <li>
+                        {% if lang == 'cs' %}
+                            <a href="{{ url_for('index_en') }}">
+                                <i class="fa fa-globe"></i>
+                                English, please!
+                            </a>
+                        {% else %}
+                            <a href="{{ url_for('index_cs') }}">
+                                <i class="fa fa-globe"></i>
+                                Umíš česky?
+                            </a>
+                        {% endif %}
+                        </li>
+                    </ul>
+                </nav>
+                <p class="title">
+                    <a href="{{ url_for('index_' + lang) }}">
+                        <img src="{{ url_for('static', filename='images/logo-plain.png') }}" height="30">
+                        {% if lang == 'cs' %}
+                            Python v&nbsp;ČR
+                        {% else %}
+                            Czech&nbsp;Python
+                        {% endif %}
+                    </a>
+                </p>
+            </div>
+
+            {% if not is_homepage %}
+            <ol class="breadcrumb">
+                <li>
+                    <a href="{{ url_for('index_' + lang) }}">
+                    {% if lang == 'cs' %}Domů{% else %}Home{% endif %}
+                    </a>
+                </li>
+                <li class="active">
+                    {% block breadcrumb %}{% endblock %}
+                </li>
+            </ol>
             {% endif %}
 
             {% block content %}{% endblock %}
@@ -72,6 +116,8 @@
             {% endif %}
             </div>
 
+            <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+            <script src="{{ url_for('static', filename='anchors.js') }}"></script>
             {% block scripts %}{% endblock %}
         </div>
     </body>
