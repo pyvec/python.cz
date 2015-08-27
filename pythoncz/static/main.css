@@ -15,7 +15,9 @@ body {
   padding-left: 15px;
 }
 
-h1, h2, h3, h4, .title { font-family: 'Arbutus Slab', serif; }
+h1, h2, h3, h4, .title {
+  font-family: 'Arbutus Slab', serif;
+}
 
 .header {
   padding-bottom: 1.5em;
