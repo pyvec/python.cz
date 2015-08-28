@@ -23,7 +23,10 @@
 
     <div id="map" style="height: 350px" data-src="{{ url_for('static', filename='business.geojson') }}"></div>
 
-    <h3>Companies and institutions</h3>
+    <h3>
+        <i class="fa fa-users"></i>
+        Companies and institutions
+    </h3>
     {% for company in business_groups.companies %}
         <li>
             <a href="{{ company.url }}" target="_blank">
@@ -32,7 +35,10 @@
         </li>
     {% endfor %}
 
-    <h3>Individuals</h3>
+    <h3>
+        <i class="fa fa-user"></i>
+        Individuals
+    </h3>
     {% for individual in business_groups.individuals %}
         <li>
             <a href="{{ individual.url }}" target="_blank">
@@ -43,6 +49,7 @@
 
     <p>
         <a href="{{ config.BUSINESS_LIST_URL }}" class="btn btn-default">
+            <i class="fa fa-edit"></i>
             I want to be on the list
         </a>
     </p>

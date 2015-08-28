@@ -1,8 +1,8 @@
 
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
 }
 
 .container {
@@ -13,8 +13,8 @@ body {
 .header,
 .marketing,
 .footer {
-  padding-right: 15px;
-  padding-left: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 h1,
@@ -22,16 +22,16 @@ h2,
 h3,
 h4,
 .title {
-  font-family: 'Arbutus Slab', serif;
+    font-family: 'Arbutus Slab', serif;
 }
 
 a.permalink {
-  visibility: hidden;
-  font-family: sans-serif;
-  margin-left: 0.1em;
-  padding: 0 0.3em;
-  text-decoration: none;
-  color: #d5d5d5;
+    visibility: hidden;
+    font-family: sans-serif;
+    margin-left: 0.1em;
+    padding: 0 0.3em;
+    text-decoration: none;
+    color: #d5d5d5;
 }
 
 h1[id]:hover .permalink,
@@ -40,18 +40,18 @@ h3[id]:hover .permalink,
 h4[id]:hover .permalink,
 h5[id]:hover .permalink,
 h6[id]:hover .permalink {
-  visibility: visible;
+    visibility: visible;
 }
 
 .header {
-  padding-bottom: 1.5em;
+    padding-bottom: 1.5em;
 }
 
 .header .title {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 2em;
-  font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 2em;
+    font-size: 1.5em;
 }
 
 .header .title a {
@@ -65,9 +65,9 @@ h6[id]:hover .permalink {
 }
 
 .jumbotron {
-  text-align: center;
-  background: none;
-  padding-top: 0;
+    text-align: center;
+    background: none;
+    padding-top: 0;
 }
 
 .jumbotron h1 img {
@@ -75,9 +75,9 @@ h6[id]:hover .permalink {
 }
 
 .jumbotron .lead {
-  list-style-type: none;
-  padding: 0;
-  margin-top: 2.5em;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 2.5em;
 }
 
 .box-body {
@@ -90,7 +90,7 @@ h6[id]:hover .permalink {
 }
 
 .boxes {
-  margin: 2em 0;
+    margin: 2em 0;
 }
 
 .call-to-action {
@@ -136,7 +136,7 @@ h2 i.fa {
 }
 
 .meetups-city {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .meetups-city img {
@@ -154,13 +154,25 @@ h2 i.fa {
 }
 
 .meetups-container {
-  margin-bottom: 2em;
-  padding: 2em;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    margin-bottom: 2em;
+    padding: 2em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.columns {
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+}
+
+.columns-section {
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
 }
 
 .photo {
@@ -190,33 +202,34 @@ h2 i.fa {
 }
 
 .help {
-  cursor: help;
+    cursor: help;
 }
 
 i.fa.help {
-  margin-left: 0.3em;
+    margin-left: 0.3em;
 }
+
 
 @media only screen and (max-width: 992px) {
   .jumbotron,
   .meetups {
-    border-bottom: 1px solid #e5e5e5;
+      border-bottom: 1px solid #e5e5e5;
   }
 
   .meetups {
-    padding-bottom: 2em;
+      padding-bottom: 2em;
   }
 
   .boxes {
-    margin: 0;
+      margin: 0;
   }
 
   .photo {
-    display: none;
+      display: none;
   }
 
   .photo-container {
-    min-height: auto;
-    background: none;
+      min-height: auto;
+      background: none;
   }
 }
