@@ -21,7 +21,8 @@ h1,
 h2,
 h3,
 h4,
-.title {
+.title,
+.tasks .panel-body {
     font-family: 'Arbutus Slab', serif;
 }
 
@@ -207,6 +208,37 @@ h2 i.fa {
 
 i.fa.help {
     margin-left: 0.3em;
+}
+
+.tasks h3 {
+    text-align: center;
+    margin: 2em 0 2em 0;
+}
+
+.tasks .panel-body {
+    text-align: center;
+    font-size: 110%;
+}
+
+.tasks .panel-body a {
+    color: #333;
+    height: 5em;
+    width: 100%;
+    display: table;
+}
+
+.tasks .panel-body a span,
+.tasks .panel-body a strong {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.tasks .panel-footer {
+    text-align: right;
+}
+
+.tasks .votes {
+    margin-right: 1em;
 }
 
 
