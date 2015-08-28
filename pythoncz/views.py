@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 
 
-import random
-
 from flask import (render_template as _render_template, url_for,
                    redirect, request)
 
@@ -16,15 +14,6 @@ def render_template(filename, **kwargs):
     return _render_template(filename, **kwargs)
 
 
-@app.template_filter()
-def pop_random(iterable):
-    if not iterable:
-        raise ValueError
-
-    index = random.randint(0, len(iterable) - 1)
-    return iterable.pop(index)
-
-
 @app.context_processor
 def inject_context():
     return {
@@ -32,7 +21,6 @@ def inject_context():
         'config': app.config,
         'url': request.url,
         'lang': 'cs',
-        'photos_urls': photos.get_urls(app.static_folder)
     }
 
 
@@ -40,12 +28,14 @@ def inject_context():
 
 @app.route('/')
 def index_cs():
-    return render_template('index_cs.html')
+    return render_template('index_cs.html',
+                           photo_url=photos.get_random_url())
 
 
 @app.route('/en')
 def index_en():
-    return render_template('index_en.html', lang='en')
+    return render_template('index_en.html',
+                           photo_url=photos.get_random_url(), lang='en')
 
 
 @app.route('/zapojse')
@@ -72,7 +62,7 @@ def jobs_cs():
 @app.route('/en/jobs')
 def jobs_en():
     groups = business.get_groups(app.config['DATA_DIR'])
-    return render_template('jobs_en.html', lang='en', business_groups=groups)
+    return render_template('jobs_en.html', business_groups=groups, lang='en')
 
 
 # Redirects of legacy stuff
