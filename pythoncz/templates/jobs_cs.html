@@ -43,7 +43,7 @@
             Firmy, instituce
         </h3>
         <ul>
-        {% for company in business_groups.companies %}
+        {% for company in data.business_groups.companies %}
             <li>
                 <a href="{{ company.url }}" target="_blank">
                     {{ company.name }}
@@ -57,7 +57,7 @@
             Jednotlivci
         </h3>
         <ul>
-        {% for individual in business_groups.individuals %}
+        {% for individual in data.business_groups.individuals %}
             <li>
                 <a href="{{ individual.url }}" target="_blank">
                     {{ individual.name }}
@@ -92,7 +92,10 @@
                     Zkus přímo oslovit <a href="#kdo">firmy výše</a>.
                 </li>
                 <li>
-                    Sleduj Twitter účet <a href="https://twitter.com/pyjobo">@pyjobo</a> a pročítej <a href="https://www.python.org/jobs/">globální nástěnku nabídek</a> &ndash; inzeráty lze hledat <a href="https://www.python.org/jobs/locations/">podle lokace</a> nebo třeba i podle toho, <a href="https://www.python.org/jobs/location/telecommute/">zda lze pracovat na dálku</a>.
+                    Sleduj Twitter účet <a href="https://twitter.com/pyjobo">@pyjobo</a> a pročítej <a href="https://www.python.org/jobs/">globální nástěnku nabídek</a> &ndash; inzeráty lze hledat <a href="https://www.python.org/jobs/locations/">podle lokace</a> nebo třeba i podle toho, <a href="https://www.python.org/jobs/location/telecommute/">zda lze pracovat na dálku</a>. Sleduj Python na pracovních serverech: {% for link in data.job_boards %}<a href="{{ link.url }}" target="_blank">{{ link.name }}</a>, {% endfor %}&hellip; (Víš o dalších? <a href="{{ config.JOBS_DATA_URL }}">Přidej odkaz!</a>)
+                </li>
+                <li>
+                    Odzkoušej si své znalosti v testech: {% for link in data.knowledge_tests %}<a href="{{ link.url }}" target="_blank">{{ link.name }}</a>, {% endfor %}&hellip; (Víš o dalších? <a href="{{ config.JOBS_DATA_URL }}">Přidej odkaz!</a>)
                 </li>
             </ul>
         </div>
@@ -109,34 +112,15 @@
                     Sepiš si inzerát a konkretizuj jej, aspoň do tvaru něčeho jako <em>"hledám nadšence/nájemného profíka na krátkodobý projekt ve stylu CMS s galerií, nejspíš v Djangu, platím penězi"</em>. Čím víc bude <strong>lidsky od srdíčka</strong> a čím méně to budou odrážky ve stylu poptáváme/nabízíme, tím více lidí to zaujme. <strong>Nezapomeň napsat do jaké míry je možná práce na dálku.</strong>
                 </li>
                 <li>
-                    Napiš na django-cs a py.cz diskuse (<a href="{{ url_for('index_cs') }}#diskuse">viz hlavní stránka</a>). Čte je mnoho českých a slovenských Pythonistů.
-                </li>
-                <li>
-                    Napiš inzerát na <a href="https://www.facebook.com/groups/pyonieri/">Facebookovou skupinu</a> a na <a href="https://www.python.org/community/jobs/howto/">globální nástěnku nabídek</a> &ndash; ta uveřejňuje nabídky zdarma, jen je potřeba se registrovat. Nabídka se pak objeví i na Twitter účtu <a href="https://twitter.com/pyjobo">@pyjobo</a>.
+                    Napiš inzerát na diskuse django-cs a py.cz (<a href="{{ url_for('index_cs') }}#diskuse">viz hlavní stránka</a>) a na <a href="https://www.facebook.com/groups/pyonieri/">Facebookovou skupinu</a>. Čte je mnoho českých a slovenských Pythonistů.
                 </li>
                 <li>
                     Nepřehlcuj žádnou z diskusí. Inzeráty jsou vítány, jsou zadarmo a bez omezení, ale pokud se to zvrhne, nemusí to tak zůstat.
                 </li>
-            </ul>
-        </div>
-    </div>
-
-    <h2 id="jobboardy">České weby s nabídkou a poptávkou</h2>
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <ul>
-                {% for link in job_boards %}
                 <li>
-                    <a href="{{ link.url }}" target="_blank">Python na {{ link.name }}</a>
+                    Pošli inzerát na <a href="https://www.python.org/community/jobs/howto/">globální nástěnku nabídek</a> &ndash; ta uveřejňuje nabídky zdarma, jen je potřeba se registrovat. Nabídka se pak objeví i na Twitter účtu <a href="https://twitter.com/pyjobo">@pyjobo</a>. Inzeruj nabídku na pracovních serverech: {% for link in data.job_boards %}<a href="{{ link.url }}" target="_blank">{{ link.name }}</a>, {% endfor %}&hellip;
                 </li>
-                {% endfor %}
             </ul>
-            <p class="call-to-action">
-                <a href="{{ config.JOB_BOARDS_LIST_URL }}" class="btn btn-default">
-                    <i class="fa fa-edit"></i>
-                    Přidat odkaz
-                </a>
-            </p>
         </div>
     </div>
 

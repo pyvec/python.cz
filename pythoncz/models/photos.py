@@ -10,15 +10,20 @@ from flask import url_for
 from .. import app
 
 
+__all__ = ('get_random_url',)
+
+
+# Created on import time so file system is not read on every request.
+_photos = glob(os.path.join(app.static_folder, 'photos', '*.[jJ][pP][gG]'))
+
+
 def get_random_url():
-    return random.choice(get_urls(app.static_folder))
-
-
-def get_urls(static_dir):
-    path = os.path.join(static_dir, 'photos', '*.[jJ][pP][gG]')
-    prefix = '{}/'.format(static_dir)
-
-    return [
-        url_for('static', filename=f.replace(prefix, ''))
-        for f in glob(path)
+    # List of URLs cannot be created during import time because
+    # creating of an URL needs Flask's application context.
+    prefix = '{}/'.format(app.static_folder)
+    urls = [
+        url_for('static', filename=photo.replace(prefix, ''))
+        for photo in _photos
     ]
+
+    return random.choice(urls)

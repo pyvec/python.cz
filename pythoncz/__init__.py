@@ -9,8 +9,8 @@ GITHUB_EDIT_URL = GITHUB_URL + '/edit/master/pythoncz'
 
 TEMPLATES_DIR_URL = GITHUB_EDIT_URL + '/templates/'
 BUSINESS_LIST_URL = GITHUB_EDIT_URL + '/static/data/business.geojson'
-COURSES_LIST_URL = GITHUB_EDIT_URL + '/static/data/courses.yml'
-JOB_BOARDS_LIST_URL = GITHUB_EDIT_URL + '/static/data/job_boards.yml'
+BEGINNERS_DATA_URL = GITHUB_EDIT_URL + '/static/data/beginners.yml'
+JOBS_DATA_URL = GITHUB_EDIT_URL + '/static/data/jobs.yml'
 
 PYVEC_ACCOUNT_URL = (
     'https://www.fio.cz/scgi-bin/hermes/'

@@ -4,6 +4,9 @@
 import requests
 
 
+__all__ = ('get_board',)
+
+
 def get_board(board_id):
     url = 'https://trello.com/1/boards/{}/lists?cards=open'.format(board_id)
 

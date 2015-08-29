@@ -35,7 +35,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="row courses">
-                {% for column in courses %}
+                {% for column in data.courses %}
                     <div class="col-md-{{ 12 // courses|length }}">
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -57,7 +57,7 @@
             </div>
             <div class="row">
                 <p class="call-to-action">
-                    <a href="{{ config.COURSES_LIST_URL }}" class="btn btn-default">
+                    <a href="{{ config.BEGINNERS_DATA_URL }}" class="btn btn-default">
                         <i class="fa fa-edit"></i>
                         Přidat kurz
                     </a>
