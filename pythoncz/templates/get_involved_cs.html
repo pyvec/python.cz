@@ -7,43 +7,60 @@
     <meta property="og:description" content="Jak se můžeš zapojit a aktivně přispět k tomu, že se česká Python komunita posune o kousek vpřed?">
 {% endblock %}
 
+{% block body_class %}get-involved{% endblock %}
+
 {% block breadcrumb %}
     Zapoj se!
 {% endblock %}
 
 {% block content %}
     <h1>Zapoj se!</h1>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <p class="lead">
+                Líbí se ti Python? <strong>Pomoz nám ho rozšířit i mezi ostatní.</strong> Pro lenochy s penězi máme <a href="{{ config.PYVEC_ACCOUNT_URL }}">číslo účtu</a>, ale spíš oceníme, když se chopíš nějakého připraveného úkolu a dotlačíš jej do konce.
+            </p>
+            <p>
+                Máme sice <a href="#pyvec">Pyvec</a>, tedy neziskovku, která má rozšiřování a podporu Pythonu u nás jako misi, ale to je jen nějaká formální obálka. Reálně hýbou věci dopředu <strong>lidi, kteří přiloží ruku k dílu</strong> a ti v žádné neziskovce být nemusí - nakonec to všichni stejně děláme po večerech, po střípcích volného času. Konkrétní peníze sehnat umíme, ale potřebujeme <strong>hrdiny</strong>, kteří se chytnou projektu a <strong>uskuteční jej</strong>. Nemusí to být žádní známí profíci, nemusí být z Prahy nebo Brna a ani Python nemusí umět nijak skvěle. <strong>Kontakty, reference a zkušenosti</strong> jsou odměnou, ne požadavkem!
+            </p>
+        </div>
+    </div>
 
-    <p>
-        Líbí se ti Python? <strong>Pomoz nám ho rozšířit i mezi ostatní.</strong> Pro lenochy s penězi máme <a href="{{ config.PYVEC_ACCOUNT_URL }}">číslo účtu</a>, ale spíš oceníme, když se chopíš nějakého připraveného úkolu a dotlačíš jej do konce.
-    </p>
-    <p>
-        Máme sice <a href="#pyvec">Pyvec</a>, tedy neziskovku, která má rozšiřování a podporu Pythonu u nás jako misi, ale to je jen nějaká formální obálka. Reálně hýbou věci dopředu <strong>lidi, kteří přiloží ruku k dílu</strong> a ti v žádné neziskovce být nemusí - nakonec to všichni stejně děláme po večerech, po střípcích volného času. Konkrétní peníze sehnat umíme, ale potřebujeme <strong>hrdiny</strong>, kteří se chytnou projektu a <strong>uskuteční jej</strong>. Nemusí to být žádní známí profíci, nemusí být z Prahy nebo Brna a ani Python nemusí umět nijak skvěle. <strong>Kontakty, reference a zkušenosti</strong> jsou odměnou, ne požadavkem!
-    </p>
+    <hr>
 
     <h2 id="nekonecneukoly">Nekonečné úkoly</h2>
-    <ul>
-        <li>
-            <strong>Vysvětluj</strong> nováčkům na <a href="{{ url_for('index_cs') }}#diskuse">diskusích</a>.
-        </li>
-        <li>
-            <strong>Pomoz</strong> organizátorům <a href="{{ url_for('index_cs') }}#srazy">srazů</a> nebo <a href="http://pyvo.cz/zaloz">založ vlastní sraz</a> ve svém městě.
-        </li>
-        <li>
-            <strong>Přednášej</strong> na <a href="{{ url_for('index_cs') }}#srazy">srazech</a>! Pětiminutový <em>lightning talk</em> většinou není potřeba oznamovat předem, stačí přijít na sraz a&nbsp;něco říct. Delší přednášky je dobré s&nbsp;předstihem nahlásit organizátorům srazu.
-        </li>
-        <li>
-            <strong>Piš</strong> a překládej! Články můžeš publikovat třeba na <a href="http://www.zdrojak.cz/n/python/">Zdroják.cz</a>.
-        </li>
-        <li>
-            <strong>Programuj</strong> open source! Zajímavých projektů, které uvítají pomoc na jakékoli úrovni, je spousta. Inspirovat se můžeš na <a href="https://github.com/trending?l=python">GitHubu</a>.
-        </li>
-    </ul>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <ul>
+                <li>
+                    <strong>Vysvětluj</strong> nováčkům na <a href="{{ url_for('index_cs') }}#diskuse">diskusích</a>.
+                </li>
+                <li>
+                    <strong>Pomoz</strong> organizátorům <a href="{{ url_for('index_cs') }}#srazy">srazů</a> nebo <a href="http://pyvo.cz/zaloz">založ vlastní sraz</a> ve svém městě.
+                </li>
+                <li>
+                    <strong>Přednášej</strong> na <a href="{{ url_for('index_cs') }}#srazy">srazech</a>! Pětiminutový <em>lightning talk</em> většinou není potřeba oznamovat předem, stačí přijít na sraz a&nbsp;něco říct. Delší přednášky je dobré s&nbsp;předstihem nahlásit organizátorům srazu.
+                </li>
+                <li>
+                    <strong>Piš</strong> a překládej! Články můžeš publikovat třeba na <a href="http://www.zdrojak.cz/n/python/">Zdroják.cz</a>.
+                </li>
+                <li>
+                    <strong>Programuj</strong> open source! Zajímavých projektů, které uvítají pomoc na jakékoli úrovni, je spousta. Inspirovat se můžeš na <a href="https://github.com/trending?l=python">GitHubu</a>.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <hr>
 
     <h2 id="ukoly">Jednorázové úkoly</h2>
-    <p>
-        Pro organizaci jednorázových úkolů používáme <a href="{{ trello_board_url }}" target="_blank">tuto veřejnou Trello nástěnku</a> (<a href="#trello">co je Trello?</a>). Když nic, tak aspoň <a href="#jakhlasovat">hlasuj</a> nebo <a href="#jakpridat">přidej vlastní nápad</a>. Díky hlasům budeme mít přinejmenším přehled o tom, co si přeje nejvíc lidí.
-    </p>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <p>
+                Pro organizaci jednorázových úkolů používáme <a href="{{ trello_board_url }}" target="_blank">tuto veřejnou Trello nástěnku</a> (<a href="#trello">co je Trello?</a>). Když nic, tak aspoň <a href="#jakhlasovat">hlasuj</a> nebo <a href="#jakpridat">přidej vlastní nápad</a>. Díky hlasům budeme mít přinejmenším přehled o tom, co si přeje nejvíc lidí.
+            </p>
+        </div>
+    </div>
 
     {% for list in trello_board %}
         {% set cards_count = list.cards|length %}
@@ -122,69 +139,73 @@
         </div>
     {% endfor %}
 
+    <hr>
+
     <h2>Máš otázky?</h2>
-    <h3 id="trello">Co je Trello?</h3>
-    <p>
-        Pro přehled a organizaci úkolů používáme <a href="https://trello.com" target="_blank">Trello</a>. Je to nástroj, který funguje v podstatě jako <strong>online nástěnka s kartičkami</strong>. Jediné, co je pro práci s Trellem potřeba, je mít tam svůj svůj účet (registrace je zdarma). Naše <a href="{{ trello_board_url }}" target="_blank">Trello nástěnka</a> je veřejná.
-    </p>
-    <p>
-        Každý úkol nebo projekt, na kterém chceme pracovat, má svou kartičku. Ty jsou ve třech sloupcích - co se má udělat, co se právě realizuje a co už se povedlo. Když kartička změní svůj stav, chytneme ji a přesuneme do příslušného sloupce, zpravidla zleva doprava.
-    </p>
+    <div class="columns">
+        <h3 id="trello">Co je Trello?</h3>
+        <p>
+            Pro přehled a organizaci úkolů používáme <a href="https://trello.com" target="_blank">Trello</a>. Je to nástroj, který funguje v podstatě jako <strong>online nástěnka s kartičkami</strong>. Jediné, co je pro práci s Trellem potřeba, je mít tam svůj svůj účet (registrace je zdarma). Naše <a href="{{ trello_board_url }}" target="_blank">Trello nástěnka</a> je veřejná.
+        </p>
+        <p>
+            Každý úkol nebo projekt, na kterém chceme pracovat, má svou kartičku. Ty jsou ve třech sloupcích - co se má udělat, co se právě realizuje a co už se povedlo. Když kartička změní svůj stav, chytneme ji a přesuneme do příslušného sloupce, zpravidla zleva doprava.
+        </p>
 
-    <h3 id="jaksezapojit">Jak se zapojit?</h3>
-    <p>
-        Kromě odvahy a odhodlání potřebuješ ještě <a href="#trello">účet na Trellu</a>. Pokud se chci chopit nějakého projektu, kliknu na něj a přiřadím se k jeho Trello kartičce.
-    </p>
-    <p>
-        <img src="{{ url_for('static', filename='images/trello-members.png') }}" alt="Jak se přidat na kartičku jako realizátor?">
-    </p>
-    <p>
-        Tu následně posunu do sloupce <em>Realizujeme</em>.
-    </p>
-    <p>
-        <img src="{{ url_for('static', filename='images/trello-moving.png') }}" alt="Jak posunovat kartičky?">
-    </p>
-    <p>
-        Napíšu e-mail na <a href="mailto:info&#64;pyvec.org">info&#64;<!---->pyvec.org</a> a představím v něm nějaký svůj bojový plán. To je vše - v tuto chvíli nezbývá, než začít makat na úkolu. Komentáře pod kartičkou a kartička samotná je mi k dispozici jako místo, kde můžu shromažďovat informace, pokládat dotazy a hlásit postup.
-    </p>
+        <h3 id="jaksezapojit">Jak se zapojit?</h3>
+        <p>
+            Kromě odvahy a odhodlání potřebuješ ještě <a href="#trello">účet na Trellu</a>. Pokud se chci chopit nějakého projektu, kliknu na něj a přiřadím se k jeho Trello kartičce.
+        </p>
+        <p>
+            <img src="{{ url_for('static', filename='images/trello-members.png') }}" alt="Jak se přidat na kartičku jako realizátor?" class="img-thumbnail">
+        </p>
+        <p>
+            Tu následně posunu do sloupce <em>Realizujeme</em>.
+        </p>
+        <p>
+            <img src="{{ url_for('static', filename='images/trello-moving.png') }}" alt="Jak posunovat kartičky?" class="img-thumbnail">
+        </p>
+        <p>
+            Napíšu e-mail na <a href="mailto:info&#64;pyvec.org">info&#64;<!---->pyvec.org</a> a představím v něm nějaký svůj bojový plán. To je vše - v tuto chvíli nezbývá, než začít makat na úkolu. Komentáře pod kartičkou a kartička samotná je mi k dispozici jako místo, kde můžu shromažďovat informace, pokládat dotazy a hlásit postup.
+        </p>
 
-    <h3 id="jakpridat">Jak přidat vlastní úkol?</h3>
-    <p>
-        Kromě úžasného nápadu potřebuješ ještě <a href="#trello">účet na Trellu</a>. Na spodním konci prvního sloupce najdeš tlačítko na přidání nové kartičky:
-    </p>
-    <p>
-        <img src="{{ url_for('static', filename='images/trello-add.png') }}" alt="Jak přidat vlastní úkol?">
-    </p>
-    <p>
-        Vepíšeš název úkolu a přidáš jej. Když na novou kartu klikneš, otevřou se její detaily a tam můžeš rozvést svou myšlenku v dlouhém popisu.
-    </p>
+        <h3 id="jakpridat">Jak přidat vlastní úkol?</h3>
+        <p>
+            Kromě úžasného nápadu potřebuješ ještě <a href="#trello">účet na Trellu</a>. Na spodním konci prvního sloupce najdeš tlačítko na přidání nové kartičky:
+        </p>
+        <p>
+            <img src="{{ url_for('static', filename='images/trello-add.png') }}" alt="Jak přidat vlastní úkol?" class="img-thumbnail img-small">
+        </p>
+        <p>
+            Vepíšeš název úkolu a přidáš jej. Když na novou kartu klikneš, otevřou se její detaily a tam můžeš rozvést svou myšlenku v dlouhém popisu.
+        </p>
 
-    <h3 id="jakhlasovat">Jak hlasovat pro úkoly?</h3>
-    <p>
-        Kromě chuti klikat potřebuješ ještě <a href="#trello">účet na Trellu</a>. Jakmile ho máš, vybereš si na nástěnce projekt, o kterém si myslíš, že je důležitý a líbilo by se ti, kdyby jej někdo uskutečnil. Klikneš a v detailech karty můžeš zahlasovat:
-    </p>
-    <p>
-        <img src="{{ url_for('static', filename='images/trello-vote.png') }}" alt="Jak hlasovat pro úkoly?">
-    </p>
+        <h3 id="jakhlasovat">Jak hlasovat pro úkoly?</h3>
+        <p>
+            Kromě chuti klikat potřebuješ ještě <a href="#trello">účet na Trellu</a>. Jakmile ho máš, vybereš si na nástěnce projekt, o kterém si myslíš, že je důležitý a líbilo by se ti, kdyby jej někdo uskutečnil. Klikneš a v detailech karty můžeš zahlasovat:
+        </p>
+        <p>
+            <img src="{{ url_for('static', filename='images/trello-vote.png') }}" alt="Jak hlasovat pro úkoly?" class="img-thumbnail img-small">
+        </p>
 
-    <h3 id="jakkomentovat">Jak komentovat pod úkoly?</h3>
-    <p>
-        Kromě myšlenek, které hodláš vypustit, potřebuješ ještě <a href="#trello">účet na Trellu</a>. Jakmile ho máš, můžeš volně komentovat pod kteroukoliv kartou na naší Trello nástěnce.
-    </p>
+        <h3 id="jakkomentovat">Jak komentovat pod úkoly?</h3>
+        <p>
+            Kromě myšlenek, které hodláš vypustit, potřebuješ ještě <a href="#trello">účet na Trellu</a>. Jakmile ho máš, můžeš volně komentovat pod kteroukoliv kartou na naší Trello nástěnce.
+        </p>
 
-    <h3 id="jaksledovat">Jak sledovat úkoly?</h3>
-    <p>
-        Zajímá-li tě nějaká karta, ale nehodláš se jí ujmout, můžeš i přesto sledovat, co se s ní děje. K tomu slouží funkce <em>Subscribe</em>. Potřebuješ <a href="#trello">účet na Trellu</a> a potom můžeš začít sledovat libovolnou kartu na naší nástěnce:
-    </p>
-    <p>
-        <img src="{{ url_for('static', filename='images/trello-subscribe.png') }}" alt="Jak sledovat úkoly?">
-    </p>
+        <h3 id="jaksledovat">Jak sledovat úkoly?</h3>
+        <p>
+            Zajímá-li tě nějaká karta, ale nehodláš se jí ujmout, můžeš i přesto sledovat, co se s ní děje. K tomu slouží funkce <em>Subscribe</em>. Potřebuješ <a href="#trello">účet na Trellu</a> a potom můžeš začít sledovat libovolnou kartu na naší nástěnce:
+        </p>
+        <p>
+            <img src="{{ url_for('static', filename='images/trello-subscribe.png') }}" alt="Jak sledovat úkoly?" class="img-thumbnail img-small">
+        </p>
 
-    <h3 id="pyvec">Jak je to s tou neziskovkou?</h2>
-    <p>
-        Neziskovka se jmenuje <a href="http://pyvec.org/">Pyvec</a>, je <a href="http://wwwinfo.mfcr.cz/cgi-bin/ares/darv_res.cgi?ico=22746668&amp;jazyk=cz&amp;xml=1">zapsána</a> jako občanské sdružení a má <a href="{{ config.PYVEC_ACCOUNT_URL }}">transparentní účet</a>. Globální <a href="https://www.python.org/psf/">PSF</a> ji uznává jako svou pracovní skupinu. Její misí je podporovat a propagovat Python komunitu v ČR. Srazy nebo workshopy dělají konkrétní lidé a Pyvec jim do toho nemluví - nabízí ale pomocnou ruku co se týče financí a zázemí.
-    </p>
-    <p>
-        Pokud se chceš chopit nějakého úkolu výše, Pyvec ti může pomoci tím, že ti v rámci svých možností dodá sponzory, peníze, lidi (třeba kouče), PR, know-how. Organizace a realizace je ale čistě na tobě.
-    </p>
+        <h3 id="pyvec">Jak je to s tou neziskovkou?</h3>
+        <p>
+            Neziskovka se jmenuje <a href="http://pyvec.org/">Pyvec</a>, je <a href="http://wwwinfo.mfcr.cz/cgi-bin/ares/darv_res.cgi?ico=22746668&amp;jazyk=cz&amp;xml=1">zapsána</a> jako občanské sdružení a má <a href="{{ config.PYVEC_ACCOUNT_URL }}">transparentní účet</a>. Globální <a href="https://www.python.org/psf/">PSF</a> ji uznává jako svou pracovní skupinu. Její misí je podporovat a propagovat Python komunitu v ČR. Srazy nebo workshopy dělají konkrétní lidé a Pyvec jim do toho nemluví - nabízí ale pomocnou ruku co se týče financí a zázemí.
+        </p>
+        <p>
+            Pokud se chceš chopit nějakého úkolu výše, Pyvec ti může pomoci tím, že ti v rámci svých možností dodá sponzory, peníze, lidi (třeba kouče), PR, know-how. Organizace a realizace je ale čistě na tobě.
+        </p>
+    </div>
 {% endblock %}

@@ -9,107 +9,153 @@
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
 {% endblock %}
 
+{% block body_class %}jobs{% endblock %}
+
 {% block breadcrumb %}
     Práce
 {% endblock %}
 
 {% block content %}
     <h1>Python a práce</h1>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <p class="lead">
+                Používá vůbec někdo Python? <strong>Ano!</strong> Jde o jazyk vhodný k výuce nebo skriptování, ale to neznamená, že jej nepoužívají firmy z celého světa a nepíšou se v něm rozsáhlé projekty.
+            </p>
+            <p class="lead">
+                Ve světě Python používají např. <strong>Blender 3D, Google (YouTube!), Dropbox, Disqus, IBM, Instagram, Lucasfilm, Mozilla, NASA, Spotify, Walt Disney, <a href="https://www.python.org/about/success/">a&nbsp;mnoho dalších</a></strong> &ndash; mimo jiné také spousta vědeckých organizací <strong>včetně švýcarského CERNu</strong>.
+            </p>
+        </div>
+    </div>
 
-    <h2 id="smysl">Používá to vůbec někdo?</h2>
-    <p>
-        <strong>Ano!</strong> Python je&nbsp;moderní programovací jazyk. Je univerzální &ndash; pohání weby i rakety. Přestože je snadný na naučení, je to jazyk, který používají firmy z celého světa.
-    </p>
+    <hr>
 
-    <h2 id="kdo">Kdo používá Python?</h2>
-    <p>
-        Ve světě jsou to např. Bitbucket, Blender 3D, Canonical, Google (např. YouTube je v Pythonu), Dropbox, Disqus, IBM, NASA, Nokia, Rackspace, Spotify, Walt Disney, <a href="https://www.python.org/about/success/">a další</a> &ndash; mimo jiné také spousta vědeckých organizací. U nás a na Slovensku Python používají následující subjekty:
-    </p>
+    <h2 id="kdo">Python u nás</h2>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 thumbnail">
+            <div id="map" data-src="{{ url_for('static', filename='data/business.geojson') }}"></div>
+        </div>
+    </div>
 
-    <div id="map" style="height: 350px" data-src="{{ url_for('static', filename='business.geojson') }}"></div>
+    <div class="columns columns-many">
+        <h3>
+            <i class="fa fa-users"></i>
+            Firmy, instituce
+        </h3>
+        <ul>
+        {% for company in business_groups.companies %}
+            <li>
+                <a href="{{ company.url }}" target="_blank">
+                    {{ company.name }}
+                </a>
+            </li>
+        {% endfor %}
+        </ul>
 
-    <h3>
-        <i class="fa fa-users"></i>
-        Firmy a instituce
-    </h3>
-    {% for company in business_groups.companies %}
-        <li>
-            <a href="{{ company.url }}" target="_blank">
-                {{ company.name }}
-            </a>
-        </li>
-    {% endfor %}
-
-    <h3>
-        <i class="fa fa-user"></i>
-        Osoby
-    </h3>
-    {% for individual in business_groups.individuals %}
-        <li>
-            <a href="{{ individual.url }}" target="_blank">
-                {{ individual.name }}
-            </a>
-        </li>
-    {% endfor %}
-
-    <p>
-        <a href="{{ config.BUSINESS_LIST_URL }}" class="btn btn-default">
+        <h3>
+            <i class="fa fa-user"></i>
+            Jednotlivci
+        </h3>
+        <ul>
+        {% for individual in business_groups.individuals %}
+            <li>
+                <a href="{{ individual.url }}" target="_blank">
+                    {{ individual.name }}
+                </a>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+    <p class="add-business">
+        <a href="{{ config.BUSINESS_LIST_URL }}" class="btn btn-primary btn-lg">
             <i class="fa fa-edit"></i>
             Chci být na seznamu
         </a>
     </p>
 
+    <hr>
+
     <h2 id="poptavka">Jak najít práci?</h2>
-    <ul>
-        <li>
-            Přijď na <a href="{{ url_for('index_cs') }}#srazy">sraz</a> a poptej se tam.
-        </li>
-        <li>
-            Sleduj všechny <a href="{{ url_for('index_cs') }}#diskuse">diskusní kanály</a>, kde se nabídky objevují.
-        </li>
-        <li>
-            Na zmíněné kanály aktivně napiš, že hledáš práci nebo stáž.
-        </li>
-        <li>
-            Zkus přímo oslovit <a href="#kdo">firmy výše</a>.
-        </li>
-        <li>
-            Sleduj Twitter účet <a href="https://twitter.com/pyjobo">@pyjobo</a> a pročítej <a href="https://www.python.org/jobs/">globální nástěnku nabídek</a> &ndash; inzeráty lze hledat <a href="https://www.python.org/jobs/locations/">podle lokace</a> nebo třeba i podle toho, <a href="https://www.python.org/jobs/location/telecommute/">zda lze pracovat na dálku</a>.
-        </li>
-    </ul>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <ul>
+                <li>
+                    Přijď na <a href="{{ url_for('index_cs') }}#srazy">sraz</a> a poptej se tam.
+                </li>
+                <li>
+                    Sleduj všechny <a href="{{ url_for('index_cs') }}#diskuse">diskusní kanály</a>, kde se nabídky objevují.
+                </li>
+                <li>
+                    Na zmíněné kanály aktivně napiš, že hledáš práci nebo stáž.
+                </li>
+                <li>
+                    Zkus přímo oslovit <a href="#kdo">firmy výše</a>.
+                </li>
+                <li>
+                    Sleduj Twitter účet <a href="https://twitter.com/pyjobo">@pyjobo</a> a pročítej <a href="https://www.python.org/jobs/">globální nástěnku nabídek</a> &ndash; inzeráty lze hledat <a href="https://www.python.org/jobs/locations/">podle lokace</a> nebo třeba i podle toho, <a href="https://www.python.org/jobs/location/telecommute/">zda lze pracovat na dálku</a>.
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <h2 id="nabidka">Jak najít Python programátory?</h2>
-    <ul>
-        <li>
-            Přijď na <a href="{{ url_for('index_cs') }}#srazy">sraz</a> a poptej se tam. Promluv si s reálnými lidmi, nadchni je, zlákej je, zjisti jaké mají možnosti a požadavky.
-        </li>
-        <li>
-            Sepiš si inzerát a konkretizuj jej, aspoň do tvaru něčeho jako <em>"hledám nadšence/nájemného profíka na krátkodobý projekt ve stylu CMS s galerií, nejspíš v Djangu, platím penězi"</em>. Čím víc bude <strong>lidsky od srdíčka</strong> a čím méně to budou odrážky ve stylu poptáváme/nabízíme, tím více lidí to zaujme. <strong>Nezapomeň napsat do jaké míry je možná práce na dálku.</strong>
-        </li>
-        <li>
-            Napiš na <code>django-cs&#64;<!---->googlegroups.com</code> a <code>python&#64;<!---->py.cz</code> (viz <a href="{{ url_for('index_cs') }}#diskuse">diskusní kanály</a>). Skoro každý, kdo u nás v Pythonu něco dělá, jednu z nich čte.
-        </li>
-        <li>
-            Napiš inzerát na <a href="https://www.facebook.com/groups/pyonieri/">Facebookovou skupinu</a> a na <a href="https://www.python.org/community/jobs/howto/">globální nástěnku nabídek</a> &ndash; ta uveřejňuje nabídky zdarma, jen je potřeba se registrovat. Nabídka se pak objeví i na Twitter účtu <a href="https://twitter.com/pyjobo">@pyjobo</a>.
-        </li>
-        <li>
-            Pokud jsi "headhunter", nepřehlcuj žádnou z diskusí. Inzeráty jsou vítány, jsou zadarmo a bez omezení, ale pokud se to zvrhne, nemusí to tak zůstat.
-        </li>
-    </ul>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <ul>
+                <li>
+                    Přijď na <a href="{{ url_for('index_cs') }}#srazy">sraz</a> a poptej se tam. Promluv si s reálnými lidmi, nadchni je, zlákej je, zjisti jaké mají možnosti a požadavky.
+                </li>
+                <li>
+                    Sepiš si inzerát a konkretizuj jej, aspoň do tvaru něčeho jako <em>"hledám nadšence/nájemného profíka na krátkodobý projekt ve stylu CMS s galerií, nejspíš v Djangu, platím penězi"</em>. Čím víc bude <strong>lidsky od srdíčka</strong> a čím méně to budou odrážky ve stylu poptáváme/nabízíme, tím více lidí to zaujme. <strong>Nezapomeň napsat do jaké míry je možná práce na dálku.</strong>
+                </li>
+                <li>
+                    Napiš na django-cs a py.cz diskuse (<a href="{{ url_for('index_cs') }}#diskuse">viz hlavní stránka</a>). Čte je mnoho českých a slovenských Pythonistů.
+                </li>
+                <li>
+                    Napiš inzerát na <a href="https://www.facebook.com/groups/pyonieri/">Facebookovou skupinu</a> a na <a href="https://www.python.org/community/jobs/howto/">globální nástěnku nabídek</a> &ndash; ta uveřejňuje nabídky zdarma, jen je potřeba se registrovat. Nabídka se pak objeví i na Twitter účtu <a href="https://twitter.com/pyjobo">@pyjobo</a>.
+                </li>
+                <li>
+                    Nepřehlcuj žádnou z diskusí. Inzeráty jsou vítány, jsou zadarmo a bez omezení, ale pokud se to zvrhne, nemusí to tak zůstat.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <h2 id="jobboardy">České weby s nabídkou a poptávkou</h2>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <ul>
+                {% for link in job_boards %}
+                <li>
+                    <a href="{{ link.url }}" target="_blank">Python na {{ link.name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+            <p class="call-to-action">
+                <a href="{{ config.JOB_BOARDS_LIST_URL }}" class="btn btn-default">
+                    <i class="fa fa-edit"></i>
+                    Přidat odkaz
+                </a>
+            </p>
+        </div>
+    </div>
 
     <h2 id="vic">Chci, aby bylo víc Pythonistů!</h2>
-    <p>
-        My taky! Máme na to dokonce <a href="http://pyvec.org/">neziskovku</a>. Můžeš se <a href="{{ url_for('get_involved_cs') }}">zapojit</a> a s naší misí nám pomoci.
-    </p>
-    <p>
-        Pokud zastupuješ nějakou firmu, můžeš nás sponzorovat (<a href="{{ config.PYVEC_ACCOUNT_URL }}">číslo účtu</a>). Přes Pyvec se peníze rozdělí na dílčí projekty. Podporujeme např. srazy a workshopy pro dámy &ndash; <a href="http://pyladies.cz">PyLadies</a>, <a href="http://djangogirls.org">DjangoGirls</a>.
-    </p>
-    <p>
-        Budeme také rádi, pokud nám napíšete <em>success story</em> o tom, jak jste Python použili u vás a jak vám to usnadnilo práci a co vše jste s ním dokázali. Takovou zkušenost zde rádi uveřejníme, klidně i na samostatné stránce, s logem apod.
-    </p>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <p>
+                <strong>My taky!</strong> Máme na to dokonce <a href="http://pyvec.org/">neziskovku Pyvec</a>. Můžeš se <a href="{{ url_for('get_involved_cs') }}">zapojit</a> a s naší misí nám pomoci.
+            </p>
+            <p>
+                Pokud zastupuješ nějakou firmu, můžeš nás <strong>sponzorovat (<a href="{{ config.PYVEC_ACCOUNT_URL }}">číslo účtu</a>)</strong>. Přes Pyvec se peníze rozdělí na dílčí projekty. Podporujeme např. srazy a workshopy pro dámy &ndash; <a href="http://pyladies.cz">PyLadies</a>, <a href="http://djangogirls.org">DjangoGirls</a>.
+            </p>
+            <p>
+                Budeme také rádi, pokud nám <strong>napíšete <em>success story</em> o tom, jak jste Python použili u vás</strong> a jak vám to usnadnilo práci a co vše jste s ním dokázali. Takovou zkušenost zde rádi uveřejníme, klidně i na samostatné stránce, s logem apod.
+            </p>
+        </div>
+    </div>
 
     {% block scripts %}
-        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
         <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
         <script src="{{ url_for('static', filename='maps.js') }}"></script>
     {% endblock %}

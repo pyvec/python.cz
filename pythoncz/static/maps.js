@@ -21,7 +21,7 @@ $(function() {
     var lat = element.attr('data-lat') || 49.8;
     var lng = element.attr('data-lng') || 15.55;
 
-    var map = L.map('map')
+    var map = L.map('map', {'scrollWheelZoom': false})
         .setView([lat, lng], zoom)
         .addLayer(layer);
 

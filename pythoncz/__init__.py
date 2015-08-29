@@ -1,19 +1,16 @@
 # -*- coding: utf-8 -*-
 
 
-from os import path
-
 from flask import Flask
 
-
-PACKAGE_DIR = path.dirname(path.realpath(__file__))
-DATA_DIR = path.join(PACKAGE_DIR, 'static')
 
 GITHUB_URL = 'https://github.com/honzajavorek/python.cz'
 GITHUB_EDIT_URL = GITHUB_URL + '/edit/master/pythoncz'
 
 TEMPLATES_DIR_URL = GITHUB_EDIT_URL + '/templates/'
-BUSINESS_LIST_URL = GITHUB_EDIT_URL + '/static/business.geojson'
+BUSINESS_LIST_URL = GITHUB_EDIT_URL + '/static/data/business.geojson'
+COURSES_LIST_URL = GITHUB_EDIT_URL + '/static/data/courses.yml'
+JOB_BOARDS_LIST_URL = GITHUB_EDIT_URL + '/static/data/job_boards.yml'
 
 PYVEC_ACCOUNT_URL = (
     'https://www.fio.cz/scgi-bin/hermes/'

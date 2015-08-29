@@ -17,13 +17,40 @@ body {
     padding-left: 15px;
 }
 
+hr {
+    margin: 4em;
+}
+
 h1,
 h2,
 h3,
 h4,
 .title,
-.tasks .panel-body {
+.tasks .panel-body,
+.online-courses .panel-body {
     font-family: 'Arbutus Slab', serif;
+}
+
+.content > h1,
+h2,
+h3 {
+    margin: 1.3em 0 1em 0;
+}
+
+.content > h1 {
+    text-align: center;
+    font-size: 400%;
+    margin-bottom: 1.5em;
+}
+
+.get-involved h2,
+.beginners h2,
+.jobs h2 {
+    text-align: center;
+}
+
+.columns h3 {
+    margin-top: 2em;
 }
 
 a.permalink {
@@ -75,10 +102,10 @@ h6[id]:hover .permalink {
     width: 100%;
 }
 
-.jumbotron .lead {
+ul.lead {
+    text-align: center;
     list-style-type: none;
     padding: 0;
-    margin-top: 2.5em;
 }
 
 .box-body {
@@ -87,7 +114,7 @@ h6[id]:hover .permalink {
 }
 
 .box h2 {
-    margin-top: 0;
+    margin: 0 0 0.5em 0;
 }
 
 .boxes {
@@ -102,11 +129,20 @@ h6[id]:hover .permalink {
     margin: 1em 0.5em 0 auto;
 }
 
-.list-group {
+.add-business {
+    margin-top: -1em;
+    text-align: center;
+}
+
+.add-business .btn {
+    margin: 0 auto;
+}
+
+.discussions {
     margin: 0;
 }
 
-.list-group .list-group-item {
+.discussions .list-group-item {
     border: none;
 }
 
@@ -150,8 +186,18 @@ h2 i.fa {
     border-radius: 5px;
 }
 
+.meetups p,
+.meetups .row {
+    margin: 1em;
+}
+
+.meetups .row {
+    margin-bottom: 2.5em;
+}
+
+.meetups-city,
 .meetups p {
-    margin: 2em 0;
+    font-size: 125%;
 }
 
 .meetups-container {
@@ -165,15 +211,34 @@ h2 i.fa {
 }
 
 .columns {
+    margin: 4em 2em;
+
     -webkit-columns: 2;
     -moz-columns: 2;
     columns: 2;
+
+    -webkit-column-rule: 1px dotted #aaa;
+    -moz-column-rule: 1px dotted #aaa;
+    column-rule: 1px dotted #aaa;
+
+    -webkit-column-gap: 3em;
+    -moz-column-gap: 3em;
+    column-gap: 3em;
 }
 
-.columns-section {
-    -webkit-column-break-inside: avoid;
-    page-break-inside: avoid;
-    break-inside: avoid;
+.columns-many {
+    -webkit-columns: 4;
+    -moz-columns: 4;
+    columns: 4;
+}
+
+.columns h2:first-of-type,
+.columns h3:first-of-type {
+    margin-top: 0;
+}
+
+.columns img {
+    width: 100%;
 }
 
 .photo {
@@ -210,12 +275,32 @@ i.fa.help {
     margin-left: 0.3em;
 }
 
+.get-involved .columns img {
+    filter: gray;
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+    opacity: 0.4;
+}
+
+.get-involved .columns img:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+    opacity: 1;
+}
+
+img.img-small {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
 .tasks h3 {
     text-align: center;
     margin: 2em 0 2em 0;
 }
 
-.tasks .panel-body {
+.tasks .panel-body,
+.online-courses .panel-body {
     text-align: center;
     font-size: 110%;
 }
@@ -239,6 +324,18 @@ i.fa.help {
 
 .tasks .votes {
     margin-right: 1em;
+}
+
+.online-courses {
+    margin: 3em 0 1em 0;
+}
+
+.online-courses .panel {
+    text-align: center;
+}
+
+#map {
+    height: 350px;
 }
 
 

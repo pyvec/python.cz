@@ -4,7 +4,8 @@
 from flask import (render_template as _render_template, url_for,
                    redirect, request)
 
-from . import app, trello, business, photos
+from . import app, cs_sort
+from .models import trello, business, photos, yaml_files
 
 
 # Templating
@@ -50,19 +51,30 @@ def get_involved_cs():
 
 @app.route('/zacatecnici')
 def beginners_cs():
-    return render_template('beginners_cs.html')
+    return render_template('beginners_cs.html',
+                           courses=yaml_files.get('courses'))
 
 
 @app.route('/prace')
 def jobs_cs():
-    groups = business.get_groups(app.config['DATA_DIR'])
-    return render_template('jobs_cs.html', business_groups=groups)
+    return render_template('jobs_cs.html',
+                           business_groups=business.get_groups(),
+                           job_boards=get_job_boards())
 
 
 @app.route('/en/jobs')
 def jobs_en():
-    groups = business.get_groups(app.config['DATA_DIR'])
-    return render_template('jobs_en.html', business_groups=groups, lang='en')
+    return render_template('jobs_en.html',
+                           business_groups=business.get_groups(),
+                           job_boards=get_job_boards(),
+                           lang='en')
+
+
+def get_job_boards():
+    job_boards = yaml_files.get('job_boards')
+    key_func = cs_sort.get_key_fn()
+    job_boards.sort(key=lambda board: key_func(board['name']))
+    return job_boards
 
 
 # Redirects of legacy stuff

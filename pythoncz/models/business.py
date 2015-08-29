@@ -4,11 +4,11 @@
 import os
 import json
 
-import icu
+from .. import app, cs_sort
 
 
-def get_groups(data_dir):
-    path = os.path.join(data_dir, 'business.geojson')
+def get_groups():
+    path = os.path.join(app.static_folder, 'data', 'business.geojson')
     return _group_business_data(_load_business_data(path))
 
 
@@ -23,16 +23,11 @@ def _group_business_data(data):
         groups.setdefault(name, [])
         groups[name].append(point)
 
-    key_func = _get_czech_sort_key_func()
+    key_func = cs_sort.get_key_fn()
     for name, group in groups.items():
         group.sort(key=lambda point: key_func(point['name']))
 
     return groups
-
-
-def _get_czech_sort_key_func():
-    collator = icu.Collator.createInstance(icu.Locale('cs_CZ.UTF-8'))
-    return collator.getSortKey
 
 
 def _load_business_data(data_file):

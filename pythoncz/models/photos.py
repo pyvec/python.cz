@@ -5,15 +5,13 @@ import os
 import random
 from glob import glob
 
-from flask import url_for, g
+from flask import url_for
 
-from . import app
+from .. import app
 
 
 def get_random_url():
-    if not g.get('photos'):
-        g.photos = get_urls(app.static_folder)
-    return random.choice(g.photos)
+    return random.choice(get_urls(app.static_folder))
 
 
 def get_urls(static_dir):

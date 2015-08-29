@@ -9,13 +9,19 @@ $(function() {
     }
 
     $(selectors.join(', ')).each(function () {
-        var el = $(this);
-        var link = $('<a/>', {
-            'href': '#' + el.attr('id'),
+        var $heading = $(this);
+        var $link = $('<a/>', {
+            'href': '#' + $heading.attr('id'),
             'class': 'permalink',
             'title': title,
             'text': '¶',
         });
-        el.append(link);
+        $heading.append($link);
+
+        if ($heading.css('text-align') == 'center') {
+            $heading.css({
+                'padding-left': $link.outerWidth(true) + 'px'
+            });
+        }
     });
 });

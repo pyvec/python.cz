@@ -32,7 +32,7 @@
         <meta property="og:description" content="Česká (a tak trochu i slovenská) komunita kolem programovacího jazyka Python.">
     {% endblock %}
 </head>
-    <body{% if is_homepage %} class="homepage"{% endif %}>
+    <body class="{% block body_class %}{% if is_homepage %}homepage{% endif %}{% endblock %}">
         <div class="container">
             {% if not debug %}
                 <script>
@@ -89,7 +89,9 @@
             </ol>
             {% endif %}
 
-            {% block content %}{% endblock %}
+            <div class="content">
+                {% block content %}{% endblock %}
+            </div>
 
             <div class="row footer">
             {% if lang == 'cs' %}
@@ -118,7 +120,7 @@
             </div>
 
             <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-            <script src="{{ url_for('static', filename='anchors.js') }}"></script>
+            <script src="{{ url_for('static', filename='permalinks.js') }}"></script>
             {% block scripts %}{% endblock %}
         </div>
     </body>
