@@ -83,43 +83,49 @@
                 {{ list.name }}
             </h3>
             {% for card in list.cards %}
-            <div class="col-md-3">
-                <div class="panel panel-{{ list_panel }}">
-                    <div class="panel-heading"></div>
-                    <div class="panel-body">
-                        <a href="{{ card.url }}" target="_blank">
-                            <span>{{ card.name }}</span>
-                        </a>
-                    </div>
-                    {% if list.name != 'Hotovo!' %}
-                        <div class="panel-footer">
-                            {% if card.badges.votes > 0 %}
-                                <span title="Počet hlasů" class="help label label-primary votes">
-                                    {{ card.badges.votes }}
-                                    <i class="fa fa-thumbs-up"></i>
-                                </span>
-                            {% endif %}
-
-                            {% if list.name == 'Realizujeme' %}
-                                {% set button_icon = 'user-plus' %}
-                                {% set button_text = 'Přidám se!' %}
-                            {% else %}
-                                {% set button_icon = 'rocket' %}
-                                {% set button_text = 'Jdu do toho!' %}
-                            {% endif %}
-
-                            <a href="mailto:info&#64;pyvec.org?subject={{ (button_text + ' [' + card.name + ']')|urlencode }}" class="btn btn-default btn-sm">
-                                <i class="fa fa-{{ button_icon }}"></i>
-                                {{ button_text }}
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <div class="panel panel-{{ list_panel }}">
+                        <div class="panel-heading"></div>
+                        <div class="panel-body">
+                            <a href="{{ card.url }}" target="_blank">
+                                <span>{{ card.name }}</span>
                             </a>
                         </div>
-                    {% endif %}
+                        {% if list.name != 'Hotovo!' %}
+                            <div class="panel-footer">
+                                {% if card.badges.votes > 0 %}
+                                    <span title="Počet hlasů" class="help label label-primary votes">
+                                        {{ card.badges.votes }}
+                                        <i class="fa fa-thumbs-up"></i>
+                                    </span>
+                                {% endif %}
+
+                                {% if list.name == 'Realizujeme' %}
+                                    {% set button_icon = 'user-plus' %}
+                                    {% set button_text = 'Přidám se!' %}
+                                {% else %}
+                                    {% set button_icon = 'rocket' %}
+                                    {% set button_text = 'Jdu do toho!' %}
+                                {% endif %}
+
+                                <a href="mailto:info&#64;pyvec.org?subject={{ (button_text + ' [' + card.name + ']')|urlencode }}" class="btn btn-default btn-sm">
+                                    <i class="fa fa-{{ button_icon }}"></i>
+                                    {{ button_text }}
+                                </a>
+                            </div>
+                        {% endif %}
+                    </div>
                 </div>
-            </div>
+
+                {% if loop.index % 4 == 0 %}<div class="clearfix visible-md-block"></div>{% endif %}
+
+                {% if loop.index % 3 == 0 %}<div class="clearfix visible-sm-block"></div>{% endif %}
+
+                {% if loop.index % 2 == 0 %}<div class="clearfix visible-xs-block"></div>{% endif %}
             {% endfor %}
 
             {% if list.name == 'Nápady' %}
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-4 col-xs-6">
                 <div class="panel panel-primary">
                     <div class="panel-heading"></div>
                     <div class="panel-body">

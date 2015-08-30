@@ -7,27 +7,27 @@
     <meta property="og:description" content="Česká (a tak trochu i slovenská) komunita kolem programovacího jazyka Python.">
 {% endblock %}
 {% block content %}
-    <div class="jumbotron">
-        <div class="row">
-            <h1 class="col-md-6 col-md-offset-3">
-                <img alt="Python" src="{{ url_for('static', filename='images/logo.svg') }}" onerror="this.onerror = null; this.src = '{{ url_for('static', filename='images/logo.png') }}'">
-            </h1>
-        </div>
-        <ul class="lead">
-            <li>
-                Python je&nbsp;moderní <strong>programovací jazyk</strong>.
-                Je <strong>univerzální</strong> &ndash; pohání weby i rakety.
-            </li>
-            <li>
-                Dobře se čte a dá se velice <strong>rychle naučit</strong>.
-                Je skvělý pro <strong>výuku</strong> programování.
-            </li>
-            <li>
-                <strong>Česká komunita</strong> je aktivní.
-                Najdeš v ní <strong>pomoc, kamarády i práci</strong>.
-            </li>
-        </ul>
+    <div class="row logo">
+        <h1 class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+            <img alt="Python" src="{{ url_for('static', filename='images/logo.svg') }}" onerror="this.onerror = null; this.src = '{{ url_for('static', filename='images/logo.png') }}'">
+        </h1>
     </div>
+    <ul class="lead">
+        <li>
+            Python je&nbsp;moderní <strong>programovací jazyk</strong>.
+            Je <strong>univerzální</strong> &ndash; pohání weby i&nbsp;rakety.
+        </li>
+        <li>
+            Dobře se čte a dá se velice <strong>rychle naučit</strong>.
+            Je skvělý pro <strong>výuku</strong> programování.
+        </li>
+        <li>
+            <strong>Česká komunita</strong> je aktivní.
+            Najdeš v ní <strong>pomoc, kamarády i práci</strong>.
+        </li>
+    </ul>
+
+    <hr class="visible-sm-block visible-xs-block">
 
     <div class="row">
         <div class="photo-container meetups-container">
@@ -44,6 +44,8 @@
             </div>
         </div>
     </div>
+
+    <hr class="visible-sm-block visible-xs-block">
 
     <div class="row boxes">
         <div id="diskuse" class="box col-md-4 col-sm-6">

@@ -10,18 +10,18 @@ $(function() {
 
     $(selectors.join(', ')).each(function () {
         var $heading = $(this);
+
         var $link = $('<a/>', {
             'href': '#' + $heading.attr('id'),
             'class': 'permalink',
             'title': title,
             'text': '¶',
         });
-        $heading.append($link);
+        var $container = $('<span/>', {
+            'class': 'permalink-container',
+        });
 
-        if ($heading.css('text-align') == 'center') {
-            $heading.css({
-                'padding-left': $link.outerWidth(true) + 'px'
-            });
-        }
+        $heading.append($container);
+        $container.append($link);
     });
 });

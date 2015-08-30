@@ -18,7 +18,7 @@ body {
 }
 
 hr {
-    margin: 4em;
+    margin: 4em 0;
 }
 
 h1,
@@ -53,7 +53,14 @@ h3 {
     margin-top: 2em;
 }
 
+.permalink-container {
+    position: relative;
+}
+
 a.permalink {
+    position: absolute;
+    left: 0;
+    bottom: 0;
     visibility: hidden;
     font-family: sans-serif;
     margin-left: 0.1em;
@@ -107,13 +114,12 @@ ul li:before {
     margin-right: 0.1em;
 }
 
-.jumbotron {
+.logo {
     text-align: center;
-    background: none;
-    padding-top: 0;
+    margin-bottom: 2em;
 }
 
-.jumbotron h1 img {
+.logo img {
     width: 100%;
 }
 
@@ -221,7 +227,7 @@ h2 i.fa {
 }
 
 .meetups-container {
-    margin-bottom: 2em;
+    margin: 4em 0 2em 0;
     padding: 2em;
     text-align: center;
     display: flex;
@@ -364,25 +370,49 @@ img.img-small {
 
 
 @media only screen and (max-width: 992px) {
-  .jumbotron,
-  .meetups {
-      border-bottom: 1px solid #e5e5e5;
-  }
+    .boxes,
+    .meetups-container,
+    .photo-container {
+        margin: 0;
+        padding: 0;
+    }
 
-  .meetups {
-      padding-bottom: 2em;
-  }
+    .photo {
+        display: none;
+    }
 
-  .boxes {
-      margin: 0;
-  }
+    .photo-container {
+        min-height: auto;
+        background: none;
+    }
 
-  .photo {
-      display: none;
-  }
+    .columns {
+        margin: 0;
 
-  .photo-container {
-      min-height: auto;
-      background: none;
-  }
+        -webkit-columns: 1;
+        -moz-columns: 1;
+        columns: 1;
+    }
+
+    .columns-many {
+        margin: 4em 2em;
+
+        -webkit-columns: 3;
+        -moz-columns: 3;
+        columns: 3;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .columns-many {
+        -webkit-columns: 2;
+        -moz-columns: 2;
+        columns: 2;
+    }
+
+    .discussions {
+        width: 50%;
+        margin: 0 auto;
+    }
 }
