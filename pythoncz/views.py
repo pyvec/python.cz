@@ -76,10 +76,14 @@ def index_en_legacy():
     return redirect(url_for('index_en'), code=301)
 
 
-@app.route('/pyladies/', defaults={'target': ''})
 @app.route('/pyladies/<path:target>')
 def pyladies(target):
-    return redirect('http://pyladies.cz/' + target, code=301)
+    return redirect('http://pyladies.cz/v1/' + target, code=301)
+
+
+@app.route('/pyladies/')
+def pyladies_index():
+    return redirect('http://pyladies.cz/', code=301)
 
 
 @app.route('/talks/<path:target>')
