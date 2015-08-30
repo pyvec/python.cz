@@ -9,13 +9,10 @@ install:
 script:
     - "flake8 ."
     - "PYTHONPATH=$PYTHONPATH:. py.test tests"
-
 deploy:
-    provider: "heroku"
-    api_key:
-        secure: "TkF6T+X2vU+18X2/ERSvg056SIaCT+JjpcjXfC4Fwc1Fx07VYNAiD0m6ZEucpq9L9uUUqXXgcsLqwYoei9PBPGOd2CrEilw56zwWFwA7JKm3FvKw2gDrxDE/ckmLU+F8hgJle06A6cbGhx+MbsrVz7EeQ/njwLRlPYJW2Xtnzqw="
-    app: "pythoncz"
+    provider: "script"
+    script: "deployment/deploy.sh"
     on:
         branch: "master"
         python: "3.4"
-        repo: honzajavorek/python.cz
+        repo: "honzajavorek/python.cz"
