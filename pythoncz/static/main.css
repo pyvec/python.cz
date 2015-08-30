@@ -71,6 +71,21 @@ h6[id]:hover .permalink {
     visibility: visible;
 }
 
+ul {
+    padding-left: 1.5em;
+}
+
+ul li {
+    list-style-type: none;
+    position: relative;
+}
+
+ul li:before {
+    content: '•';
+    position: absolute;
+    left: -1em;
+}
+
 .header {
     padding-bottom: 1.5em;
 }
@@ -104,8 +119,11 @@ h6[id]:hover .permalink {
 
 ul.lead {
     text-align: center;
-    list-style-type: none;
     padding: 0;
+}
+
+ul.lead li:before {
+    display: none;
 }
 
 .box-body {
@@ -334,7 +352,11 @@ img.img-small {
     text-align: center;
 }
 
-#map {
+.jobs .thumbnail {
+    margin-top: 2em;
+}
+
+.jobs #map {
     height: 350px;
 }
 
