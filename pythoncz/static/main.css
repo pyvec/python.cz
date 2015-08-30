@@ -122,7 +122,9 @@ ul.lead {
     padding: 0;
 }
 
-ul.lead li:before {
+ul.lead li:before,
+ul.nav li:before,
+ul.list-group li:before {
     display: none;
 }
 
