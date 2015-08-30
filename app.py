@@ -24,4 +24,4 @@ Instructions:
 """
 
 
-from pythoncz import app as application
+from pythoncz import app as application  # noqa
