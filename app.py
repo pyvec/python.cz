@@ -15,6 +15,7 @@ Instructions:
 
 - Install everything:
 
+        cd /srv/app
         pip install -r requirements.txt
 
 - Restart:

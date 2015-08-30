@@ -11,6 +11,5 @@ py==1.4.20
 pyflakes==0.8.1
 pytest==2.5.2
 requests==2.5.3
-waitress==0.8.9
 PyYAML==3.11
 Unidecode==0.04.18
