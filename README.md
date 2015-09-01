@@ -1,7 +1,7 @@
 
 # python.cz
 
-Small summary website for Czech Python community.
+Czech Python community homepage.
 
 [![Build Status](https://travis-ci.org/honzajavorek/python.cz.svg?branch=master)](https://travis-ci.org/honzajavorek/python.cz)
 
@@ -21,9 +21,24 @@ $ python runserver.py
 
 See [documentation in the `deployment` directory](deployment/README.md).
 
-## License: MIT
+-   **Hosting:** [Rosti.cz](https://rosti.cz/)
+    Access: [Pyvec](http://pyvec.org/)
 
-© 2014 Jan Javorek &lt;<a
-href="mailto:mail&#64;honzajavorek.cz">mail&#64;honzajavorek.cz</a>&gt;
+-   **Domain:** bestowed by [KRAXNET](http://www.kraxnet.cz/)
+    Access: e-mail request to [KRAXNET](http://www.kraxnet.cz/)
 
-This work is licensed under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
+-   **Monitoring:** [UptimeRobot](https://uptimerobot.com/)
+    Access: [@honzajavorek](http://github.com/honzajavorek)
+
+-   **Analytics:** [Google Analytics](http://www.google.com/analytics/)
+    Access: [@honzajavorek](http://github.com/honzajavorek), [@encukou](http://github.com/encukou), [@martinbilek](http://github.com/martinbilek), [@benabraham](http://github.com/benabraham)
+
+## Authors & Contribution
+
+[Honza Javorek](http://github.com/honzajavorek) is the core commiter and maintainer, but contributions are very welcome. Do not hesitate to send Pull Requests!
+
+**This site is community effort.** See [Hall of fame](https://github.com/honzajavorek/python.cz/graphs/contributors) for the most active contributors.
+
+## License
+
+[MIT](LICENSE)
