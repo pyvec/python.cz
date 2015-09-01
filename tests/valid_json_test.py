@@ -12,6 +12,10 @@ def test_valid_json():
     test_dir = path.dirname(path.abspath(__file__))
     data_dir = path.join(test_dir, '..', 'static', 'data')
 
+    count = 0
     for filename in glob(path.join(data_dir, '*.*json')):
+        count += 1
         with open(filename) as f:
             assert json.load(f)
+
+    assert count > 0
