@@ -33,11 +33,11 @@ See [documentation in the `deployment` directory](deployment/README.md).
 -   **Analytics:** [Google Analytics](http://www.google.com/analytics/)<br>
     Access: [@honzajavorek](http://github.com/honzajavorek), [@encukou](http://github.com/encukou), [@martinbilek](http://github.com/martinbilek), [@benabraham](http://github.com/benabraham)
 
-## Authors & Contribution
+## Authors & Contributions
 
-[Honza Javorek](http://github.com/honzajavorek) is the core commiter and maintainer, but contributions are very welcome. Do not hesitate to send Pull Requests!
+**This site is community effort and contributions are very welcome!** See the [Hall of fame](https://github.com/honzajavorek/python.cz/graphs/contributors) for the most active contributors.
 
-**This site is community effort.** See [Hall of fame](https://github.com/honzajavorek/python.cz/graphs/contributors) for the most active contributors.
+The site is backed by [Pyvec](http://pyvec.org/), nonprofit organization dedicated to support of Python in the Czech Republic. [Honza Javorek](http://github.com/honzajavorek) is the core commiter and maintainer.
 
 ## License
 
