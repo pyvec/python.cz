@@ -21,16 +21,16 @@ $ python runserver.py
 
 See [documentation in the `deployment` directory](deployment/README.md).
 
--   **Hosting:** [Rosti.cz](https://rosti.cz/)
+-   **Hosting:** [Rosti.cz](https://rosti.cz/)<br>
     Access: [Pyvec](http://pyvec.org/)
 
--   **Domain:** bestowed by [KRAXNET](http://www.kraxnet.cz/)
+-   **Domain:** bestowed by [KRAXNET](http://www.kraxnet.cz/)<br>
     Access: e-mail request to [KRAXNET](http://www.kraxnet.cz/)
 
--   **Monitoring:** [UptimeRobot](https://uptimerobot.com/)
+-   **Monitoring:** [UptimeRobot](https://uptimerobot.com/)<br>
     Access: [@honzajavorek](http://github.com/honzajavorek)
 
--   **Analytics:** [Google Analytics](http://www.google.com/analytics/)
+-   **Analytics:** [Google Analytics](http://www.google.com/analytics/)<br>
     Access: [@honzajavorek](http://github.com/honzajavorek), [@encukou](http://github.com/encukou), [@martinbilek](http://github.com/martinbilek), [@benabraham](http://github.com/benabraham)
 
 ## Authors & Contribution
