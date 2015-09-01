@@ -19,7 +19,7 @@ $ python runserver.py
 
 ### Deployment
 
-See [documentation in the `deployment` directory](deployment/README.md).
+The site gets automatically deployed after any push to the `master` branch. See [documentation in the `deployment` directory](deployment/README.md).
 
 -   **Hosting:** [Rosti.cz](https://rosti.cz/)<br>
     Access: [Pyvec](http://pyvec.org/)
