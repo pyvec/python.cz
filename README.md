@@ -7,34 +7,19 @@ Small summary website for Czech Python community.
 
 ## Installation
 
-```bash
+```shell
 $ pip install -r requirements.txt
 ```
 
-### Troubleshooting on Mac
-
-- You need `brew install icu4c`
-- ...and then `CFLAGS=-I/usr/local/opt/icu4c/include LDFLAGS=-L/usr/local/opt/icu4c/lib pip install pyicu`
-
 ### Development
 
-```bash
+```shell
 $ python runserver.py
 ```
 
-### Production (Heroku)
+### Deployment
 
-There's ready-made `Procfile` in the repository. For more details,
-see...
-
-- [Heroku Docs](https://devcenter.heroku.com/articles/getting-started-with-python)
-- [Travis CI](https://travis-ci.org/pyvec/python.cz) and its
-  [docs](http://docs.travis-ci.com/user/deployment/heroku/) about auto-deployment to Heroku
-- [live preview of the app](http://pythoncz.herokuapp.com/)
-
-#### Note
-
-Since we need `libicu`, deployment doesn't work with Heroku out of the box anymore. See [this article](http://tooky.co.uk/using-charklock_holmes-on-heroku/).
+See [documentation in the `deployment` directory](deployment/README.md).
 
 ## License: MIT
 
