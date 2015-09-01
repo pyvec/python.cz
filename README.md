@@ -37,7 +37,7 @@ See [documentation in the `deployment` directory](deployment/README.md).
 
 **This site is community effort and contributions are very welcome!** See the [Hall of fame](https://github.com/honzajavorek/python.cz/graphs/contributors) for the most active contributors.
 
-The site is backed by [Pyvec](http://pyvec.org/), nonprofit organization dedicated to support of Python in the Czech Republic. [Honza Javorek](http://github.com/honzajavorek) is the core commiter and maintainer.
+The site is backed by [Pyvec](http://pyvec.org/), nonprofit organization dedicated to support of Python in the Czech Republic. [Honza Javorek](http://github.com/honzajavorek) is the original author, core commiter and maintainer of python.cz.
 
 ## License
 
