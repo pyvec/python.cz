@@ -3,19 +3,23 @@
 
 import json
 from os import path
-from glob import glob
+
+from .helpers import get_test_cases, DATA_DIR
 
 
-def test_valid_json():
-    """Tests whether all JSON data files are valid JSON documents."""
+cases = get_test_cases([
+    path.join(DATA_DIR, '*.*json'),
+])
 
-    test_dir = path.dirname(path.abspath(__file__))
-    data_dir = path.join(test_dir, '..', 'static', 'data')
 
-    count = 0
-    for filename in glob(path.join(data_dir, '*.*json')):
-        count += 1
-        with open(filename) as f:
+def test_there_are_json_files_to_be_tested():
+    assert len(cases) > 0
+
+
+for case in cases:
+    def _test():
+        """Tests whether JSON data file is a valid JSON document."""
+        with open(case['filename']) as f:
             assert json.load(f)
 
-    assert count > 0
+    globals()[case['fn_name']] = _test

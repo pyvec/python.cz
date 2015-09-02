@@ -1,21 +1,31 @@
 # -*- coding: utf-8 -*-
 
 
-import yaml
 from os import path
-from glob import glob
+
+import yaml
+
+from .helpers import get_test_cases, DATA_DIR, ROOT_DIR
 
 
-def test_valid_json():
-    """Tests whether all YAML data files are valid YAML documents."""
+cases = get_test_cases([
+    path.join(DATA_DIR, '*.yaml'),
+    path.join(DATA_DIR, '*.yml'),
+    path.join(ROOT_DIR, '*.yaml'),
+    path.join(ROOT_DIR, '*.yml'),
+    path.join(ROOT_DIR, '.*.yaml'),
+    path.join(ROOT_DIR, '.*.yml'),
+])
 
-    test_dir = path.dirname(path.abspath(__file__))
-    data_dir = path.join(test_dir, '..', 'static', 'data')
 
-    count = 0
-    for filename in glob(path.join(data_dir, '*.yml')):
-        count += 1
-        with open(filename) as f:
+def test_there_are_yaml_files_to_be_tested():
+    assert len(cases) > 0
+
+
+for case in cases:
+    def _test():
+        """Tests whether YAML data file is a valid YAML document."""
+        with open(case['filename']) as f:
             assert yaml.load(f.read())
 
-    assert count > 0
+    globals()[case['fn_name']] = _test
