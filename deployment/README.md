@@ -13,7 +13,7 @@
 -   Clone the repository:
 
     ```
-    $ git clone https://github.com/honzajavorek/python.cz /srv/app
+    $ git clone https://github.com/pyvec/python.cz /srv/app
     ```
 
 -   Install:
@@ -74,7 +74,7 @@ Continuous deployment means your app gets automatically deployed if continuous i
         on:
             branch: "master"
             python: "3.4"
-            repo: "honzajavorek/python.cz"
+            repo: "pyvec/python.cz"
     ```
 
     This triggers `deploy.sh` script only for `master` branch with Python 3.4.

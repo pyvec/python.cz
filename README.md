@@ -3,7 +3,7 @@
 
 Czech Python community homepage.
 
-[![Build Status](https://travis-ci.org/honzajavorek/python.cz.svg?branch=master)](https://travis-ci.org/honzajavorek/python.cz)
+[![Build Status](https://travis-ci.org/pyvec/python.cz.svg?branch=master)](https://travis-ci.org/pyvec/python.cz)
 
 ## Installation
 
@@ -35,7 +35,7 @@ The site gets automatically deployed after any push to the `master` branch. See 
 
 ## Authors & Contributions
 
-**This site is community effort and contributions are very welcome!** See the [Hall of fame](https://github.com/honzajavorek/python.cz/graphs/contributors) for the most active contributors.
+**This site is community effort and contributions are very welcome!** See the [Hall of fame](https://github.com/pyvec/python.cz/graphs/contributors) for the most active contributors.
 
 The site is backed by [Pyvec](http://pyvec.org/), nonprofit organization dedicated to support of Python in the Czech Republic. [Honza Javorek](http://github.com/honzajavorek) is the original author, core commiter and maintainer of python.cz.
 

@@ -4,7 +4,7 @@
 from flask import Flask
 
 
-GITHUB_URL = 'https://github.com/honzajavorek/python.cz'
+GITHUB_URL = 'https://github.com/pyvec/python.cz'
 GITHUB_EDIT_URL = GITHUB_URL + '/edit/master/pythoncz'
 
 TEMPLATES_DIR_URL = GITHUB_EDIT_URL + '/templates/'

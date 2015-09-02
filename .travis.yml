@@ -15,4 +15,4 @@ deploy:
     on:
         branch: "master"
         python: "3.4"
-        repo: "honzajavorek/python.cz"
+        repo: "pyvec/python.cz"
