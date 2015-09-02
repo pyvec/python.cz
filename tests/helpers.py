@@ -12,7 +12,7 @@ def get_test_cases(glob_patterns):
     for glob_pattern in glob_patterns:
         for filename in glob(glob_pattern):
             slug = slugify(path.basename(filename), separator='_')
-            fn_name = 'test_{}_is_valid'.format(slug)
+            fn_name = 'test_{0}_is_valid'.format(slug)
 
             cases.append({
                 'filename': filename,
