@@ -14,7 +14,7 @@ fi
 rm -rf /srv/app
 
 # get latest code
-git clone --progress --depth=1 https://github.com/pyvec/python.cz /srv/app
+git clone --progress --depth=1 --branch=master https://github.com/pyvec/python.cz /srv/app
 
 # install dependencies
 /srv/venv/bin/pip install -r /srv/app/requirements.txt
