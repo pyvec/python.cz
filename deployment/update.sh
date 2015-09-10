@@ -4,6 +4,10 @@
 #
 # This script is designed to be remotely executed by TravisCI build
 # as part of automatic continuous deployment.
+#
+# WARNING!
+# If you change contents of this file, then you need to update it manually
+# on server as it won't be able to 'update itself'.
 
 # This script should be executed remotely on the production machine.
 if [ "$USER" != "app" ]; then
