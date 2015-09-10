@@ -12,7 +12,7 @@ if [ -z "$CI" ]; then
 fi
 
 # Decrypting private key
-openssl aes-256-cbc -K $encrypted_c15489139a9e_key -iv $encrypted_c15489139a9e_iv -in deployment/id_rsa_pyvec_deployment.enc -out deployment/id_rsa_pyvec_deployment -d
+openssl aes-256-cbc -K $encrypted_3814399f38ed_key -iv $encrypted_3814399f38ed_iv -in deployment/id_rsa_pyvec_deployment.enc -out deployment/id_rsa_pyvec_deployment -d
 chmod 600 deployment/id_rsa_pyvec_deployment
 
 # Run the 'update.sh' script remotely.
