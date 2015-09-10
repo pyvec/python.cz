@@ -1,4 +1,0 @@
-[submodule "pyladies"]
-	path = pyladies
-	url = https://github.com/encukou/pyladies.git
-	branch = gh-pages

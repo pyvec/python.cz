@@ -1,0 +1,130 @@
+{% extends '_base.html' %}
+{% block head %}
+    <title>Python in the Czech Republic</title>
+    <meta property="og:title" content="Python in the Czech Republic">
+
+    <meta name="description" content="Czech community around the Python programming language. User groups, jobs and other information.">
+    <meta property="og:description" content="Czech community around the Python programming language. User groups, jobs and other information.">
+{% endblock %}
+{% block content %}
+    <div class="row logo">
+        <h1 class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+            <img alt="Python" src="{{ url_for('static', filename='images/logo.svg') }}" onerror="this.onerror = null; this.src = '{{ url_for('static', filename='images/logo.png') }}'">
+        </h1>
+    </div>
+    <ul class="lead">
+        <li>
+            Python is a modern programming language. See <a href="https://www.python.org/">python.org</a> for details.
+        </li>
+        <li>
+            The Czech Python community is <strong>active and friendly</strong>.
+        </li>
+        <li>
+            Come and <strong>join us</strong> at meetups and workshops in several cities!
+        </li>
+    </ul>
+
+    <hr class="visible-sm-block visible-xs-block">
+
+    <div class="row">
+        <div class="photo-container meetups-container">
+            <img class="photo" src="{{ photo_url }}">
+
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 meetups">
+                    <h2 id="meetups">Meetups</h2>
+                    <p>
+                        <a href="http://pyvo.cz/en">Python meetups</a> called “Pyvo” are happening across the country.
+                        <strong>You're welcome to come, or present at one!</strong>
+                    </p>
+                    {% include '_meetups.html' %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="visible-sm-block visible-xs-block">
+
+    <div class="row boxes">
+        <div id="discussions" class="box col-md-4 col-sm-6">
+            <div class="box-body">
+                {% include '_discussions.html' %}
+            </div>
+        </div>
+        <div id="jobs" class="box col-md-4 col-sm-6">
+            <div class="box-body">
+                <h2>
+                    <i class="fa fa-briefcase"></i>
+                    Jobs
+                </h2>
+                <p>
+                    How can you address Czech software engineers working in Python with your <strong>job offer</strong>? Why is it <strong>worth the effort</strong>?
+                </p>
+                <p class="call-to-action">
+                    <a href="{{ url_for('jobs_en') }}" class="btn btn-primary">
+                        <i class="fa fa-arrow-right"></i>
+                        Let me hunt some heads!
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <div class="clearfix visible-sm-block"></div>
+
+        <div id="ladies" class="box col-md-4 col-sm-6">
+            <div class="box-body">
+                <h2>
+                    <i class="fa fa-heart"></i>
+                    For&nbsp;ladies
+                </h2>
+                <p>
+                    We actively support events for ladies in multiple Czech cities.
+                </p>
+                <ul>
+                    <li><a href="http://pyladies.cz">PyLadies, regular meetups</a></li>
+                    <li><a href="http://djangogirls.org/events/">DjangoGirls, one-day workshops</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="clearfix visible-md-block"></div>
+
+        <div id="conferences" class="box col-md-4 col-sm-6">
+            <div class="box-body">
+                <h2>
+                    <i class="fa fa-comments"></i>
+                    PyCon CZ 2015
+                </h2>
+                <p>
+                    Very first Czech Python conference! <strong>November 2015, Brno.</strong> Spread the word, register a talk or workshop, consider sponshorship, or just come and enjoy the event&ndash;whatever you choose will make us happy!
+                </p>
+                <p class="call-to-action">
+                    <a href="https://github.com/pyvec/cz.pycon.org-2015" class="btn btn-primary">
+                        <i class="fa fa-arrow-right"></i>
+                        Conference? Great!
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <div class="clearfix visible-sm-block"></div>
+
+        <div id="library" class="box col-md-4 col-sm-6">
+            <div class="box-body">
+                <h2>
+                    <i class="fa fa-book"></i>
+                    Library
+                </h2>
+                <p>
+                    We have a library of Python-related books. If you want to borrow one, let us know, and come to the nearest <a href="#meetups">Pyvo meetup</a> to pick the book up. By the way, you already know <a href="http://pythonbooks.revolunet.com/">Python Books</a>, right?
+                </p>
+                <p class="call-to-action">
+                    <a href="http://github.com/pyvec/bookshelf" class="btn btn-primary">
+                        <i class="fa fa-arrow-right"></i>
+                        What can I borrow?
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,36 @@
+<ul class="list-group discussions">
+    <li class="list-group-item">
+        <i class="fa fa-envelope"></i>
+        <a href="https://groups.google.com/group/django-cs/">
+            django-cs
+            {% if lang == 'cs' %}diskuse{% else %}discussion{% endif %}
+        </a>
+    </li>
+    <li class="list-group-item">
+        <i class="fa fa-envelope"></i>
+        <a href="http://www.py.cz/mailman/listinfo/python">
+            py.cz
+            {% if lang == 'cs' %}diskuse{% else %}discussion{% endif %}
+        </a>
+    </li>
+    <li class="list-group-item">
+        <i class="fa fa-facebook-official"></i>
+        {% if lang == 'cs' %}
+            Facebooková skupina
+            <a href="https://www.facebook.com/groups/pyonieri/">Pyonýři</a>
+        {% else %}
+            Facebook group
+            <a href="https://www.facebook.com/groups/pyonieri/">Pyoneers</a>
+        {% endif %}
+    </li>
+    <li class="list-group-item">
+        <i class="fa fa-twitter"></i>
+        Twitter <a href="https://twitter.com/naPyvo">@naPyvo</a>
+    </li>
+    <li class="list-group-item">
+        <i class="fa fa-slack"></i>
+        IRC <a href="irc://irc.freenode.net/python-cs">python-cs</a>, <a href="irc://irc.freenode.net/django-cs">django-cs</a>
+    </li>
+</ul>
+
+<hr class="visible-xs-block">

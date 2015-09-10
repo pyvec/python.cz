@@ -1,0 +1,20 @@
+courses:
+    -   name: Pro dámy
+        icon: female
+        links:
+            -   text: Pravidelné srazy PyLadies
+                url: http://pyladies.cz
+            -   text: Jednorázové workshopy Django Girls
+                url: http://djangogirls.org/events/
+
+    -   name: Pro studenty
+        icon: graduation-cap
+        links:
+            -   text: Kurzy MU Brno
+                url: http://is.muni.cz/vyhledavani/?search=jazyk+python+agenda%3Apr
+
+    -   name: Pro mládež
+        icon: child
+        links:
+            -   text: Kroužek na Praze 10
+                url: 'http://kapsa.cz/cs/krouzky-pro-deti#python'

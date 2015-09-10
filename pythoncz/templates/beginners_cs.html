@@ -1,0 +1,215 @@
+{% extends '_base.html' %}
+{% block head %}
+    <title>Python v ČR: Pro začátečníky</title>
+    <meta property="og:title" content="Python v ČR: Pro začátečníky">
+
+    <meta name="description" content="Jak se naučit Python? Python tutoriály, návody, Django, jak začít, apod.">
+    <meta property="og:description" content="Jak se naučit Python? Python tutoriály, návody, Django, jak začít, apod.">
+{% endblock %}
+
+{% block body_class %}beginners{% endblock %}
+
+{% block breadcrumb %}
+    Pro začátečníky
+{% endblock %}
+
+{% set en = '<i class="fa fa-globe help" title="Anglicky"></i>'|safe %}
+
+{% block content %}
+    <h1>Učíme se Python</h1>
+    <ul class="lead">
+        <li>
+            Česká <strong>komunita je přátelská a živá</strong>. Vždy bude po ruce <strong>někdo, kdo ti pomůže</strong>.
+        </li>
+        <li>
+            <strong>Nebudeš mít problém <a href="{{ url_for('jobs_cs') }}">sehnat práci</a>.</strong> Pythonistů je nedostatek!
+        </li>
+        <li>
+            I kdyby weby vyšly z módy, Python nachází <strong>uplatnění v desítkách dalších oborů</strong>.
+        </li>
+    </ul>
+
+    <hr>
+
+    <h2 id="kurzy">Kurzy</h2>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="row courses">
+                {% for column in data.courses %}
+                    <div class="col-md-{{ 12 // data.courses|length }}">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <i class="fa fa-{{ column.icon }}"></i>
+                                {{ column.name }}
+                            </div>
+                            <ul class="list-group">
+                                {% for link in column.links %}
+                                <li class="list-group-item">
+                                    <a href="{{ link.url }}">
+                                        {{ link.text }}
+                                    </a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="row">
+                <p class="call-to-action">
+                    <a href="{{ config.BEGINNERS_DATA_URL }}" class="btn btn-default">
+                        <i class="fa fa-edit"></i>
+                        Přidat kurz
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2 id="onlineneumim">Online materiály &ndash; neumím vůbec programovat</h2>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <p>
+                Následující materiály vznikly v rámci aktivit, které se snaží přiblížit <strong>IT ženám a ženy k IT</strong>. Jsou skvěle zpracované a může se z nich naučit programovat od úplných základů kdokoliv.
+            </p>
+
+            <div class="row online-courses">
+                <div class="col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-body">
+                            Chci umět obecně programovat
+                        </div>
+                        <div class="panel-footer">
+                            <a href="http://pyladies.cz" class="btn btn-primary">Materiály pro PyLadies</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-body">
+                            Chci vytvořit webovou stránku
+                        </div>
+                        <div class="panel-footer">
+                            <a href="http://tutorial.djangogirls.org/" class="btn btn-primary">Návod pro Django Girls</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2 id="onlineumim">Online materiály &ndash; programovat trochu umím</h2>
+    <div class="columns">
+        <h3>
+            <i class="fa fa-map-signs"></i>
+            Přecházím z jiného jazyka
+        </h3>
+        <ul>
+            <!--
+                Vkládejte prosím pokud možno pouze návody a materiály pro Python 3
+            -->
+
+            <!-- České návody -->
+            <li><a href="http://www.zdrojak.cz/clanky/jak-napisu-webovou-aplikaci-v-pythonu/">Jak přejít z PHP</a> (<a href="http://www.zdrojak.cz/clanky/jak-napisu-webovou-aplikaci-v-pythonu-2/">2. díl</a>)</li>
+
+            <!-- Anglické návody -->
+            <li><a href="https://speakerdeck.com/u/pydanny/p/intro-to-python">Úvod do Pythonu pro programátory</a> {{ en }}</li>
+            <li><a href="http://hyperpolyglot.org/scripting">Tahák na podobné konstrukce v PHP, Perlu, Pythonu a Ruby</a> {{ en }}</li>
+            <li><a href="http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html">Jak psát Python tak, aby to vypadalo jako Python (a ne třeba Java)</a> {{ en }}</li>
+            <li><a href="http://blog.jmoz.co.uk/learning-python-the-pragmatic-way/">Pragmatické tipy na to jak začít a co použít</a> {{ en }}</li>
+            <li><a href="http://docs.python-guide.org/">Průvodce Python ekosystémem</a> {{ en }}</li>
+            <li><a href="https://docs.python.org/3/tutorial/">Oficiální návod k Pythonu</a> {{ en }}</li>
+            <li><a href="http://stephensugden.com/crash_into_python/">Rychlokurz Pythonu pro programátory</a> {{ en }}</li>
+            <li><a href="http://mirnazim.org/writings/python-ecosystem-introduction/">pip, balíčky, a tak dále</a> {{ en }}</li>
+        </ul>
+
+        <h3>
+            <i class="fa fa-university"></i>
+            Návody pro začátečníky
+        </h3>
+        <ul>
+            <!--
+                Vkládejte prosím pokud možno pouze návody a materiály pro Python 3
+            -->
+
+            <!-- České návody -->
+            <li><a href="http://diveintopython3.py.cz/index.html">Kniha Ponořme se do Pythonu 3</a> (<a href="http://knihy.nic.cz/files/nic/edice/mark_pilgrim_dip3_ver3.pdf">PDF</a>)</li>
+            <li><a href="http://howto.py.cz/">Učíme se&nbsp;programovat v&nbsp;jazyce Python&nbsp;3</a></li>
+
+            <!-- Anglické návody -->
+            <li><a href="http://net.tutsplus.com/tutorials/the-best-way-to-learn-python/">Seznam nejlepších materiálů</a> {{ en }}</li>
+            <li><a href="https://www.cbtnuggets.com/it-training/python-programming">Sada krátkých videí jako úvod do Pythonu</a> {{ en }}</li>
+            <li><a href="http://www.neckbeardrepublic.com/screencasts/">Sada screencastů k vylepšení dovedností s Pythonem</a> {{ en }}</li>
+            <li><a href="https://godjango.com/">Screencasty pro webový framework Django</a> {{ en }}</li>
+            <li><a href="https://docs.djangoproject.com/">Dokumentace k webovému frameworku Django</a> {{ en }}</li>
+            <li><a href="http://interactivepython.org/runestone/static/pythonds/index.html">Základní algoritmy - v Pythonu a interaktivně</a></li>
+            <li><a href="http://inventwithpython.com/blog/2012/07/09/16-common-python-runtime-errors/">Vysvětlení nejčastějších chyb začátečníků</a> {{ en }}</li>
+            <li><a href="http://jessenoller.com/good-to-great-python-reads/">Odkazy na vysvětlení zajímavých či pokročilých detailů jazyka</a> {{ en }}</li>
+
+            <!-- Návody, které mají hodnotu i přesto, že jsou pro Python 2 -->
+            <li><a href="http://newcoder.io/">Syntaxi už umím, co dál?</a> {{ en }}</li>
+            <li><a href="http://learnpythonthehardway.org/">Learn Python The Hard Way</a> {{ en }}</li>
+        </ul>
+
+        <h3>
+            <i class="fa fa-hand-pointer-o"></i>
+            Chci si to hned zkusit
+        </h3>
+        <ul>
+            <!--
+                Vkládejte prosím pokud možno pouze materiály pro Python 3
+            -->
+
+            <li><a href="http://repl.it/">Python konzole v prohlížeči</a></li>
+            <li><a href="http://www.checkio.org">Programovací hra</a> {{ en }}</li>
+            <li><a href="http://www.codecademy.com/tracks/python">Python na Codecademy, interaktivní online kurz</a> {{ en }}</li>
+            <li><a href="https://www.coursera.org/course/pythonlearn">Programming for Everybody, interaktivní online kurz</a> {{ en }}</li>
+            <li><a href="http://www.pythontutor.com/">Interaktivní vysvětlení toho, co se děje v kódu</a> {{ en }}</li>
+        </ul>
+
+        <h3>
+            <i class="fa fa-book"></i>
+            Knihy
+        </h3>
+        <p>
+            Díky <a href="{{ url_for('index_cs') }}#knihovna">naší knihovničce</a> si můžeš zadarmo půjčit knihy o Pythonu. Na stránkách <a href="http://pythonbooks.revolunet.com/">Python Books</a> navíc najdeš seznam knih, které si můžeš zdarma číst online nebo si je rovnou stáhnout. Určitě to omrkni!
+        </p>
+
+        <h3>
+            <i class="fa fa-video-camera"></i>
+            Přednášky
+        </h3>
+        <p>
+            Nahráváme přednášky ze <a href="{{ url_for('index_cs') }}#srazy">srazů</a> a <a href="https://www.youtube.com/user/pyvec/playlists">dáváme je na YouTube</a>. Na stránkách <a href="http://pyvideo.org/">pyvideo.org</a> najdeš přednášky z celého světa.
+        </p>
+
+        <h3>
+            <i class="fa fa-gavel"></i>
+            Konvence pro psaní kódu
+        </h3>
+        <ul>
+            <li><a href="http://www.python.org/dev/peps/pep-0008/">Style Guide for Python Code</a></li>
+            <li><a href="http://www.python.org/dev/peps/pep-0257/">Python Docstring Conventions</a></li>
+            <li><a href="http://google-styleguide.googlecode.com/svn/trunk/pyguide.html">Google Python Style Guide</a></li>
+        </ul>
+
+        <h3>
+            <i class="fa fa-server"></i>
+            Spolehlivý hosting
+        </h3>
+        <ul>
+            <!--
+                Hostingy, na kterých je radost něco v Pythonu hostovat. Ne takové, kde se dají omylem spustit i Python skripty, nebo kde si člověk koupí VPS a může si tam nainstalovat co chce.
+            -->
+            <li><a href="https://rosti.cz/python-hosting/">Roští.cz</a></li>
+            <li><a href="https://www.heroku.com/">Heroku</a></li>
+            <li><a href="https://developers.google.com/appengine/">Google App Engine</a></li>
+            <li><a href="https://www.pythonanywhere.com/">PythonAnywhere</a></li>
+            <li><a href="https://www.alwaysdata.com/">AlwaysData</a></li>
+        </ul>
+    </div>
+{% endblock %}
