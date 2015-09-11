@@ -535,6 +535,17 @@
                 "type": "Point",
                 "coordinates": [16.62073, 49.19031]
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Nubium Development SE",
+                "url": "http://www.nubium.cz"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4292935, 50.0809328]
+            }
         }
     ]
 }
