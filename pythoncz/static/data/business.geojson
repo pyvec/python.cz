@@ -540,7 +540,8 @@
             "type": "Feature",
             "properties": {
                 "name": "Nubium Development SE",
-                "url": "http://www.nubium.cz"
+                "url": "http://www.nubium.cz",
+                "company": true
             },
             "geometry": {
                 "type": "Point",
