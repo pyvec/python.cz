@@ -1,0 +1,418 @@
+
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.container {
+    margin: 0 auto;
+    text-align: left;
+}
+
+.header,
+.marketing,
+.footer {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+hr {
+    margin: 4em 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+.title,
+.tasks .panel-body,
+.online-courses .panel-body {
+    font-family: 'Arbutus Slab', serif;
+}
+
+.content > h1,
+h2,
+h3 {
+    margin: 1.3em 0 1em 0;
+}
+
+.content > h1 {
+    text-align: center;
+    font-size: 400%;
+    margin-bottom: 1.5em;
+}
+
+.get-involved h2,
+.beginners h2,
+.jobs h2 {
+    text-align: center;
+}
+
+.columns h3 {
+    margin-top: 2em;
+}
+
+.permalink-container {
+    position: relative;
+}
+
+a.permalink {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    visibility: hidden;
+    font-family: sans-serif;
+    margin-left: 0.1em;
+    padding: 0 0.3em;
+    text-decoration: none;
+    color: #d5d5d5;
+}
+
+h1[id]:hover .permalink,
+h2[id]:hover .permalink,
+h3[id]:hover .permalink,
+h4[id]:hover .permalink,
+h5[id]:hover .permalink,
+h6[id]:hover .permalink {
+    visibility: visible;
+}
+
+ul {
+    padding-left: 1.5em;
+}
+
+ul li {
+    list-style-type: none;
+    position: relative;
+}
+
+ul li:before {
+    content: '•';
+    position: absolute;
+    left: -1em;
+}
+
+.header {
+    padding-bottom: 1.5em;
+}
+
+.header .title {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 2em;
+    font-size: 1.5em;
+}
+
+.header .title a {
+    text-decoration: none;
+    color: #646464;
+}
+
+.header .title img {
+    vertical-align: text-top;
+    margin-right: 0.1em;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.logo img {
+    width: 100%;
+}
+
+ul.lead {
+    text-align: center;
+    padding: 0;
+}
+
+ul.lead li:before,
+ul.nav li:before,
+ul.list-group li:before {
+    display: none;
+}
+
+.box-body {
+    min-height: 18em;
+    padding: 1em 0;
+}
+
+.box h2 {
+    margin: 0 0 0.5em 0;
+}
+
+.boxes {
+    margin: 2em 0;
+}
+
+.call-to-action {
+    text-align: right;
+}
+
+.call-to-action .btn {
+    margin: 1em 0.5em 0 auto;
+}
+
+.add-business {
+    margin-top: -1em;
+    text-align: center;
+}
+
+.add-business .btn {
+    margin: 0 auto;
+}
+
+.discussions {
+    margin: 0;
+}
+
+.discussions .list-group-item {
+    border: none;
+}
+
+i.fa {
+    margin-right: 0.3em;
+}
+
+h2 i.fa {
+    margin-right: 0.1em;
+}
+
+.footer {
+    margin-top: 2em;
+    padding: 2em 1em;
+    border-top: 1px solid #e5e5e5;
+}
+
+.footer p {
+    line-height: 2em;
+}
+
+.footer .edit {
+    text-align: right;
+}
+
+.footer .edit a {
+    text-align: left;
+}
+
+.meetups-city {
+    font-weight: bold;
+}
+
+.meetups-city img {
+    display: block;
+    margin: 1em auto;
+}
+
+.meetups {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+}
+
+.meetups p,
+.meetups .row {
+    margin: 1em;
+}
+
+.meetups .row {
+    margin-bottom: 2.5em;
+}
+
+.meetups-city,
+.meetups p {
+    font-size: 125%;
+}
+
+.meetups-container {
+    margin: 4em 0 2em 0;
+    padding: 2em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.columns {
+    margin: 4em 2em;
+
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+
+    -webkit-column-rule: 1px dotted #aaa;
+    -moz-column-rule: 1px dotted #aaa;
+    column-rule: 1px dotted #aaa;
+
+    -webkit-column-gap: 3em;
+    -moz-column-gap: 3em;
+    column-gap: 3em;
+}
+
+.columns-many {
+    -webkit-columns: 4;
+    -moz-columns: 4;
+    columns: 4;
+}
+
+.columns h2:first-of-type,
+.columns h3:first-of-type {
+    margin-top: 0;
+}
+
+.columns img {
+    width: 100%;
+}
+
+.photo {
+    width: 100%;
+    position: absolute;
+    z-index: -100;
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+    margin: auto;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.photo-container {
+    position: relative;
+    overflow: hidden;
+    min-height: 32em;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0.6) 5%,
+        rgba(255, 255, 255, 0.6) 95%,
+        rgba(255, 255, 255, 1) 100%
+    );
+}
+
+.help {
+    cursor: help;
+}
+
+i.fa.help {
+    margin-left: 0.3em;
+}
+
+.get-involved .columns img {
+    filter: gray;
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+    opacity: 0.4;
+}
+
+.get-involved .columns img:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+    opacity: 1;
+}
+
+img.img-small {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.tasks h3 {
+    text-align: center;
+    margin: 2em 0 2em 0;
+}
+
+.tasks .panel-body,
+.online-courses .panel-body {
+    text-align: center;
+    font-size: 110%;
+}
+
+.tasks .panel-body a {
+    color: #333;
+    height: 5em;
+    width: 100%;
+    display: table;
+}
+
+.tasks .panel-body a span,
+.tasks .panel-body a strong {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.tasks .panel-footer {
+    text-align: right;
+}
+
+.tasks .votes {
+    margin-right: 1em;
+}
+
+.online-courses {
+    margin: 3em 0 1em 0;
+}
+
+.online-courses .panel {
+    text-align: center;
+}
+
+.jobs .thumbnail {
+    margin-top: 2em;
+}
+
+.jobs #map {
+    height: 350px;
+}
+
+
+@media only screen and (max-width: 992px) {
+    .boxes,
+    .meetups-container,
+    .photo-container {
+        margin: 0;
+        padding: 0;
+    }
+
+    .photo {
+        display: none;
+    }
+
+    .photo-container {
+        min-height: auto;
+        background: none;
+    }
+
+    .columns {
+        margin: 0;
+
+        -webkit-columns: 1;
+        -moz-columns: 1;
+        columns: 1;
+    }
+
+    .columns-many {
+        margin: 4em 2em;
+
+        -webkit-columns: 3;
+        -moz-columns: 3;
+        columns: 3;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .columns-many {
+        -webkit-columns: 2;
+        -moz-columns: 2;
+        columns: 2;
+    }
+
+    .discussions {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
