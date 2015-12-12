@@ -301,19 +301,6 @@ i.fa.help {
     margin-left: 0.3em;
 }
 
-.get-involved .columns img {
-    filter: gray;
-    filter: grayscale(1);
-    -webkit-filter: grayscale(1);
-    opacity: 0.4;
-}
-
-.get-involved .columns img:hover {
-    filter: none;
-    -webkit-filter: grayscale(0);
-    opacity: 1;
-}
-
 img.img-small {
     width: 50%;
     margin-left: 25%;
