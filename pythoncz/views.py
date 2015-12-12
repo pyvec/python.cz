@@ -30,13 +30,13 @@ def inject_context():
 @app.route('/')
 def index_cs():
     return render_template('index_cs.html',
-                           photo_url=photos.get_random_url())
+                           photo_urls=photos.get_random_urls(5))
 
 
 @app.route('/en')
 def index_en():
     return render_template('index_en.html',
-                           photo_url=photos.get_random_url(), lang='en')
+                           photo_urls=photos.get_random_urls(5), lang='en')
 
 
 @app.route('/zapojse')
