@@ -64,18 +64,6 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "Webexpo",
-                "url": "http://www.redhat.cz",
-                "company": true
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [16.5816069, 49.2261222]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "name": "Y Soft",
                 "url": "https://www.ysoft.com/",
                 "company": true
