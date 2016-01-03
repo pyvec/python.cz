@@ -535,6 +535,17 @@
                 "type": "Point",
                 "coordinates": [14.4292935, 50.0809328]
             }
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "tcp cloud a.s.",
+                "url": "http://tcpcloud.eu",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4527403, 50.0919999]
+            }
         }
     ]
 }
