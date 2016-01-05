@@ -87,9 +87,10 @@
                     <div class="panel panel-{{ list_panel }}">
                         <div class="panel-heading"></div>
                         <div class="panel-body">
-                            <a href="{{ card.url }}" target="_blank">
+                            <a href="{{ card.url }}" target="_blank" title="{{ card.name }}">
                                 <span>{{ card.name }}</span>
                             </a>
+                            <div class="shadow"></div>
                         </div>
                         {% if list.name != 'Hotovo!' %}
                             <div class="panel-footer">
