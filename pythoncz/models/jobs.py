@@ -47,7 +47,7 @@ def _load_business_data(data_file):
 
 def _sort_cs(iterable, key='name'):
     def item_key(item):
-        return czech_sort.key(unicode(item[key]))
+        return czech_sort.key(item[key])
     return sorted(iterable, key=item_key)
 
 
