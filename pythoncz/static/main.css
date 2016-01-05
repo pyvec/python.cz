@@ -312,6 +312,21 @@ img.img-small {
     margin: 2em 0 2em 0;
 }
 
+.tasks .panel-body {
+    height: 120px;
+    overflow: hidden;
+    position: relative;
+}
+
+.tasks .panel-body .shadow {
+    position: absolute;
+    height: 20px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: inset 0px -15px 20px 0px rgba(255,255,255,1);
+}
+
 .tasks .panel-body,
 .online-courses .panel-body {
     text-align: center;
@@ -320,7 +335,7 @@ img.img-small {
 
 .tasks .panel-body a {
     color: #333;
-    height: 5em;
+    height: 70px;
     width: 100%;
     display: table;
 }
