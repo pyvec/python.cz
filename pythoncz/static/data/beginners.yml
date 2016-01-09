@@ -12,6 +12,10 @@ courses:
         links:
             -   text: Kurzy MU Brno
                 url: http://is.muni.cz/vyhledavani/?search=jazyk+python+agenda%3Apr
+            -   text: Kurz ZČU v Plzni KKY/ITE
+                url: https://portal.zcu.cz/StagPortletsJSR168/CleanUrl?urlid=prohlizeni-predmet-sylabus&predmetZkrPrac=KKY&predmetZkrPred=ITE
+            -   text: Kurz ZČU v Plzni KKY/APK
+                url: https://portal.zcu.cz/StagPortletsJSR168/CleanUrl?urlid=prohlizeni-predmet-sylabus&predmetZkrPrac=KKY&predmetZkrPred=APK
 
     -   name: Pro mládež
         icon: child
