@@ -16,5 +16,5 @@ job_boards:
 knowledge_tests:
     -   name: StartupJobs.cz
         url: 'https://www.startupjobs.cz/test/python'
-    -   name: TopTal.com
+    -   name: Toptal.com
         url: 'http://www.toptal.com/python/interview-questions'
