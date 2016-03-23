@@ -10,6 +10,8 @@ courses:
     -   name: Pro studenty
         icon: graduation-cap
         links:
+            -   text: Kurz ČVUT FEL A4B99RPH
+                url: https://cw.fel.cvut.cz/wiki/courses/a4b99rph/prednasky/start
             -   text: Kurzy MU Brno
                 url: http://is.muni.cz/vyhledavani/?search=jazyk+python+agenda%3Apr
             -   text: Kurz ZČU v Plzni KKY/ITE
