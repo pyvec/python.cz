@@ -16,6 +16,8 @@ courses:
                 url: https://portal.zcu.cz/StagPortletsJSR168/CleanUrl?urlid=prohlizeni-predmet-sylabus&predmetZkrPrac=KKY&predmetZkrPred=ITE
             -   text: Kurz ZČU v Plzni KKY/APK
                 url: https://portal.zcu.cz/StagPortletsJSR168/CleanUrl?urlid=prohlizeni-predmet-sylabus&predmetZkrPrac=KKY&predmetZkrPred=APK
+            -   text: Kurz FIT ČVUT v Praze (BI-PYT)
+                url: http://bk.fit.cvut.cz/cz/predmety/00/00/00/00/00/00/01/29/14/p1291406.html
 
     -   name: Pro mládež
         icon: child
