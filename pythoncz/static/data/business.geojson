@@ -560,7 +560,7 @@
                 "coordinates": [14.4527403, 50.0919999]
             }
         },
-          {
+        {
             "type": "Feature",
             "properties": {
                 "name": "OpenGeoLabs s.r.o.",
@@ -572,7 +572,7 @@
                 "coordinates": [14.5160186, 50.0324947]
             }
         },
-          {
+        {
             "type": "Feature",
             "properties": {
                 "name": "Direct-services s.r.o.",
@@ -582,6 +582,18 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [18.010309, 49.594368]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Leadhub s.r.o.",
+                "url": "http://www.leadhub.co/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4036089, 50.0751008]
             }
         }
     ]
