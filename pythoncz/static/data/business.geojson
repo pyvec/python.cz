@@ -559,6 +559,18 @@
                 "type": "Point",
                 "coordinates": [14.4527403, 50.0919999]
             }
+        },
+          {
+            "type": "Feature",
+            "properties": {
+                "name": "OpenGeoLabs s.r.o.",
+                "url": "http://opengeolabs.cz",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.5160186, 50.0324947]
+            }
         }
     ]
 }
