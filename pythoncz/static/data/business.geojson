@@ -171,6 +171,18 @@
         {
             "type": "Feature",
             "properties": {
+                "name": "Grand IT",
+                "url": "http://grandit.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4812706, 50.0713181]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "name": "User Technologies",
                 "url": "http://usertechnologies.com/",
                 "company": true
