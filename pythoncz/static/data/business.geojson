@@ -571,7 +571,8 @@
                 "type": "Point",
                 "coordinates": [14.5160186, 50.0324947]
             }
-                {
+        },
+          {
             "type": "Feature",
             "properties": {
                 "name": "Direct-services s.r.o.",
