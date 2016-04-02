@@ -571,6 +571,18 @@
                 "type": "Point",
                 "coordinates": [14.5160186, 50.0324947]
             }
+        },
+          {
+            "type": "Feature",
+            "properties": {
+                "name": "Direct-services s.r.o.",
+                "url": "http://www.direct-services.cz",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [18.010309, 49.594368]
+            }
         }
     ]
 }
