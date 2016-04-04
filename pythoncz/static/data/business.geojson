@@ -100,6 +100,18 @@
         {
             "type": "Feature",
             "properties": {
+                "name": "ROI Hunter",
+                "url": "http://www.roihunter.com/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [16.6127981, 49.2007753]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "name": "ARMATURY Group a.s.",
                 "url": "http://www.armaturygroup.cz/",
                 "company": true
