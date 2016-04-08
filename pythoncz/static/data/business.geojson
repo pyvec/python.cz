@@ -52,6 +52,18 @@
         {
             "type": "Feature",
             "properties": {
+                "name": "The Brainity",
+                "url": "http://www.thebrainity.com/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4412558, 50.1005167]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "name": "Inuits",
                 "url": "https://www.inuits.eu/",
                 "company": true
