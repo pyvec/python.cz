@@ -172,17 +172,6 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "Jozef Simo",
-                "url": "http://www.wtfall.com/"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [10.2107, 56.1572]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "name": "Videoflot",
                 "url": "http://www.videoflot.com/",
                 "company": true
