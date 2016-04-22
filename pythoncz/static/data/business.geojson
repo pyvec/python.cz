@@ -608,6 +608,18 @@
                 "type": "Point",
                 "coordinates": [14.4036089, 50.0751008]
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Roští.cz, s.r.o.",
+                "url": "http://rosti.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [15.814811, 50.206445]
+            }
         }
     ]
 }
