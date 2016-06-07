@@ -220,8 +220,8 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "SkyPicker",
-                "url": "http://skypicker.com/",
+                "name": "Kiwi.com",
+                "url": "http://kiwi.com",
                 "company": true
             },
             "geometry": {
