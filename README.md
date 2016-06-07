@@ -7,6 +7,8 @@ Czech Python community homepage.
 
 ## Installation
 
+The code is **Python 3**.
+
 ```shell
 $ pip install -r requirements.txt
 ```

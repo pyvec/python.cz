@@ -33,13 +33,13 @@ def index_cs():
                            photo_urls=photos.get_random_urls(5))
 
 
-@app.route('/en')
+@app.route('/en/')
 def index_en():
     return render_template('index_en.html',
                            photo_urls=photos.get_random_urls(5), lang='en')
 
 
-@app.route('/zapojse')
+@app.route('/zapojse/')
 def get_involved_cs():
     trello_board_id = app.config['TRELLO_BOARD_ID']
     context = {
@@ -49,19 +49,26 @@ def get_involved_cs():
     return render_template('get_involved_cs.html', **context)
 
 
-@app.route('/zacatecnici')
+@app.route('/zacatecnici/')
 def beginners_cs():
     return render_template('beginners_cs.html', data=beginners.data)
 
 
-@app.route('/prace')
+@app.route('/prace/')
 def jobs_cs():
     return render_template('jobs_cs.html', data=jobs.data)
 
 
-@app.route('/en/jobs')
+@app.route('/en/jobs/')
 def jobs_en():
     return render_template('jobs_en.html', data=jobs.data, lang='en')
+
+
+# Subdomain redirect
+
+@app.route('/', subdomain='www')
+def subdomain_redirect():
+    return redirect(url_for('index_cs'))
 
 
 # Redirects of legacy stuff
