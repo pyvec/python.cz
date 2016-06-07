@@ -64,13 +64,6 @@ def jobs_en():
     return render_template('jobs_en.html', data=jobs.data, lang='en')
 
 
-# Subdomain redirect
-
-@app.route('/', subdomain='www')
-def subdomain_redirect():
-    return redirect(url_for('index_cs'))
-
-
 # Redirects of legacy stuff
 
 @app.route('/index.html')

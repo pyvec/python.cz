@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 
 
-import os
-
 from flask import Flask
 
 
@@ -25,12 +23,6 @@ GOOGLE_ANALYTICS_CODE = 'UA-1316071-13'
 
 app = Flask('pythoncz')
 app.config.from_object(__name__)
-
-
-if app.debug:
-    app.config['SERVER_NAME'] = 'python.cz'
-else:
-    app.config['SERVER_NAME'] = '0.0.0.0:' + os.environ.get('PORT', '5000')
 
 
 from . import views  # NOQA
