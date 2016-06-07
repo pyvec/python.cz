@@ -140,6 +140,11 @@ ul.list-group li:before {
     padding: 1em 0;
 }
 
+.box-body p {
+    height: 90px;
+    margin: 0 0 0px;
+}
+
 .box h2 {
     margin: 0 0 0.5em 0;
 }
