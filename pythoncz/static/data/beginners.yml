@@ -5,7 +5,13 @@ courses:
             -   text: Pravidelné srazy PyLadies
                 url: http://pyladies.cz
             -   text: Jednorázové workshopy Django Girls
-                url: http://djangogirls.org/events/
+                url: http://djangogirls.org
+            -   text: Workshopy Czechitas (v Pythonu jen některé)
+                url: http://www.czechitas.cz
+            -   text: Workshopy Geek Girls Carrots v Ostravě (v Pythonu jen některé)
+                url: http://geekgirlscarrots.org
+            -   text: Srazy Women in Technology v Praze (obecné)
+                url: http://www.meetup.com/Prague-Women-in-Technology-Meetup/
 
     -   name: Pro studenty
         icon: graduation-cap
