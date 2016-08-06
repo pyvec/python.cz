@@ -140,9 +140,8 @@ ul.list-group li:before {
     padding: 1em 0;
 }
 
-.box-body p {
-    height: 90px;
-    margin: 0 0 0px;
+.box-content {
+    min-height: 10em;
 }
 
 .box h2 {
@@ -374,6 +373,31 @@ img.img-small {
 
 .jobs #map {
     height: 350px;
+}
+
+.cartoon {
+  display: block;
+  width: 100%;
+}
+
+.cartoon-container {
+  margin: 0 auto;
+  padding: 2em 0;
+  max-width: 768px;
+}
+
+.cartoon-hr {
+  padding-bottom: 4em;
+}
+
+.panel-body .cartoon {
+  margin: 0 auto 1.5em auto;
+  max-height: 10em;
+  width: auto;
+}
+
+img[src*="jobs.svg"] {
+  max-height: 400px;
 }
 
 

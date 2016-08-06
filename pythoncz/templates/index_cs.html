@@ -27,7 +27,9 @@
         </li>
     </ul>
 
-    <hr class="visible-sm-block visible-xs-block">
+    <div class="row cartoon-container">
+        <img class="cartoon" alt="Česká Python komunita" src="{{ url_for('static', filename='images/czech-python-user-group.svg') }}" onerror="this.onerror = null; this.src = '{{ url_for('static', filename='images/czech-python-user-group.png') }}'">
+    </div>
 
     <div class="row" id="srazy">
         <div class="photo-container meetups-container">
@@ -59,13 +61,15 @@
         </div>
         <div id="zacatecnici" class="box col-md-4 col-sm-6">
             <div class="box-body">
-                <h2>
-                    <i class="fa fa-heart"></i>
-                    Pro&nbsp;začátečníky
-                </h2>
-                <p>
-                    Základy Pythonu se dají <strong>naučit i z prohlížeče</strong>. Máme pro tebe odkazy na výukové hry, online kurzy, videa, články, knihy a další.
-                </p>
+                <div class="box-content">
+                    <h2>
+                        <i class="fa fa-heart"></i>
+                        Pro&nbsp;začátečníky
+                    </h2>
+                    <p>
+                        Základy Pythonu se dají <strong>naučit i z prohlížeče</strong>. Máme pro tebe odkazy na výukové hry, online kurzy, videa, články, knihy a další.
+                    </p>
+                </div>
                 <p class="call-to-action">
                     <a href="{{ url_for('beginners_cs') }}" class="btn btn-primary">
                         <i class="fa fa-arrow-right"></i>
@@ -79,13 +83,15 @@
 
         <div id="prace" class="box col-md-4 col-sm-6">
             <div class="box-body">
-                <h2>
-                    <i class="fa fa-briefcase"></i>
-                    Práce
-                </h2>
-                <p>
-                    Jakou práci seženeš, když se naučíš Python? Kdo jej používá? Jak a kam napsat <strong>nabídku práce</strong> pro Pythonisty?
-                </p>
+                <div class="box-content">
+                    <h2>
+                        <i class="fa fa-briefcase"></i>
+                        Práce
+                    </h2>
+                    <p>
+                        Jakou práci seženeš, když se naučíš Python? Kdo jej používá? Jak a kam napsat <strong>nabídku práce</strong> pro Pythonisty?
+                    </p>
+                </div>
                 <p class="call-to-action">
                     <a href="{{ url_for('jobs_cs') }}" class="btn btn-primary">
                         <i class="fa fa-arrow-right"></i>
@@ -99,13 +105,15 @@
 
         <div id="zapojse" class="box col-md-4 col-sm-6">
             <div class="box-body">
-                <h2>
-                    <i class="fa fa-bullhorn"></i>
-                    Zapoj&nbsp;se!
-                </h2>
-                <p>
-                    Pomoz nám <strong>rozšířit Python</strong> mezi ostatní. Pro lenochy s penězi máme <a href="{{ config.PYVEC_ACCOUNT_URL }}">číslo účtu</a>, ale spíš oceníme, když se <strong>chopíš nějakého připraveného úkolu</strong> a dotlačíš jej do konce. Věčná sláva zaručena!
-                </p>
+                <div class="box-content">
+                    <h2>
+                        <i class="fa fa-bullhorn"></i>
+                        Zapoj&nbsp;se!
+                    </h2>
+                    <p>
+                        Pomoz nám <strong>rozšířit Python</strong> mezi ostatní. Pro lenochy s penězi máme <a href="{{ config.PYVEC_ACCOUNT_URL }}">číslo účtu</a>, ale spíš oceníme, když se <strong>chopíš nějakého připraveného úkolu</strong> a dotlačíš jej do konce. Věčná sláva zaručena!
+                    </p>
+                </div>
                 <p class="call-to-action">
                     <a href="{{ url_for('get_involved_cs') }}" class="btn btn-primary">
                         <i class="fa fa-arrow-right"></i>
@@ -119,13 +127,15 @@
 
         <div id="konference" class="box col-md-4 col-sm-6">
             <div class="box-body">
-                <h2>
-                    <i class="fa fa-comments"></i>
-                    PyCon CZ
-                </h2>
-                <p>
-                    Česká Python konference! Pomoz nám s přípravami, propagací, zkus si přihlásit přednášku nebo workshop, sponzoruj nás, nebo prostě jen přijď a akci si užij!
-                </p>
+                <div class="box-content">
+                    <h2>
+                        <i class="fa fa-comments"></i>
+                        PyCon CZ
+                    </h2>
+                    <p>
+                        Česká Python konference! Pomoz nám s přípravami, propagací, zkus si přihlásit přednášku nebo workshop, sponzoruj nás, nebo prostě jen přijď a akci si užij!
+                    </p>
+                </div>
                 <p class="call-to-action">
                     <a href="http://cz.pycon.org" class="btn btn-primary">
                         <i class="fa fa-arrow-right"></i>
@@ -136,13 +146,15 @@
         </div>
         <div id="knihovna" class="box col-md-4 col-sm-6">
             <div class="box-body">
-                <h2>
-                    <i class="fa fa-book"></i>
-                    Knihovna
-                </h2>
-                <p>
-                    Máme knihovničku s literaturou o Pythonu a podobných technologiích. Knihy si lze <strong>zdarma půjčit</strong> &ndash; ozvi se a přijď si knížku vyzvednout na nejbližším <a href="#srazy">srazu</a>. Mimochodem, <a href="http://pythonbooks.revolunet.com/">Python Books</a> znáš, že?
-                </p>
+                <div class="box-content">
+                    <h2>
+                        <i class="fa fa-book"></i>
+                        Knihovna
+                    </h2>
+                    <p>
+                        Máme knihovničku s literaturou o Pythonu a podobných technologiích. Knihy si lze <strong>zdarma půjčit</strong> &ndash; ozvi se a přijď si knížku vyzvednout na nejbližším <a href="#srazy">srazu</a>. Mimochodem, <a href="http://pythonbooks.revolunet.com/">Python Books</a> znáš, že?
+                    </p>
+                </div>
                 <p class="call-to-action">
                     <a href="http://github.com/pyvec/bookshelf" class="btn btn-primary">
                         <i class="fa fa-arrow-right"></i>

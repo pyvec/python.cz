@@ -29,7 +29,9 @@
         </li>
     </ul>
 
-    <hr>
+    <div class="row cartoon-container cartoon-hr">
+        <img class="cartoon" src="{{ url_for('static', filename='images/learning-python.svg') }}" onerror="this.onerror = null; this.src = '{{ url_for('static', filename='images/learning-python.png') }}'">
+    </div>
 
     <h2 id="kurzy">Kurzy</h2>
     <div class="row">
@@ -79,6 +81,7 @@
                 <div class="col-md-6">
                     <div class="panel panel-primary">
                         <div class="panel-body">
+                            <img class="cartoon" src="{{ url_for('static', filename='images/learning-python-general.svg') }}" onerror="this.onerror = null; this.src = '{{ url_for('static', filename='images/learning-python-general.png') }}'">
                             Chci umět obecně programovat
                         </div>
                         <div class="panel-footer">
@@ -89,6 +92,7 @@
                 <div class="col-md-6">
                     <div class="panel panel-primary">
                         <div class="panel-body">
+                            <img class="cartoon" src="{{ url_for('static', filename='images/learning-python-web.svg') }}" onerror="this.onerror = null; this.src = '{{ url_for('static', filename='images/learning-python-web.png') }}'">
                             Chci vytvořit webovou stránku
                         </div>
                         <div class="panel-footer">

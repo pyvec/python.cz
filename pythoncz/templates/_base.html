@@ -1,4 +1,4 @@
-{% set is_homepage = request.path in ['/', '/' + lang] %}
+{% set is_homepage = request.path in ['/', '/{}'.format(lang), '/{}/'.format(lang)] %}
 <!doctype html>
 <html lang="{{ lang }}">
 <head>
