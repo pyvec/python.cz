@@ -620,6 +620,17 @@
                 "type": "Point",
                 "coordinates": [15.814811, 50.206445]
             }
-        }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Miloň Krejča",
+                "url": "http://www.milonline.eu"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [15.2232711, 49.4309486]
+            }
+        },
     ]
 }
