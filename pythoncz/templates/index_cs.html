@@ -30,6 +30,9 @@
     <div class="row cartoon-container">
         <img class="cartoon" alt="Česká Python komunita" src="{{ url_for('static', filename='images/czech-python-user-group.svg') }}" onerror="this.onerror = null; this.src = '{{ url_for('static', filename='images/czech-python-user-group.png') }}'">
     </div>
+    <div class="row communication">
+        {% include '_communication.html' %}
+    </div>
 
     <div class="row" id="srazy">
         <div class="photo-container meetups-container">
@@ -54,9 +57,23 @@
     <hr class="visible-sm-block visible-xs-block">
 
     <div class="row boxes">
-        <div id="diskuse" class="box col-md-4 col-sm-6">
+        <div id="blog" class="box col-md-4 col-sm-6">
             <div class="box-body">
-                {% include '_discussions.html' %}
+                <div class="box-content">
+                    <h2>
+                        <i class="fa fa-newspaper-o"></i>
+                        Blog
+                    </h2>
+                    <p>
+                        Díky blogu se <strong>dovíš o všem, co se v české Python komunitě zrovna děje</strong>. A co je nejlepší &ndash; můžeš klidně přidat svůj vlastní článek!
+                    </p>
+                </div>
+                <p class="call-to-action">
+                    <a href="http://blog.python.cz" class="btn btn-primary">
+                        <i class="fa fa-arrow-right"></i>
+                        Chci být v obraze!
+                    </a>
+                </p>
             </div>
         </div>
         <div id="zacatecnici" class="box col-md-4 col-sm-6">

@@ -27,6 +27,9 @@
     <div class="row cartoon-container">
         <img class="cartoon" alt="Czech Python User Group" src="{{ url_for('static', filename='images/czech-python-user-group.svg') }}" onerror="this.onerror = null; this.src = '{{ url_for('static', filename='images/czech-python-user-group.png') }}'">
     </div>
+    <div class="row communication">
+        {% include '_communication.html' %}
+    </div>
 
     <div class="row" id="meetups">
         <div class="photo-container meetups-container">
@@ -52,11 +55,6 @@
     <hr class="visible-sm-block visible-xs-block">
 
     <div class="row boxes">
-        <div id="discussions" class="box col-md-4 col-sm-6">
-            <div class="box-body">
-                {% include '_discussions.html' %}
-            </div>
-        </div>
         <div id="jobs" class="box col-md-4 col-sm-6">
             <div class="box-body">
                 <div class="box-content">
@@ -84,7 +82,7 @@
                 <div class="box-content">
                     <h2>
                         <i class="fa fa-heart"></i>
-                        For&nbsp;ladies
+                        For&nbsp;Ladies
                     </h2>
                     <p>
                         There are events for ladies in multiple Czech cities.
@@ -124,7 +122,7 @@
                 <p class="call-to-action">
                     <a href="https://github.com/pyvec/cz.pycon.org-2015" class="btn btn-primary">
                         <i class="fa fa-arrow-right"></i>
-                        Conference? Great!
+                        Let me be your speaker!
                     </a>
                 </p>
             </div>
