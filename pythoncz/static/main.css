@@ -376,28 +376,66 @@ img.img-small {
 }
 
 .cartoon {
-  display: block;
-  width: 100%;
+    display: block;
+    width: 100%;
 }
 
 .cartoon-container {
-  margin: 0 auto;
-  padding: 2em 0;
-  max-width: 768px;
+    margin: 0 auto;
+    padding: 2em 0;
+    max-width: 768px;
 }
 
 .cartoon-hr {
-  padding-bottom: 4em;
+    padding-bottom: 4em;
 }
 
 .panel-body .cartoon {
-  margin: 0 auto 1.5em auto;
-  max-height: 10em;
-  width: auto;
+    margin: 0 auto 1.5em auto;
+    max-height: 10em;
+    width: auto;
 }
 
 img[src*="jobs.svg"] {
-  max-height: 400px;
+    max-height: 400px;
+}
+
+.communication {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2em 0 0 0;
+}
+
+.communication-item {
+    display: block;
+    width: 10em;
+    height: 8em;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+li.communication-item::before {
+    display: none;
+}
+
+.communication-item a {
+    text-decoration: none;
+}
+
+.communication-item-icon {
+    font-size: 2.5em;
+    display: block;
+}
+
+.communication-item-icon i {
+    margin: 0;
+}
+
+.communication-item-caption {
+    display: block;
 }
 
 
