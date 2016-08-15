@@ -32,3 +32,9 @@ courses:
         links:
             -   text: Kroužek na Praze 10
                 url: 'http://kapsa.cz/cs/krouzky-pro-deti#python'
+
+    -   name: Pro ty, co už něco vědí
+        icon: code
+        links:
+            -   text: Nepravidelné intenzivní Python kurzy kiwi.com
+                url: 'https://pythonvikend.kiwi.com/'
