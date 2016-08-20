@@ -5,7 +5,7 @@ from flask import (render_template as _render_template, url_for,
                    redirect, request)
 
 from . import app
-from .models import trello, jobs, photos, beginners
+from .models import jobs, photos, beginners
 
 
 # Templating
@@ -37,16 +37,6 @@ def index_cs():
 def index_en():
     return render_template('index_en.html',
                            photo_urls=photos.get_random_urls(5), lang='en')
-
-
-@app.route('/zapojse/')
-def get_involved_cs():
-    trello_board_id = app.config['TRELLO_BOARD_ID']
-    context = {
-        'trello_board': trello.get_board(trello_board_id),
-        'trello_board_url': 'https://trello.com/b/{}/'.format(trello_board_id),
-    }
-    return render_template('get_involved_cs.html', **context)
 
 
 @app.route('/zacatecnici/')
