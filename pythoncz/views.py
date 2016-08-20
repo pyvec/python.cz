@@ -82,6 +82,6 @@ def talks(target):
     return redirect(base_url + target, code=301)
 
 
-@app.route('/zapojse')
+@app.route('/zapojse/')
 def get_involved():
     return redirect(app.config['GET_INVOLVED_URL'])
