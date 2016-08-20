@@ -80,3 +80,8 @@ def pyladies_index():
 def talks(target):
     base_url = 'https://github.com/pyvec/talks-archive/raw/master/'
     return redirect(base_url + target, code=301)
+
+
+@app.route('/zapojse')
+def get_involved():
+    return redirect(app.config['GET_INVOLVED_URL'])

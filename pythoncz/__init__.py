@@ -16,6 +16,9 @@ PYVEC_ACCOUNT_URL = (
     'https://www.fio.cz/scgi-bin/hermes/'
     'dz-transparent.cgi?ID_ucet=2600260438'
 )
+GET_INVOLVED_URL = (
+    'https://github.com/pulls?utf8=%E2%9C%93&q=is%3Aopen+org%3Apyvec'
+)
 
 GOOGLE_ANALYTICS_CODE = 'UA-1316071-13'
 
