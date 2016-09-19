@@ -631,6 +631,18 @@
                 "type": "Point",
                 "coordinates": [15.2232711, 49.4309486]
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Stories",
+                "url": "http://www.stories.bi/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4070231, 50.0516553]
+            }
         }
     ]
 }
