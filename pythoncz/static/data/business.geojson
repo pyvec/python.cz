@@ -643,6 +643,17 @@
                 "type": "Point",
                 "coordinates": [14.4070231, 50.0516553]
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Vojtěch Bartoš",
+                "url": "http://vojtech.me"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [16.2134464, 50.1236622]
+            }
         }
     ]
 }
