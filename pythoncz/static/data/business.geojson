@@ -659,7 +659,7 @@
             "type": "Feature",
             "properties": {
                 "name": "SparkTECH s.r.o.",
-                "url": "https://www.sparktech.cz/",
+                "url": "http://www.sparktech.cz/",
                 "company": true
             },
             "geometry": {
