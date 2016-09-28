@@ -654,6 +654,18 @@
                 "type": "Point",
                 "coordinates": [16.2134464, 50.1236622]
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "SparkTECH s.r.o.",
+                "url": "http://www.sparktech.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.444733, 50.109173]
+            }
         }
     ]
 }
