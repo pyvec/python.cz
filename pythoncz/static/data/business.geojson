@@ -666,6 +666,17 @@
                 "type": "Point",
                 "coordinates": [14.444733, 50.109173]
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Jan Šváger",
+                "url": "https://www.svager.cz"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.631337, 50.918289]
+            }
         }
     ]
 }
