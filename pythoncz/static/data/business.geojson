@@ -677,6 +677,17 @@
                 "type": "Point",
                 "coordinates": [14.631337, 50.918289]
             }
-        }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Petr Blahoš",
+                "url": "https://petr.blahos.com"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.6380850, 49.6401267]
+            }
+        }        
     ]
 }
