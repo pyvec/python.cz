@@ -677,6 +677,18 @@
                 "type": "Point",
                 "coordinates": [14.631337, 50.918289]
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "EPAM",
+                "url": "https://www.epam.com/careers/job-listings?query=&department%5B%5D=all&city=all&country=Czech+Republic",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [50.0506023, 14.4343922]
+            }
         }
     ]
 }
