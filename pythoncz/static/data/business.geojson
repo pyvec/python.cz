@@ -688,6 +688,18 @@
                 "type": "Point",
                 "coordinates": [14.6380850, 49.6401267]
             }
-        }        
+        },
+        {
+            "type": "Feature",
+            "properties": {
+            "name": "EPAM",
+            "url": "https://www.epam.com",
+            "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [50.0506023, 14.4343922]
+            }
+        } 
     ]
 }
