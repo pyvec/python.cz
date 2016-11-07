@@ -682,7 +682,7 @@
             "type": "Feature",
             "properties": {
                 "name": "Petr Blahoš",
-                "url": "https://petr.blahos.com"
+                "url": "http://petr.blahos.com/"
             },
             "geometry": {
                 "type": "Point",
