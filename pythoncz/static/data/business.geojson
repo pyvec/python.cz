@@ -700,6 +700,18 @@
                 "type": "Point",
                 "coordinates": [50.0506023, 14.4343922]
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Proboston Creative",
+                "url": "https://www.proboston.net",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [50.0770531, 14.4368203]
+            }
         } 
     ]
 }
