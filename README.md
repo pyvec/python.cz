@@ -5,17 +5,25 @@ Czech Python community homepage.
 
 [![Build Status](https://travis-ci.org/pyvec/python.cz.svg?branch=master)](https://travis-ci.org/pyvec/python.cz)
 
+## Cloning
+
+The recommended way to clone this repository is to use _shallow clone_, because the Git history is [polluted by couple of large files](https://github.com/pyvec/python.cz/issues/96):
+
+```sh
+$ git clone --depth=5 git@github.com:pyvec/python.cz.git
+```
+
 ## Installation
 
 The code is **Python 3**.
 
-```shell
+```sh
 $ pip install -r requirements.txt
 ```
 
 ### Development
 
-```shell
+```sh
 $ python runserver.py
 ```
 
@@ -39,7 +47,7 @@ The site gets automatically deployed after any push to the `master` branch. See 
 
 **This site is community effort and contributions are very welcome!** See the [Hall of fame](https://github.com/pyvec/python.cz/graphs/contributors) for the most active contributors.
 
-The site is backed by [Pyvec](http://pyvec.org/), nonprofit organization dedicated to support of Python in the Czech Republic. [Honza Javorek](http://github.com/honzajavorek) is the original author, core commiter and maintainer of python.cz.
+The site is backed by [Pyvec](http://pyvec.org/), nonprofit organization dedicated to support of Python in the Czech Republic. [Honza Javorek](http://github.com/honzajavorek) is the original author, core committer and maintainer of python.cz.
 
 ## License
 
