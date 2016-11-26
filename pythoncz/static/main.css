@@ -438,6 +438,20 @@ li.communication-item::before {
     display: block;
 }
 
+i.icon-english {
+  display: inline-block;
+  width: 1.3em;
+  border-radius: 0.4em;
+  background: url("./images/uk-flag.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+i.icon-english::before {
+  content: "\00a0";
+}
+
 
 @media only screen and (max-width: 992px) {
     .boxes,
