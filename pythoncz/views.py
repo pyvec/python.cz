@@ -5,7 +5,7 @@ from flask import (render_template as _render_template, url_for,
                    redirect, request)
 
 from . import app
-from .models import jobs, photos, beginners, github
+from .models import jobs, photos, beginners
 
 
 # Templating
@@ -54,12 +54,6 @@ def jobs_en():
     return render_template('jobs_en.html', data=jobs.data, lang='en')
 
 
-@app.route('/zapojse/')
-def get_involved_cs():
-    issues = github.get_issues(app.config['GITHUB_ORGANIZATIONS'])
-    return render_template('get_involved_cs.html', issues=issues)
-
-
 # Redirects of legacy stuff
 
 @app.route('/index.html')
@@ -86,3 +80,8 @@ def pyladies_index():
 def talks(target):
     base_url = 'https://github.com/pyvec/talks-archive/raw/master/'
     return redirect(base_url + target, code=301)
+
+
+@app.route('/zapojse/')
+def get_involved_cs():
+    return redirect(app.config['GET_INVOLVED_URL'])

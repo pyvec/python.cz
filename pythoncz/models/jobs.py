@@ -7,6 +7,7 @@ import json
 import yaml
 import czech_sort
 
+
 from .. import app
 
 

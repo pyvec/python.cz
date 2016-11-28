@@ -9,16 +9,13 @@ Czech Python community homepage.
 
 The code is **Python 3**.
 
-```sh
+```shell
 $ pip install -r requirements.txt
 ```
 
 ### Development
 
-Get [GitHub Personal Access Token](https://github.com/settings/tokens) (with no scopes) and set it as `GITHUB_TOKEN` environment value.
-
-```sh
-$ export GITHUB_TOKEN=...
+```shell
 $ python runserver.py
 ```
 
