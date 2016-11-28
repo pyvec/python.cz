@@ -13,7 +13,7 @@
     Pro začátečníky
 {% endblock %}
 
-{% set en = '<i class="fa fa-globe help" title="Anglicky"></i>'|safe %}
+{% set en = '<i class="fa icon-english help" title="Anglicky"></i>'|safe %}
 
 {% block content %}
     <h1>Učíme se Python</h1>
@@ -32,43 +32,6 @@
     <div class="row cartoon-container cartoon-hr">
         <img class="cartoon" src="{{ url_for('static', filename='images/learning-python.svg') }}" onerror="this.onerror = null; this.src = '{{ url_for('static', filename='images/learning-python.png') }}'">
     </div>
-
-    <h2 id="kurzy">Kurzy</h2>
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="row courses">
-                {% for column in data.courses %}
-                    <div class="col-md-{{ 12 // data.courses|length }}">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <i class="fa fa-{{ column.icon }}"></i>
-                                {{ column.name }}
-                            </div>
-                            <ul class="list-group">
-                                {% for link in column.links %}
-                                <li class="list-group-item">
-                                    <a href="{{ link.url }}">
-                                        {{ link.text }}
-                                    </a>
-                                </li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-            <div class="row">
-                <p class="call-to-action">
-                    <a href="{{ config.BEGINNERS_DATA_URL }}" class="btn btn-default">
-                        <i class="fa fa-edit"></i>
-                        Přidat kurz
-                    </a>
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <hr>
 
     <h2 id="onlineneumim">Online materiály &ndash; neumím vůbec programovat</h2>
     <div class="row">
@@ -144,6 +107,7 @@
             <!-- České návody -->
             <li><a href="http://diveintopython3.py.cz/index.html">Kniha Ponořme se do Pythonu 3</a> (<a href="http://knihy.nic.cz/files/nic/edice/mark_pilgrim_dip3_ver3.pdf">PDF</a>)</li>
             <li><a href="http://howto.py.cz/">Učíme se&nbsp;programovat v&nbsp;jazyce Python&nbsp;3</a></li>
+            <li><a href="https://github.com/tomasbedrich/skoleni-python">Základy Pythonu 3, interaktivní materiály</a></li>
 
             <!-- Anglické návody -->
             <li><a href="http://net.tutsplus.com/tutorials/the-best-way-to-learn-python/">Seznam nejlepších materiálů</a> {{ en }}</li>
@@ -206,7 +170,7 @@
 
         <h3>
             <i class="fa fa-server"></i>
-            Spolehlivý hosting
+            Kam nahrát web napsaný v Pythonu?
         </h3>
         <ul>
             <!--
@@ -218,5 +182,42 @@
             <li><a href="https://www.pythonanywhere.com/">PythonAnywhere</a></li>
             <li><a href="https://www.alwaysdata.com/">AlwaysData</a></li>
         </ul>
+    </div>
+
+    <hr>
+
+    <h2 id="kurzy">Kurzy</h2>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="row courses">
+                {% for column in data.courses %}
+                    <div class="col-md-{{ 12 // data.courses|length }}">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <i class="fa fa-{{ column.icon }}"></i>
+                                {{ column.name }}
+                            </div>
+                            <ul class="list-group">
+                                {% for link in column.links %}
+                                <li class="list-group-item">
+                                    <a href="{{ link.url }}">
+                                        {{ link.text }}
+                                    </a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="row">
+                <p class="call-to-action">
+                    <a href="{{ config.BEGINNERS_DATA_URL }}" class="btn btn-default">
+                        <i class="fa fa-edit"></i>
+                        Přidat kurz
+                    </a>
+                </p>
+            </div>
+        </div>
     </div>
 {% endblock %}

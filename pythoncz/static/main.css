@@ -152,21 +152,28 @@ ul.list-group li:before {
     margin: 2em 0;
 }
 
-.call-to-action {
+.index .call-to-action, .beginners .call-to-action {
     text-align: right;
 }
 
-.call-to-action .btn {
+.beginners .index .btn, .beginners .call-to-action .btn {
     margin: 1em 0.5em 0 auto;
 }
 
-.add-business {
-    margin-top: -1em;
+.jobs .call-to-action, .get-involved .call-to-action {
     text-align: center;
 }
 
-.add-business .btn {
+.jobs .call-to-action {
+    margin-top: -1em;
+}
+
+.jobs .call-to-action .btn {
     margin: 0 auto;
+}
+
+.get-involved .call-to-action .btn {
+    margin: 1em auto;
 }
 
 .discussions {
@@ -438,6 +445,43 @@ li.communication-item::before {
     display: block;
 }
 
+.label {
+    margin-right: 0.5em;
+}
+
+.issues {
+    margin: 2em 0;
+}
+
+.issue {
+    border-left: #D5AD42 3px solid;
+    margin-bottom: 1.5em;
+}
+
+.issue h3 {
+    font-size: inherit;
+    font-family: inherit;
+    margin: 0.3em 0 0.5em 0;
+    padding: 0;
+}
+
+.issue h3 a {
+    color: #333;
+}
+
+i.icon-english {
+  display: inline-block;
+  width: 1.3em;
+  border-radius: 0.4em;
+  background: url("./images/uk-flag.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+i.icon-english::before {
+  content: "\00a0";
+}
 
 @media only screen and (max-width: 992px) {
     .boxes,
