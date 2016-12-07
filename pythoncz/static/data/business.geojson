@@ -4,6 +4,18 @@
         {
             "type": "Feature",
             "properties": {
+                "name": "Akamai",
+                "url": "https://www.akamai.com",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4006753, 50.0703272]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "name": "Twisto",
                 "url": "https://www.twisto.cz/",
                 "company": true
