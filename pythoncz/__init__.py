@@ -21,6 +21,8 @@ GET_INVOLVED_URL = (
 )
 
 GOOGLE_ANALYTICS_CODE = 'UA-1316071-13'
+GITHUB_TOKEN = os.getenv('GITHUB_TOKEN') or os.getenv('GH_TOKEN')
+CACHE_DIR = os.getenv('CACHE_DIR') or os.path.join(os.path.dirname(__file__), '..', 'cache')
 
 
 app = Flask('pythoncz')
