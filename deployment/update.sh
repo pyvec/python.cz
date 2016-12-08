@@ -21,6 +21,7 @@ rm -rf /srv/app
 git clone --progress --depth=1 --branch=master https://github.com/pyvec/python.cz /srv/app
 
 # install dependencies
+/srv/venv/bin/pip install -U pip
 /srv/venv/bin/pip install -r /srv/app/requirements.txt
 
 # restart the app
