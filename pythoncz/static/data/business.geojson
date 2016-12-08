@@ -724,6 +724,18 @@
                 "type": "Point",
                 "coordinates": [50.0770531, 14.4368203]
             }
-        } 
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "OLC Systems s.r.o.",
+                "url": "https://www.olc.cz",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [49.576409, 17.282280]
+            }
+        }
     ]
 }
