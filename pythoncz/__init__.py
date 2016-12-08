@@ -22,7 +22,7 @@ PYVEC_ACCOUNT_URL = (
 GET_INVOLVED_URL = (
     'https://github.com/pulls?utf8=%E2%9C%93&q=is%3Aopen+org%3Apyvec'
 )
-
+GITHUB_ORGANIZATIONS = ('pyvec', 'pyladiescz')
 GOOGLE_ANALYTICS_CODE = 'UA-1316071-13'
 GITHUB_TOKEN = os.getenv('GITHUB_TOKEN') or os.getenv('GH_TOKEN')
 CACHE_DIR = os.getenv('CACHE_DIR') or os.path.join(ROOT_DIR, 'cache')

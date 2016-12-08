@@ -23,6 +23,15 @@
     $ pip install -r requirements.txt
     ```
 
+-   Set `GITHUB_TOKEN` environment value. Get [GitHub Personal Access Token](https://github.com/settings/tokens) (with no scopes) and edit `/srv/conf/supervisor.d/python.conf`:
+
+    ```
+    [program:app]
+    command=...
+    environment=GITHUB_TOKEN="123a123dc..."
+    ...
+    ```
+
 -   Restart [Supervisor](http://supervisord.org/):
 
     ```
