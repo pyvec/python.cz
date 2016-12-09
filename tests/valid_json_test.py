@@ -2,7 +2,6 @@
 
 import json
 from os import path
-from glob import glob
 
 from slugify import slugify
 

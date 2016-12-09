@@ -2,7 +2,6 @@
 
 import json
 from os import path
-from glob import glob
 
 from slugify import slugify
 
@@ -10,8 +9,8 @@ from . import ROOT_DIR, DATA_DIR, generate_filenames
 
 
 BOUNDS = (
-    (-28, 56), # Azores (West), Novaya Zemlya (East)
-    (34, 71), # Gavdos (South), Nordkapp (North)
+    (-28, 56),  # Azores (West), Novaya Zemlya (East)
+    (34, 71),  # Gavdos (South), Nordkapp (North)
 )
 
 

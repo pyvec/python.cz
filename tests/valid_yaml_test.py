@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 from os import path
-from glob import glob
 
 import yaml
 from slugify import slugify
