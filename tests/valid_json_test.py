@@ -1,25 +1,33 @@
 # -*- coding: utf-8 -*-
 
-
 import json
 from os import path
+from glob import glob
 
-from .helpers import get_test_cases, DATA_DIR
+from slugify import slugify
+
+from . import ROOT_DIR, DATA_DIR, generate_filenames
 
 
-cases = get_test_cases([
+glob_patterns = [
     path.join(DATA_DIR, '*.*json'),
-])
+    path.join(ROOT_DIR, '*.*json'),
+]
 
 
 def test_there_are_json_files_to_be_tested():
-    assert len(cases) > 0
+    assert len(list(generate_filenames(glob_patterns))) > 0
 
 
-for case in cases:
-    def _test():
+def _create_test(filename):
+    def test():
         """Tests whether JSON data file is a valid JSON document."""
-        with open(case['filename']) as f:
+        with open(filename) as f:
             assert json.load(f)
+    return test
 
-    globals()[case['fn_name']] = _test
+
+for filename in generate_filenames(glob_patterns):
+    slug = slugify(path.basename(filename), separator='_')
+    fn_name = 'test_{}_is_valid'.format(slug)
+    globals()[fn_name] = _create_test(filename)
