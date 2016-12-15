@@ -63,8 +63,8 @@ def _get_issues_for_org(org_name):
 def _enhance_issue(issue):
     repo_url_segments = issue['repository_url'].split('/')
     repo_full_name = '{}/{}'.format(
-        repo_url_segments[-1],
-        repo_url_segments[-2]
+        repo_url_segments[-2],
+        repo_url_segments[-1]
     )
 
     issue['repository_name'] = repo_url_segments[-1]
