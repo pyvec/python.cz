@@ -30,7 +30,7 @@ def get_issues(org_names):
 def _get_issues_for_org(org_name):
     now = datetime.now()
     user_agent = ('pythoncz/{now.year}-{now.month} '
-                  '(+http://python.cz)').format(now=now)
+                  '(+https://python.cz)').format(now=now)
 
     session = requests.Session()
     session.headers.update({
