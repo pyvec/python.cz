@@ -6,7 +6,7 @@
     <meta name="description" content="Kdo v ČR používá Python? Má smysl se učit Python? Jak seženu Python vývojáře? Jak seženu práci v Pythonu?">
     <meta property="og:description" content="Kdo v ČR používá Python? Má smysl se učit Python? Jak seženu Python vývojáře? Jak seženu práci v Pythonu?">
 
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
 {% endblock %}
 
 {% block body_class %}jobs{% endblock %}
@@ -142,7 +142,7 @@
     </div>
 
     {% block scripts %}
-        <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+        <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
         <script src="{{ url_for('static', filename='maps.js') }}"></script>
     {% endblock %}
 {% endblock %}
