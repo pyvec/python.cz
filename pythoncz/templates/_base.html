@@ -33,6 +33,18 @@
     {% endblock %}
 </head>
     <body class="{% block body_class %}{% if is_homepage %}homepage{% endif %}{% endblock %}">
+        <!--
+          This 'notice' is a temporary thing to advertise something to visitors of the site.
+          Once the advertising period is over, it should be commented out. (Probably not worth
+          deleting as we may need to advertise something in the future again.)
+        -->
+        {% if lang == 'cs' %}
+        <div class="notice">
+            Byl(a) jsi někdy na Python srazu?
+            Dej nám prosím <a href="https://pyvo.cz/feedback">zpětnou vazbu</a>!
+        </div>
+        {% endif %}
+
         <div class="container">
             {% if not debug %}
                 <script>
