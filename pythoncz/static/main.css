@@ -483,6 +483,22 @@ i.icon-english::before {
   content: "\00a0";
 }
 
+.notice {
+  background: #cb3837;
+  color: #fff;
+  padding: 0.5em;
+  text-align: center;
+  margin-top: -20px;
+  margin-bottom: 0.5em;
+}
+
+.notice a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+
 @media only screen and (max-width: 992px) {
     .boxes,
     .meetups-container,
