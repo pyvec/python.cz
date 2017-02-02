@@ -736,6 +736,18 @@
                 "type": "Point",
                 "coordinates": [17.282280, 49.576409]
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "DANTEM s.r.o.",
+                "url": "http://www.dantem.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.3755908, 50.0806400]
+            }
         }
     ]
 }
