@@ -748,6 +748,18 @@
                 "type": "Point",
                 "coordinates": [14.3755908, 50.0806400]
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Jack.cz",
+                "url": "http://www.jack.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4334178, 50.0896022]
+            }
         }
     ]
 }
