@@ -178,8 +178,13 @@
                     <i class="fa fa-code-fork"></i> {{ issue.repository_name }}
                 </a>
                 {% if issue.comments %}
-                <span class="label label-primary">
+                <span class="label label-default">
                     <i class="fa fa-comment"></i>{{ issue.comments }}
+                </span>
+                {% endif %}
+                {% if issue.votes %}
+                <span class="label label-primary">
+                    <i class="fa fa-thumbs-up"></i>{{ issue.votes }}
                 </span>
                 {% endif %}
             </p>

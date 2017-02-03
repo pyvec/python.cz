@@ -467,8 +467,9 @@ li.communication-item::before {
 }
 
 .issue {
-    /*border-left: #FEDC62 3px solid;*/
-    margin-bottom: 1.5em;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    border-bottom: #F5F5F5 1px solid;
 }
 
 .issue h3 {
@@ -499,7 +500,7 @@ li.communication-item::before {
 
 .issue-details a.label-default:hover,
 .issue-details a.label-default:focus {
-    background-color: #F5F5F5;
+    background-color: #E5E5E5;
     color: #777;
 }
 
