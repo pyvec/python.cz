@@ -50,6 +50,14 @@ h3 {
     text-align: center;
 }
 
+.boxes h2 {
+  text-align: left;
+}
+
+.boxes #organizuj h2 {
+  text-align: center;
+}
+
 .columns h3 {
     margin-top: 2em;
 }
@@ -86,6 +94,7 @@ ul {
 ul li {
     list-style-type: none;
     position: relative;
+    margin-bottom: 0.3em;
 }
 
 ul li:before {
@@ -403,6 +412,10 @@ img.img-small {
     width: auto;
 }
 
+.get-involved .cartoon {
+    margin-bottom: 2em;
+}
+
 img[src*="jobs.svg"] {
     max-height: 400px;
 }
@@ -454,7 +467,7 @@ li.communication-item::before {
 }
 
 .issue {
-    border-left: #FEDC62 3px solid;
+    /*border-left: #FEDC62 3px solid;*/
     margin-bottom: 1.5em;
 }
 
@@ -463,39 +476,60 @@ li.communication-item::before {
     font-family: inherit;
     margin: 0.3em 0 0.5em 0;
     padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .issue h3 a {
     color: #333;
 }
 
+.issue .fa-exclamation-circle {
+    color: #6CC644;
+}
+
+.issue-details {
+    padding-left: 1.5em;
+}
+
+.issue-details .label-default {
+    background-color: #F5F5F5;
+    color: #777;
+}
+
+.issue-details a.label-default:hover,
+.issue-details a.label-default:focus {
+    background-color: #F5F5F5;
+    color: #777;
+}
+
 i.icon-english {
-  display: inline-block;
-  width: 1.3em;
-  border-radius: 0.4em;
-  background: url("./images/uk-flag.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center;
+    display: inline-block;
+    width: 1.3em;
+    border-radius: 0.4em;
+    background: url("./images/uk-flag.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
 }
 
 i.icon-english::before {
-  content: "\00a0";
+    content: "\00a0";
 }
 
 .notice {
-  background: #337ab7;
-  color: #fff;
-  padding: 0.5em;
-  text-align: center;
-  margin-top: -20px;
-  margin-bottom: 0.5em;
+    background: #337ab7;
+    color: #fff;
+    padding: 0.5em;
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 0.5em;
 }
 
 .notice a {
-  color: #fff;
-  text-decoration: underline;
-  font-weight: bold;
+    color: #fff;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 
