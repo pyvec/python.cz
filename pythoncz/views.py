@@ -60,6 +60,13 @@ def get_involved_cs():
     return render_template('get_involved_cs.html', issues=issues)
 
 
+# Subdomain redirect
+
+@app.route('/', subdomain='www')
+def subdomain_redirect():
+    return redirect(url_for('index_cs'))
+
+
 # Redirects of legacy stuff
 
 @app.route('/index.html')
