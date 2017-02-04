@@ -168,23 +168,46 @@
 
     <div id="issues" class="issues row">
     {% for issue in issues %}
-        <div class="issue col-md-6">
-            <h3>
-                <i class="fa fa-exclamation-circle"></i>
-                <a href="{{ issue.html_url }}">{{ issue.title }}</a>
+        <div class="issue col-md-4 col-sm-6 issue-{% if issue.repository_name == 'zapojse' %}general{% else %}repo-specific{% endif %}">
+            <h3 title="{{ issue.title }}">
+                {% if issue.is_pull_request %}
+                    <i class="issue-icon fa fa-pencil-square"></i>
+                {% else %}
+                    <i class="issue-icon fa fa-exclamation-circle"></i>
+                {% endif %}
+
+                {% if issue.repository_name != 'zapojse' %}
+                    <a href="{{ issue.repository_url_html }}" class="issue-repo">
+                        <i class="fa fa-code-fork"></i>{{ issue.repository_name|lower }}
+                    </a>
+                {% endif %}
+                <a href="{{ issue.html_url }}" class="issue-title">
+                    {{ issue.title }}
+                </a>
             </h3>
             <p class="issue-details">
-                <a href="{{ issue.repository_url_html }}" class="label label-default">
-                    <i class="fa fa-code-fork"></i> {{ issue.repository_name }}
+                <a href="{{ issue.user.html_url }}" class="label label-default" title="od {{ issue.user.login }}">
+                    <i class="fa fa-user"></i>{{ issue.user.login }}
                 </a>
+                {% if issue.assignee %}
+                <a href="{{ issue.assignee.html_url }}" class="label label-default" title="prý to vyřeší {{ issue.assignee.login }}">
+                    <i class="fa fa-user-circle-o"></i>{{ issue.assignee.login }}
+                </a>
+                {% endif %}
+                {% if issue.votes %}
+                <span class="label label-default" title="hlasů: {{ issue.votes }}">
+                    <i class="fa fa-thumbs-up"></i>{{ issue.votes }}
+                </span>
+                {% endif %}
                 {% if issue.comments %}
-                <span class="label label-default">
+                <span class="label label-default" title="komentářů: {{ issue.comments }}">
                     <i class="fa fa-comment"></i>{{ issue.comments }}
                 </span>
                 {% endif %}
-                {% if issue.votes %}
-                <span class="label label-primary">
-                    <i class="fa fa-thumbs-up"></i>{{ issue.votes }}
+
+                {% if issue.organization_name|lower == 'pyladiescz' %}
+                <span class="label label-pyladies">
+                    PyLadies
                 </span>
                 {% endif %}
             </p>

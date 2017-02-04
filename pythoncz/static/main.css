@@ -467,9 +467,10 @@ li.communication-item::before {
 }
 
 .issue {
-    padding: 0.5em;
+    padding: 0.5em 0.5em 0.5em 2em;
     margin: 0.5em 0;
     border-bottom: #F5F5F5 1px solid;
+    position: relative;
 }
 
 .issue h3 {
@@ -481,27 +482,64 @@ li.communication-item::before {
     overflow: hidden;
 }
 
-.issue h3 a {
+a.issue-title {
     color: #333;
 }
 
-.issue .fa-exclamation-circle {
-    color: #6CC644;
+.issue-title::before {
+    content: "\00a0";
+    width: 2em;
+    background: linear-gradient(
+      to right,
+      rgba(255,255,255,0) 0%,
+      rgba(255,255,255,1) 100%
+    );
+    position: absolute;
+    right: 0.5em;
 }
 
-.issue-details {
-    padding-left: 1.5em;
+.issue-icon {
+    color: #6CC644;
+    font-size: 1.5em;
+    position: absolute;
+    left: 0;
+    top: 0.7em;
+}
+
+.issue-repo {
+    line-height: 0.7em;
+    font-size: 0.7em;
+    display: table; /* trick to have a 'block' as wide as content */
+}
+
+.issue-repo-specific .issue-title {
+    line-height: 1.3em;
+}
+
+.issue-general .issue-title {
+    line-height: 2em;
+}
+
+a.issue-repo,
+a.issue-repo:hover,
+a.issue-repo:focus,
+.issue-details .label-default,
+.issue-details a.label-default:hover,
+.issue-details a.label-default:focus {
+    color: #777;
 }
 
 .issue-details .label-default {
     background-color: #F5F5F5;
-    color: #777;
 }
 
 .issue-details a.label-default:hover,
 .issue-details a.label-default:focus {
     background-color: #E5E5E5;
-    color: #777;
+}
+
+.label-pyladies {
+    background-color: #FF8181;
 }
 
 i.icon-english {

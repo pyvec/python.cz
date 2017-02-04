@@ -29,9 +29,8 @@ def get_issues(org_names):
 
 
 def _create_github_api_session():
-    now = datetime.now()
     user_agent = ('pythoncz/{now.year}-{now.month} '
-                  '(+https://python.cz)').format(now=now)
+                  '(+https://python.cz)').format(now=datetime.now())
 
     session = requests.Session()
     session.headers.update({
@@ -45,7 +44,6 @@ def _create_github_api_session():
 def _get_issues_for_org(session, org_name):
     search_conditions = [
         'is:open',
-        'is:issue',
         'org:{}'.format(org_name)
     ]
 
@@ -80,6 +78,11 @@ def _enhance_issue(session, issue):
     issue_details = res.json()
 
     try:
+        is_pull_request = bool(issue_details['pull_request']['url'])
+    except KeyError:
+        is_pull_request = False
+
+    try:
         reactions = issue_details['reactions']
         issue['votes'] = (
             reactions.get('total_count', 0)
@@ -89,6 +92,7 @@ def _enhance_issue(session, issue):
     except KeyError:
         issue['votes'] = 0
 
+    issue['is_pull_request'] = is_pull_request
     issue['repository_name'] = repo_url_segments[-1]
     issue['organization_name'] = repo_url_segments[-2]
     issue['repository_full_name'] = repo_full_name
@@ -98,4 +102,9 @@ def _enhance_issue(session, issue):
 
 
 def _get_issue_sort_key(issue):
-    return (issue.get('votes'), issue.get('updated_at'))
+    return (
+        not issue.get('assignee'),
+        issue.get('votes'),
+        issue.get('comments'),
+        issue.get('updated_at'),
+    )
