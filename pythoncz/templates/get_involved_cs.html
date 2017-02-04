@@ -158,6 +158,9 @@
             <p>
                 Pro organizaci jednorázových úkolů používáme <a href="https://github.com/pyvec/zapojse/">GitHub</a> Když nic, tak aspoň <a href="https://github.com/blog/2119-add-reactions-to-pull-requests-issues-and-comments">hlasuj</a> nebo <a href="https://github.com/pyvec/zapojse/issues/new">přidej vlastní nápad</a>. Díky hlasům budeme mít přinejmenším přehled o tom, co si přeje nejvíc lidí.
             </p>
+            <p>
+                Značka <span class="label label-primary">Kouč pomůže!</span> znamená, že někdo navrhl, že ti s úkolem pomůže, pokud se do něj pustíš. Jestli se ty chceš někde navrhnout jako kouč, napiš to do komentáře pod daný úkol a <a href="https://help.github.com/articles/applying-labels-to-issues-and-pull-requests/">přiřaď mu štítek</a> <strong>„coach“</strong>.
+            </p>
             <p class="call-to-action">
                 <a href="https://github.com/pyvec/zapojse/issues/new" class="btn btn-primary">
                     <i class="fa fa-lightbulb-o"></i> Přidat nápad
@@ -181,9 +184,11 @@
                         <i class="fa fa-code-fork"></i>{{ issue.repository_name|lower }}
                     </a>
                 {% endif %}
-                <a href="{{ issue.html_url }}" class="issue-title" title="{{ issue.title }}">
-                    {{ issue.title }}
-                </a>
+                <span class="issue-title">
+                    <a href="{{ issue.html_url }}" title="{{ issue.title }}">
+                        {{ issue.title }}
+                    </a>
+                </span>
             </h3>
             <p class="issue-details">
                 <a href="{{ issue.user.html_url }}" class="label label-default" title="od {{ issue.user.login }}">
@@ -208,6 +213,11 @@
                 {% if issue.organization_name|lower == 'pyladiescz' %}
                 <span class="label label-pyladies">
                     PyLadies
+                </span>
+                {% endif %}
+                {% if issue.coach %}
+                <span class="label label-primary" title="někdo navrhl, že ti s úkolem pomůže, pokud se do něj pustíš">
+                    Kouč pomůže!
                 </span>
                 {% endif %}
             </p>

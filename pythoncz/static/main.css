@@ -482,7 +482,7 @@ li.communication-item::before {
     overflow: hidden;
 }
 
-a.issue-title {
+.issue-title a {
     color: #333;
 }
 

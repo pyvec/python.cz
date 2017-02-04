@@ -92,6 +92,9 @@ def _enhance_issue(session, issue):
     except KeyError:
         issue['votes'] = 0
 
+    labels = [label['name'] for label in issue_details.get('labels', [])]
+
+    issue['coach'] = 'coach' in labels
     issue['is_pull_request'] = is_pull_request
     issue['repository_name'] = repo_url_segments[-1]
     issue['organization_name'] = repo_url_segments[-2]
