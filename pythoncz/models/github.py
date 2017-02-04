@@ -107,6 +107,7 @@ def _enhance_issue(session, issue):
 def _get_issue_sort_key(issue):
     return (
         not issue.get('assignee'),
+        issue.get('coach'),
         issue.get('votes'),
         issue.get('comments'),
         issue.get('updated_at'),
