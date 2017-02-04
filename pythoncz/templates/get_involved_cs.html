@@ -169,7 +169,7 @@
     <div id="issues" class="issues row">
     {% for issue in issues %}
         <div class="issue col-md-4 col-sm-6 issue-{% if issue.repository_name == 'zapojse' %}general{% else %}repo-specific{% endif %}">
-            <h3 title="{{ issue.title }}">
+            <h3>
                 {% if issue.is_pull_request %}
                     <i class="issue-icon fa fa-pencil-square"></i>
                 {% else %}
@@ -181,7 +181,7 @@
                         <i class="fa fa-code-fork"></i>{{ issue.repository_name|lower }}
                     </a>
                 {% endif %}
-                <a href="{{ issue.html_url }}" class="issue-title">
+                <a href="{{ issue.html_url }}" class="issue-title" title="{{ issue.title }}">
                     {{ issue.title }}
                 </a>
             </h3>
