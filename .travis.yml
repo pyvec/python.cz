@@ -1,6 +1,6 @@
 language: "python"
 python:
-    - "3.5"
+    - "3.4"
 cache: "pip"
 install:
     - "pip install -r requirements.txt"
@@ -12,5 +12,5 @@ deploy:
     script: "deployment/deploy.sh"
     on:
         branch: "master"
-        python: "3.5"
+        python: "3.4"
         repo: "pyvec/python.cz"
