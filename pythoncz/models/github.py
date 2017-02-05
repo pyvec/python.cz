@@ -18,29 +18,32 @@ cache = FileSystemCache(app.config['CACHE_DIR'], default_timeout=3600)
 def get_issues(org_names):
     issues = cache.get('github-issues')
     if issues is None:
+        session = _create_github_api_session()
         issues = []
         for org_name in org_names:
-            for issue in _get_issues_for_org(org_name):
-                issues.append(_enhance_issue(issue))
+            for issue in _get_issues_for_org(session, org_name):
+                issues.append(_enhance_issue(session, issue))
         issues = sorted(issues, key=_get_issue_sort_key, reverse=True)
         cache.set('github-issues', issues)
     return issues
 
 
-def _get_issues_for_org(org_name):
-    now = datetime.now()
+def _create_github_api_session():
     user_agent = ('pythoncz/{now.year}-{now.month} '
-                  '(+https://python.cz)').format(now=now)
+                  '(+https://python.cz)').format(now=datetime.now())
 
     session = requests.Session()
     session.headers.update({
         'User-Agent': user_agent,
         'Authorization': 'token {}'.format(app.config['GITHUB_TOKEN']),
+        'Accept': 'application/vnd.github.squirrel-girl-preview',
     })
+    return session
 
+
+def _get_issues_for_org(session, org_name):
     search_conditions = [
         'is:open',
-        'is:issue',
         'org:{}'.format(org_name)
     ]
 
@@ -60,13 +63,39 @@ def _get_issues_for_org(org_name):
             break
 
 
-def _enhance_issue(issue):
+def _enhance_issue(session, issue):
     repo_url_segments = issue['repository_url'].split('/')
     repo_full_name = '{}/{}'.format(
         repo_url_segments[-2],
         repo_url_segments[-1]
     )
 
+    res = session.get('https://api.github.com/repos/{}/issues/{}'.format(
+        repo_full_name,
+        issue['number']
+    ))
+    res.raise_for_status()
+    issue_details = res.json()
+
+    try:
+        is_pull_request = bool(issue_details['pull_request']['url'])
+    except KeyError:
+        is_pull_request = False
+
+    try:
+        reactions = issue_details['reactions']
+        issue['votes'] = (
+            reactions.get('total_count', 0)
+            - reactions.get('-1', 0)
+            - reactions.get('confused', 0)
+        )
+    except KeyError:
+        issue['votes'] = 0
+
+    labels = [label['name'] for label in issue_details.get('labels', [])]
+
+    issue['coach'] = 'coach' in labels
+    issue['is_pull_request'] = is_pull_request
     issue['repository_name'] = repo_url_segments[-1]
     issue['organization_name'] = repo_url_segments[-2]
     issue['repository_full_name'] = repo_full_name
@@ -76,4 +105,10 @@ def _enhance_issue(issue):
 
 
 def _get_issue_sort_key(issue):
-    return issue.get('updated_at')
+    return (
+        not issue.get('assignee'),
+        issue.get('coach'),
+        issue.get('votes'),
+        issue.get('comments'),
+        issue.get('updated_at'),
+    )

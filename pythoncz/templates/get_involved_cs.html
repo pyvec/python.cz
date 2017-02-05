@@ -20,6 +20,9 @@
             <p class="lead">
                 Líbí se ti Python? <strong>Pomoz nám ho rozšířit i mezi ostatní.</strong> Můžeš nám poslat peníze, učit, přednášet, psát, organizovat, programovat, ale třeba i jen vymýšlet, co a jak by se dalo zlepšit. Máme práci pro každého!
             </p>
+            <p>
+                Python komunita je fajn jen díky tomu, že jsou v ní <strong>lidi, kteří se nebojí přiložit ruku k dílu</strong>. Všichni to děláme po večerech ve volném čase, z čirého nadšení. <strong>Děláme to proto, že chceme, aby to bylo lepší i pro tebe.</strong> Ať jsi profík nebo začátečník, z Prahy nebo z Karviné, můžeš nám pomoci. Odměnou ti budou kontakty, reference, zkušenosti.
+            </p>
         </div>
     </div>
 
@@ -27,129 +30,194 @@
         <img class="cartoon" alt="Česká Python komunita" src="{{ url_for('static', filename='images/czech-python-user-group.svg') }}" onerror="this.onerror = null; this.src = '{{ url_for('static', filename='images/czech-python-user-group.png') }}'">
     </div>
 
-    <h2><i class="fa fa-users"></i> Zapoj se</h2>
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <p>
-            Python komunita je fajn jen díky tomu, že jsou v ní <strong>lidi, kteří se nebojí přiložit ruku k dílu</strong>. Všichni to děláme po večerech ve volném čase, z čirého nadšení. <strong>Děláme to proto, že chceme, aby to bylo lepší i pro tebe.</strong> Ať jsi profík nebo začátečník, z Prahy nebo z Karviné, můžeš nám pomoci. Odměnou ti budou kontakty, reference, zkušenosti.
-        </p>
-      </div>
-    </div>
+    <div class="row boxes">
+        <div id="daruj" class="box col-md-4 col-sm-6 col-md-offset-2">
+            <div class="box-body">
+                <div class="box-content">
+                    <h2>
+                        <i class="fa fa-credit-card"></i>
+                        Přispěj
+                    </h2>
+                    <p>
+                        Budeme rádi, když přispěješ na provoz neziskovky <a href="http://pyvec.org/">Pyvec</a>, jejíž misí je podporovat a propagovat Python komunitu v ČR.
+                    </p>
+                    <p>
+                        Srazy nebo workshopy dělají konkrétní lidé a Pyvec jim do toho nemluví - nabízí ale pomocnou ruku co se týče financí a zázemí.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="vyucuj" class="box col-md-4 col-sm-6">
+            <div class="box-body">
+                <div class="box-content">
+                    <h2>
+                        <i class="fa fa-university"></i>
+                        Vyučuj
+                    </h2>
+                    <ul>
+                        <li>
+                            Přidej se na skupiny <strong>Učíme Python</strong>:
+                            <a href="https://www.facebook.com/groups/800923800012580/">Facebook</a>,
+                            <a href="https://groups.google.com/forum/#!forum/ucime-python">Google Groups</a>.
+                        </li>
+                        <li>
+                            Koučuj pro <a href="http://pyladies.cz/">PyLadies</a>.
+                        </li>
+                        <li>
+                            <a href="http://pyvec-guide.readthedocs.io/">Rozjeď kurz pro začátečníky podle našeho návodu</a>. Použij a vylepšuj naše Open Source <a href="{{ url_for('beginners_cs') }}#onlineneumim">materiály</a>.
+                        </li>
+                        <li>
+                            Přečti si <a href="https://coach.djangogirls.org/">tipy na koučování od Django Girls</a>.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-    <h2 id="daruj"><i class="fa fa-credit-card"></i> Daruj</h2>
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <p>
-            Pokud nemáš čas, ale máš peníze, můžeš přispět na provoz naší neziskovky. Ta se jmenuje <a href="http://pyvec.org/">Pyvec</a>, je <a href="http://wwwinfo.mfcr.cz/cgi-bin/ares/darv_oss.cgi?ico=22746668&amp;jazyk=cz&amp;xml=1">zapsána</a> jako občanské sdružení a má <a href="{{ config.PYVEC_ACCOUNT_URL }}">transparentní účet</a>. Její misí je podporovat a propagovat Python komunitu v ČR. Srazy nebo workshopy dělají konkrétní lidé a Pyvec jim do toho nemluví - nabízí ale pomocnou ruku co se týče financí a zázemí.
-        </p>
-      </div>
-    </div>
+        <div class="clearfix visible-md-block visible-sm-block"></div>
 
-    <h2 id="vyucuj"><i class="fa fa-university"></i> Vyučuj</h2>
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <ul>
-            <li>
-                Přidej se na skupiny <strong>Učíme Python</strong>:
-                <a href="https://www.facebook.com/groups/800923800012580/">Facebook</a>,
-                <a href="https://groups.google.com/forum/#!forum/ucime-python">Google Groups</a>.
-            </li>
-            <li>
-                Koučuj pro <a href="http://pyladies.cz/">PyLadies</a>.
-            </li>
-            <li>
-                <a href="http://pyvec-guide.readthedocs.io/">Rozjeď kurz pro začátečníky podle našeho návodu</a>. Použij a vylepšuj naše Open Source <a href="{{ url_for('beginners_cs') }}#onlineneumim">materiály</a>.
-            </li>
-            <li>
-                Přečti si <a href="https://coach.djangogirls.org/">tipy na koučování od Django Girls</a>.
-            </li>
-        </ul>
-      </div>
-    </div>
+        <div id="prednasej" class="box col-md-4 col-sm-6 col-md-offset-2">
+            <div class="box-body">
+                <div class="box-content">
+                    <h2>
+                        <i class="fa fa-commenting"></i>
+                        Přednášej
+                    </h2>
+                    <ul>
+                        <li>
+                            Přihlaš se s přednáškou na nejbližší <a href="https://pyvo.cz">sraz</a>.
+                        </li>
+                        <li>
+                            Pokud se necítíš na 15-20 minut, připrav si tzv. lightning talk. Je to pětiminutovka o čemkoliv a můžeš s ní přijít na <a href="https://pyvo.cz">srazy</a> přijít i bez ohlášení.
+                        </li>
+                        <li>
+                            Koukni se, jestli zrovna nehledají řečníky <a href="https://cz.pycon.org/">PyCon&nbsp;CZ</a> nebo <a href="https://www.pycon.sk/">PyCon&nbsp;SK</a>. Na mnohé konference se může přihlásit s přednáškou kdokoliv, stačí vyplnit formulář &ndash; tzv. CfP (Call for Proposals).
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-    <h2 id="prednasej"><i class="fa fa-commenting"></i> Přednášej</h2>
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <ul>
-            <li>
-                Přihlaš se s přednáškou na nejbližší <a href="https://pyvo.cz">sraz</a>.
-            </li>
-            <li>
-                Pokud se necítíš na 15-20 minut, připrav si tzv. lightning talk. Je to pětiminutovka o čemkoliv a můžeš s ní přijít na <a href="https://pyvo.cz">srazy</a> přijít i bez ohlášení.
-            </li>
-            <li>
-                Koukni se, jestli zrovna nehledají řečníky <a href="https://cz.pycon.org/">PyCon&nbsp;CZ</a> nebo <a href="https://www.pycon.sk/">PyCon&nbsp;SK</a>. Na mnohé konference se může přihlásit s přednáškou kdokoliv, stačí vyplnit formulář &ndash; tzv. CfP (Call for Proposals).
-            </li>
-        </ul>
-      </div>
-    </div>
-
-    <h2 id="pis"><i class="fa fa-pencil"></i> Piš</h2>
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <ul>
-            <li>
-                Napiš článek na náš <a href="http://blog.python.cz">blog</a>! Může to být cokoliv - klidně o tom, jak jsi se naučil s Pythonem, nebo jak se ti líbilo na srazu. Nemáš-li nápad, my jich máme dost - dáme ti třeba tip na rozhovor se zajímavou osobou.
-            </li>
-            <li>
-                Máš technický článek? Takového je škoda na blog - ať už tvůj vlastní, nebo ten náš. Raději se ozvi do redakce např. <a href="http://zdrojak.cz/">Zdroják.cz</a>. Redakce bude nadšená a ty budeš mít větší publikum.
-            </li>
-            <li>
-                Python učíme podle Open Source <a href="{{ url_for('beginners_cs') }}#onlineneumim">materiálů</a>. Můžeš nám pomoci je vylepšovat.
-            </li>
-            <li>
-                Když se nám povede něco zorganizovat, snažíme se sepsat naše know-how do tzv. <a href="http://pyvec-guide.readthedocs.io/">Pyvec Guide</a>. Chybí tam ještě spousta věcí!
-            </li>
-        </ul>
-      </div>
+        <div id="pis" class="box col-md-4 col-sm-6">
+            <div class="box-body">
+                <div class="box-content">
+                    <h2>
+                        <i class="fa fa-pencil"></i>
+                        Piš
+                    </h2>
+                    <ul>
+                        <li>
+                            Poděl se o zážitky z akcí nebo o svůj životní příběh na <a href="http://blog.python.cz">komunitní blog</a>.
+                        </li>
+                        <li>
+                            Technické články piš např. na <a href="http://zdrojak.cz/">Zdroják.cz</a>. Redakce bude nadšená a ty budeš mít větší publikum.
+                        </li>
+                        <li>
+                            Python učíme podle Open Source <a href="{{ url_for('beginners_cs') }}#onlineneumim">materiálů</a>. Můžeš nám pomoci je vylepšovat.
+                        </li>
+                        <li>
+                            Když se nám povede něco zorganizovat, snažíme se sepsat naše know-how do tzv. <a href="http://pyvec-guide.readthedocs.io/">Pyvec Guide</a>. Chybí tam ještě spousta věcí!
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 
     <h2 id="organizuj"><i class="fa fa-clipboard"></i> Organizuj</h2>
     <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <ul>
-            <li>
-                Pokud ve tvém městě není Python sraz nebo třeba PyLadies skupina, tak gratulujeme! Jsi jejich organizátorem! Jestliže už se kolem tebe něco koná, nejlepší bude, když se spojíš s organizátory a zeptáš se, jak jim můžeš pomoci.
-            </li>
-            <li>
-                Všechny důležité věci řešíme na <a href="http://pyvec.slack.com/">Slacku</a>. Napiš nám na <a
-                href="mailto:info&#64;pyvec.org">info&#64;<!---->pyvec.org</a>, my tě přidáme, pak můžeš pokukovat co se v jaké místnosti řeší a brzy uvidíš, kde je tvoje pomoc nejvíc potřeba.
-            </li>
-            <li>
-                Když se nám povede něco zorganizovat, snažíme se sepsat naše know-how do tzv. <a href="http://pyvec-guide.readthedocs.io/">Pyvec Guide</a>.
-            </li>
-            <li>
-                Máme neziskovku <a href="http://pyvec.org/">Pyvec</a>. Její misí je podporovat a propagovat Python komunitu v ČR. Srazy nebo workshopy dělají lidé jako ty a Pyvec jim do toho nemluví - nabízí ale pomocnou ruku co se týče financí a zázemí.
-            </li>
-        </ul>
-      </div>
+        <div class="col-md-4 col-sm-6 col-md-offset-2">
+            <ul>
+                <li>
+                    Pokud ve tvém městě není <a href="https://pyvo.cz">Python sraz</a> nebo třeba <a href="http://pyladies.cz/">PyLadies</a> skupina, tak gratulujeme: Můžeš je založit! Jestliže už se kolem tebe něco koná, nejlepší bude, když se spojíš s organizátory a zeptáš se, jak jim můžeš pomoci.
+                </li>
+                <li>
+                    Každoročně sháníme dobrovolníky na konferenci <a href="https://pycon.cz">PyCon CZ</a>. Potřebné činnosti mají většinou pramálo společného s Pythonem a programováním.
+                </li>
+                <li>
+                    Když se nám povede něco zorganizovat, snažíme se sepsat naše know-how do tzv. <a href="http://pyvec-guide.readthedocs.io/">Pyvec Guide</a>.
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <ul>
+                <li>
+                    Všechny důležité věci řešíme na <a href="http://pyvec.slack.com/">Slacku</a>. Napiš nám na <a
+                    href="mailto:info&#64;pyvec.org">info&#64;<!---->pyvec.org</a>, my tě přidáme, pak můžeš pokukovat co se v jaké místnosti řeší a brzy uvidíš, kde je tvoje pomoc nejvíc potřeba.
+                </li>
+                <li>
+                    Máme neziskovku <a href="http://pyvec.org/">Pyvec</a>. Její misí je podporovat a propagovat Python komunitu v ČR. Srazy nebo workshopy dělají lidé jako ty a Pyvec jim do toho nemluví - nabízí ale pomocnou ruku co se týče financí a zázemí.
+                </li>
+            </ul>
+        </div>
     </div>
 
     <h2 id="dalsi-napady"><i class="fa fa-lightbulb-o"></i> Další nápady</h2>
     <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <p>
-            Pro organizaci jednorázových úkolů používáme <a href="https://github.com/pyvec/zapojse/">GitHub</a> Když nic, tak aspoň <a href="https://github.com/blog/2119-add-reactions-to-pull-requests-issues-and-comments">hlasuj</a> nebo <a href="https://github.com/pyvec/zapojse/issues/new">přidej vlastní nápad</a>. Díky hlasům budeme mít přinejmenším přehled o tom, co si přeje nejvíc lidí.
-        </p>
-        <p class="call-to-action">
-            <a href="https://github.com/pyvec/zapojse/issues/new" class="btn btn-primary">
-                <i class="fa fa-lightbulb-o"></i> Přidat nápad
-            </a>
-        </p>
-      </div>
+        <div class="col-md-8 col-md-offset-2">
+            <p>
+                Pro organizaci jednorázových úkolů používáme <a href="https://github.com/pyvec/zapojse/">GitHub</a> Když nic, tak aspoň <a href="https://github.com/blog/2119-add-reactions-to-pull-requests-issues-and-comments">hlasuj</a> nebo <a href="https://github.com/pyvec/zapojse/issues/new">přidej vlastní nápad</a>. Díky hlasům budeme mít přinejmenším přehled o tom, co si přeje nejvíc lidí.
+            </p>
+            <p>
+                Značka <span class="label label-primary">Kouč pomůže!</span> znamená, že někdo navrhl, že ti s úkolem pomůže, pokud se do něj pustíš. Jestli se ty chceš někde navrhnout jako kouč, napiš to do komentáře pod daný úkol a <a href="https://help.github.com/articles/applying-labels-to-issues-and-pull-requests/">přiřaď mu štítek</a> <strong>„coach“</strong>.
+            </p>
+            <p class="call-to-action">
+                <a href="https://github.com/pyvec/zapojse/issues/new" class="btn btn-primary">
+                    <i class="fa fa-lightbulb-o"></i> Přidat nápad
+                </a>
+            </p>
+        </div>
     </div>
 
     <div id="issues" class="issues row">
     {% for issue in issues %}
-        <div class="issue col-md-6">
-            <h3><a href="{{ issue.html_url }}">{{ issue.title }}</a></h3>
-            <p>
-                <a href="{{ issue.repository_url_html }}" class="label label-primary">
-                    <i class="fa fa-code-fork"></i> {{ issue.repository_name }}
+        <div class="issue col-md-4 col-sm-6 issue-{% if issue.repository_name == 'zapojse' %}general{% else %}repo-specific{% endif %}">
+            <h3>
+                {% if issue.is_pull_request %}
+                    <i class="issue-icon fa fa-pencil-square"></i>
+                {% else %}
+                    <i class="issue-icon fa fa-exclamation-circle"></i>
+                {% endif %}
+
+                {% if issue.repository_name != 'zapojse' %}
+                    <a href="{{ issue.repository_url_html }}" class="issue-repo">
+                        <i class="fa fa-code-fork"></i>{{ issue.repository_name|lower }}
+                    </a>
+                {% endif %}
+                <span class="issue-title">
+                    <a href="{{ issue.html_url }}" title="{{ issue.title }}">
+                        {{ issue.title }}
+                    </a>
+                </span>
+            </h3>
+            <p class="issue-details">
+                <a href="{{ issue.user.html_url }}" class="label label-default" title="od {{ issue.user.login }}">
+                    <i class="fa fa-user"></i>{{ issue.user.login }}
                 </a>
+                {% if issue.assignee %}
+                <a href="{{ issue.assignee.html_url }}" class="label label-default" title="prý to vyřeší {{ issue.assignee.login }}">
+                    <i class="fa fa-user-circle-o"></i>{{ issue.assignee.login }}
+                </a>
+                {% endif %}
+                {% if issue.votes %}
+                <span class="label label-default" title="hlasů: {{ issue.votes }}">
+                    <i class="fa fa-thumbs-up"></i>{{ issue.votes }}
+                </span>
+                {% endif %}
                 {% if issue.comments %}
-                <span class="label label-default">
+                <span class="label label-default" title="komentářů: {{ issue.comments }}">
                     <i class="fa fa-comment"></i>{{ issue.comments }}
+                </span>
+                {% endif %}
+
+                {% if issue.organization_name|lower == 'pyladiescz' %}
+                <span class="label label-pyladies">
+                    PyLadies
+                </span>
+                {% endif %}
+                {% if issue.coach %}
+                <span class="label label-primary" title="někdo navrhl, že ti s úkolem pomůže, pokud se do něj pustíš">
+                    Kouč pomůže!
                 </span>
                 {% endif %}
             </p>
