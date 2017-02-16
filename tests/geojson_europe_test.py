@@ -3,7 +3,7 @@
 import json
 from os import path
 
-from slugify import slugify
+import pytest
 
 from . import ROOT_DIR, DATA_DIR, generate_filenames
 
@@ -14,45 +14,44 @@ BOUNDS = (
 )
 
 
+def generate_geojson_entries(filenames):
+    for filename in filenames:
+        with open(filename) as f:
+            data = json.load(f)
+
+        for feature in data['features']:
+            yield {
+                'filename': filename,
+                'name': feature['properties']['name'],
+                'coords': feature['geometry']['coordinates'],
+            }
+
+
 glob_patterns = [
-    path.join(DATA_DIR, '*.*json'),
-    path.join(ROOT_DIR, '*.*json'),
+    path.join(DATA_DIR, '*.geojson'),
+    path.join(ROOT_DIR, '*.geojson'),
 ]
 
-
-def test_there_are_json_files_to_be_tested():
-    assert len(list(generate_filenames(glob_patterns))) > 0
+entries = list(generate_geojson_entries(generate_filenames(glob_patterns)))
 
 
-def _create_test(coords):
-    def test():
-        """Tests whether entries in GeoJSON are in Europe. If this test failed
-        for you, it's very likely because you have
-
-            "coordinates": [50.0703272, 14.4006753]
-
-        (which is Yemen) instead of
-
-            "coordinates": [14.4006753, 50.0703272]
-
-        (which is Prague) in your GeoJSON entry.
-        """
-        for i, coord in enumerate(coords):
-            assert BOUNDS[i][0] < coords[i] < BOUNDS[i][1]
-    return test
+def test_there_are_geojson_entries_to_be_tested():
+    assert len(entries) > 0
 
 
-for filename in generate_filenames(glob_patterns):
-    filename_slug = slugify(path.basename(filename), separator='_')
+@pytest.mark.parametrize('entry', entries)
+def test_geojson_coords_are_in_europe(entry):
+    """Tests whether entries in GeoJSON are in Europe. If this test failed
+    for you, it's very likely because you have
 
-    with open(filename) as f:
-        data = json.load(f)
+        "coordinates": [50.0703272, 14.4006753]
 
-    for feature in data['features']:
-        name = feature['properties']['name']
-        coords = feature['geometry']['coordinates']
+    (which is Yemen) instead of
 
-        feature_slug = slugify(name, separator='_')
-        fn_name = 'test_{}_{}_is_in_europe'.format(filename_slug, feature_slug)
+        "coordinates": [14.4006753, 50.0703272]
 
-        globals()[fn_name] = _create_test(coords)
+    (which is Prague) in your GeoJSON entry.
+    """
+    coords = entry['coords']
+    for i, coord in enumerate(coords):
+        assert BOUNDS[i][0] < coords[i] < BOUNDS[i][1]
