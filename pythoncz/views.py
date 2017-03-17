@@ -15,6 +15,11 @@ def render_template(filename, **kwargs):
     return _render_template(filename, **kwargs)
 
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
+
 @app.context_processor
 def inject_context():
     return {
