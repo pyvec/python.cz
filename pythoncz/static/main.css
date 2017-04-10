@@ -571,6 +571,15 @@ i.icon-english::before {
     font-weight: bold;
 }
 
+.pagenotfound {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.pagenotfound img {
+    width: 50%;
+}
+
 
 @media only screen and (max-width: 992px) {
     .boxes,
@@ -617,5 +626,9 @@ i.icon-english::before {
     .discussions {
         width: 50%;
         margin: 0 auto;
+    }
+
+    .pagenotfound img {
+        width: 80%;
     }
 }
