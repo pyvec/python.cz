@@ -772,6 +772,18 @@
                 "type": "Point",
                 "coordinates": [14.4334178, 50.0896022]
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Red Hat, CZ",
+                "url": "https://www.redhat.com/jobs",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [16.580853, 49.226174]
+            }
         }
     ]
 }
