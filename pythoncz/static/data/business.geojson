@@ -52,6 +52,18 @@
         {
             "type": "Feature",
             "properties": {
+                "name": "Exponea",
+                "url": "https://exponea.com/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [17.125383000000056, 48.145637]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "name": "Vaultier",
                 "url": "https://www.vaultier.org/",
                 "company": true
