@@ -1,0 +1,69 @@
+query($org_name:String!) {
+  organization(login:$org_name) {
+    repositories(first:100) {
+      totalCount
+      nodes {
+        name
+        nameWithOwner
+        isPrivate
+        url
+        issues(first:100, states:OPEN) {
+          totalCount
+          nodes {
+            title
+            url
+            updatedAt
+            author {
+              login
+              url
+            }
+            labels(first:5) {
+              nodes {
+                name
+              }
+            }
+            reactions(first:50) {
+              nodes {
+                content
+              }
+            }
+            comments {
+              totalCount
+            }
+            participants {
+              totalCount
+            }
+          }
+        }
+        pullRequests(first:100, states:OPEN) {
+          totalCount
+          nodes {
+            title
+            url
+            updatedAt
+            author {
+              login
+              url
+            }
+            labels(first:5) {
+              nodes {
+                name
+              }
+            }
+            reactions(first:50) {
+              nodes {
+                content
+              }
+            }
+            comments {
+              totalCount
+            }
+            participants {
+              totalCount
+            }
+          }
+        }
+      }
+    }
+  }
+}

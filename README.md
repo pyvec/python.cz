@@ -7,7 +7,7 @@ Czech Python community homepage.
 
 ## Installation
 
-The code is **Python 3**.
+The code is **Python 3** (the production Python version is 3.4).
 
 ```sh
 $ pip install -r requirements.txt
