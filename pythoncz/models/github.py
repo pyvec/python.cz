@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 
 
+import os
 import itertools
+import warnings
 from datetime import datetime
 
 import requests
-import grequests
 from werkzeug.contrib.cache import FileSystemCache
 
 from .. import app
@@ -14,20 +15,26 @@ from .. import app
 __all__ = ('get_issues',)
 
 
-cache = FileSystemCache(app.config['CACHE_DIR'], default_timeout=3600)
+get_issues_graphql_filename = (
+    os.path.join(os.path.dirname(__file__), 'github_get_issues.graphql')
+)
+with open(get_issues_graphql_filename) as f:
+    GET_ISSUES_GRAPHQL = f.read()
+
+SIX_HOURS_AS_SECONDS = 21600
+
+
+cache = FileSystemCache(app.config['CACHE_DIR'],
+                        default_timeout=SIX_HOURS_AS_SECONDS)
 
 
 def get_issues(org_names):
     issues = cache.get('github-issues')
     if issues is None:
         session = _create_github_api_session()
-        issues = itertools.chain(*(_get_issues_for_org(session, org)
-                                   for org in org_names))
-        # Using grequests here to get the issues details asynchronously
-        # Note that it does not support session, so we set the headers manually
-        reqs = (grequests.get(_issue_url(issue), headers=session.headers)
-                for issue in issues)
-        issues = [_enhance_issue(response) for response in grequests.map(reqs)]
+        issues = itertools.chain(*(
+            _get_issues_for_org(session, org_name) for org_name in org_names)
+        )
         issues = sorted(issues, key=_get_issue_sort_key, reverse=True)
         cache.set('github-issues', issues)
     return issues
@@ -41,78 +48,95 @@ def _create_github_api_session():
     session.headers.update({
         'User-Agent': user_agent,
         'Authorization': 'token {}'.format(app.config['GITHUB_TOKEN']),
-        'Accept': 'application/vnd.github.squirrel-girl-preview',
     })
     return session
 
 
 def _get_issues_for_org(session, org_name):
-    search_conditions = [
-        'is:open',
-        'org:{}'.format(org_name)
-    ]
-
-    page = 1
-    while True:
-        res = session.get('https://api.github.com/search/issues', params={
-            'q': ' '.join(search_conditions),
-            'per_page': 100,
-            'page': page,
-        })
-        res.raise_for_status()
-        items = res.json().get('items', [])
-        if items:
-            yield from items
-            page += 1
-        else:
-            break
-
-
-def _issue_repo_slug(issue):
-    repo_url_segments = issue['repository_url'].split('/')
-    org, repo = repo_url_segments[-2], repo_url_segments[-1]
-    return org, repo, '{}/{}'.format(org, repo)
-
-
-def _issue_url(issue):
-    org, repo, slug = _issue_repo_slug(issue)
-    return 'https://api.github.com/repos/{}/issues/{}'.format(
-        slug,
-        issue['number']
-    )
-
-
-def _enhance_issue(res):
+    res = session.post('https://api.github.com/graphql', json={
+        'query': GET_ISSUES_GRAPHQL,
+        'variables': {'org_name': org_name}
+    })
     res.raise_for_status()
-    issue = res.json()
+
+    json = res.json()
+    if json.get('errors'):
+        message = '. '.join(error['message'] for error in json['errors'])
+        raise requests.RequestException(message)
 
     try:
-        is_pull_request = bool(issue['pull_request']['url'])
-    except KeyError:
-        is_pull_request = False
+        organization = json['data']['organization']
+        repositories = _get_nodes(organization, 'repositories')
 
-    try:
-        reactions = issue['reactions']
-        issue['votes'] = (
-            reactions.get('total_count', 0)
-            - reactions.get('-1', 0)
-            - reactions.get('confused', 0)
+        for repository in repositories:
+            if repository['isPrivate']:
+                continue
+
+            for issue in _get_nodes(repository, 'issues'):
+                yield _format_issue(org_name, repository, issue)
+
+            for pull_request in _get_nodes(repository, 'pullRequests'):
+                yield _format_issue(org_name, repository, pull_request,
+                                    is_pull_request=True)
+    except KeyError as e:
+        raise ValueError(
+            'Unexpected structure of the GitHub API response: {}'.format(e)
         )
-    except KeyError:
-        issue['votes'] = 0
 
-    labels = [label['name'] for label in issue.get('labels', [])]
 
-    org, repo, slug = _issue_repo_slug(issue)
+def _format_issue(org_name, repository, issue, is_pull_request=False):
+    author = issue['author'] or {
+        'login': None,
+        'url': 'https://github.com/ghost',
+    }
+    labels = [label['name'] for label in _get_nodes(issue, 'labels')]
 
-    issue['coach'] = 'coach' in labels
-    issue['is_pull_request'] = is_pull_request
-    issue['repository_name'] = repo
-    issue['organization_name'] = org
-    issue['repository_full_name'] = slug
-    issue['repository_url_html'] = 'https://github.com/' + slug
+    return {
+        'title': issue['title'],
+        'html_url': issue['url'],
+        'updated_at': issue['updatedAt'],
+        'user': {
+            'login': author['login'],
+            'html_url': author['url'],
+        },
+        'is_pull_request': is_pull_request,
+        'repository_name': repository['name'],
+        'repository_url_html': repository['url'],
+        'organization_name': org_name,
+        'comments': issue['comments']['totalCount'],
+        'votes': _get_reactions(issue),
+        'labels': labels,
+        'coach': 'coach' in labels,
+    }
 
-    return issue
+
+def _get_reactions(issue):
+    votes = 0
+    for reaction in _get_nodes(issue, 'reactions'):
+        if reaction['content'] in ['THUMBS_DOWN', 'CONFUSED']:
+            votes -= 1
+        else:
+            votes += 1
+    return votes
+
+
+def _get_nodes(node, connection_name):
+    connection_nodes = node[connection_name]['nodes']
+
+    if 'totalCount' in node[connection_name]:
+        connection_nodes_count = len(connection_nodes)
+        connection_nodes_total_count = node[connection_name]['totalCount']
+
+        if connection_nodes_count > connection_nodes_total_count:
+            warnings.warn((
+                "The '{}' contain {} nodes in total, but only {} was fetched"
+            ).format(
+                connection_name,
+                connection_nodes_total_count,
+                connection_nodes_count,
+            ), warnings.UserWarning)
+
+    return connection_nodes
 
 
 def _get_issue_sort_key(issue):

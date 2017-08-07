@@ -1,8 +1,7 @@
 Flask==0.12
 flake8==3.2.1
 pytest==3.0.6
-requests==2.13.0
+requests==2.18.3
 czech-sort==0.4
 PyYAML==3.12
 python-slugify==1.2.1
-grequests==0.3.0

@@ -156,7 +156,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <p>
-                Pro organizaci jednorázových úkolů používáme <a href="https://github.com/pyvec/zapojse/">GitHub</a> Když nic, tak aspoň <a href="https://github.com/blog/2119-add-reactions-to-pull-requests-issues-and-comments">hlasuj</a> nebo <a href="https://github.com/pyvec/zapojse/issues/new">přidej vlastní nápad</a>. Díky hlasům budeme mít přinejmenším přehled o tom, co si přeje nejvíc lidí.
+                Pro organizaci jednorázových úkolů používáme <a href="https://github.com/pyvec/zapojse/">GitHub</a>. Když nic, tak aspoň <a href="https://github.com/blog/2119-add-reactions-to-pull-requests-issues-and-comments">hlasuj</a> nebo <a href="https://github.com/pyvec/zapojse/issues/new">přidej vlastní nápad</a>. Díky hlasům budeme mít přinejmenším přehled o tom, co si přeje nejvíc lidí.
             </p>
             <p>
                 Značka <span class="label label-primary">Kouč pomůže!</span> znamená, že někdo navrhl, že ti s úkolem pomůže, pokud se do něj pustíš. Jestli se ty chceš někde navrhnout jako kouč, napiš to do komentáře pod daný úkol a <a href="https://help.github.com/articles/applying-labels-to-issues-and-pull-requests/">přiřaď mu štítek</a> <strong>„coach“</strong>.
@@ -191,13 +191,14 @@
                 </span>
             </h3>
             <p class="issue-details">
-                <a href="{{ issue.user.html_url }}" class="label label-default" title="od {{ issue.user.login }}">
-                    <i class="fa fa-user"></i>{{ issue.user.login }}
-                </a>
-                {% if issue.assignee %}
-                <a href="{{ issue.assignee.html_url }}" class="label label-default" title="prý to vyřeší {{ issue.assignee.login }}">
-                    <i class="fa fa-user-circle-o"></i>{{ issue.assignee.login }}
-                </a>
+                {% if issue.user.login %}
+                    <a href="{{ issue.user.html_url }}" class="label label-default" title="od {{ issue.user.login }}">
+                        <i class="fa fa-user"></i>{{ issue.user.login }}
+                    </a>
+                {% else %}
+                    <a href="{{ issue.user.html_url }}" class="label label-default" title="od již neexistujícího uživatele">
+                        <i class="fa fa-user"></i>?
+                    </a>
                 {% endif %}
                 {% if issue.votes %}
                 <span class="label label-default" title="hlasů: {{ issue.votes }}">
