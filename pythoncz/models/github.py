@@ -104,6 +104,7 @@ def _format_issue(org_name, repository, issue, is_pull_request=False):
         'repository_url_html': repository['url'],
         'organization_name': org_name,
         'comments': issue['comments']['totalCount'],
+        'participants': issue['participants']['totalCount'],
         'votes': _get_reactions(issue),
         'labels': labels,
         'coach': 'coach' in labels,

@@ -200,6 +200,11 @@
                         <i class="fa fa-user"></i>?
                     </a>
                 {% endif %}
+                {% if issue.participants %}
+                <span class="label label-default" title="účastníků diskuze: {{ issue.participants }}">
+                    <i class="fa fa-users"></i>{{ issue.participants }}
+                </span>
+                {% endif %}
                 {% if issue.votes %}
                 <span class="label label-default" title="hlasů: {{ issue.votes }}">
                     <i class="fa fa-thumbs-up"></i>{{ issue.votes }}
