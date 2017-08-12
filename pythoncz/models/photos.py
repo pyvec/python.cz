@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-
-
 import os
 import random
 from glob import glob

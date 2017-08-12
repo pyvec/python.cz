@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-
-
 from flask import (render_template as _render_template, url_for,
                    redirect, request)
 
