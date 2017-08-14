@@ -1,8 +1,8 @@
 from flask import (render_template as _render_template, url_for,
                    redirect, request)
 
-from . import app
-from .models import jobs, photos, beginners, github
+from pythoncz import app
+from pythoncz.models import jobs, photos, beginners, github
 
 
 # Templating
