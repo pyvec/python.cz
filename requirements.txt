@@ -5,3 +5,4 @@ requests==2.18.3
 czech-sort==0.4
 PyYAML==3.12
 python-slugify==1.2.1
+responses==0.7.0

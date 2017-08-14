@@ -6,7 +6,7 @@ from datetime import datetime
 import requests
 from werkzeug.contrib.cache import FileSystemCache
 
-from .. import app
+from pythoncz import app
 
 
 __all__ = ('get_issues',)
@@ -28,16 +28,16 @@ cache = FileSystemCache(app.config['CACHE_DIR'],
 def get_issues(org_names):
     issues = cache.get('github-issues')
     if issues is None:
-        session = _create_github_api_session()
+        session = _create_api_session()
         issues = itertools.chain(*(
             _get_issues_for_org(session, org_name) for org_name in org_names)
         )
-        issues = sorted(issues, key=_get_issue_sort_key, reverse=True)
+        issues = _sort_issues(issues)
         cache.set('github-issues', issues)
     return issues
 
 
-def _create_github_api_session():
+def _create_api_session():
     user_agent = ('pythoncz/{now.year}-{now.month} '
                   '(+https://python.cz)').format(now=datetime.now())
 
@@ -50,17 +50,7 @@ def _create_github_api_session():
 
 
 def _get_issues_for_org(session, org_name):
-    res = session.post('https://api.github.com/graphql', json={
-        'query': GET_ISSUES_GRAPHQL,
-        'variables': {'org_name': org_name}
-    })
-    res.raise_for_status()
-
-    json = res.json()
-    if json.get('errors'):
-        message = '. '.join(error['message'] for error in json['errors'])
-        raise requests.RequestException(message)
-
+    json = _request_api(session, GET_ISSUES_GRAPHQL, {'org_name': org_name})
     try:
         organization = json['data']['organization']
         repositories = _get_nodes(organization, 'repositories')
@@ -79,6 +69,25 @@ def _get_issues_for_org(session, org_name):
         raise ValueError(
             'Unexpected structure of the GitHub API response: {}'.format(e)
         )
+
+
+def _request_api(session, query, variables):
+    res = session.post('https://api.github.com/graphql', json={
+        'query': query,
+        'variables': variables,
+    })
+    try:
+        json = res.json()
+    except ValueError as e:
+        res.raise_for_status()
+        raise ValueError(
+            'Unexpected structure of the GitHub API response: {}'.format(e)
+        )
+    if json.get('errors'):
+        message = '; '.join(error['message'] for error in json['errors'])
+        raise requests.HTTPError(message, response=res)
+    res.raise_for_status()
+    return json
 
 
 def _format_issue(org_name, repository, issue, is_pull_request=False):
@@ -102,13 +111,13 @@ def _format_issue(org_name, repository, issue, is_pull_request=False):
         'organization_name': org_name,
         'comments': issue['comments']['totalCount'],
         'participants': issue['participants']['totalCount'],
-        'votes': _get_reactions(issue),
+        'votes': _calculate_votes(issue),
         'labels': labels,
         'coach': 'coach' in labels,
     }
 
 
-def _get_reactions(issue):
+def _calculate_votes(issue):
     votes = 0
     for reaction in _get_nodes(issue, 'reactions'):
         if reaction['content'] in ['THUMBS_DOWN', 'CONFUSED']:
@@ -125,23 +134,26 @@ def _get_nodes(node, connection_name):
         connection_nodes_count = len(connection_nodes)
         connection_nodes_total_count = node[connection_name]['totalCount']
 
-        if connection_nodes_count > connection_nodes_total_count:
+        if connection_nodes_count < connection_nodes_total_count:
             warnings.warn((
                 "The '{}' contain {} nodes in total, but only {} was fetched"
             ).format(
                 connection_name,
                 connection_nodes_total_count,
                 connection_nodes_count,
-            ), warnings.UserWarning)
+            ), UserWarning)
 
     return connection_nodes
 
 
+def _sort_issues(issues):
+    return sorted(issues, key=_get_issue_sort_key, reverse=True)
+
+
 def _get_issue_sort_key(issue):
     return (
-        not issue.get('assignee'),
-        issue.get('coach'),
-        issue.get('votes'),
-        issue.get('comments'),
-        issue.get('updated_at'),
+        issue['coach'],
+        issue['votes'],
+        issue['comments'] + issue['participants'],
+        issue['updated_at'],
     )
