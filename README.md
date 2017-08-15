@@ -11,7 +11,7 @@ Czech Python community homepage.
 The code is **Python 3** (the production Python version is 3.4).
 
 ```sh
-$ pip install -e .
+$ pip install .
 ```
 
 ### Development
