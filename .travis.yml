@@ -3,10 +3,12 @@ python:
     - "3.4"
 cache: "pip"
 install:
-    - "pip install ."
+    - "pip install .[tests]"
 script:
     - "flake8 ."
-    - "py.test pythoncz_tests"
+    - "pytest"
+after_success:
+    - "coveralls"
 deploy:
     provider: "script"
     script: "deployment/deploy.sh"
