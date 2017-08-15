@@ -22,7 +22,7 @@ git clone --progress --depth=1 --branch=master https://github.com/pyvec/python.c
 
 # install dependencies
 /srv/venv/bin/pip install -U pip
-/srv/venv/bin/pip install -r /srv/app/requirements.txt
+/srv/venv/bin/pip install /srv/app
 
 # restart the app
 supervisorctl restart app
