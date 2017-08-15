@@ -5,7 +5,6 @@ cache: "pip"
 install:
     - "pip install .[tests]"
 script:
-    - "flake8 ."
     - "pytest"
 after_success:
     - "coveralls"
