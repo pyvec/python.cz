@@ -389,19 +389,20 @@ def test_sort_issues_votes(github):
 def test_sort_issues_activity(github):
     """
     Issues with most user activity should go first if there's no 'coach'
-    issue and no reactions
+    issue and no reactions.
+    User activity is comments count + participants count
     """
     issue1 = fixtures.issue(labels=[], reactions_counts={})
-    issue1['comments']['totalCount'] = 1
-    issue1['participants']['totalCount'] = 4
+    issue1['comments']['totalCount'] = 3
+    issue1['participants']['totalCount'] = 2
 
     issue2 = fixtures.issue(labels=[], reactions_counts={})
-    issue2['comments']['totalCount'] = 3
-    issue2['participants']['totalCount'] = 3
+    issue2['comments']['totalCount'] = 1
+    issue2['participants']['totalCount'] = 9
 
     issue3 = fixtures.issue(labels=[], reactions_counts={})
     issue3['comments']['totalCount'] = 0
-    issue3['participants']['totalCount'] = 1
+    issue3['participants']['totalCount'] = 4
 
     repository = fixtures.repository()
     sorted_issues = github._sort_issues([
@@ -409,6 +410,6 @@ def test_sort_issues_activity(github):
         for issue in [issue1, issue2, issue3]
     ])
 
-    assert sorted_issues[0]['comments'] == 3
-    assert sorted_issues[1]['comments'] == 1
-    assert sorted_issues[2]['comments'] == 0
+    assert sorted_issues[0]['comments'] == 1  # + 9 = 10
+    assert sorted_issues[1]['comments'] == 3  # + 2 = 7
+    assert sorted_issues[2]['comments'] == 0  # + 4 = 4
