@@ -15,6 +15,7 @@ tests_require = [
     'responses==0.7.0',
     'pytest-runner==2.11.1',
     'pytest-cov==2.5.1',
+    'pytest-flake8==0.8.1',
 ]
 
 
