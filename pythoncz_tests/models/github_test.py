@@ -84,7 +84,7 @@ def test_create_api_session(github):
     headers = session.headers
 
     assert 'https://python.cz' in headers.get('User-Agent')
-    assert re.match(r'token \w+', headers.get('Authorization')) is not None
+    assert re.match(r'token \w+', headers.get('Authorization'))
 
 
 def test_get_issues_for_org_key_error(github, requests_mock):
