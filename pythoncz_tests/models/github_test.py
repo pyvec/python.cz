@@ -200,40 +200,24 @@ def test_request_api_500_invalid_json(github, requests_mock):
     assert excinfo.value.response.status_code == 500
 
 
-def test_request_api_200_errors(github, requests_mock):
+@pytest.mark.parametrize('status_code', (200, 500))
+def test_request_api_X00_errors(github, requests_mock, status_code):
     """
     The '_request_api' helper should raise HTTP error with error messages
-    sent in the response body if they're present, even if the HTTP status
-    code is not an error
+    sent in the response body if they're present, regardless of the HTTP status
+    code errorness
     """
     requests_mock.add(
         responses.POST,
         'https://api.github.com/graphql',
+        status=status_code,
         json={'errors': [{'message': 'Error 1'}, {'message': 'Error 2'}]},
     )
     error_message = 'Error 1; Error 2'
     with pytest.raises(requests.HTTPError, match=error_message) as excinfo:
         github._request_api(requests.Session(), '... query ...', {})
 
-    assert excinfo.value.response.status_code == 200
-
-
-def test_request_api_500_errors(github, requests_mock):
-    """
-    The '_request_api' helper should raise HTTP error with error messages
-    sent in the response body
-    """
-    requests_mock.add(
-        responses.POST,
-        'https://api.github.com/graphql',
-        status=500,
-        json={'errors': [{'message': 'Error 1'}, {'message': 'Error 2'}]},
-    )
-    error_message = 'Error 1; Error 2'
-    with pytest.raises(requests.HTTPError, match=error_message) as excinfo:
-        github._request_api(requests.Session(), '... query ...', {})
-
-    assert excinfo.value.response.status_code == 500
+    assert excinfo.value.response.status_code == status_code
 
 
 def test_request_api_200(github, requests_mock):
