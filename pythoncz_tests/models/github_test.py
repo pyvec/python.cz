@@ -205,7 +205,7 @@ def test_request_api_X00_errors(github, requests_mock, status_code):
     """
     The '_request_api' helper should raise HTTP error with error messages
     sent in the response body if they're present, regardless of the HTTP status
-    code errorness
+    code
     """
     requests_mock.add(
         responses.POST,
