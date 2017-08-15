@@ -6,7 +6,7 @@ install:
     - "pip install .[tests]"
 script:
     - "flake8 ."
-    - "pytest --cov-report="
+    - "pytest"
 after_success:
     - "coveralls"
 deploy:
