@@ -10,7 +10,7 @@ Czech Python community homepage.
 The code is **Python 3** (the production Python version is 3.4).
 
 ```sh
-$ pip install -r requirements.txt
+$ pip install .
 ```
 
 ### Development

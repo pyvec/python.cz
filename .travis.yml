@@ -3,10 +3,10 @@ python:
     - "3.4"
 cache: "pip"
 install:
-    - "pip install -r requirements.txt"
+    - "pip install ."
 script:
     - "flake8 ."
-    - "PYTHONPATH=$PYTHONPATH:. py.test pythoncz_tests"
+    - "py.test pythoncz_tests"
 deploy:
     provider: "script"
     script: "deployment/deploy.sh"
