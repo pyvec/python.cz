@@ -3,7 +3,8 @@
 
 Czech Python community homepage.
 
-|Build Status| |Test Coverage|
+[![Build Status](https://travis-ci.org/pyvec/python.cz.svg?branch=master)](https://travis-ci.org/pyvec/python.cz)
+[![Test Coverage](https://coveralls.io/repos/github/pyvec/python.cz/badge.svg?branch=master)](https://coveralls.io/github/pyvec/python.cz?branch=master)
 
 ## Installation
 
@@ -47,9 +48,3 @@ The site is backed by [Pyvec](http://pyvec.org/), nonprofit organization dedicat
 ## License
 
 [MIT](LICENSE)
-
-
-.. |Build Status| image:: https://travis-ci.org/pyvec/python.cz.svg?branch=master
-   :target: https://travis-ci.org/pyvec/python.cz
-.. |Test Coverage| image:: https://coveralls.io/repos/github/pyvec/python.cz/badge.svg?branch=master
-   :target: https://coveralls.io/github/pyvec/python.cz?branch=master
