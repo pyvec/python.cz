@@ -376,10 +376,10 @@ def test_sort_issues_votes(github):
     """
     repository = fixtures.repository()
     issues = [github._format_issue('org', repository, issue) for issue in [
-        fixtures.issue(labels=[], reactions_counts={'LAUGH': 1}),
+        fixtures.issue(labels=[], reactions_counts={'THUMBS_UP': 1}),
         fixtures.issue(labels=[], reactions_counts={'THUMBS_DOWN': 1}),
-        fixtures.issue(labels=[], reactions_counts={'HEART': 5, 'CONFUSED': 1}),  # NOQA
-        fixtures.issue(labels=[], reactions_counts={'LAUGH': 1}),
+        fixtures.issue(labels=[], reactions_counts={'THUMBS_UP': 4}),
+        fixtures.issue(labels=[], reactions_counts={'THUMBS_UP': 3}),
     ]]
     sorted_issues = github._sort_issues(issues)
 
