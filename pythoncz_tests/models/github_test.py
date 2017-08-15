@@ -133,9 +133,7 @@ def test_get_issues_for_org_merges_issues_pull_requests(github, requests_mock):
     )
     issues = github._get_issues_for_org(requests.Session(), 'org')
 
-    titles_are_pr = {}
-    for issue in issues:
-        titles_are_pr[issue['title']] = issue['is_pull_request']
+    titles_are_pr = {i['title']: i['is_pull_request'] for i in issues}
 
     assert titles_are_pr == expected_titles_are_pr
 
