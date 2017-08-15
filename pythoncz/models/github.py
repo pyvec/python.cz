@@ -83,13 +83,11 @@ def _request_api(session, query, variables):
         raise ValueError(
             'Unexpected structure of the GitHub API response: {}'.format(e)
         )
-    else:
-        if json.get('errors'):
-            message = '; '.join(error['message'] for error in json['errors'])
-            raise requests.HTTPError(message, response=res)
-        else:
-            res.raise_for_status()
-            return json
+    if json.get('errors'):
+        message = '; '.join(error['message'] for error in json['errors'])
+        raise requests.HTTPError(message, response=res)
+    res.raise_for_status()
+    return json
 
 
 def _format_issue(org_name, repository, issue, is_pull_request=False):
