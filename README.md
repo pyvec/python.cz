@@ -16,7 +16,7 @@ $ pip install .
 
 ### Development
 
-Get [GitHub Personal Access Token](https://github.com/settings/tokens) (with no scopes) and set it as `GITHUB_TOKEN` environment value.
+The site uses GitHub API. For certian pages to work correctly, you need to set the `GITHUB_TOKEN` environment variable to a [GitHub Personal Access Token](https://github.com/settings/tokens) (no scopes needed).
 
 ```sh
 $ export GITHUB_TOKEN=...
