@@ -784,6 +784,18 @@
                 "type": "Point",
                 "coordinates": [14.4334178, 50.0896022]
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "MSD",
+                "url": "http://www.msd.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4101153, 50.0670421]
+            }
         }
     ]
 }
