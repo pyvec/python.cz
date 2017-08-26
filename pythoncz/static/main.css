@@ -462,8 +462,17 @@ li.communication-item::before {
     margin-right: 0.5em;
 }
 
-.issues {
+.issues, .issues-error {
     margin: 2em 0;
+}
+
+.issues-error {
+    text-align: center;
+}
+
+.issues-error .fa {
+    font-size: 200%;
+    margin-bottom: 0.3em;
 }
 
 .issue {

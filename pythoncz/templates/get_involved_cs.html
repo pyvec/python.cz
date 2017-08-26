@@ -169,72 +169,83 @@
         </div>
     </div>
 
-    <div id="issues" class="issues row">
-    {% for issue in issues %}
-        <div class="issue col-md-4 col-sm-6 issue-{% if issue.repository_name == 'zapojse' %}general{% else %}repo-specific{% endif %}">
-            <h3>
-                {% if issue.is_pull_request %}
-                    <i class="issue-icon fa fa-pencil-square"></i>
-                {% else %}
-                    <i class="issue-icon fa fa-exclamation-circle"></i>
-                {% endif %}
-
-                {% if issue.repository_name != 'zapojse' %}
-                    <a href="{{ issue.repository_url_html }}" class="issue-repo">
-                        <i class="fa fa-code-fork"></i>{{ issue.repository_name|lower }}
-                    </a>
-                {% endif %}
-                <span class="issue-title">
-                    <a href="{{ issue.html_url }}" title="{{ issue.title }}">
-                        {{ issue.title }}
-                    </a>
-                </span>
-            </h3>
-            <p class="issue-details">
-                {% if issue.user.login %}
-                    <a href="{{ issue.user.html_url }}" class="label label-default" title="od {{ issue.user.login }}">
-                        <i class="fa fa-user"></i>{{ issue.user.login }}
-                    </a>
-                {% else %}
-                    <a href="{{ issue.user.html_url }}" class="label label-default" title="od již neexistujícího uživatele">
-                        <i class="fa fa-user"></i>?
-                    </a>
-                {% endif %}
-                {% if issue.participants %}
-                <span class="label label-default" title="účastníků diskuze: {{ issue.participants }}">
-                    <i class="fa fa-users"></i>{{ issue.participants }}
-                </span>
-                {% endif %}
-                {% if issue.votes %}
-                <span class="label label-default" title="hlasů: {{ issue.votes }}">
-                    <i class="fa fa-thumbs-up"></i>{{ issue.votes }}
-                </span>
-                {% endif %}
-                {% if issue.comments %}
-                <span class="label label-default" title="komentářů: {{ issue.comments }}">
-                    <i class="fa fa-comment"></i>{{ issue.comments }}
-                </span>
-                {% endif %}
-
-                {% if issue.organization_name|lower == 'pyladiescz' %}
-                <span class="label label-pyladies">
-                    PyLadies
-                </span>
-                {% endif %}
-                {% if issue.coach %}
-                <span class="label label-primary" title="někdo navrhl, že ti s úkolem pomůže, pokud se do něj pustíš">
-                    Kouč pomůže!
-                </span>
-                {% endif %}
-                {% if issue['sprint-idea'] %}
-                <span class="label label-sprint-idea" title="vhodné na sprint">
-                    Sprint
-                </span>
-                {% endif %}
-            </p>
+    {% if not issues %}
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <p class="alert alert-danger issues-error">
+                    <i class="fa fa-window-close"></i><br>
+                    Nápady se nepovedlo načíst. Většinu z nich lze alternativně najít na <a href="https://github.com/pyvec/zapojse/issues">pyvec/zapojse</a>. Pokud tento stav přetrvává, dejte nám o tom prosím vědět <a href="https://github.com/pyvec/python.cz/issues/new?title={{ 'Nefunguje Zapoj se'|urlencode }}&amp;body={{ error.__class__.__name__|urlencode }}%3A+{{ error|urlencode }}">sem</a>.
+                </p>
+            </div>
         </div>
-    {% endfor %}
-    </div>
+    {% else %}
+        <div id="issues" class="issues row">
+        {% for issue in issues %}
+            <div class="issue col-md-4 col-sm-6 issue-{% if issue.repository_name == 'zapojse' %}general{% else %}repo-specific{% endif %}">
+                <h3>
+                    {% if issue.is_pull_request %}
+                        <i class="issue-icon fa fa-pencil-square"></i>
+                    {% else %}
+                        <i class="issue-icon fa fa-exclamation-circle"></i>
+                    {% endif %}
+
+                    {% if issue.repository_name != 'zapojse' %}
+                        <a href="{{ issue.repository_url_html }}" class="issue-repo">
+                            <i class="fa fa-code-fork"></i>{{ issue.repository_name|lower }}
+                        </a>
+                    {% endif %}
+                    <span class="issue-title">
+                        <a href="{{ issue.html_url }}" title="{{ issue.title }}">
+                            {{ issue.title }}
+                        </a>
+                    </span>
+                </h3>
+                <p class="issue-details">
+                    {% if issue.user.login %}
+                        <a href="{{ issue.user.html_url }}" class="label label-default" title="od {{ issue.user.login }}">
+                            <i class="fa fa-user"></i>{{ issue.user.login }}
+                        </a>
+                    {% else %}
+                        <a href="{{ issue.user.html_url }}" class="label label-default" title="od již neexistujícího uživatele">
+                            <i class="fa fa-user"></i>?
+                        </a>
+                    {% endif %}
+                    {% if issue.participants %}
+                    <span class="label label-default" title="účastníků diskuze: {{ issue.participants }}">
+                        <i class="fa fa-users"></i>{{ issue.participants }}
+                    </span>
+                    {% endif %}
+                    {% if issue.votes %}
+                    <span class="label label-default" title="hlasů: {{ issue.votes }}">
+                        <i class="fa fa-thumbs-up"></i>{{ issue.votes }}
+                    </span>
+                    {% endif %}
+                    {% if issue.comments %}
+                    <span class="label label-default" title="komentářů: {{ issue.comments }}">
+                        <i class="fa fa-comment"></i>{{ issue.comments }}
+                    </span>
+                    {% endif %}
+
+                    {% if issue.organization_name|lower == 'pyladiescz' %}
+                    <span class="label label-pyladies">
+                        PyLadies
+                    </span>
+                    {% endif %}
+                    {% if issue.coach %}
+                    <span class="label label-primary" title="někdo navrhl, že ti s úkolem pomůže, pokud se do něj pustíš">
+                        Kouč pomůže!
+                    </span>
+                    {% endif %}
+                    {% if issue['sprint-idea'] %}
+                    <span class="label label-sprint-idea" title="vhodné na sprint">
+                        Sprint
+                    </span>
+                    {% endif %}
+                </p>
+            </div>
+        {% endfor %}
+        </div>
+    {% endif %}
 
     <div class="row">
       <div class="col-md-8 col-md-offset-2">

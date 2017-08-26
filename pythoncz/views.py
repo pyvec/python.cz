@@ -1,5 +1,7 @@
+from urllib.parse import quote_plus as url_quote_plus
+
 from flask import (render_template as _render_template, url_for,
-                   redirect, request)
+                   redirect, request, make_response)
 
 from pythoncz import app
 from pythoncz.models import jobs, photos, beginners, github
@@ -15,6 +17,11 @@ def render_template(filename, **kwargs):
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
+
+
+@app.template_filter('urlencode')
+def urlencode_filter(s):
+    return url_quote_plus(str(s).encode('utf8'))
 
 
 @app.context_processor
@@ -58,8 +65,12 @@ def jobs_en():
 
 @app.route('/zapojse/')
 def get_involved_cs():
-    issues = github.get_issues(app.config['GITHUB_ORGANIZATIONS'])
-    return render_template('get_involved_cs.html', issues=issues)
+    try:
+        issues = github.get_issues(app.config['GITHUB_ORGANIZATIONS'])
+        return render_template('get_involved_cs.html', issues=issues)
+    except Exception as e:
+        template = render_template('get_involved_cs.html', issues=[], error=e)
+        return make_response(template, 500)
 
 
 # Subdomain redirect
