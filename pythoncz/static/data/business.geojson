@@ -788,13 +788,13 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "MSD",
-                "url": "http://www.msd.cz/",
+                "name": "MSD IT Global Innovation Center s.r.o.",
+                "url": "http://www.msdit.cz/",
                 "company": true
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [14.4101153, 50.0670421]
+                "coordinates": [14.4099194, 50.0670106]
             }
         }
     ]
