@@ -246,29 +246,17 @@ def test_format_issue_labels(github):
     assert formatted_issue['coach'] is False
 
 
-def test_format_issue_coach(github):
+@pytest.mark.parametrize('issue_name', ('coach', 'sprint-idea'))
+def test_format_issue_special_labels(github, issue_name):
     """
     The '_format_issue' helper should be able to process the 'coach' label
     and to mark the resulting formatted issue with the 'coach' flag accordingly
     """
-    issue = fixtures.issue(labels=[{'name': 'bug'}, {'name': 'coach'}])
+    issue = fixtures.issue(labels=[{'name': 'bug'}, {'name': issue_name}])
     formatted_issue = github._format_issue('org', fixtures.repository(), issue)
 
-    assert formatted_issue['labels'] == ['bug', 'coach']
-    assert formatted_issue['coach'] is True
-
-
-def test_format_issue_sprint_idea(github):
-    """
-    The '_format_issue' helper should be able to process the 'sprint-idea'
-    label and to mark the resulting formatted issue with the 'sprint-idea'
-    flag accordingly
-    """
-    issue = fixtures.issue(labels=[{'name': 'coach'}, {'name': 'sprint-idea'}])
-    formatted_issue = github._format_issue('org', fixtures.repository(), issue)
-
-    assert formatted_issue['labels'] == ['coach', 'sprint-idea']
-    assert formatted_issue['sprint-idea'] is True
+    assert formatted_issue['labels'] == ['bug', issue_name]
+    assert formatted_issue[issue_name] is True
 
 
 def test_format_issue_reactions(github):
