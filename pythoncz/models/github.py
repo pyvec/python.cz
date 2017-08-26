@@ -114,6 +114,7 @@ def _format_issue(org_name, repository, issue, is_pull_request=False):
         'votes': _calculate_votes(issue),
         'labels': labels,
         'coach': 'coach' in labels,
+        'sprint-idea': 'sprint-idea' in labels,
     }
 
 

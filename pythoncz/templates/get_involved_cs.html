@@ -226,6 +226,11 @@
                     Kouč pomůže!
                 </span>
                 {% endif %}
+                {% if issue['sprint-idea'] %}
+                <span class="label label-sprint-idea" title="vhodné na sprint">
+                    Sprint
+                </span>
+                {% endif %}
             </p>
         </div>
     {% endfor %}
