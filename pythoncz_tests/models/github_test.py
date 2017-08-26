@@ -258,6 +258,19 @@ def test_format_issue_coach(github):
     assert formatted_issue['coach'] is True
 
 
+def test_format_issue_sprint_idea(github):
+    """
+    The '_format_issue' helper should be able to process the 'sprint-idea'
+    label and to mark the resulting formatted issue with the 'sprint-idea'
+    flag accordingly
+    """
+    issue = fixtures.issue(labels=[{'name': 'coach'}, {'name': 'sprint-idea'}])
+    formatted_issue = github._format_issue('org', fixtures.repository(), issue)
+
+    assert formatted_issue['labels'] == ['coach', 'sprint-idea']
+    assert formatted_issue['sprint-idea'] is True
+
+
 def test_format_issue_reactions(github):
     """
     The '_format_issue' helper should be able to calculate 'votes'
