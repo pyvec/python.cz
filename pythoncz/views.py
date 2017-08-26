@@ -73,7 +73,7 @@ def subdomain_redirect():
 
 @app.route('/index.html')
 def index_legacy():
-    return redirect(url_for('index'), code=301)
+    return redirect(url_for('index_cs'), code=301)
 
 
 @app.route('/english.html')
@@ -88,7 +88,7 @@ def pyladies(target):
 
 @app.route('/pyladies/')
 def pyladies_index():
-    return redirect('http://pyladies.cz/', code=301)
+    return redirect('http://pyladies.cz', code=301)
 
 
 @app.route('/talks/<path:target>')
