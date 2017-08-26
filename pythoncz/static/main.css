@@ -541,6 +541,10 @@ a.issue-repo:focus,
 .label-pyladies {
     background-color: #FF8181;
 }
+.label-sprint-idea {
+    background-color: #FBCA04;
+    color: black;
+}
 
 i.icon-english {
     display: inline-block;
