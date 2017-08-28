@@ -7,6 +7,7 @@ install_requires = [
     'czech-sort==0.4',
     'pyyaml==3.12',
     'python-slugify==1.2.1',
+    'click==6.7',
 ]
 tests_require = [
     'coveralls==1.1',
@@ -26,4 +27,9 @@ setup(
     install_requires=install_requires,
     tests_require=tests_require,
     extras_require={'tests': tests_require},
+    entry_points={
+        'console_scripts': [
+            'pythoncz = pythoncz.cli:main'
+        ]
+    },
 )

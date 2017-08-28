@@ -1,26 +1,47 @@
 
 # python.cz
 
-Czech Python community homepage.
+Czech Python community homepage
 
 [![Build Status](https://travis-ci.org/pyvec/python.cz.svg?branch=master)](https://travis-ci.org/pyvec/python.cz)
 [![Test Coverage](https://coveralls.io/repos/github/pyvec/python.cz/badge.svg?branch=master)](https://coveralls.io/github/pyvec/python.cz?branch=master)
 
-## Installation
+### Requirements
 
-The code is **Python 3** (the production Python version is 3.4).
+-  The code is **Python 3** (the production Python version is 3.4)
+-  The site uses GitHub API. For certian pages to work correctly, you need to set the `GITHUB_TOKEN` environment variable to a [GitHub Personal Access Token](https://github.com/settings/tokens) (no scopes needed)
+
+### Get Started
+
+#### Development
+
+Installation:
 
 ```sh
-$ pip install .
+$ pip install -e .[tests]
 ```
 
-### Development
-
-The site uses GitHub API. For certian pages to work correctly, you need to set the `GITHUB_TOKEN` environment variable to a [GitHub Personal Access Token](https://github.com/settings/tokens) (no scopes needed).
+Development server:
 
 ```sh
 $ export GITHUB_TOKEN=...
-$ python runserver.py
+$ pythoncz run
+```
+
+#### Production
+
+Installation:
+
+```sh
+$ pip install .
+$ pip install gunicorn
+```
+
+Server:
+
+```sh
+$ export GITHUB_TOKEN=...
+$ gunicorn pythoncz.app:app
 ```
 
 ### Deployment
