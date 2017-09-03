@@ -187,37 +187,48 @@
     <hr>
 
     <h2 id="kurzy">Kurzy</h2>
+    <div class="row courses">
+        {% for column in data.courses %}
+            <div class="col-md-{{ 12 // data.courses|length }}">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-{{ column.icon }}"></i>
+                        {{ column.name }}
+                    </div>
+                    <ul class="list-group">
+                        {% for link in column.links %}
+                        <li class="list-group-item">
+                            <a href="{{ link.url }}">
+                                {{ link.text }}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="row">
+        <p class="call-to-action">
+            <a href="{{ config.BEGINNERS_DATA_URL }}" class="btn btn-default">
+                <i class="fa fa-edit"></i>
+                Přidat kurz
+            </a>
+        </p>
+    </div>
+
+    <h2 id="koucovani">Koučování</h2>
+
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <div class="row courses">
-                {% for column in data.courses %}
-                    <div class="col-md-{{ 12 // data.courses|length }}">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <i class="fa fa-{{ column.icon }}"></i>
-                                {{ column.name }}
-                            </div>
-                            <ul class="list-group">
-                                {% for link in column.links %}
-                                <li class="list-group-item">
-                                    <a href="{{ link.url }}">
-                                        {{ link.text }}
-                                    </a>
-                                </li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-            <div class="row">
-                <p class="call-to-action">
-                    <a href="{{ config.BEGINNERS_DATA_URL }}" class="btn btn-default">
-                        <i class="fa fa-edit"></i>
-                        Přidat kurz
-                    </a>
-                </p>
-            </div>
+            <p>Aneb osobní konzultace, mentoring, doučování&hellip;</p>
+            <ul>
+                <li>
+                    Učíme Python:
+                    <a href="https://www.facebook.com/groups/800923800012580/">Facebook skupina</a>,
+                    <a href="https://groups.google.com/forum/#!forum/ucime-python">Google Groups</a>
+                </li>
+            </ul>
         </div>
     </div>
 {% endblock %}
