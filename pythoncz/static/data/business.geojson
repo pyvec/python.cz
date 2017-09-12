@@ -796,6 +796,18 @@
                 "type": "Point",
                 "coordinates": [14.4099194, 50.0670106]
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "NTK - Národní technická knihovna",
+                "url": "https://www.techlib.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.3905997, 50.1039000]
+            }
         }
     ]
 }
