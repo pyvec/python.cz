@@ -1,5 +1,10 @@
 include LICENSE
-include README.md
+include *.md
 include setup.cfg
-recursive-include pythoncz *
-recursive-include pythoncz_tests *
+recursive-include pythoncz *.py
+recursive-include pythoncz *.graphql
+recursive-include pythoncz/templates *
+recursive-include pythoncz/static *
+recursive-include pythoncz_tests *.py
+global-exclude __pycache__
+global-exclude *.py[co]
