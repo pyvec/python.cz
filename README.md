@@ -44,6 +44,8 @@ $ export GITHUB_TOKEN=...
 $ gunicorn pythoncz.app:app
 ```
 
+**Note:** The above won't work locally on your development machine, unless you set an environment variable `SERVER_NAME` to something like `localhost:8000`. Then access the site from `localhost:8000` in your browser.
+
 ### Deployment
 
 The site gets automatically deployed after any push to the `master` branch. See [documentation in the `deployment` directory](deployment/README.md).
