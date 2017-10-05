@@ -1,50 +1,27 @@
 
 # python.cz
 
-Czech Python community homepage
+Czech Python community homepage.
 
 [![Build Status](https://travis-ci.org/pyvec/python.cz.svg?branch=master)](https://travis-ci.org/pyvec/python.cz)
 [![Test Coverage](https://coveralls.io/repos/github/pyvec/python.cz/badge.svg?branch=master)](https://coveralls.io/github/pyvec/python.cz?branch=master)
 
-### Requirements
+## Installation
 
--  The code is **Python 3** (the production Python version is 3.4)
--  The site uses GitHub API. For certian pages to work correctly, you need to set the `GITHUB_TOKEN` environment variable to a [GitHub Personal Access Token](https://github.com/settings/tokens) (no scopes needed)
-
-### Get Started
-
-#### Development
-
-Installation:
-
-```sh
-$ pip install -e .[tests]
-```
-
-Development server:
-
-```sh
-$ export GITHUB_TOKEN=...
-$ pythoncz run
-```
-
-#### Production
-
-Installation:
+The code is **Python 3** (the production Python version is 3.4).
 
 ```sh
 $ pip install .
-$ pip install gunicorn
 ```
 
-Server:
+### Development
+
+The site uses GitHub API. For certian pages to work correctly, you need to set the `GITHUB_TOKEN` environment variable to a [GitHub Personal Access Token](https://github.com/settings/tokens) (no scopes needed).
 
 ```sh
 $ export GITHUB_TOKEN=...
-$ gunicorn pythoncz.app:app
+$ python runserver.py
 ```
-
-**Note:** The above won't work locally on your development machine, unless you set an environment variable `SERVER_NAME` to something like `localhost:8000`. Then access the site from `localhost:8000` in your browser.
 
 ### Deployment
 

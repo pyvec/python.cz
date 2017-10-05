@@ -2,7 +2,7 @@ import os
 
 import yaml
 
-from pythoncz.app import app
+from .. import app
 
 
 __all__ = ('data',)

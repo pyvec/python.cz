@@ -27,16 +27,8 @@
 
     ```
     [program:app]
+    command=...
     environment=GITHUB_TOKEN="123a123dc..."
-    ...
-    ```
-
--   Make sure the `/srv/conf/supervisor.d/python.conf` points to the correct directory, module, and WSGI variable:
-
-    ```
-    [program:app]
-    command=/srv/venv/bin/gunicorn ... pythoncz.app:app
-    directory=/srv/app
     ...
     ```
 

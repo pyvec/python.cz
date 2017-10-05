@@ -6,7 +6,7 @@ from datetime import datetime
 import requests
 from werkzeug.contrib.cache import FileSystemCache
 
-from pythoncz.app import app
+from pythoncz import app
 
 
 __all__ = ('get_issues',)
