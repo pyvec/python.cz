@@ -3,7 +3,7 @@ from urllib.parse import quote_plus as url_quote_plus
 from flask import (render_template as _render_template, url_for,
                    redirect, request, make_response)
 
-from pythoncz.app import app
+from pythoncz import app
 from pythoncz.models import jobs, photos, beginners, github
 
 
@@ -75,10 +75,9 @@ def get_involved_cs():
 
 # Subdomain redirect
 
-if app.config.get('SERVER_NAME'):
-    @app.route('/', subdomain='www')
-    def subdomain_redirect():
-        return redirect(url_for('index_cs'))
+@app.route('/', subdomain='www')
+def subdomain_redirect():
+    return redirect(url_for('index_cs'))
 
 
 # Redirects of legacy stuff

@@ -4,7 +4,7 @@ from glob import glob
 
 from flask import url_for
 
-from pythoncz.app import app
+from pythoncz import app
 
 
 __all__ = ('get_random_url', 'get_random_urls')

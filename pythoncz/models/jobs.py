@@ -4,7 +4,7 @@ import json
 import yaml
 import czech_sort
 
-from pythoncz.app import app
+from pythoncz import app
 
 
 __all__ = ('data',)
