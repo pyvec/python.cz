@@ -4,7 +4,7 @@ import pytest
 from flask import url_for
 from werkzeug.contrib.cache import NullCache
 
-from pythoncz import app
+from pythoncz.app import app
 from pythoncz.models import github as github_module
 
 
