@@ -808,6 +808,18 @@
                 "type": "Point",
                 "coordinates": [14.3905997, 50.1039000]
             }
+        },
+         {
+            "type": "Feature",
+            "properties": {
+                "name": "STOCKED s.r.o.",
+                "url": "https://www.stocked.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4722669, 50.0781181]
+            }
         }
     ]
 }
