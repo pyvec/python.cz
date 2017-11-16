@@ -809,6 +809,18 @@
                 "coordinates": [14.3905997, 50.1039000]
             }
         },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "SlushPool",
+                "url": "https://slushpool.com/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.47374, 50.10514]
+            }
+        },
          {
             "type": "Feature",
             "properties": {
