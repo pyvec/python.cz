@@ -837,7 +837,7 @@
             "type": "Feature",
             "properties": {
                 "name": "Atollon CS",
-                "url": "https://www.atollon.cz/",
+                "url": "http://www.atollon.cz/",
                 "company": true
             },
             "geometry": {
