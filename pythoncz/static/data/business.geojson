@@ -832,6 +832,18 @@
                 "type": "Point",
                 "coordinates": [14.4722669, 50.0781181]
             }
-        }
+        },
+         {
+            "type": "Feature",
+            "properties": {
+                "name": "LMC s.r.o.",
+                "url": "https://www.lmc.eu/cs/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4568872, 50.1028653]
+            }
+        }        
     ]
 }
