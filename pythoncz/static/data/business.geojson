@@ -821,7 +821,7 @@
                 "coordinates": [14.47374, 50.10514]
             }
         },
-         {
+        {
             "type": "Feature",
             "properties": {
                 "name": "STOCKED s.r.o.",
@@ -831,6 +831,18 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [14.4722669, 50.0781181]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Atollon CS",
+                "url": "https://www.atollon.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.424799, 50.088100] 
             }
         }
     ]
