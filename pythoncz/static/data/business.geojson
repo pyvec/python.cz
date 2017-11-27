@@ -838,12 +838,25 @@
             "properties": {
                 "name": "Atollon CS",
                 "url": "http://www.atollon.cz/",
+                "company": true 
+                
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [14.424799, 50.088100] 
+            }
+        },
+		{
+            "type": "Feature",
+            "properties": {
+                "name": "LMC s.r.o.",
+                "url": "https://www.lmc.eu/cs/",
                 "company": true
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [14.424799, 50.088100] 
+                "coordinates": [14.4568872, 50.1028653]
             }
-        }
+        }        
     ]
 }
