@@ -285,8 +285,8 @@
                 "company": true
             },
             "geometry": {
-                "type": "Point",
-                "coordinates": [14.4009400, 50.0710808]
+                "type": "MultiPoint",
+                "coordinates": [[14.4009400, 50.0710808], [18.2722244, 49.8162225], [16.5990161, 49.1718178]]
             }
         },
         {
@@ -781,8 +781,8 @@
                 "company": true
             },
             "geometry": {
-                "type": "Point",
-                "coordinates": [14.3755908, 50.0806400]
+                "type": "MultiPoint",
+                "coordinates": [[14.3755908, 50.0806400], [18.2618453, 49.8317611]]
             }
         },
         {
@@ -855,6 +855,42 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [14.4568872, 50.1028653]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "OKIN BPS",
+                "url": "https://okinbps.com/us/home/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [18.2923319, 49.8392964]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "AutoCont CZ a. s.",
+                "url": "http://www.autocont.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [18.2715000, 49.8410000]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "REMAK a.s.",
+                "url": "http://www.remak.eu/cs/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [18.1154847, 49.4607186]
             }
         }        
     ]

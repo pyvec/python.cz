@@ -23,6 +23,7 @@ def generate_geojson_entries(filenames):
             yield {
                 'filename': filename,
                 'name': feature['properties']['name'],
+                'geometry_type': feature['geometry']['type'],
                 'coords': feature['geometry']['coordinates'],
             }
 
@@ -52,6 +53,12 @@ def test_geojson_coords_are_in_europe(entry):
 
     (which is Prague) in your GeoJSON entry.
     """
-    coords = entry['coords']
-    for i, coord in enumerate(coords):
-        assert BOUNDS[i][0] < coords[i] < BOUNDS[i][1]
+    # For Point, convert list of coords to nested list
+    if entry['geometry_type'] == 'Point':
+        places = [entry['coords']]
+    else:
+        places = entry['coords']
+
+    for place_coords in places:
+        for i, coord in enumerate(place_coords):
+            assert BOUNDS[i][0] < place_coords[i] < BOUNDS[i][1]
