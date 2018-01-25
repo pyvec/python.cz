@@ -892,6 +892,18 @@
                 "type": "Point",
                 "coordinates": [18.1154847, 49.4607186]
             }
-        }        
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Heureka.cz",
+                "url": "https://www.heureka.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "MultiPoint",
+                "coordinates": [[15.058695, 50.766428], [14.443173, 50.094377]]
+            }
+        }
     ]
 }
