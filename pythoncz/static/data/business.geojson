@@ -904,6 +904,18 @@
                 "type": "MultiPoint",
                 "coordinates": [[15.058695, 50.766428], [14.443173, 50.094377]]
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "SpaceKnow",
+                "url": "https://spaceknow.com/",
+                "company": true
+            },
+            "geometry": {
+                "type": "MultiPoint",
+                "coordinates": [[14.4525094, 50.0924147]]
+            }
         }
     ]
 }
