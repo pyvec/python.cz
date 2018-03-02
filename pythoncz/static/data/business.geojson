@@ -100,8 +100,8 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "The Brainity",
-                "url": "http://www.thebrainity.com/",
+                "name": "Nanooq IT",
+                "url": "http://www.nanooq.eu/",
                 "company": true
             },
             "geometry": {
