@@ -917,5 +917,17 @@
                 "coordinates": [[14.4525094, 50.0924147]]
             }
         }
+         {
+            "type": "Feature",
+            "properties": {
+                "name": "BoxtrapSecurity",
+                "url": "https://www.boxtrapsecurity.com/",
+                "company": true
+            },
+            "geometry": {
+                "type": "MultiPoint",
+                "coordinates": [[50.0823494, 14.4220517]]
+            }
+        }
     ]
 }
