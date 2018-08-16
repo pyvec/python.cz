@@ -569,6 +569,21 @@ i.icon-english::before {
     content: "\00a0";
 }
 
+.notice {
+    background: #337ab7;
+    color: #fff;
+    padding: 0.5em;
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 0.5em;
+}
+
+.notice a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
 .pagenotfound {
     text-align: center;
     margin-bottom: 2em;
