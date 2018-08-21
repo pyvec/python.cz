@@ -119,13 +119,19 @@ def _format_issue(org_name, repository, issue, is_pull_request=False):
 
 
 def _calculate_votes(issue):
-    votes = 0
-    for reaction in _get_nodes(issue, 'reactions'):
-        if reaction['content'] in ['THUMBS_DOWN', 'CONFUSED']:
-            votes -= 1
-        else:
-            votes += 1
-    return votes
+    """Get votes per issue from counts of Reactions
+
+    A THUMBS_DOWN and CONFUSED counts as "-1", the rest as "+1".
+    """
+    # From the query we get the total number of reactions (including
+    # the "downvotes"), and the number of THUMBS_DOWN, and the number
+    # of CONFUSED.
+
+    return (
+        issue['reactions']['totalCount']
+        - issue['thumbs_down']['totalCount'] * 2
+        - issue['confuseds']['totalCount'] * 2
+    )
 
 
 def _get_nodes(node, connection_name):
