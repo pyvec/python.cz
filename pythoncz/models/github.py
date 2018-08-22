@@ -123,15 +123,15 @@ def _calculate_votes(issue):
 
     A THUMBS_DOWN and CONFUSED counts as "-1", the rest as "+1".
     """
-    # From the query we get the total number of reactions (including
-    # the "downvotes"), and the number of THUMBS_DOWN, and the number
-    # of CONFUSED.
+    # First, count *all* reactions as "+1"
+    score = issue['reactions']['totalCount']
 
-    return (
-        issue['reactions']['totalCount']
-        - issue['thumbs_down']['totalCount'] * 2
-        - issue['confuseds']['totalCount'] * 2
-    )
+    # Then change the negative ones from "+1" to "-1"
+    # (subtract 2 for each negative reaction)
+    score -= issue['thumbs_down']['totalCount'] * 2
+    score -= issue['confuseds']['totalCount'] * 2
+
+    return score
 
 
 def _get_nodes(node, connection_name):
