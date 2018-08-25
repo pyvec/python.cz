@@ -20,22 +20,17 @@ The site uses GitHub API. For certian pages to work correctly, you need to set t
 
 ```sh
 $ export GITHUB_TOKEN=...
-$ python runserver.py
+$ python runserver.py --help
 ```
 
 ### Deployment
 
-The site gets automatically deployed after any push to the `master` branch. See [documentation in the `deployment` directory](deployment/README.md).
-
--   **Hosting:** [Rosti.cz](https://rosti.cz/)<br>
-    Access: [Pyvec](http://pyvec.org/)
+The site gets automatically deployed after any push to the `master` branch.
+It is frozen by [Elsa](https://github.com/pyvec/elsa). A cron job redeploys
+it daily, so any content of dynamic nature isn't outdated.
 
 -   **Domain:** bestowed by [KRAXNET](http://www.kraxnet.cz/)<br>
     Access: e-mail request to [KRAXNET](http://www.kraxnet.cz/)
-
--   **Monitoring:** [UptimeRobot](https://uptimerobot.com/)<br>
-    Access: [@honzajavorek](http://github.com/honzajavorek)
-
 -   **Analytics:** [Google Analytics](http://www.google.com/analytics/)<br>
     Access: [@honzajavorek](http://github.com/honzajavorek), [@encukou](http://github.com/encukou), [@martinbilek](http://github.com/martinbilek), [@benabraham](http://github.com/benabraham)
 

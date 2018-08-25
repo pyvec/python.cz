@@ -2,7 +2,9 @@ from setuptools import setup
 
 
 install_requires = [
+    'elsa==0.1.5',
     'flask==1.0.2',
+    'frozen-Flask==0.15',
     'requests==2.19.1',
     'czech-sort==0.4',
     'pyyaml==3.13',

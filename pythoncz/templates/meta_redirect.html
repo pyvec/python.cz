@@ -1,0 +1,19 @@
+{% extends '_base.html' %}
+{% block head %}
+    <!-- Apologies for using deprecated HTML technology -->
+    <meta http-equiv="refresh" content="0; {{ url }}">
+    <link rel="canonical" href="{{ url }}">
+    <meta name="robots" content="noindex, follow">
+{% endblock %}
+
+{% block content %}
+    <h1>Přesměrování</h1>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 thumbnail">
+            <p>
+                Obsah této stránky byl přesunut na novou adresu:
+                <a href="{{ url }}">{{ url }}</a>.
+            </p>
+        </div>
+    </div>
+{% endblock %}

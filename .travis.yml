@@ -6,15 +6,20 @@ install:
     - "pip install .[tests]"
 script:
     - "pytest"
+    - "test $TRAVIS_PULL_REQUEST == false || export DISABLE_GITHUB_ISSUES_FETCH=true"
+    - "python runserver.py freeze"
 after_success:
     - "coveralls"
 deploy:
-    provider: "script"
-    script: "deployment/deploy.sh"
+    provider: script
+    skip_cleanup: true
+    script: 'python runserver.py deploy --no-freeze --push'
     on:
-        branch: "master"
-        python: "3.4"
-        repo: "pyvec/python.cz"
+        branch: master
+        repo: pyvec/python.cz
 notifications:
     slack:
         secure: "s/PCU4+geUozmw3AJguPYpv/YFNZVYmQ30A3DZpbSOE/9HDEgqbaF/hONY1VhHriRBG1EJ2uSezbxjOveyJPV+UMGJFMPU4c4Mw4AHxyROSnJe/MpOKPd8QRgbtYWYwy5UI47bzxotGoN49Mk0EjqhaFk9DFb14et9YPwMDbrVY="
+env:
+    global:
+        secure: R1+KSJV1oOikNBvyil0m/FMace5Y4lVC8WTlIpspZZ30BDkJCQ0eTnXy7gFvuEa4wBmVSqRKnRm+LKf44wXRjyKy/KRwUIzuy9AmzzQMe/PuvWSQDz7zf1dvG7GlR0kTJlgJ7s0+Vh4uqEpjIQnvtn+xkLguYVs3QXmTUvxLMnA=

@@ -1,6 +1,7 @@
 import os
 
 from flask import Flask
+from flask_frozen import Freezer
 
 
 ROOT_DIR = os.path.join(os.path.dirname(__file__), '..')
@@ -27,6 +28,9 @@ CACHE_DIR = os.getenv('CACHE_DIR') or os.path.join(ROOT_DIR, 'cache')
 
 
 app = Flask('pythoncz')
+
+freezer = Freezer(app)
+
 app.config.from_object(__name__)
 
 

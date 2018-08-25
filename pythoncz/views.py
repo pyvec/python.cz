@@ -1,9 +1,12 @@
+import os
+import subprocess
+from fnmatch import fnmatch
 from urllib.parse import quote_plus as url_quote_plus
 
 from flask import (render_template as _render_template, url_for,
-                   redirect, request, make_response)
+                   request, make_response, send_from_directory)
 
-from pythoncz import app
+from pythoncz import app, freezer
 from pythoncz.models import jobs, photos, beginners, github
 
 
@@ -65,26 +68,31 @@ def jobs_en():
 
 @app.route('/zapojse/')
 def get_involved_cs():
+    disabled = os.getenv('DISABLE_GITHUB_ISSUES_FETCH', False)
     try:
+        if disabled:
+            raise Exception('DISABLE_GITHUB_ISSUES_FETCH is set')
         issues = github.get_issues(app.config['GITHUB_ORGANIZATIONS'])
         return render_template('get_involved_cs.html', issues=issues)
     except Exception as e:
         template = render_template('get_involved_cs.html', issues=[], error=e)
-        return make_response(template, 500)
-
-
-# Subdomain redirect
-
-@app.route('/', subdomain='www')
-def subdomain_redirect():
-    return redirect(url_for('index_cs'))
+        code = 200 if disabled else 500
+        return make_response(template, code)
 
 
 # Redirects of legacy stuff
 
-@app.route('/index.html')
-def index_legacy():
-    return redirect(url_for('index_cs'), code=301)
+def redirect(url, code=None):
+    """Return a response with a Meta redirect, code is unused"""
+
+    # With static pages, we can't use HTTP redirects.
+    # Return a page wit <meta refresh> instead.
+    #
+    # When Frozen-Flask gets support for redirects
+    # (https://github.com/Frozen-Flask/Frozen-Flask/issues/81),
+    # this should be revisited.
+
+    return render_template('meta_redirect.html', url=url)
 
 
 @app.route('/english.html')
@@ -97,12 +105,69 @@ def pyladies(target):
     return redirect('http://pyladies.cz/v1/' + target, code=301)
 
 
+@freezer.register_generator
+def pyladies():
+    # This is hardcoded because it doesn't change & it's easier to hardcode it
+    targets = (
+        's001-install/',
+        's002-hello-world/',
+        's003-looping/',
+        's004-strings/',
+        's005-modules/',
+        's006-lists/',
+        's007-cards/',
+        's008-cards2/',
+        's009-git/',
+        's010-data/',
+        's011-dicts/',
+        's012-pyglet/',
+        's014-class/',
+        's015-asteroids/',
+        's016-micropython/',
+    )
+    yield from ({'target': t} for t in targets)
+
+
 @app.route('/pyladies/')
 def pyladies_index():
-    return redirect('http://pyladies.cz', code=301)
+    return redirect('http://pyladies.cz/', code=301)
+
+
+# Talks, this used to redirect, but that's not possible with *.pdf HTML files
+talks_dir = 'talks-archive'
+
+
+@app.before_first_request
+def clone_talks():
+    try:
+        os.chdir(talks_dir)
+    except FileNotFoundError:
+        subprocess.run(('git', 'clone',
+                         'https://github.com/pyvec/talks-archive',
+                         '--depth', '1'))
+        os.chdir(talks_dir)
+    else:
+        subprocess.run(('git', 'fetch', 'origin'), check=True)
+        subprocess.run(('git', 'reset', '--hard', 'origin/master'), check=True)
+    finally:
+        os.chdir('..')
 
 
 @app.route('/talks/<path:target>')
 def talks(target):
-    base_url = 'https://github.com/pyvec/talks-archive/raw/master/'
-    return redirect(base_url + target, code=301)
+    # sends from pythoncz directory, hence ../
+    return send_from_directory(f'../{talks_dir}', target)
+
+
+@freezer.register_generator
+def talks():
+    ignore = ['.travis.yml', '.gitignore']
+    for name, dirs, files in os.walk(talks_dir):
+        if '.git' in dirs:
+            dirs.remove('.git')
+        for file in files:
+            if file == '.git':
+                continue
+            if not any(fnmatch(file, ig) for ig in ignore):
+                path = os.path.relpath(os.path.join(name, file), talks_dir)
+                yield {'target': path}
