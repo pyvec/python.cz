@@ -3,11 +3,12 @@ import subprocess
 from fnmatch import fnmatch
 from urllib.parse import quote_plus as url_quote_plus
 
+from arrow import Arrow
 from flask import (render_template as _render_template, url_for,
-                   request, make_response, send_from_directory)
+                   request, make_response, send_from_directory, Response)
 
 from pythoncz import app, freezer
-from pythoncz.models import jobs, photos, beginners, github
+from pythoncz.models import jobs, photos, beginners, github, events
 
 
 # Templating
@@ -25,6 +26,11 @@ def page_not_found(e):
 @app.template_filter('urlencode')
 def urlencode_filter(s):
     return url_quote_plus(str(s).encode('utf8'))
+
+
+@app.template_filter('format_arrow')
+def format_arrow_filter(dt: Arrow):
+    return dt.to("Europe/Prague").strftime("%H:%M %d. %m. %Y")
 
 
 @app.context_processor
@@ -64,6 +70,21 @@ def jobs_cs():
 @app.route('/en/jobs/')
 def jobs_en():
     return render_template('jobs_en.html', data=jobs.data, lang='en')
+
+
+@app.route('/udalosti/')
+def events_cs():
+    return render_template('events_cs.html', data=events.data)
+
+
+@app.route('/en/events/')
+def events_en():
+    return render_template('events_en.html', lang='en', data=events.data)
+
+
+@app.route("/events.ics")
+def events_ical():
+    return Response(str(events.get_calendar()), mimetype="text/calendar")
 
 
 @app.route('/zapojse/')
