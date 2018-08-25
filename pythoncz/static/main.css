@@ -221,6 +221,7 @@ h2 i.fa {
 
 .meetups-city {
     font-weight: bold;
+    text-align: center;
 }
 
 .meetups-city img {
@@ -231,6 +232,7 @@ h2 i.fa {
 .meetups {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 5px;
+    min-width: 300px;
 }
 
 .meetups p,
@@ -245,6 +247,10 @@ h2 i.fa {
 .meetups-city,
 .meetups p {
     font-size: 125%;
+}
+
+.meetups .call-to-action {
+    text-align: center;
 }
 
 .meetups-container {
@@ -644,4 +650,13 @@ i.icon-english::before {
     .pagenotfound img {
         width: 80%;
     }
+}
+
+
+.events h2 {
+    text-align: center;
+}
+
+.events p {
+    text-align: center;
 }

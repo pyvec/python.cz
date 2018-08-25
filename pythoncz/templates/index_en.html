@@ -41,12 +41,16 @@
 
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 meetups">
-                    <h2>Meetups</h2>
+                    <h2>Events</h2>
                     <p>
-                        <a href="http://pyvo.cz/en">Python meetups</a> called “Pyvo” are happening across the country.
-                        <strong>You're welcome to come, or present at one!</strong>
+                        TODO: About events
                     </p>
-                    {% include '_meetups.html' %}
+
+                    <p class="call-to-action">
+                        <a href="{{ url_for('events_en') }}" class="btn btn-primary">
+                            See all events
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
