@@ -2,20 +2,20 @@ from setuptools import setup
 
 
 install_requires = [
-    'flask==0.12',
-    'requests==2.18.3',
+    'flask==1.0.2',
+    'requests==2.19.1',
     'czech-sort==0.4',
-    'pyyaml==3.12',
-    'python-slugify==1.2.1',
+    'pyyaml==3.13',
+    'python-slugify==1.2.5',
 ]
 tests_require = [
-    'coveralls==1.1',
-    'flake8==3.2.1',
-    'pytest==3.0.6',
-    'responses==0.7.0',
-    'pytest-runner==2.11.1',
+    'coveralls==1.4.0',
+    'flake8==3.5.0',
+    'pytest==3.7.2',
+    'responses==0.9.0',
+    'pytest-runner==4.2',
     'pytest-cov==2.5.1',
-    'pytest-flake8==0.8.1',
+    'pytest-flake8==1.0.2',
 ]
 
 

@@ -13,7 +13,7 @@
 #
 #     docker run -p 8000:8000 -e GITHUB_TOKEN=token123 python.cz
 
-FROM python:3.4-alpine
+FROM python:3.6-alpine
 
 RUN python3 -m venv /venv
 RUN /venv/bin/pip install gunicorn

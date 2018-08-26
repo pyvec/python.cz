@@ -29,5 +29,6 @@ pip-log.txt
 .DS_Store
 
 # Cache
-cache
+/cache/
 .cache
+.pytest_cache/

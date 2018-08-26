@@ -8,7 +8,7 @@ Czech Python community homepage.
 
 ## Installation
 
-The code is **Python 3** (the production Python version is 3.4).
+The code is **Python 3** (the production Python version is 3.6).
 
 ```sh
 $ pip install .
