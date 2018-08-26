@@ -1,5 +1,6 @@
 from urllib.parse import quote_plus as url_quote_plus
 
+import ics
 import pytest
 from flask import url_for
 from werkzeug.contrib.cache import NullCache
@@ -222,3 +223,12 @@ def test_talks_pdf_download(test_client):
         '/talks/brno-2013-11-28-veros-kaplan-postgis.pdf'
     )
     assert response.headers['content-type'] == 'application/pdf'
+
+
+def test_ical_generation(test_client):
+    response = test_client.get('events.ics')
+
+    assert response.status_code == 200
+    assert 'text/calendar' in response.headers['content-type']
+
+    assert ics.Calendar(response.get_data(as_text=True))
