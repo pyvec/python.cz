@@ -16,6 +16,18 @@
         {
             "type": "Feature",
             "properties": {
+                "name": "CreativeDock",
+                "url": "https://creativedock.com/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+               "coordinates": [14.403246, 50.076407]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "name": "CYAN Research & Development s.r.o.",
                 "url": "https://www.cyanrd.cz/",
                 "company": true
@@ -88,8 +100,8 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "The Brainity",
-                "url": "http://www.thebrainity.com/",
+                "name": "Nanooq IT",
+                "url": "http://www.nanooq.eu/",
                 "company": true
             },
             "geometry": {
@@ -273,8 +285,8 @@
                 "company": true
             },
             "geometry": {
-                "type": "Point",
-                "coordinates": [14.4009400, 50.0710808]
+                "type": "MultiPoint",
+                "coordinates": [[14.4009400, 50.0710808], [18.2722244, 49.8162225], [16.5990161, 49.1718178]]
             }
         },
         {
@@ -769,8 +781,8 @@
                 "company": true
             },
             "geometry": {
-                "type": "Point",
-                "coordinates": [14.3755908, 50.0806400]
+                "type": "MultiPoint",
+                "coordinates": [[14.3755908, 50.0806400], [18.2618453, 49.8317611]]
             }
         },
         {
@@ -857,6 +869,66 @@
                 "type": "Point",
                 "coordinates": [14.4568872, 50.1028653]
             }
-        }        
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "OKIN BPS",
+                "url": "https://okinbps.com/us/home/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [18.2923319, 49.8392964]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "AutoCont CZ a. s.",
+                "url": "http://www.autocont.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [18.2715000, 49.8410000]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "REMAK a.s.",
+                "url": "http://www.remak.eu/cs/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [18.1154847, 49.4607186]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Heureka.cz",
+                "url": "https://www.heureka.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "MultiPoint",
+                "coordinates": [[15.058695, 50.766428], [14.443173, 50.094377]]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "SpaceKnow",
+                "url": "https://spaceknow.com/",
+                "company": true
+            },
+            "geometry": {
+                "type": "MultiPoint",
+                "coordinates": [[14.4525094, 50.0924147]]
+            }
+        }
     ]
 }
