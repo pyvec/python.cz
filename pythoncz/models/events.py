@@ -41,10 +41,10 @@ def preprocess_ical(text: str) -> List[str]:
 def load_events(ical_url):
     try:
         response = requests.get(ical_url)
+
+        response.raise_for_status()
     except Exception as e:
         raise ValueError(f"Could not load iCal feed from {ical_url}") from e
-
-    response.raise_for_status()
 
     ical = preprocess_ical(response.text)
 
