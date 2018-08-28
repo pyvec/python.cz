@@ -25,7 +25,7 @@ $ python runserver.py --help
 
 ### Deployment
 
-The site gets automatically deployed after any push to the `master` branch. It is frozen by [Elsa](https://github.com/pyvec/elsa). A [Travis CI cron job](https://travis-ci.org/pyvec/python.cz/settings) redeploys it daily, so any content of dynamic nature isn't outdated.
+The site gets automatically deployed after any push to the `master` branch. It is frozen by [Elsa](https://github.com/pyvec/elsa). A [Travis CI cron job](https://docs.travis-ci.com/user/cron-jobs/) ([admin access](https://travis-ci.org/pyvec/python.cz/settings)) redeploys it daily, so any content of dynamic nature isn't outdated.
 
 -   **Domain:** bestowed by [KRAXNET](http://www.kraxnet.cz/)<br>
     Access: e-mail request to [KRAXNET](http://www.kraxnet.cz/)
