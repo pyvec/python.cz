@@ -1,0 +1,58 @@
+{% extends '_base.html' %}
+
+{% block head %}
+    <title>Python v ČR: Události</title>
+    <meta property="og:title" content="Python v ČR: Události">
+
+    <meta name="description" content="{# TODO: text #}">
+    <meta property="og:description" content="{# TODO: text #}">
+{% endblock %}
+
+{% block body_class %}events{% endblock %}
+
+{% block breadcrumb %}
+    Události
+{% endblock %}
+
+{% block content %}
+    <h1>{% block content_h1 %}Události{% endblock %}</h1>
+
+    <p>
+    {% block content_events_description %}
+        TODO: O téhle stránce
+    {% endblock %}
+    </p>
+
+    <h2>{% block content_meetups_header %}Srazy{% endblock %}</h2>
+
+    <p>
+        {% block content_meetups_description %}
+        <a href="https://pyvo.cz">Srazy Python programátorů</a> zvané <strong>Pyvo</strong> se pořádají po celé republice.
+        Přijď si poslechnout <strong>přednášky</strong> od chytrých lidí a <strong>popovídat si</strong> nejen o Pythonu!
+        {% endblock %}
+    </p>
+
+    {% include "_meetups.html" %}
+
+    <h2>{% block content_events_header %}Seznam událostí{% endblock %}</h2>
+
+    <p>
+        <a href="{{ url_for("events_ical") }}">
+            {% block content_ical_link %}iCal na všechny události{% endblock %}
+        </a>
+    </p>
+
+    <ul>
+        {% for event in data %}
+            <li>
+                <a href="{{ event.feed.url }}" target="_blank">{{ event.feed.name }}</a>:
+                {% if event.event.url %}<a href="{{ event.event.url }}" target="_blank">{% endif %}
+                {{ event.event.name }}
+                {% if event.event.url %}</a>{% endif %}
+
+                ({{ event.event.begin|format_arrow }}{% if event.event.location %} – {{ event.event.location }}{% endif %})
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
