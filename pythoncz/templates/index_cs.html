@@ -34,26 +34,22 @@
         {% include '_communication.html' %}
     </div>
 
-    <div class="row" id="srazy">
-        <div class="photo-container meetups-container">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3 meetups">
-                    <h2>Události</h2>
-                    <p>
-                        TODO: o událostech
-                    </p>
+    <hr>
 
-                    <p class="call-to-action">
-                        <a href="{{ url_for('events_cs') }}" class="btn btn-primary">
-                            Zobrazit všechny události
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div id="akce" class="row events events-index"><div class="col-md-8 col-md-offset-2">
+        <h2>
+            <i class="fa fa-calendar"></i>
+            Nejbližší akce
+        </h2>
+        {% include '_events.html' with context %}
+        <p class="call-to-action">
+            <a href="{{ url_for('events_cs') }}" class="btn btn-primary btn-lg">
+                Všechny akce
+            </a>
+        </p>
+    </div></div>
 
-    <hr class="visible-sm-block visible-xs-block">
+    <hr>
 
     <div class="row boxes">
         <div id="blog" class="box col-md-4 col-sm-6">

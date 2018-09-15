@@ -21,7 +21,9 @@
     <h2 id="who">Who uses Python in the Czech Republic?</h2>
     <div class="row">
         <div class="col-md-8 col-md-offset-2 thumbnail">
-            <div id="map" data-src="{{ url_for('static', filename='data/business.geojson') }}"></div>
+            <div id="map"
+                data-src="{{ url_for('static', filename='data/business.geojson') }}"
+                data-icon-src="{{ url_for('static', filename='images/icon.png') }}"></div>
         </div>
     </div>
 
@@ -102,9 +104,10 @@
     <div class="row cartoon-container">
         <img class="cartoon" src="{{ url_for('static', filename='images/jobs.svg') }}" onerror="this.onerror = null; this.src = '{{ url_for('static', filename='images/jobs.png') }}'">
     </div>
+{% endblock %}
 
-    {% block scripts %}
-        <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
-        <script src="{{ url_for('static', filename='maps.js') }}"></script>
-    {% endblock %}
+
+{% block scripts %}
+<script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+<script src="{{ url_for('static', filename='maps.js') }}"></script>
 {% endblock %}

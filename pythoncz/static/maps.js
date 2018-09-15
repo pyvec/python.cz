@@ -5,17 +5,17 @@ var layer = L.tileLayer('https://a.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
 });
 
 
-var icon = L.icon({
-    iconUrl: '/static/images/icon.png',
-    iconSize: [16, 16],
-    shadowSize: [0, 0],
-    iconAnchor: [8, 8],
-    popupAnchor: [0, 0]
-});
-
-
 $(function() {
     var element = $('#map');
+
+    var iconSize = parseInt(element.attr('data-icon-size'), 10) || 16;
+    var icon = L.icon({
+        iconUrl: element.attr('data-icon-src'),
+        iconSize: [iconSize, iconSize],
+        shadowSize: [0, 0],
+        iconAnchor: [iconSize / 2, iconSize / 2],
+        popupAnchor: [0, 0]
+    });
 
     var zoom = element.attr('data-zoom') || 7;
     var lat = element.attr('data-lat') || 49.8;

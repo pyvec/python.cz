@@ -54,7 +54,7 @@ def _sort_cs(iterable, key='name'):
 # jobs.yml
 _path = os.path.join(app.static_folder, 'data', 'jobs.yml')
 with open(os.path.join(_path)) as f:
-    data = yaml.load(f.read())
+    data = yaml.safe_load(f.read())
 
 data['job_boards'] = _sort_cs(data['job_boards'])
 data['knowledge_tests'] = _sort_cs(data['knowledge_tests'])
