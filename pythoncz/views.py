@@ -8,7 +8,7 @@ from flask import (render_template as _render_template, url_for,
                    request, make_response, send_from_directory, Response)
 
 from pythoncz import app, freezer
-from pythoncz.models import jobs, photos, beginners, github, events
+from pythoncz.models import jobs, beginners, github, events
 
 
 # Templating
@@ -47,14 +47,12 @@ def inject_context():
 
 @app.route('/')
 def index_cs():
-    return render_template('index_cs.html',
-                           photo_urls=photos.get_random_urls(5))
+    return render_template('index_cs.html')
 
 
 @app.route('/en/')
 def index_en():
-    return render_template('index_en.html',
-                           photo_urls=photos.get_random_urls(5), lang='en')
+    return render_template('index_en.html', lang='en')
 
 
 @app.route('/zacatecnici/')

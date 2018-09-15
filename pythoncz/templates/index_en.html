@@ -33,12 +33,6 @@
 
     <div class="row" id="meetups">
         <div class="photo-container meetups-container">
-            <div class="photo-collection">
-                {% for photo_url in photo_urls %}
-                    <img class="photo" src="{{ photo_url }}">
-                {% endfor %}
-            </div>
-
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 meetups">
                     <h2>Events</h2>
@@ -154,7 +148,4 @@
             </div>
         </div>
     </div>
-{% endblock %}
-{% block scripts %}
-    <script src="{{ url_for('static', filename='photos.js') }}"></script>
 {% endblock %}
