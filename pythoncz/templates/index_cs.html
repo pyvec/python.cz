@@ -9,7 +9,7 @@
 {% block content %}
     <div class="row logo">
         <h1 class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
-            <img alt="Python" src="{{ url_for('static', filename='images/logo.svg') }}" onerror="this.onerror = null; this.src = '{{ url_for('static', filename='images/logo.png') }}'">
+            <img alt="Python" src="{{ url_for('static', filename='images/logo.svg') }}">
         </h1>
     </div>
     <ul class="lead">
@@ -28,7 +28,7 @@
     </ul>
 
     <div class="row cartoon-container">
-        <img class="cartoon" alt="Česká Python komunita" src="{{ url_for('static', filename='images/czech-python-user-group.svg') }}" onerror="this.onerror = null; this.src = '{{ url_for('static', filename='images/czech-python-user-group.png') }}'">
+        <img class="cartoon" alt="Česká Python komunita" src="{{ url_for('static', filename='images/czech-python-user-group.svg') }}">
     </div>
     <div class="row communication">
         {% include '_communication.html' %}
