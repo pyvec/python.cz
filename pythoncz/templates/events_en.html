@@ -1,0 +1,72 @@
+{% extends '_base.html' %}
+{% block head %}
+    <title>Python in the Czech Republic: Events</title>
+    <meta property="og:title" content="Python in the Czech Republic: Events">
+
+    <meta name="description" content="Meetups, conferences, workshops. All Czech Python events, at one place!">
+    <meta property="og:description" content="Meetups, conferences, workshops. All Czech Python events, at one place!">
+{% endblock %}
+
+{% block body_class %}events{% endblock %}
+
+{% block breadcrumb %}
+    Events
+{% endblock %}
+
+{% block content %}
+    <h1>Events</h1>
+    <div class="row">
+        <p class="lead">
+            Meetups, conferences, workshops. All Czech Python events, at one place.
+        </p>
+    </div>
+    <div class="row cartoon-container cartoon-hr">
+        <img class="cartoon" src="{{ url_for('static', filename='images/ukulele.svg') }}">
+    </div>
+    <div class="row"><div class="col-md-8 col-md-offset-2">
+
+    <h2 id="meetups">Meetups</h2>
+    <p>
+        <a href="https://pyvo.cz">Python meetups</a> called “Pyvo” are happening
+        across the country. <strong>You're welcome to come, or present at one!</strong>
+    </p>
+
+    {% include '_meetups.html' with context %}
+
+    </div></div>
+
+    <hr>
+
+    <div class="row"><div class="col-md-8 col-md-offset-2">
+
+    <h2 id="events">All Events</h2>
+    <ul>
+        <li>
+            <strong>Regular events</strong> can be added using an
+            <a href="https://cs.wikipedia.org/wiki/ICalendar">iCal</a> feed.
+            The feed can be generated directly by your website (as in the case of
+            <a href="https://pyvo.cz">pyvo.cz</a>), or you can obtain it from
+            your platform, such as Google Calendar, meetup.com, etc.
+            Then <a href="{{ config.EVENTS_DATA_URL }}">send a Pull Request</a>
+            to add your iCal feed URL to our website.
+        </li>
+        <li>
+            <strong>One-time events</strong> can be added using the
+            <a href="{{ config.CZECH_PYTHON_EVENTS_CALENDAR_URL }}">Czech
+            Python Events</a> calendar. A lot of local event organizers have
+            access to edit the calendar, so you can ask them to add your event,
+            or let us know at <a href="mailto:info&#64;pyvec.org">info&#64;<!--
+            -->pyvec.org</a>.
+        </li>
+    </ul>
+
+    {% include '_events.html' with context %}
+
+    <p class="call-to-action">
+        <a href="{{ url_for('events_ical') }}" class="btn btn-primary btn-lg">
+            <i class="fa fa-calendar"></i> iCal of all events
+        </a>
+    </p>
+
+    </div></div>
+{% endblock %}

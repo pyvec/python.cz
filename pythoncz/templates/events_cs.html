@@ -1,0 +1,80 @@
+{% extends '_base.html' %}
+{% block head %}
+    <title>Python v ČR: Události</title>
+    <meta property="og:title" content="Python v ČR: Události">
+
+    <meta name="description" content="Srazy, konference, workshopy. Vše, co se v ČR děje kolem jazyka Python, na jednom místě!">
+    <meta property="og:description" content="Srazy, konference, workshopy. Vše, co se v ČR děje kolem jazyka Python, na jednom místě!">
+{% endblock %}
+
+{% block body_class %}events{% endblock %}
+
+{% block breadcrumb %}
+    Akce
+{% endblock %}
+
+{% block content %}
+    <h1>Akce</h1>
+    <div class="row">
+        <p class="lead">
+            Srazy, konference, workshopy. Vše, co se v ČR děje kolem jazyka Python, na jednom místě.
+        </p>
+    </div>
+    <div class="row cartoon-container cartoon-hr">
+        <img class="cartoon" src="{{ url_for('static', filename='images/ukulele.svg') }}">
+    </div>
+    <div class="row"><div class="col-md-8 col-md-offset-2">
+
+    <h2 id="srazy">Srazy</h2>
+    <p>
+        <a href="https://pyvo.cz">Srazy Python programátorů</a> zvané
+        <strong>Pyvo</strong> se pořádají po celé republice. Přijď si
+        poslechnout <strong>přednášky</strong> od chytrých lidí a
+        <strong>popovídat si</strong> nejen o Pythonu!
+    </p>
+
+    {% include '_meetups.html' with context %}
+
+    <p class="call-to-action">
+        <a href="https://pyvec-guide.readthedocs.io/guides/meetup.html" class="btn btn-primary btn-lg">
+            <i class="fa fa-flag"></i> Chci uspořádat sraz v mém městě
+        </a>
+    </p>
+
+    </div></div>
+
+    <hr>
+
+    <div class="row"><div class="col-md-8 col-md-offset-2">
+
+    <h2 id="akce">Všechny akce</h2>
+    <ul>
+        <li>
+            <strong>Pravidelné akce</strong> lze přidat přes tzv.
+            <a href="https://cs.wikipedia.org/wiki/ICalendar">iCal</a> export.
+            Ten může generovat přímo vaše webová stránka (jako v případě
+            <a href="https://pyvo.cz">pyvo.cz</a>), nebo jej lze vytáhnout
+            z nějaké služby (Google Calendar, meetup.com). URL exportu pak
+            na náš web <a href="{{ config.EVENTS_DATA_URL }}">přidejte pomocí
+            Pull Requestu</a>.
+        </li>
+        <li>
+            <strong>Jednorázové akce</strong> lze přidat přes kalendář
+            <a href="{{ config.CZECH_PYTHON_EVENTS_CALENDAR_URL }}">Czech
+            Python Events</a>. Do kalendáře má přístup mnoho z organizátorů
+            existujících Python akcí, takže je poproste, ať vaši akci přidají,
+            nebo napište na <a href="mailto:info&#64;pyvec.org">info&#64;<!--
+            -->pyvec.org</a>.
+        </li>
+    </ul>
+
+    {% include '_events.html' with context %}
+
+    <p class="call-to-action">
+        <a href="{{ url_for('events_ical') }}" class="btn btn-primary btn-lg">
+            <i class="fa fa-calendar"></i> iCal na všechny akce
+        </a>
+    </p>
+
+    </div></div>
+{% endblock %}

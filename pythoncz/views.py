@@ -1,13 +1,18 @@
 import os
 import subprocess
+import itertools
 from fnmatch import fnmatch
 from urllib.parse import quote_plus as url_quote_plus
 
+from arrow import Arrow
 from flask import (render_template as _render_template, url_for,
-                   request, make_response, send_from_directory)
+                   request, make_response, send_from_directory, Response)
 
 from pythoncz import app, freezer
-from pythoncz.models import jobs, photos, beginners, github
+from pythoncz.models import jobs, beginners, github, events, meetups
+
+
+INDEX_EVENTS_LIMIT = 3
 
 
 # Templating
@@ -27,6 +32,27 @@ def urlencode_filter(s):
     return url_quote_plus(str(s).encode('utf8'))
 
 
+@app.template_filter('format_dt')
+def format_dt_filter(dt: Arrow, fmt):
+    return dt.to('Europe/Prague').strftime(fmt)
+
+
+@app.template_filter('format_dt_iso')
+def format_dt_iso_filter(dt: Arrow):
+    return dt.to('Europe/Prague').isoformat()
+
+
+@app.template_filter('format_month')
+def format_month_filter(month, lang='cs'):
+    months = {'en': [None, 'January', 'February', 'March', 'April', 'May',
+                     'June', 'July', 'August', 'September', 'October',
+                     'November', 'December'],
+              'cs': [None, 'Leden', 'Únor', 'Březen', 'Duben', 'Květen',
+                     'Červen', 'Červenec', 'Srpen', 'Září', 'Říjen',
+                     'Listopad', 'Prosinec']}
+    return months[lang][month]
+
+
 @app.context_processor
 def inject_context():
     return {
@@ -37,18 +63,22 @@ def inject_context():
     }
 
 
+def by_month(event):
+    return (event['event'].begin.year, event['event'].begin.month)
+
+
 # Regular views
 
 @app.route('/')
 def index_cs():
-    return render_template('index_cs.html',
-                           photo_urls=photos.get_random_urls(5))
+    data = itertools.groupby(events.data[:INDEX_EVENTS_LIMIT], key=by_month)
+    return render_template('index_cs.html', data=data)
 
 
 @app.route('/en/')
 def index_en():
-    return render_template('index_en.html',
-                           photo_urls=photos.get_random_urls(5), lang='en')
+    data = itertools.groupby(events.data[:INDEX_EVENTS_LIMIT], key=by_month)
+    return render_template('index_en.html', lang='en', data=data)
 
 
 @app.route('/zacatecnici/')
@@ -64,6 +94,25 @@ def jobs_cs():
 @app.route('/en/jobs/')
 def jobs_en():
     return render_template('jobs_en.html', data=jobs.data, lang='en')
+
+
+@app.route('/akce/')
+def events_cs():
+    return render_template('events_cs.html',
+                           data=itertools.groupby(events.data, key=by_month),
+                           meetups=meetups.get_meetups())
+
+
+@app.route('/en/events/')
+def events_en():
+    return render_template('events_en.html', lang='en',
+                           data=itertools.groupby(events.data, key=by_month),
+                           meetups=meetups.get_meetups(lang='en'))
+
+
+@app.route('/events.ics')
+def events_ical():
+    return Response(str(events.get_calendar()), mimetype='text/calendar')
 
 
 @app.route('/zapojse/')

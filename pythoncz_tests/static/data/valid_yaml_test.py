@@ -28,4 +28,4 @@ def test_there_are_yaml_files_to_be_tested():
 def test_yaml_file_is_valid(filename):
     """Tests whether YAML data file is a valid YAML document."""
     with open(filename) as f:
-        assert yaml.load(f.read())
+        assert yaml.safe_load(f.read())

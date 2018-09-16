@@ -11,8 +11,12 @@ Czech Python community homepage.
 The code is **Python 3** (the production Python version is 3.6).
 
 ```sh
-$ pip install .
+$ git clone git@github.com:pyvec/python.cz.git ./python.cz --depth=10
+$ cd ./python.cz
+$ pip install -e .
 ```
+
+It is recommended to start with a [shallow clone](https://git-scm.com/docs/git-clone#git-clone---depthltdepthgt) as historically, this repo has contained a lot of rather large photos.
 
 ### Development
 

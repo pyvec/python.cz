@@ -140,7 +140,8 @@ ul.lead {
 
 ul.lead li:before,
 ul.nav li:before,
-ul.list-group li:before {
+ul.list-group li:before,
+ul.events-list li:before {
     display: none;
 }
 
@@ -169,7 +170,7 @@ ul.list-group li:before {
     margin: 1em 0.5em 0 auto;
 }
 
-.jobs .call-to-action, .get-involved .call-to-action {
+.jobs .call-to-action, .get-involved .call-to-action, .events .call-to-action {
     text-align: center;
 }
 
@@ -219,44 +220,6 @@ h2 i.fa {
     text-align: left;
 }
 
-.meetups-city {
-    font-weight: bold;
-}
-
-.meetups-city img {
-    display: block;
-    margin: 1em auto;
-}
-
-.meetups {
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 5px;
-}
-
-.meetups p,
-.meetups .row {
-    margin: 1em;
-}
-
-.meetups .row {
-    margin-bottom: 2.5em;
-}
-
-.meetups-city,
-.meetups p {
-    font-size: 125%;
-}
-
-.meetups-container {
-    margin: 4em 0 2em 0;
-    padding: 2em;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
 .columns {
     margin: 4em 2em;
 
@@ -286,32 +249,6 @@ h2 i.fa {
 
 .columns img {
     width: 100%;
-}
-
-.photo {
-    width: 100%;
-    position: absolute;
-    z-index: -100;
-    left: -100%;
-    right: -100%;
-    top: -100%;
-    bottom: -100%;
-    margin: auto;
-    min-height: 100%;
-    min-width: 100%;
-}
-
-.photo-container {
-    position: relative;
-    overflow: hidden;
-    min-height: 32em;
-    background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 1) 0%,
-        rgba(255, 255, 255, 0.4) 15%,
-        rgba(255, 255, 255, 0.4) 85%,
-        rgba(255, 255, 255, 1) 100%
-    );
 }
 
 .help {
@@ -387,7 +324,7 @@ img.img-small {
     margin-top: 2em;
 }
 
-.jobs #map {
+.jobs #map, .events #map {
     height: 350px;
 }
 
@@ -593,22 +530,132 @@ i.icon-english::before {
     width: 50%;
 }
 
+.events .lead,
+.events-index h2 {
+    text-align: center;
+}
+
+.events-index h3 {
+    text-align: left;
+}
+
+.events .cartoon {
+    height: 10em;
+}
+
+.events .content h2,
+.events .content p,
+.events-month {
+    text-align: center;
+}
+
+.events-list,
+.events-list li {
+    padding: 0;
+    margin: 0;
+}
+
+.events-month {
+    padding-bottom: 0.3em;
+    border-bottom: 1px #eee solid;
+}
+
+.events-list .event {
+    margin-bottom: 2em;
+}
+
+.event-datetime {
+    color: #337ab7;
+    display: block;
+    text-align: center;
+    border: 1px #337ab7 solid;
+    border-radius: 0.3em;
+    padding: 0.5em 2em 1.5em 2em;
+}
+
+.event-day,
+.event-time {
+    display: block;
+}
+
+.event-day {
+    font-size: 230%;
+}
+
+.event h4 {
+    font-size: inherit;
+    font-family: inherit;
+    margin: 0.3em 0 0.5em 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.event-title, a.event-title {
+    line-height: 2em;
+}
+
+.event-title::before {
+    content: "\00a0";
+    width: 2em;
+    background: linear-gradient(
+      to right,
+      rgba(255,255,255,0) 0%,
+      rgba(255,255,255,1) 100%
+    );
+    position: absolute;
+    right: 0;
+}
+
+.event-feed {
+    line-height: 0.7em;
+    font-size: 0.7em;
+    display: table; /* trick to have a 'block' as wide as content */
+}
+
+.event-feed,
+.event-feed a,
+.event-feed a:hover,
+.event-feed a:focus {
+    color: #777;
+}
+
+.events .content p.event-location,
+.events .content p.event-map-links {
+    text-align: left;
+    font-size: 90%;
+    margin: 0;
+    margin-bottom: 0.1em;
+}
+
+.event-map-links a {
+    margin-right: 0.5em;
+}
+
+.meetups {
+    margin: 2em 0;
+}
+
+.meetups-city {
+    text-align: center;
+    font-size: 120%;
+}
+
+.meetups-city a {
+    display: inline-block;
+    line-height: 2.5em;
+    padding-left: 3em;
+    margin: 0.5em 0;
+    background: url("./images/pyvo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 
 @media only screen and (max-width: 992px) {
-    .boxes,
-    .meetups-container,
-    .photo-container {
+    .boxes {
         margin: 0;
         padding: 0;
-    }
-
-    .photo-collection {
-        display: none;
-    }
-
-    .photo-container {
-        min-height: auto;
-        background: none;
     }
 
     .columns {

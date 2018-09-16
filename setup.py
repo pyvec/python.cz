@@ -9,6 +9,10 @@ install_requires = [
     'czech-sort==0.4',
     'pyyaml==3.13',
     'python-slugify==1.2.5',
+    'ics==0.4',
+    'arrow==0.4.2',
+    'lxml==4.2.5',
+    'cssselect==1.0.3',
 ]
 tests_require = [
     'coveralls==1.4.0',
