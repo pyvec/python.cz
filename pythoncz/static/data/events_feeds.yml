@@ -8,6 +8,9 @@ feeds:
   - name: PyWorking Sessions
     url: https://pyworking.cz/
     ical: http://api.meetup.com/pyworking/upcoming.ical
+  - name: PyData Prague
+    url: https://www.meetup.com/PyData-Prague/
+    ical: http://api.meetup.com/PyData-Prague/upcoming.ical
   - name: Czech Python Events
     url: https://calendar.google.com/calendar/embed?src=kfdeelic1a13jsp7jvai861vfs%40group.calendar.google.com&ctz=Europe%2FPrague
     ical: https://calendar.google.com/calendar/ical/kfdeelic1a13jsp7jvai861vfs%40group.calendar.google.com/public/basic.ics
