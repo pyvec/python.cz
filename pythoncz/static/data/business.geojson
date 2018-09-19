@@ -909,13 +909,13 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "Heureka.cz",
-                "url": "https://www.heureka.cz/",
+                "name": "Heureka",
+                "url": "https://www.heurekadevs.cz/",
                 "company": true
             },
             "geometry": {
                 "type": "MultiPoint",
-                "coordinates": [[15.058695, 50.766428], [14.443173, 50.094377]]
+                "coordinates": [[15.058695, 50.766428], [14.443173, 50.094377], [13.3818922, 49.7372414]]
             }
         },
         {
