@@ -6,6 +6,7 @@ import requests
 import responses
 from werkzeug.contrib.cache import NullCache
 
+from pythoncz import app
 from pythoncz.models import github as github_module
 from pythoncz_tests.models import github_test_fixtures as fixtures
 
@@ -21,7 +22,19 @@ class RequestsMock(responses.RequestsMock):
 
 
 @pytest.fixture()
-def requests_mock():
+def patched_token():
+    """
+    Code expects the token to be configured.
+    Also this makes sure that we do not accidentally access the non-mock API.
+    """
+    orig_value = app.config['GITHUB_TOKEN']
+    app.config['GITHUB_TOKEN'] = 'test'
+    yield
+    app.config['GITHUB_TOKEN'] = orig_value
+
+
+@pytest.fixture()
+def requests_mock(patched_token):
     """Provides mechanism for faking HTTP responses"""
     with RequestsMock() as mock:
         yield mock
@@ -78,7 +91,7 @@ def test_get_issues_api_error(github, requests_mock):
     assert excinfo.value.response.status_code == 500
 
 
-def test_create_api_session(github):
+def test_create_api_session(patched_token, github):
     """
     The '_create_api_session' helper should add User-Agent and Authorization
     HTTP headers to the HTTP session
