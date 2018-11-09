@@ -1,5 +1,6 @@
-import requests
+from functools import lru_cache
 from lxml import html
+import requests
 from slugify import slugify
 
 
@@ -10,6 +11,7 @@ WIKI_URL = ('https://cs.wikipedia.org/wiki/'
             'Seznam_m%C4%9Bst_v_%C4%8Cesku_podle_po%C4%8Dtu_obyvatel')
 
 
+@lru_cache()
 def get_meetups(lang='cs'):
     return sort_by_city_size(scrape_meetups(lang))
 
@@ -36,6 +38,15 @@ def scrape_meetups(lang='cs'):
             continue
 
 
+@lru_cache()
+def scrape_cities():
+    res = requests.get(WIKI_URL)
+    res.raise_for_status()
+    root = html.fromstring(res.text)
+    rows = root.cssselect('.wikitable tbody tr')
+    return [row.cssselect('td')[1].text_content().strip() for row in rows[1:]]
+
+
 def sort_by_city_size(meetups):
     """
     Sorts given iterable of meetups by the size of the city. While pyvo.cz
@@ -47,23 +58,13 @@ def sort_by_city_size(meetups):
     that the visitor of the page is close to them, thus they deserve to be
     higher in the list.
     """
-    res = requests.get(WIKI_URL)
-    res.raise_for_status()
-
-    root = html.fromstring(res.content.decode('utf-8'))
-    rows = root.cssselect('.wikitable tbody tr')
-    rows.pop(0)
-
-    city_slugs = [
-        slugify(row.cssselect('td')[0].text_content().strip()) + '-pyvo'
-        for row in rows
-    ]
-
-    # fix discrepancies
-    city_slugs[city_slugs.index('hradec-kralove-pyvo')] = 'hradec-pyvo'
+    city_slugs = [slugify(city) + '-pyvo' for city in scrape_cities()]
+    # convert list [city1, city2, ...] into dict {city1: 0, city2: 1, ...}
+    city_slugs = {city: n for n, city in enumerate(city_slugs)}
+    city_slugs['hradec-pyvo'] = city_slugs['hradec-kralove-pyvo']
 
     def key_func(meetup):
         slug = meetup['url'].rstrip('/').split('/')[-1]
-        return city_slugs.index(slug)
+        return city_slugs[slug]
 
     return sorted(meetups, key=key_func)
