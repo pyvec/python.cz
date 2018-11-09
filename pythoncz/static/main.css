@@ -647,7 +647,7 @@ i.icon-english::before {
     padding-left: 3em;
     margin: 0.5em 0;
     background: url("./images/pyvo.png");
-    background-size: contain;
+    background-size: 2em;
     background-repeat: no-repeat;
 }
 
