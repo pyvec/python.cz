@@ -1,3 +1,4 @@
+import logging
 import os
 import subprocess
 import itertools
@@ -13,6 +14,8 @@ from pythoncz.models import jobs, beginners, github, events, meetups
 
 
 INDEX_EVENTS_LIMIT = 3
+
+logger = logging.getLogger(__name__)
 
 
 # Templating
@@ -118,15 +121,17 @@ def events_ical():
 @app.route('/zapojse/')
 def get_involved_cs():
     disabled = os.getenv('DISABLE_GITHUB_ISSUES_FETCH', False)
-    try:
-        if disabled:
-            raise Exception('DISABLE_GITHUB_ISSUES_FETCH is set')
-        issues = github.get_issues(app.config['GITHUB_ORGANIZATIONS'])
-        return render_template('get_involved_cs.html', issues=issues)
-    except Exception as e:
-        template = render_template('get_involved_cs.html', issues=[], error=e)
-        code = 200 if disabled else 500
-        return make_response(template, code)
+    issues = []
+    error = None
+    if not disabled:
+        try:
+            issues = github.get_issues(app.config['GITHUB_ORGANIZATIONS'])
+        except Exception as e:
+            logger.exception('Failed to fetch GitHub issues')
+            error = e
+    template = render_template('get_involved_cs.html', issues=issues, error=error)
+    code = 200 if not error else 500
+    return make_response(template, code)
 
 
 # Redirects of legacy stuff

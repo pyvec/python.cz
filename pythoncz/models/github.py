@@ -42,9 +42,12 @@ def _create_api_session():
                   '(+https://python.cz)').format(now=datetime.now())
 
     session = requests.Session()
+    token = app.config['GITHUB_TOKEN']
+    if not token:
+        raise Exception('GITHUB_TOKEN not configured')
     session.headers.update({
         'User-Agent': user_agent,
-        'Authorization': 'token {}'.format(app.config['GITHUB_TOKEN']),
+        'Authorization': 'token {}'.format(token),
     })
     return session
 
