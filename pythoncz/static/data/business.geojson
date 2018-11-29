@@ -916,8 +916,8 @@
                 "type": "MultiPoint",
                 "coordinates": [[14.4525094, 50.0924147]]
             }
-        }
-         {
+        },
+        {
             "type": "Feature",
             "properties": {
                 "name": "BoxtrapSecurity",
@@ -926,7 +926,7 @@
             },
             "geometry": {
                 "type": "MultiPoint",
-                "coordinates": [[50.0823494, 14.4220517]]
+                "coordinates": [[14.4220517, 50.0823494]]
             }
         }
     ]
