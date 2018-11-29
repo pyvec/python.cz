@@ -9,7 +9,7 @@
 {% block content %}
     <div class="row logo">
         <h1 class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
-            <img alt="Python" src="{{ url_for('static', filename='images/logo.svg') }}" onerror="this.onerror = null; this.src = '{{ url_for('static', filename='images/logo.png') }}'">
+            <img alt="Python" src="{{ url_for('static', filename='images/logo.svg') }}">
         </h1>
     </div>
     <ul class="lead">
@@ -25,32 +25,29 @@
     </ul>
 
     <div class="row cartoon-container">
-        <img class="cartoon" alt="Czech Python User Group" src="{{ url_for('static', filename='images/czech-python-user-group.svg') }}" onerror="this.onerror = null; this.src = '{{ url_for('static', filename='images/czech-python-user-group.png') }}'">
+        <img class="cartoon" alt="Czech Python User Group" src="{{ url_for('static', filename='images/czech-python-user-group.svg') }}">
     </div>
     <div class="row communication">
         {% include '_communication.html' %}
     </div>
 
-    <div class="row" id="meetups">
-        <div class="photo-container meetups-container">
-            <div class="photo-collection">
-                {% for photo_url in photo_urls %}
-                    <img class="photo" src="{{ photo_url }}">
-                {% endfor %}
-            </div>
+    <hr>
 
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3 meetups">
-                    <h2>Meetups</h2>
-                    <p>
-                        <a href="http://pyvo.cz/en">Python meetups</a> called “Pyvo” are happening across the country.
-                        <strong>You're welcome to come, or present at one!</strong>
-                    </p>
-                    {% include '_meetups.html' %}
-                </div>
-            </div>
-        </div>
-    </div>
+    <div id="akce" class="row events events-index"><div class="col-md-8 col-md-offset-2">
+        <h2>
+            <i class="fa fa-calendar"></i>
+            Closest Events
+        </h2>
+        {% include '_events.html' with context %}
+        <p class="call-to-action">
+            <a href="{{ url_for('events_en') }}" class="btn btn-primary btn-lg">
+                <i class="fa fa-arrow-right"></i>
+                All events
+            </a>
+        </p>
+    </div></div>
+
+    <hr>
 
     <hr class="visible-sm-block visible-xs-block">
 
@@ -150,7 +147,4 @@
             </div>
         </div>
     </div>
-{% endblock %}
-{% block scripts %}
-    <script src="{{ url_for('static', filename='photos.js') }}"></script>
 {% endblock %}

@@ -712,7 +712,7 @@
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [14.444733, 50.109173]
+                "coordinates": [14.341330, 50.088202]
             }
         },
         {
@@ -833,7 +833,7 @@
                 "coordinates": [14.47374, 50.10514]
             }
         },
-         {
+        {
             "type": "Feature",
             "properties": {
                 "name": "STOCKED s.r.o.",
@@ -845,7 +845,20 @@
                 "coordinates": [14.4722669, 50.0781181]
             }
         },
-         {
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Atollon CS",
+                "url": "http://www.atollon.cz/",
+                "company": true 
+                
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [14.424799, 50.088100] 
+            }
+        },
+	{
             "type": "Feature",
             "properties": {
                 "name": "LMC s.r.o.",
@@ -896,13 +909,13 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "Heureka.cz",
-                "url": "https://www.heureka.cz/",
+                "name": "Heureka",
+                "url": "https://www.heurekadevs.cz/",
                 "company": true
             },
             "geometry": {
                 "type": "MultiPoint",
-                "coordinates": [[15.058695, 50.766428], [14.443173, 50.094377]]
+                "coordinates": [[15.058695, 50.766428], [14.443173, 50.094377], [13.3818922, 49.7372414]]
             }
         },
         {

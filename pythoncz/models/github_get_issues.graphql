@@ -17,15 +17,19 @@ query($org_name:String!) {
               login
               url
             }
-            labels(first:5) {
+            labels(first:20) {
               nodes {
                 name
               }
             }
-            reactions(first:50) {
-              nodes {
-                content
-              }
+            reactions() {
+              totalCount
+            }
+            thumbs_down:reactions(content:THUMBS_DOWN) {
+              totalCount
+            }
+            confuseds:reactions(content:CONFUSED) {
+              totalCount
             }
             comments {
               totalCount
@@ -45,15 +49,19 @@ query($org_name:String!) {
               login
               url
             }
-            labels(first:5) {
+            labels(first:20) {
               nodes {
                 name
               }
             }
-            reactions(first:50) {
-              nodes {
-                content
-              }
+            reactions() {
+              totalCount
+            }
+            thumbs_down:reactions(content:THUMBS_DOWN) {
+              totalCount
+            }
+            confuseds:reactions(content:CONFUSED) {
+              totalCount
             }
             comments {
               totalCount

@@ -75,6 +75,15 @@ def issue(pr=False, labels=None, reactions_counts=None):
             random.sample(labels_fake_values, labels_count)
         ]
 
+    if reactions_counts is None:
+        reaction_count = random.randint(0, 4242)
+        thumbsdown_count = random.randint(0, reaction_count)
+        confused_count = random.randint(0, reaction_count - thumbsdown_count)
+    else:
+        reaction_count = sum(reactions_counts.values())
+        thumbsdown_count = reactions_counts.get('THUMBS_DOWN', 0)
+        confused_count = reactions_counts.get('CONFUSED', 0)
+
     return {
         'title': title,
         'url': url,
@@ -84,24 +93,9 @@ def issue(pr=False, labels=None, reactions_counts=None):
             'url': 'https://github.com/{}'.format(author),
         },
         'labels': {'nodes': labels},
-        'reactions': {'nodes': reactions(reactions_counts)},
+        'reactions': {'totalCount': reaction_count},
+        'thumbs_down': {'totalCount': thumbsdown_count},
+        'confuseds': {'totalCount': confused_count},
         'comments': {'totalCount': random.randint(1, 4242)},
         'participants': {'totalCount': random.randint(1, 42)},
     }
-
-
-def reactions(reactions_counts=None):
-    if reactions_counts is None:
-        reaction_types = random.sample([
-            'THUMBS_UP', 'THUMBS_DOWN', 'LAUGH', 'HOORAY', 'CONFUSED', 'HEART'
-        ], random.randint(0, 6))
-        reactions_counts = {}
-        for reaction_type in reaction_types:
-            reactions_counts[reaction_type] = random.randint(1, 42)
-    if reactions_counts:
-        reactions = []
-        for reaction_type, count in reactions_counts.items():
-            for i in range(count):
-                reactions.append({'content': reaction_type})
-        return reactions
-    return []

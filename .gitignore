@@ -29,5 +29,10 @@ pip-log.txt
 .DS_Store
 
 # Cache
-cache
+/cache/
 .cache
+.pytest_cache/
+
+# Elsa
+_build/
+/talks-archive/

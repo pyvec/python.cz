@@ -42,9 +42,12 @@ def _create_api_session():
                   '(+https://python.cz)').format(now=datetime.now())
 
     session = requests.Session()
+    token = app.config['GITHUB_TOKEN']
+    if not token:
+        raise Exception('GITHUB_TOKEN not configured')
     session.headers.update({
         'User-Agent': user_agent,
-        'Authorization': 'token {}'.format(app.config['GITHUB_TOKEN']),
+        'Authorization': 'token {}'.format(token),
     })
     return session
 
@@ -119,13 +122,19 @@ def _format_issue(org_name, repository, issue, is_pull_request=False):
 
 
 def _calculate_votes(issue):
-    votes = 0
-    for reaction in _get_nodes(issue, 'reactions'):
-        if reaction['content'] in ['THUMBS_DOWN', 'CONFUSED']:
-            votes -= 1
-        else:
-            votes += 1
-    return votes
+    """Get votes per issue from counts of Reactions
+
+    A THUMBS_DOWN and CONFUSED counts as "-1", the rest as "+1".
+    """
+    # First, count *all* reactions as "+1"
+    score = issue['reactions']['totalCount']
+
+    # Then change the negative ones from "+1" to "-1"
+    # (subtract 2 for each negative reaction)
+    score -= issue['thumbs_down']['totalCount'] * 2
+    score -= issue['confuseds']['totalCount'] * 2
+
+    return score
 
 
 def _get_nodes(node, connection_name):

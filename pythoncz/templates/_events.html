@@ -1,0 +1,50 @@
+{% for (year, month), events in data %}
+<h3 class="events-month" id="month-{{ year }}-{{ month }}">{{ month|format_month(lang) }}</h3>
+<ul class="events-list">
+    {% for event in events %}
+    <li class="event">
+        <div class="media">
+            <div class="media-left">
+                <time class="event-datetime media-object" datetime="{{ event.event.begin|format_dt_iso }}">
+                    <span class="event-day">{{ event.event.begin|format_dt('%d')|safe }}</span>
+                    <small class="event-time">{{ event.event.begin|format_dt('%H:%M') }}</small>
+                </time>
+            </div>
+            <div class="media-body">
+                <h4>
+                    <span class="event-feed">
+                    {% if event.feed.url %}
+                        <a href="{{ event.feed.url }}">
+                            <i class="fa fa-calendar"></i>{{ event.feed.name }}
+                        </a>
+                    {% else %}
+                        <i class="fa fa-calendar"></i>{{ event.feed.name }}
+                    {% endif %}
+                        &mdash; <a href="{{ event.feed.ical }}">iCal</a>
+                    </span>
+
+                    {% if event.event.url %}
+                        <a class="event-title" href="{{ event.event.url }}">{{ event.event.name }}</a>
+                    {% else %}
+                        <span class="event-title">{{ event.event.name }}</span>
+                    {% endif %}
+                </h3>
+                {% if event.event.location %}
+                    <p class="event-location">
+                        {{ event.event.location }}
+                    </p>
+                    <p class="event-map-links">
+                        <a href="https://{% if lang == 'en' %}en.{% endif %}mapy.cz/zakladni?q={{ event.event.location|urlencode }}">
+                            <i class="fa fa-map-marker"></i>Mapy.cz
+                        </a>
+                        <a href="https://www.google.com/maps?q={{ event.event.location|urlencode }}">
+                            <i class="fa fa-map-marker"></i>Google Maps
+                        </a>
+                    </p>
+                {% endif %}
+            </div>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+{% endfor %}

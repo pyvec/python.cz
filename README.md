@@ -8,11 +8,15 @@ Czech Python community homepage.
 
 ## Installation
 
-The code is **Python 3** (the production Python version is 3.4).
+The code is **Python 3** (the production Python version is 3.6).
 
 ```sh
-$ pip install .
+$ git clone git@github.com:pyvec/python.cz.git ./python.cz --depth=10
+$ cd ./python.cz
+$ pip install -e .
 ```
+
+It is recommended to start with a [shallow clone](https://git-scm.com/docs/git-clone#git-clone---depthltdepthgt) as historically, this repo has contained a lot of rather large photos.
 
 ### Development
 
@@ -20,22 +24,15 @@ The site uses GitHub API. For certian pages to work correctly, you need to set t
 
 ```sh
 $ export GITHUB_TOKEN=...
-$ python runserver.py
+$ python runserver.py --help
 ```
 
 ### Deployment
 
-The site gets automatically deployed after any push to the `master` branch. See [documentation in the `deployment` directory](deployment/README.md).
-
--   **Hosting:** [Rosti.cz](https://rosti.cz/)<br>
-    Access: [Pyvec](http://pyvec.org/)
+The site gets automatically deployed after any push to the `master` branch. It is frozen by [Elsa](https://github.com/pyvec/elsa). A [Travis CI cron job](https://docs.travis-ci.com/user/cron-jobs/) ([admin access](https://travis-ci.org/pyvec/python.cz/settings)) redeploys it daily, so any content of dynamic nature isn't outdated.
 
 -   **Domain:** bestowed by [KRAXNET](http://www.kraxnet.cz/)<br>
     Access: e-mail request to [KRAXNET](http://www.kraxnet.cz/)
-
--   **Monitoring:** [UptimeRobot](https://uptimerobot.com/)<br>
-    Access: [@honzajavorek](http://github.com/honzajavorek)
-
 -   **Analytics:** [Google Analytics](http://www.google.com/analytics/)<br>
     Access: [@honzajavorek](http://github.com/honzajavorek), [@encukou](http://github.com/encukou), [@martinbilek](http://github.com/martinbilek), [@benabraham](http://github.com/benabraham)
 

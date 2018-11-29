@@ -1,5 +1,6 @@
 from urllib.parse import quote_plus as url_quote_plus
 
+import ics
 import pytest
 from flask import url_for
 from werkzeug.contrib.cache import NullCache
@@ -198,49 +199,36 @@ def test_get_involved_cs_handles_error(github, test_client):
     assert url in html, "URL for filing a bug report isn't present in the HTML"
 
 
-def test_index_legacy_redirect(test_client):
-    response = test_client.get('/index.html')
-
-    assert response.status_code == 301
-    assert response.headers['location'] == url_for('index_cs', _external=True)
-
-
 def test_index_en_legacy_redirect(test_client):
     response = test_client.get('/english.html')
+    url = url_for('index_en')
+    html = response.get_data(as_text=True)
+    head = html[:html.find('</head>')]
+    assert '<meta http-equiv="refresh" content="0; {}">'.format(url) in head
 
-    assert response.status_code == 301
-    assert response.headers['location'] == url_for('index_en', _external=True)
+
+@pytest.mark.parametrize('suffix', ('', 's001-install/'))
+def test_pyladies_redirect(test_client, suffix):
+    response = test_client.get('/pyladies/' + suffix)
+    url = 'http://pyladies.cz/'
+    if suffix:
+        url += 'v1/' + suffix
+    html = response.get_data(as_text=True)
+    head = html[:html.find('</head>')]
+    assert '<meta http-equiv="refresh" content="0; {}">'.format(url) in head
 
 
-def test_pyladies_redirect(test_client):
-    response = test_client.get('/pyladies/foo/bar/baz.html')
-
-    assert response.status_code == 301
-    assert response.headers['location'] == (
-        'http://pyladies.cz/v1/foo/bar/baz.html'
+def test_talks_pdf_download(test_client):
+    response = test_client.get(
+        '/talks/brno-2013-11-28-veros-kaplan-postgis.pdf'
     )
+    assert response.headers['content-type'] == 'application/pdf'
 
 
-def test_pyladies_index_trailing_slash_redirect(test_client):
-    response = test_client.get('/pyladies/')
+def test_ical_generation(test_client):
+    response = test_client.get('events.ics')
 
-    assert response.status_code == 301
-    assert response.headers['location'] == 'http://pyladies.cz'
+    assert response.status_code == 200
+    assert 'text/calendar' in response.headers['content-type']
 
-
-def test_pyladies_index_without_trailing_slash_redirect(test_client):
-    response = test_client.get('/pyladies')
-
-    assert response.status_code == 301
-    assert response.headers['location'] == (
-        url_for('pyladies_index', _external=True)
-    )
-
-
-def test_talks_redirect(test_client):
-    response = test_client.get('/talks/foo/bar/baz.html')
-
-    assert response.status_code == 301
-    assert response.headers['location'] == (
-        'https://github.com/pyvec/talks-archive/raw/master/foo/bar/baz.html'
-    )
+    assert ics.Calendar(response.get_data(as_text=True))
