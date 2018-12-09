@@ -20,7 +20,7 @@ It is recommended to start with a [shallow clone](https://git-scm.com/docs/git-c
 
 ### Development
 
-The site uses GitHub API. For certian pages to work correctly, you need to set the `GITHUB_TOKEN` environment variable to a [GitHub Personal Access Token](https://github.com/settings/tokens) (no scopes needed).
+The site uses GitHub API. For certain pages to work correctly, you need to set the `GITHUB_TOKEN` environment variable to a [GitHub Personal Access Token](https://github.com/settings/tokens) (no scopes needed).
 
 ```sh
 $ export GITHUB_TOKEN=...
