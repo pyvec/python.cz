@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [scripts]
-test = "pytest ./pythoncz_tests --cov=pythoncz --pylama"
+test = "pytest ./tests --cov=pythoncz --pylama"
 
 [packages]
 elsa = "==0.1.5"

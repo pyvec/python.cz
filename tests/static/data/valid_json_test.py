@@ -5,7 +5,7 @@ from os import path
 
 import pytest
 
-from pythoncz_tests import ROOT_DIR, DATA_DIR, generate_filenames
+from tests import ROOT_DIR, DATA_DIR, generate_filenames
 
 
 glob_patterns = [
