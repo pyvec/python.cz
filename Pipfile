@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [scripts]
-test = "pytest ./pythoncz_tests --cov=pythoncz --flake8"
+test = "pytest ./pythoncz_tests --cov=pythoncz --pylama"
 
 [packages]
 elsa = "==0.1.5"
@@ -20,13 +20,11 @@ lxml = "==4.2.5"
 cssselect = "==1.0.3"
 
 [dev-packages]
-coveralls = "==1.4.0"
-"flake8" = "==3.5.0"
+pylama = "==7.6.6"
 pytest = "==3.7.2"
-responses = "==0.9.0"
-pytest-runner = "==4.2"
 pytest-cov = "==2.5.1"
-"pytest-flake8" = "==1.0.2"
+responses = "==0.9.0"
+coveralls = "==1.4.0"
 
 [requires]
 python_version = "3.7"
