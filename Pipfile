@@ -1,0 +1,32 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[scripts]
+test = "pytest ./pythoncz_tests --cov=pythoncz --flake8"
+
+[packages]
+elsa = "==0.1.5"
+flask = "==1.0.2"
+frozen-flask = "==0.15"
+requests = "==2.20.1"
+czech-sort = "==0.4"
+pyyaml = "==3.13"
+python-slugify = "==1.2.5"
+ics = "==0.4"
+arrow = "==0.4.2"
+lxml = "==4.2.5"
+cssselect = "==1.0.3"
+
+[dev-packages]
+coveralls = "==1.4.0"
+"flake8" = "==3.5.0"
+pytest = "==3.7.2"
+responses = "==0.9.0"
+pytest-runner = "==4.2"
+pytest-cov = "==2.5.1"
+"pytest-flake8" = "==1.0.2"
+
+[requires]
+python_version = "3.7"
