@@ -5,6 +5,10 @@ name = "pypi"
 
 [scripts]
 test = "pytest ./tests --cov=pythoncz --pylama"
+coveralls = "coveralls"
+serve = "python runserver.py serve"
+build = "python runserver.py freeze"
+deploy = "python runserver.py deploy --no-freeze --push"
 
 [packages]
 elsa = "==0.1.5"

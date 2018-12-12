@@ -8,12 +8,13 @@ Czech Python community homepage.
 
 ## Installation
 
-The code is **Python 3** (the production Python version is 3.6).
+The code is **Python 3.7**
 
 ```sh
+$ pip install pipenv
 $ git clone git@github.com:pyvec/python.cz.git ./python.cz --depth=10
 $ cd ./python.cz
-$ pip install -e .
+$ pipenv install --dev
 ```
 
 It is recommended to start with a [shallow clone](https://git-scm.com/docs/git-clone#git-clone---depthltdepthgt) as historically, this repo has contained a lot of rather large photos.
@@ -24,7 +25,7 @@ The site uses GitHub API. For certain pages to work correctly, you need to set t
 
 ```sh
 $ export GITHUB_TOKEN=...
-$ python runserver.py --help
+$ pipenv run serve
 ```
 
 ### Deployment
