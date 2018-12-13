@@ -8,7 +8,7 @@ Czech Python community homepage.
 
 ## Installation
 
-The code is **Python 3.7**
+The code is **Python 3.7**.
 
 ```sh
 $ pip install pipenv
