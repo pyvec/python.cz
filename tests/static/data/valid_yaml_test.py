@@ -1,29 +1,19 @@
-from os import path
+import yaml
+from pathlib import Path
 
 import pytest
-import yaml
-
-from tests import ROOT_DIR, DATA_DIR, generate_filenames
 
 
-glob_patterns = [
-    path.join(DATA_DIR, '*.yaml'),
-    path.join(DATA_DIR, '*.yml'),
-    path.join(ROOT_DIR, '*.yaml'),
-    path.join(ROOT_DIR, '*.yml'),
-    path.join(ROOT_DIR, '.*.yaml'),
-    path.join(ROOT_DIR, '.*.yml'),
-]
-
-filenames = list(generate_filenames(glob_patterns))
+project_dir = Path(__file__).parent / '../../..'
+paths = list(project_dir.rglob('*.y*ml'))
+assert len(paths) > 0
 
 
-def test_there_are_yaml_files_to_be_tested():
-    assert len(filenames) > 0
-
-
-@pytest.mark.parametrize('filename', filenames)
-def test_yaml_file_is_valid(filename):
+@pytest.mark.parametrize('path', [
+    pytest.param(path, id=str(path.relative_to(project_dir)))
+    for path in paths
+])
+def test_json_file_is_valid(path):
     """Tests whether YAML data file is a valid YAML document."""
-    with open(filename) as f:
-        assert yaml.safe_load(f.read())
+    with path.open() as f:
+        assert yaml.safe_load(f)
