@@ -1,9 +1,7 @@
 import json
-from os import path
+from pathlib import Path
 
 import pytest
-
-from tests import ROOT_DIR, DATA_DIR, generate_filenames
 
 
 BOUNDS = (
@@ -12,34 +10,17 @@ BOUNDS = (
 )
 
 
-def generate_geojson_entries(filenames):
-    for filename in filenames:
-        with open(filename) as f:
-            data = json.load(f)
-
-        for feature in data['features']:
-            yield {
-                'filename': filename,
-                'name': feature['properties']['name'],
-                'geometry_type': feature['geometry']['type'],
-                'coords': feature['geometry']['coordinates'],
-            }
+path = Path(__file__).parent / '../../../pythoncz/static/data/business.geojson'
+with path.open() as f:
+    features = json.load(f)['features']
+assert len(features) > 0
 
 
-glob_patterns = [
-    path.join(DATA_DIR, '*.geojson'),
-    path.join(ROOT_DIR, '*.geojson'),
-]
-
-entries = list(generate_geojson_entries(generate_filenames(glob_patterns)))
-
-
-def test_there_are_geojson_entries_to_be_tested():
-    assert len(entries) > 0
-
-
-@pytest.mark.parametrize('entry', entries)
-def test_geojson_coords_are_in_europe(entry):
+@pytest.mark.parametrize('feature', [
+    pytest.param(feature, id=feature['properties']['name'])
+    for feature in features
+])
+def test_geojson_coords_are_in_europe(feature):
     """Tests whether entries in GeoJSON are in Europe. If this test failed
     for you, it's very likely because you have
 
@@ -52,10 +33,9 @@ def test_geojson_coords_are_in_europe(entry):
     (which is Prague) in your GeoJSON entry.
     """
     # For Point, convert list of coords to nested list
-    if entry['geometry_type'] == 'Point':
-        places = [entry['coords']]
-    else:
-        places = entry['coords']
+    geometry_type = feature['geometry']['type']
+    coords = feature['geometry']['coordinates']
+    places = [coords] if geometry_type == 'Point' else coords
 
     for place_coords in places:
         for i, coord in enumerate(place_coords):
