@@ -1,0 +1,34 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[scripts]
+test = "pytest ./tests --cov=pythoncz --pylama"
+coveralls = "coveralls"
+serve = "python runserver.py serve"
+build = "python runserver.py freeze"
+deploy = "python runserver.py deploy --no-freeze --push"
+
+[packages]
+elsa = "==0.1.5"
+flask = "==1.0.2"
+frozen-flask = "==0.15"
+requests = "==2.20.1"
+czech-sort = "==0.4"
+pyyaml = "==3.13"
+python-slugify = "==1.2.5"
+ics = "==0.4"
+arrow = "==0.4.2"
+lxml = "==4.2.5"
+cssselect = "==1.0.3"
+
+[dev-packages]
+pylama = "==7.6.6"
+pytest = "==3.7.2"
+pytest-cov = "==2.5.1"
+responses = "==0.9.0"
+coveralls = "==1.4.0"
+
+[requires]
+python_version = "3.7"

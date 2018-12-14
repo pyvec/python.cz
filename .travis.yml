@@ -1,29 +1,31 @@
+dist: "xenial"
 language: "python"
 python:
-    - "3.6"
+    - "3.7"
 cache: "pip"
 install:
-    - "pip install .[tests]"
+    - "pip install pipenv"
+    - "pipenv install --dev"
 script:
-    - "pytest"
+    - "pipenv run test"
     - "test $TRAVIS_PULL_REQUEST == false || export DISABLE_GITHUB_ISSUES_FETCH=true"
-    - "python runserver.py freeze"
+    - "pipenv run build"
 after_success:
-    - "coveralls"
+    - "pipenv run coveralls"
 deploy:
-    provider: script
+    provider: "script"
     skip_cleanup: true
-    script: 'python runserver.py deploy --no-freeze --push'
+    script: "pipenv run deploy"
     on:
-        branch: master
+        branch: "master"
         repo: pyvec/python.cz
 notifications:
     slack:
         on_pull_requests: false
-        on_success: change
-        on_failure: always
+        on_success: "change"
+        on_failure: "always"
         rooms:
             - secure: "s/PCU4+geUozmw3AJguPYpv/YFNZVYmQ30A3DZpbSOE/9HDEgqbaF/hONY1VhHriRBG1EJ2uSezbxjOveyJPV+UMGJFMPU4c4Mw4AHxyROSnJe/MpOKPd8QRgbtYWYwy5UI47bzxotGoN49Mk0EjqhaFk9DFb14et9YPwMDbrVY="
 env:
     global:
-        secure: R1+KSJV1oOikNBvyil0m/FMace5Y4lVC8WTlIpspZZ30BDkJCQ0eTnXy7gFvuEa4wBmVSqRKnRm+LKf44wXRjyKy/KRwUIzuy9AmzzQMe/PuvWSQDz7zf1dvG7GlR0kTJlgJ7s0+Vh4uqEpjIQnvtn+xkLguYVs3QXmTUvxLMnA=
+        secure: "R1+KSJV1oOikNBvyil0m/FMace5Y4lVC8WTlIpspZZ30BDkJCQ0eTnXy7gFvuEa4wBmVSqRKnRm+LKf44wXRjyKy/KRwUIzuy9AmzzQMe/PuvWSQDz7zf1dvG7GlR0kTJlgJ7s0+Vh4uqEpjIQnvtn+xkLguYVs3QXmTUvxLMnA="

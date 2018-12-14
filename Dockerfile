@@ -13,13 +13,13 @@
 #
 #     docker run -p 8000:8000 -e GITHUB_TOKEN=token123 python.cz
 
-FROM python:3.6-alpine
+FROM python:3.7-alpine
 
 RUN python3 -m venv /venv
-RUN /venv/bin/pip install gunicorn
+RUN /venv/bin/pip install gunicorn pipenv
 WORKDIR /app
 COPY . ./
-RUN /venv/bin/pip install -e .
+RUN /venv/bin/pipenv install
 
 EXPOSE 8000
 

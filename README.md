@@ -8,15 +8,22 @@ Czech Python community homepage.
 
 ## Installation
 
-The code is **Python 3** (the production Python version is 3.6).
+The code is **Python 3.7**.
 
-```sh
-$ git clone git@github.com:pyvec/python.cz.git ./python.cz --depth=10
-$ cd ./python.cz
-$ pip install -e .
-```
+1.  [Install Pipenv](https://pipenv.readthedocs.io/en/latest/install/#installing-pipenv)
+1.  Clone the project:
 
-It is recommended to start with a [shallow clone](https://git-scm.com/docs/git-clone#git-clone---depthltdepthgt) as historically, this repo has contained a lot of rather large photos.
+    ```sh
+    $ git clone git@github.com:pyvec/python.cz.git --depth=10
+    ```
+
+    It is recommended to start with a [shallow clone](https://git-scm.com/docs/git-clone#git-clone---depthltdepthgt) as historically, this repo has contained a lot of rather large photos.
+1.  Go inside the project directory and run Pipenv to install dependencies:
+
+    ```
+    $ cd ./python.cz
+    $ pipenv install --dev
+    ```
 
 ### Development
 
@@ -24,7 +31,7 @@ The site uses GitHub API. For certain pages to work correctly, you need to set t
 
 ```sh
 $ export GITHUB_TOKEN=...
-$ python runserver.py --help
+$ pipenv run serve
 ```
 
 ### Deployment
@@ -40,7 +47,7 @@ The site gets automatically deployed after any push to the `master` branch. It i
 
 **This site is community effort and contributions are very welcome!** See the [Hall of fame](https://github.com/pyvec/python.cz/graphs/contributors) for the most active contributors.
 
-The site is backed by [Pyvec](http://pyvec.org/), nonprofit organization dedicated to support of Python in the Czech Republic. [Honza Javorek](http://github.com/honzajavorek) is the original author, core commiter and maintainer of python.cz.
+The site is backed by [Pyvec](http://pyvec.org/), nonprofit organization dedicated to support of Python in the Czech Republic. [Honza Javorek](http://github.com/honzajavorek) is the original author, the [@pyvec/python-cz](https://github.com/orgs/pyvec/teams/python-cz) are python.cz maintainers.
 
 ## License
 

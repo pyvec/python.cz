@@ -4,7 +4,7 @@ import ics
 
 from pythoncz.models.events import preprocess_ical
 
-from pythoncz_tests import TEST_DIR
+from tests import TEST_DIR
 
 
 def test_preprocess_ical():
