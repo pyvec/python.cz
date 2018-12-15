@@ -4,13 +4,10 @@ import ics
 
 from pythoncz.models.events import preprocess_ical
 
-from tests import TEST_DIR
-
 
 def test_preprocess_ical():
-    file = Path(TEST_DIR) / "static/data/invalid_ical.ics"
-
-    lines = preprocess_ical(file.read_text())
+    path = Path(__file__).parent / 'invalid_ical.ics'
+    lines = preprocess_ical(path.read_text())
 
     calendar = ics.Calendar(lines)
 

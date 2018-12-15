@@ -8,7 +8,7 @@ from werkzeug.contrib.cache import NullCache
 
 from pythoncz import app
 from pythoncz.models import github as github_module
-from tests.models import github_test_fixtures as fixtures
+import github_test_fixtures as fixtures
 
 
 class RequestsMock(responses.RequestsMock):

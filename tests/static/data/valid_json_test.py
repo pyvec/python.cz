@@ -1,25 +1,19 @@
 import json
-from os import path
+from pathlib import Path
 
 import pytest
 
-from tests import ROOT_DIR, DATA_DIR, generate_filenames
+
+project_dir = Path(__file__).parent / '../../..'
+paths = list(project_dir.rglob('*.*json'))
+assert len(paths) > 0
 
 
-glob_patterns = [
-    path.join(DATA_DIR, '*.*json'),
-    path.join(ROOT_DIR, '*.*json'),
-]
-
-filenames = list(generate_filenames(glob_patterns))
-
-
-def test_there_are_json_files_to_be_tested():
-    assert len(filenames) > 0
-
-
-@pytest.mark.parametrize('filename', filenames)
-def test_json_file_is_valid(filename):
+@pytest.mark.parametrize('path', [
+    pytest.param(path, id=str(path.relative_to(project_dir)))
+    for path in paths
+])
+def test_json_file_is_valid(path):
     """Tests whether JSON data file is a valid JSON document."""
-    with open(filename) as f:
+    with path.open() as f:
         assert json.load(f)
