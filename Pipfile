@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [scripts]
-test = "python -m pytest ./tests --cov=pythoncz --pylama"
+test = "python -m pytest ./tests --cov=pythoncz --pylama --tb=native"
 coveralls = "coveralls"
 serve = "python runserver.py serve"
 build = "python runserver.py freeze"
