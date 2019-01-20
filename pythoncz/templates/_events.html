@@ -7,6 +7,7 @@
             <div class="media-left">
                 <time class="event-datetime media-object" datetime="{{ event.event.begin|format_dt_iso }}">
                     <span class="event-day">{{ event.event.begin|format_dt('%d')|safe }}</span>
+                    <small class="event-weekday">{{ event.event.begin|format_dt('%w')|int|format_weekday }}</small>
                     <small class="event-time">{{ event.event.begin|format_dt('%H:%M') }}</small>
                 </time>
             </div>
