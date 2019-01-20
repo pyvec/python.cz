@@ -2,7 +2,7 @@
 <h3 class="events-month" id="month-{{ year }}-{{ month }}">{{ month|format_month(lang) }}</h3>
 <ul class="events-list">
     {% for event in events %}
-    <li class="event">
+    <li class="event{% if 'tentative-date' in event.event.categories %} event-tentative{% endif %}">
         <div class="media">
             <div class="media-left">
                 <time class="event-datetime media-object" datetime="{{ event.event.begin|format_dt_iso }}">

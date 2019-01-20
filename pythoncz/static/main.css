@@ -632,6 +632,16 @@ i.icon-english::before {
     margin-right: 0.5em;
 }
 
+.event-tentative,
+.event-tentative a,
+.event-tentative a:hover,
+.event-tentative a:focus,
+.event-tentative .event-feed,
+.event-tentative .event-datetime {
+    color: #AAA;
+    border-color: #AAA;
+}
+
 .meetups {
     margin: 2em 0;
 }
