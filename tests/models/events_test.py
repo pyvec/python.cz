@@ -42,6 +42,12 @@ def test_find_first_url(text, expected):
     (Event(description='https://pyvo.cz', url='https://python.cz'),
      'https://python.cz'),
     (Event(description='https://pyvo.cz'), 'https://pyvo.cz'),
+    (Event(description='''
+        See: https://www.meetup.com/PyData-Prague/events/257775220
+
+        Looking forward to see you!
+     '''),
+     'https://www.meetup.com/PyData-Prague/events/257775220'),
 ])
 def test_set_url_from_description(event, expected_url):
     assert set_url_from_description(event).url == expected_url
