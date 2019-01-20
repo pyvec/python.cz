@@ -584,6 +584,9 @@ i.icon-english::before {
 
 .event-weekday {
     text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    min-width: 4.5em;
 }
 
 .event h4 {
