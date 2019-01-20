@@ -56,6 +56,15 @@ def format_month_filter(month, lang='cs'):
     return months[lang][month]
 
 
+@app.template_filter('format_weekday')
+def format_weekday_filter(weekday, lang='cs'):
+    weekdays = {'en': ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday',
+                       'Friday', 'Saturday'],
+                'cs': ['neděle', 'pondělí', 'úterý', 'středa', 'čtvrtek',
+                       'pátek', 'sobota']}
+    return weekdays[lang][weekday]
+
+
 @app.context_processor
 def inject_context():
     return {

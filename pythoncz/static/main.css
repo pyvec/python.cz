@@ -570,7 +570,7 @@ i.icon-english::before {
     text-align: center;
     border: 1px #337ab7 solid;
     border-radius: 0.3em;
-    padding: 0.5em 2em 1.5em 2em;
+    padding: 0.3em 2em 1em 2em;
 }
 
 .event-day,
@@ -580,6 +580,13 @@ i.icon-english::before {
 
 .event-day {
     font-size: 230%;
+}
+
+.event-weekday {
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    min-width: 4.5em;
 }
 
 .event h4 {
@@ -630,6 +637,16 @@ i.icon-english::before {
 
 .event-map-links a {
     margin-right: 0.5em;
+}
+
+.event-tentative,
+.event-tentative a,
+.event-tentative a:hover,
+.event-tentative a:focus,
+.event-tentative .event-feed,
+.event-tentative .event-datetime {
+    color: #AAA;
+    border-color: #AAA;
 }
 
 .meetups {
