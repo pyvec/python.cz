@@ -55,7 +55,7 @@ def load_events(ical_url):
 
 
 def find_first_url(text):
-    match = re.search(r'https?://[^ \n\r$]+', text or '')
+    match = re.search(r'https?://\S+', text or '')
     if match:
         return match.group(0)
     return None
