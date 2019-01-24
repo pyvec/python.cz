@@ -514,7 +514,7 @@
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [14.4029508, 50.0756483]
+                "coordinates": [14.4092097, 50.0615613]
             }
         },
         {
@@ -940,6 +940,18 @@
             "geometry": {
                 "type": "MultiPoint",
                 "coordinates": [[14.4220517, 50.0823494]]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Monitora media",
+                "url": "https://monitora.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4092097, 50.0615613]
             }
         }
     ]
