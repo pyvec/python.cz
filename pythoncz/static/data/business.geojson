@@ -52,18 +52,6 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "Pexeso",
-                "url": "https://pexe.so/",
-                "company": true
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [17.1399300, 48.1478800]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "name": "Exponea",
                 "url": "https://exponea.com/",
                 "company": true
@@ -71,18 +59,6 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [17.125383000000056, 48.145637]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "name": "Vaultier",
-                "url": "https://www.vaultier.org/",
-                "company": true
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [14.4319322, 50.0713247]
             }
         },
         {
@@ -98,6 +74,18 @@
             }
         },
         {
+            "type": "Feature",
+            "properties": {
+                "name": "Vaultier",
+                "url": "http://www.vaultier.org",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4319322, 50.0713247]
+            }
+        },
+         {
             "type": "Feature",
             "properties": {
                 "name": "Nanooq IT",
@@ -850,12 +838,12 @@
             "properties": {
                 "name": "Atollon CS",
                 "url": "http://www.atollon.cz/",
-                "company": true 
-                
+                "company": true
+
             },
             "geometry": {
               "type": "Point",
-              "coordinates": [14.424799, 50.088100] 
+              "coordinates": [14.424799, 50.088100]
             }
         },
 	{

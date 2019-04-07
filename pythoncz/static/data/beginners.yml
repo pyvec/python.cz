@@ -10,8 +10,6 @@ courses:
                 url: http://www.czechitas.cz
             -   text: Workshopy Geek Girls Carrots v Ostravě (v Pythonu jen některé)
                 url: http://geekgirlscarrots.org
-            -   text: Srazy Women in Technology v Praze (obecné)
-                url: http://www.meetup.com/Prague-Women-in-Technology-Meetup/
 
     -   name: Pro studenty
         icon: graduation-cap
@@ -32,9 +30,23 @@ courses:
         links:
             -   text: Kroužek na Praze 10
                 url: 'http://kapsa.cz/cs/krouzky-pro-deti#python'
+            -   text: Kroužek v Lázně Toušeň
+                url: 'https://www.programovanihrou.cz/'
+            -   text: Czechitas - kroužky a tábory pro různé věkové kategorie
+                url: http://www.czechitas.cz
+            -   text: Kroužky, workshopy a tábory makeITtoday
+                url: https://makeittoday.cz/courses_cz.html
+            -   text: Kurzy v Praze pro děti 8-12 let
+                url: https://www.digikids.cz
 
-    -   name: Pro ty, co už něco vědí
+    -   name: Ostatní
         icon: code
         links:
             -   text: Nepravidelné intenzivní Python kurzy kiwi.com
-                url: 'https://pythonvikend.kiwi.com/'
+                url: 'https://pythonweekend.cz/'
+            -   text: Celodenní workshopy a setkání pro Python začátečníky
+                url: 'https://pyworking.cz/'
+            -   text: Sedlákovi - různé kurzy související s Pythonem
+                url: 'https://www.sedlakovi.org/kurzy/'
+            -   text: Engeto - Python akademie v Praze a Brně
+                url: 'https://engeto.cz/python-akademie/'
