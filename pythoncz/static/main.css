@@ -650,6 +650,19 @@ i.icon-english::before {
     border-color: #AAA;
 }
 
+.event-tentative .event-datetime {
+    padding-bottom: 0.5em;
+}
+
+.event-tentative .event-day {
+    font-size: 180%;
+}
+
+.event-tentative .event-weekday,
+.event-tentative .event-time {
+    display: inline;
+}
+
 .meetups {
     margin: 2em 0;
 }
