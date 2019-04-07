@@ -76,6 +76,18 @@
         {
             "type": "Feature",
             "properties": {
+                "name": "Vaultier",
+                "url": "http://www.vaultier.org",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4319322, 50.0713247]
+            }
+        },
+         {
+            "type": "Feature",
+            "properties": {
                 "name": "Nanooq IT",
                 "url": "http://www.nanooq.eu/",
                 "company": true
