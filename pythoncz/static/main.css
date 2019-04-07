@@ -570,7 +570,8 @@ i.icon-english::before {
     text-align: center;
     border: 1px #337ab7 solid;
     border-radius: 0.3em;
-    padding: 0.3em 2em 1em 2em;
+    min-width: 8em;  /* sized for "WEDNESDAY" */
+    padding: 0.3em 1em 1em 1em;
 }
 
 .event-day,
