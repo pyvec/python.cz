@@ -65,6 +65,13 @@ def format_weekday_filter(weekday, lang='cs'):
     return weekdays[lang][weekday]
 
 
+@app.template_filter('format_weekday_short')
+def format_weekday_short_filter(weekday, lang='cs'):
+    weekdays = {'en': ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+                'cs': ['ne', 'po', 'út', 'st', 'čt', 'pá', 'so']}
+    return weekdays[lang][weekday]
+
+
 @app.context_processor
 def inject_context():
     return {
