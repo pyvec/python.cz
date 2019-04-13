@@ -7,8 +7,30 @@ from slugify import slugify
 __all__ = ('get_meetups',)
 
 
-WIKI_URL = ('https://cs.wikipedia.org/wiki/'
-            'Seznam_m%C4%9Bst_v_%C4%8Cesku_podle_po%C4%8Dtu_obyvatel')
+# Source: https://cs.wikipedia.org/wiki/Seznam_m%C4%9Bst_v_%C4%8Cesku_podle_po%C4%8Dtu_obyvatel
+SORTED_CITY_SLUGS = [
+    'praha-pyvo',
+    'brno-pyvo',
+    'ostrava-pyvo',
+    'plzen-pyvo',
+    'liberec-pyvo',
+    'olomouc-pyvo',
+    'ceske-budejovice-pyvo',
+    'usti-nad-labem-pyvo',
+    'hradec-pyvo',
+    'pardubice-pyvo',
+    'zlin-pyvo',
+    'havirov-pyvo',
+    'kladno-pyvo',
+    'most-pyvo',
+    'opava-pyvo',
+    'frydek-mistek-pyvo',
+    'karvina-pyvo',
+    'jihlava-pyvo',
+    'teplice-pyvo',
+    'decin-pyvo',
+    'karlovy-vary-pyvo',
+]
 
 
 @lru_cache()
@@ -58,10 +80,8 @@ def sort_by_city_size(meetups):
     that the visitor of the page is close to them, thus they deserve to be
     higher in the list.
     """
-    city_slugs = [slugify(city) + '-pyvo' for city in scrape_cities()]
     # convert list [city1, city2, ...] into dict {city1: 0, city2: 1, ...}
-    city_slugs = {city: n for n, city in enumerate(city_slugs)}
-    city_slugs['hradec-pyvo'] = city_slugs['hradec-kralove-pyvo']
+    city_slugs = {city: n for n, city in enumerate(SORTED_CITY_SLUGS)}
 
     def key_func(meetup):
         slug = meetup['url'].rstrip('/').split('/')[-1]
