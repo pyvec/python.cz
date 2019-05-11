@@ -953,6 +953,17 @@
                 "type": "Point",
                 "coordinates": [14.4092097, 50.0615613]
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Josef Rousek",
+                "url": "https://rousek.name/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4537655, 50.0714368]
+            }
         }
     ]
 }
