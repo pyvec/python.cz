@@ -964,6 +964,18 @@
                 "type": "Point",
                 "coordinates": [14.4537655, 50.0714368]
             }
+        },
+	{
+            "type": "Feature",
+            "properties": {
+                "name": "Oracle",
+                "url": "https://www.oracle.com",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.3753233, 50.0559844]
+            }
         }
     ]
 }
