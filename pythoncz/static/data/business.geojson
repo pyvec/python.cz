@@ -365,7 +365,7 @@
             "type": "Feature",
             "properties": {
                 "name": "Mergado",
-                "url": "http://www.mergado.cz/",
+                "url": "https://www.mergado.cz/prace",
                 "company": true
             },
             "geometry": {
