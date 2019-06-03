@@ -976,6 +976,18 @@
                 "type": "Point",
                 "coordinates": [14.3753233, 50.0559844]
             }
+        },
+	{
+            "type": "Feature",
+            "properties": {
+                "name": "Colpirio.com s.r.o.",
+                "url": "https://www.colpirio.com",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",                
+	        "coordinates": [16.602532, 49.200819]
+            }
         }
     ]
 }
