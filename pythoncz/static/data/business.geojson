@@ -988,6 +988,30 @@
                 "type": "Point",                
 	        "coordinates": [16.602532, 49.200819]
             }
+        },
+	{
+            "type": "Feature",
+            "properties": {
+                "name": "ICT & MEDIA s.r.o.",
+                "url": "https://www.ictmedia.cz",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",                
+	        "coordinates": [16.594788, 49.224163]
+            }
+        },
+	{
+            "type": "Feature",
+            "properties": {
+                "name": "REDAMP.cz",
+                "url": "https://www.redamp.cz",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",                
+	        "coordinates": [16.594788, 49.224163]
+            }
         }
     ]
 }
