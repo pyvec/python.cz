@@ -20,7 +20,7 @@ pyyaml = "==5.1.2"
 python-slugify = "==3.0.3"
 ics = "==0.4"
 arrow = "==0.4.2"
-lxml = "==4.3.4"
+lxml = "==4.4.0"
 cssselect = "==1.0.3"
 
 [dev-packages]
