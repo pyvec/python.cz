@@ -186,7 +186,7 @@ def test_get_involved_cs_handles_error(github, test_client):
     response = test_client.get('/zapojse/')
     html = extract_issues_html(response.get_data(as_text=True))
 
-    assert response.status_code == 500
+    assert response.status_code == 200  # otherwise Elsa build fails
     message = "DIV with the 'issues-error' class isn't present in the HTML"
     assert 'issues-error' in html, message
     message = "Link to alternative issues listing isn't present in the HTML"
