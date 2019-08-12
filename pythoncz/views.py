@@ -146,8 +146,7 @@ def get_involved_cs():
             logger.exception('Failed to fetch GitHub issues')
             error = e
     template = render_template('get_involved_cs.html', issues=issues, error=error)
-    code = 200 if not error else 500
-    return make_response(template, code)
+    return make_response(template)
 
 
 # Redirects of legacy stuff
