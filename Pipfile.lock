@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "f842b308a4da1882fcb9133db68c0ad6222fa24ace797ca44d933b35943b6a7d"
+            "sha256": "f36520b3029bd04433dc346009aa0117bb1850d9770666792d1c7d6d1c8bf255"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -342,6 +342,7 @@
                 "sha256:23d3d873e008a513952355379d93cbcab874c58f4f034ff657c7a87422fa64e8",
                 "sha256:80d2de76188eabfbfcf27e6a37342c2827801e59c4cc14b0371c56fed43820e3"
             ],
+            "markers": "python_version < '3.8'",
             "version": "==0.19"
         },
         "mccabe": {
@@ -356,7 +357,6 @@
                 "sha256:409cd48d4db7052af495b09dec721011634af3753ae1ef92d2b32f73a745f832",
                 "sha256:92b8c4b06dac4f0611c0729b2f2ede52b2e1bac1ab48f089c7ddc12e26bb60c4"
             ],
-            "markers": "python_version > '2.7'",
             "version": "==7.2.0"
         },
         "packaging": {
@@ -389,9 +389,10 @@
         },
         "pydocstyle": {
             "hashes": [
-                "sha256:58c421dd605eec0bce65df8b8e5371bb7ae421582cdf0ba8d9435ac5b0ffc36a"
+                "sha256:04c84e034ebb56eb6396c820442b8c4499ac5eb94a3bda88951ac3dc519b6058",
+                "sha256:66aff87ffe34b1e49bff2dd03a88ce6843be2f3346b0c9814410d34987fbab59"
             ],
-            "version": "==4.0.0"
+            "version": "==4.0.1"
         },
         "pyflakes": {
             "hashes": [
@@ -417,11 +418,11 @@
         },
         "pytest": {
             "hashes": [
-                "sha256:4a784f1d4f2ef198fe9b7aef793e9fa1a3b2f84e822d9b3a64a181293a572d45",
-                "sha256:926855726d8ae8371803f7b2e6ec0a69953d9c6311fa7c3b6c1b929ff92d27da"
+                "sha256:95b1f6db806e5b1b5b443efeb58984c24945508f93a866c1719e1a507a957d7c",
+                "sha256:c3d5020755f70c82eceda3feaf556af9a341334414a8eca521a18f463bcead88"
             ],
             "index": "pypi",
-            "version": "==4.6.3"
+            "version": "==5.1.1"
         },
         "pytest-cov": {
             "hashes": [
