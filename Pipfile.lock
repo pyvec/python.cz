@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "258e985bf142ef6e8bec119cfe20991d209d432351372c43510abe00ceecf4cb"
+            "sha256": "6b057bfbf82374d3020c2e1585f9a9e89ddc6d8fa9f2b8cff7be58181ee7337b"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -357,7 +357,6 @@
                 "sha256:409cd48d4db7052af495b09dec721011634af3753ae1ef92d2b32f73a745f832",
                 "sha256:92b8c4b06dac4f0611c0729b2f2ede52b2e1bac1ab48f089c7ddc12e26bb60c4"
             ],
-            "markers": "python_version > '2.7'",
             "version": "==7.2.0"
         },
         "packaging": {
@@ -419,11 +418,11 @@
         },
         "pytest": {
             "hashes": [
-                "sha256:4a784f1d4f2ef198fe9b7aef793e9fa1a3b2f84e822d9b3a64a181293a572d45",
-                "sha256:926855726d8ae8371803f7b2e6ec0a69953d9c6311fa7c3b6c1b929ff92d27da"
+                "sha256:13c1c9b22127a77fc684eee24791efafcef343335d855e3573791c68588fe1a5",
+                "sha256:d8ba7be9466f55ef96ba203fc0f90d0cf212f2f927e69186e1353e30bc7f62e5"
             ],
             "index": "pypi",
-            "version": "==4.6.3"
+            "version": "==5.2.0"
         },
         "pytest-cov": {
             "hashes": [
