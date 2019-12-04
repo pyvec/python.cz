@@ -110,7 +110,7 @@ def test_get_issues_for_org_key_error(github, requests_mock):
     """
     requests_mock.add_github_graphql(json={'data': {}})
     error_message = 'Unexpected structure of the GitHub API response'
-    with pytest.raises(ValueError, message=error_message):
+    with pytest.raises(ValueError, match=error_message):
         list(github._get_issues_for_org(requests.Session(), 'org'))
 
 
@@ -179,7 +179,7 @@ def test_request_api_200_invalid_json(github, requests_mock):
     """
     requests_mock.add_github_graphql(body='... invalid JSON ...')
     error_message = 'Unexpected structure of the GitHub API response'
-    with pytest.raises(ValueError, message=error_message):
+    with pytest.raises(ValueError, match=error_message):
         github._request_api(requests.Session(), '... query ...', {})
 
 
