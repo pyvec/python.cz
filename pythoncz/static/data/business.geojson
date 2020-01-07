@@ -1012,6 +1012,18 @@
                 "type": "Point",                
 	        "coordinates": [16.594788, 49.224163]
             }
+        },
+	{
+            "type": "Feature",
+            "properties": {
+                "name": "Truly Scaled",
+                "url": "https://trulyscaled.com",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",                
+	        "coordinates": [14.4538687, 50.0696205]
+            }
         }
     ]
 }
