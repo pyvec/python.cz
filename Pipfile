@@ -27,7 +27,7 @@ cssselect = "==1.1.0"
 pylama = "==7.7.1"
 pytest = "==5.3.5"
 pytest-cov = "==2.8.1"
-responses = "==0.10.9"
+responses = "==0.10.11"
 coveralls = "==1.10.0"
 
 [requires]
