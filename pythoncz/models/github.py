@@ -4,7 +4,7 @@ import warnings
 from datetime import datetime
 
 import requests
-from werkzeug.contrib.cache import FileSystemCache
+from cachelib import FileSystemCache
 
 from pythoncz import app
 

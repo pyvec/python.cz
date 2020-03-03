@@ -4,7 +4,7 @@ import warnings
 import pytest
 import requests
 import responses
-from werkzeug.contrib.cache import NullCache
+from cachelib import NullCache
 
 from pythoncz import app
 from pythoncz.models import github as github_module
