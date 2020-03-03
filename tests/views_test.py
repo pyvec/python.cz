@@ -3,7 +3,7 @@ from urllib.parse import quote_plus as url_quote_plus
 import ics
 import pytest
 from flask import url_for
-from werkzeug.contrib.cache import NullCache
+from cachelib import NullCache
 
 from pythoncz import app
 from pythoncz.models import github as github_module
