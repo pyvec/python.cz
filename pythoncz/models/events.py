@@ -14,7 +14,7 @@ feeds_datafile = Path(app.root_path) / "static/data/events_feeds.yml"
 data = []
 
 
-def preprocess_ical(text: str) -> List[str]:
+def preprocess_ical(text: str) -> str:
     """Removes VALARM ACTION:NONE from the iCal file (included in some events from Google Calendar)
     """
     lines = text.splitlines()
@@ -36,7 +36,7 @@ def preprocess_ical(text: str) -> List[str]:
     except IndexError:
         raise ValueError("Can't preprocess iCal file to remove ACTION:NONE")
 
-    return new_lines
+    return '\r\n'.join(new_lines)
 
 
 def load_events(ical_url):
@@ -47,9 +47,9 @@ def load_events(ical_url):
     except Exception as e:
         raise ValueError(f"Could not load iCal feed from {ical_url}") from e
 
-    ical = preprocess_ical(response.text)
+    text = preprocess_ical(response.text)
 
-    calendar = ics.Calendar(ical)
+    calendar = ics.Calendar(text)
 
     return calendar.events
 
@@ -85,8 +85,8 @@ def load_data():
 
 
 def get_calendar():
-    events = [e["event"] for e in data]
-
-    calendar = ics.Calendar(events=events)
+    calendar = ics.Calendar()
+    for e in data:
+        calendar.events.add(e["event"])
 
     return calendar
