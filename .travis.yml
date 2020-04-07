@@ -1,3 +1,4 @@
+os: "linux"
 dist: "xenial"
 language: "python"
 python:
@@ -14,7 +15,7 @@ after_success:
     - "pipenv run coveralls"
 deploy:
     provider: "script"
-    skip_cleanup: true
+    cleanup: false
     script: "pipenv run deploy"
     on:
         branch: "master"
