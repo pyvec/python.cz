@@ -20,7 +20,7 @@ pyyaml = "==5.3.1"
 python-slugify = "==4.0.0"
 ics = "==0.4"
 arrow = "==0.4.2"
-lxml = "==4.5.0"
+lxml = "==4.5.1"
 cssselect = "==1.1.0"
 cachelib = "*"
 
