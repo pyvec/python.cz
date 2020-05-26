@@ -4,6 +4,17 @@
         {
             "type": "Feature",
             "properties": {
+                "name": "Neuron soundware",
+                "url": "https://www.neuronsw.com",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4301578, 50.0599442]
+            }
+        },        {
+            "type": "Feature",
+            "properties": {
                 "name": "H2O.ai",
                 "url": "https://www.h2o.ai",
                 "company": true
