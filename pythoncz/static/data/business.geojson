@@ -12,7 +12,8 @@
                 "type": "Point",
                 "coordinates": [14.4301578, 50.0599442]
             }
-        },        {
+        },
+        {
             "type": "Feature",
             "properties": {
                 "name": "H2O.ai",
