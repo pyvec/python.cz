@@ -1,13 +1,13 @@
 query($org_name:String!) {
   organization(login:$org_name) {
-    repositories(first:50) {
+    repositories(first:40) {
       totalCount
       nodes {
         name
         nameWithOwner
         isPrivate
         url
-        issues(first:50, states:OPEN) {
+        issues(first:20, states:OPEN) {
           totalCount
           nodes {
             title
@@ -39,7 +39,7 @@ query($org_name:String!) {
             }
           }
         }
-        pullRequests(first:50, states:OPEN) {
+        pullRequests(first:20, states:OPEN) {
           totalCount
           nodes {
             title
