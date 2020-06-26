@@ -22,7 +22,7 @@ query($org_name:String!) {
                 name
               }
             }
-            reactions() {
+            reactions {
               totalCount
             }
             thumbs_down:reactions(content:THUMBS_DOWN) {
@@ -54,7 +54,7 @@ query($org_name:String!) {
                 name
               }
             }
-            reactions() {
+            reactions {
               totalCount
             }
             thumbs_down:reactions(content:THUMBS_DOWN) {
