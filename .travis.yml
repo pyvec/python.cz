@@ -15,7 +15,7 @@ after_success:
     - "pipenv run coveralls"
 deploy:
     provider: "script"
-    cleanup: false
+    skip_cleanup: true
     script: "pipenv run deploy"
     on:
         branch: "master"
