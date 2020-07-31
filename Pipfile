@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [scripts]
-test = "python -m pytest ./tests --cov=pythoncz --pylama --tb=native"
+test = "python -m pytest ./tests --cov=pythoncz --flake8 --tb=native"
 serve = "python runserver.py serve"
 build = "python runserver.py freeze"
 deploy = "python runserver.py deploy --no-freeze --push"
@@ -28,6 +28,7 @@ pylama = "*"
 pytest = "*"
 pytest-cov = "*"
 responses = "*"
+pytest-flake8 = "*"
 
 [requires]
 python_version = "3.7"
