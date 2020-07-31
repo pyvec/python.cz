@@ -24,7 +24,6 @@ cssselect = "==1.1.0"
 cachelib = "*"
 
 [dev-packages]
-pylama = "*"
 pytest = "*"
 pytest-cov = "*"
 responses = "*"
