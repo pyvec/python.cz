@@ -15,14 +15,18 @@ jobs:
         pipenv install --dev
     - name: Test
       run: pipenv run test
-    - name: Build without fetching GitHub Issues
+    - if: ${{ github.event_name == 'pull_request' }}
+      name: Build without fetching GitHub Issues
       run: |
         export DISABLE_GITHUB_ISSUES_FETCH=true
         pipenv run build
-      if: ${{ github.event_name == 'pull_request' }}
-    - name: Build with fetching GitHub Issues
+    - if: ${{ github.event_name != 'pull_request' }}
+      name: Build with fetching GitHub Issues
       run: pipenv run build
-      if: ${{ github.event_name != 'pull_request' }}
-    - name: Deploy
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+    - if: ${{ github.ref == 'refs/heads/master' }}
+      name: Deploy
       run: pipenv run deploy
-      if: ${{ github.ref == 'refs/heads/master' }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
