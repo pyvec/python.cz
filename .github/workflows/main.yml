@@ -1,5 +1,9 @@
 name: Main
-on: [ push, pull_request ]
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 4 * * *"
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,9 +28,9 @@ jobs:
       name: Build with fetching GitHub Issues
       run: pipenv run build
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - if: ${{ github.ref == 'refs/heads/master' }}
       name: Deploy
       run: pipenv run deploy
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
