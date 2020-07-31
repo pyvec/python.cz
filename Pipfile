@@ -24,10 +24,10 @@ cssselect = "==1.1.0"
 cachelib = "*"
 
 [dev-packages]
-pylama = "==7.7.1"
-pytest = "==5.4.3"
-pytest-cov = "==2.10.0"
-responses = "==0.10.15"
+pylama = "*"
+pytest = "*"
+pytest-cov = "*"
+responses = "*"
 
 [requires]
 python_version = "3.7"
