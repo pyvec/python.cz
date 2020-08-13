@@ -38,6 +38,8 @@ courses:
                 url: https://makeittoday.cz/courses_cz.html
             -   text: Kurzy v Praze pro děti 8-12 let
                 url: https://www.digikids.cz
+            -   text: Kurzy v Praze a online od 11-19 let
+                url: https://vzdelanibudoucnosti.cz
 
     -   name: Ostatní
         icon: code
