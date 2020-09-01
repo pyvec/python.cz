@@ -10,7 +10,7 @@ build = "python runserver.py freeze"
 deploy = "python runserver.py deploy --no-freeze --push"
 
 [packages]
-elsa = "==0.1.5"
+elsa = "==0.1.6"
 flask = "==1.1.2"
 frozen-flask = "==0.15"
 requests = "==2.24.0"
