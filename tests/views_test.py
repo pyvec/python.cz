@@ -145,11 +145,11 @@ def test_get_involved_cs_renders_repo_name(github, test_client,
     html = extract_issues_html(response.get_data(as_text=True))
 
     if is_rendered:
-        assert 'fa-code-fork' in html, "Repo icon isn't present in the HTML"
+        assert 'fa-code-branch' in html, "Repo icon isn't present in the HTML"
         url = 'http://github.com/{}/'.format(repo_name)
         assert url in html, "Repo URL isn't present in the HTML"
     else:
-        assert 'fa-code-fork' not in html, "Repo icon is present in the HTML"
+        assert 'fa-code-branch' not in html, "Repo icon is present in the HTML"
     if label_cls:
         assert label_cls in html, "Label isn't present in the HTML"
 
