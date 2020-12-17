@@ -434,11 +434,11 @@
         },
         "pytest-flake8": {
             "hashes": [
-                "sha256:1b82bb58c88eb1db40524018d3fcfd0424575029703b4e2d8e3ee873f2b17027",
-                "sha256:2e91578ecd9b200066f99c1e1de0f510fbb85bcf43712d46ea29fe47607cc234"
+                "sha256:c28cf23e7d359753c896745fd4ba859495d02e16c84bac36caa8b1eec58f5bc1",
+                "sha256:f0259761a903563f33d6f099914afef339c085085e643bee8343eb323b32dd6b"
             ],
             "index": "pypi",
-            "version": "==1.0.6"
+            "version": "==1.0.7"
         },
         "requests": {
             "hashes": [
