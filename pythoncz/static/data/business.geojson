@@ -578,12 +578,13 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "Vítek Pliska",
-                "url": "http://creatiweb.cz/"
+                "name": "Creatiweb s.r.o.",
+                "url": "https://creatiweb.cz/",
+		"company": true
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [14.5155167, 50.0333536]
+                "coordinates": [14.4477, 50.0772]
             }
         },
         {
