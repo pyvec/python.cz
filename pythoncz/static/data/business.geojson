@@ -1049,6 +1049,18 @@
                 "type": "Point",                
 	        "coordinates": [13.3701336, 49.7315498]
             }
+        },
+	{
+            "type": "Feature",
+            "properties": {
+                "name": "Medallia",
+                "url": "https://www.medallia.com",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",                
+	        "coordinates": [14.4216931, 50.0833064]
+            }
         }
     ]
 }
