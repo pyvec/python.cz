@@ -293,7 +293,7 @@
             "type": "Feature",
             "properties": {
                 "name": "Seznam.cz",
-                "url": "http://www.seznam.cz/",
+                "url": "https://kariera.seznam.cz/",
                 "company": true
             },
             "geometry": {
