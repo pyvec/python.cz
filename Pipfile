@@ -12,7 +12,7 @@ deploy = "python runserver.py deploy --no-freeze --push"
 [packages]
 elsa = "==0.1.6"
 flask = "==2.0.1"
-frozen-flask = "==0.15"
+frozen-flask = "==0.18"
 requests = "==2.25.1"
 czech-sort = "==1.0.0"
 pyyaml = "==5.4.1"
