@@ -1,0 +1,54 @@
+courses:
+    -   name: Pro dámy
+        icon: female
+        links:
+            -   text: Pravidelné srazy PyLadies
+                url: http://pyladies.cz
+            -   text: Jednorázové workshopy Django Girls
+                url: http://djangogirls.org
+            -   text: Workshopy Czechitas (v Pythonu jen některé)
+                url: http://www.czechitas.cz
+            -   text: Workshopy Geek Girls Carrots v Ostravě (v Pythonu jen některé)
+                url: http://geekgirlscarrots.org
+
+    -   name: Pro studenty
+        icon: graduation-cap
+        links:
+            -   text: Kurz ČVUT FEL A4B99RPH
+                url: https://cw.fel.cvut.cz/wiki/courses/a4b99rph/prednasky/start
+            -   text: Kurzy MU Brno
+                url: http://is.muni.cz/vyhledavani/?search=jazyk+python+agenda%3Apr
+            -   text: Kurz ZČU v Plzni KKY/ITE
+                url: https://portal.zcu.cz/StagPortletsJSR168/CleanUrl?urlid=prohlizeni-predmet-sylabus&predmetZkrPrac=KKY&predmetZkrPred=ITE
+            -   text: Kurz ZČU v Plzni KKY/APK
+                url: https://portal.zcu.cz/StagPortletsJSR168/CleanUrl?urlid=prohlizeni-predmet-sylabus&predmetZkrPrac=KKY&predmetZkrPred=APK
+            -   text: Kurz FIT ČVUT v Praze (BI-PYT)
+                url: http://bk.fit.cvut.cz/cz/predmety/00/00/00/00/00/00/01/29/14/p1291406.html
+
+    -   name: Pro mládež
+        icon: child
+        links:
+            -   text: Kroužek na Praze 10
+                url: 'http://kapsa.cz/cs/krouzky-pro-deti#python'
+            -   text: Kroužek v Lázně Toušeň
+                url: 'https://www.programovanihrou.cz/'
+            -   text: Czechitas - kroužky a tábory pro různé věkové kategorie
+                url: http://www.czechitas.cz
+            -   text: Kroužky, workshopy a tábory makeITtoday
+                url: https://makeittoday.cz/courses_cz.html
+            -   text: Kurzy v Praze pro děti 8-12 let
+                url: https://www.digikids.cz
+            -   text: Kurzy v Praze a online od 11-19 let
+                url: https://vzdelanibudoucnosti.cz
+
+    -   name: Ostatní
+        icon: code
+        links:
+            -   text: Nepravidelné intenzivní Python kurzy kiwi.com
+                url: 'https://pythonweekend.cz/'
+            -   text: Celodenní workshopy a setkání pro Python začátečníky
+                url: 'https://pyworking.cz/'
+            -   text: Sedlákovi - různé kurzy související s Pythonem
+                url: 'https://www.sedlakovi.org/kurzy/'
+            -   text: Engeto - Python akademie v Praze a Brně
+                url: 'https://engeto.cz/python-akademie/'

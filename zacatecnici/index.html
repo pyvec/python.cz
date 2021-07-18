@@ -1,0 +1,487 @@
+
+<!doctype html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+
+    <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico">
+    <meta property="og:image" content="https://python.cz/static/images/logo-fb.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://python.cz/zacatecnici/">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arbutus+Slab&amp;subset=latin,latin-ext">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/main.css">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    
+    <title>Python v ČR: Pro začátečníky</title>
+    <meta property="og:title" content="Python v ČR: Pro začátečníky">
+
+    <meta name="description" content="Jak se naučit Python? Python tutoriály, návody, Django, jak začít, apod.">
+    <meta property="og:description" content="Jak se naučit Python? Python tutoriály, návody, Django, jak začít, apod.">
+
+</head>
+    <body class="beginners">
+        <!--
+          This 'notice' is a temporary thing to advertise something to visitors of the site.
+          Once the advertising period is over, it should be commented out. (Probably not worth
+          deleting as we may need to advertise something in the future again.)
+
+        
+        <div class="notice">
+            🐍🎪 O víkendu 24.-26.8. proběhne sprint české Python komunity. Je to setkání, kde společně řešíme věci kolem našich aktivit (ať už diskuzí nebo společným kódováním). <a href="http://bit.ly/pysprint">Info v přihlášce</a> (do středy). 🍻🍲☕🎸 Přijeď.
+        </div>
+        
+        -->
+
+        <div class="container">
+            
+                <script>
+                    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                    ga('create', 'UA-1316071-13', 'auto');
+                    ga('send', 'pageview');
+                </script>
+            
+
+            <div class="header clearfix">
+                <nav>
+                    <ul class="nav nav-pills pull-right">
+                        <li>
+                        
+                            <a href="/en/">
+                                <i class="fa fa-globe"></i>
+                                English, please!
+                            </a>
+                        
+                        </li>
+                    </ul>
+                </nav>
+                <p class="title">
+                    <a href="/">
+                        <img src="/static/images/logo-plain.png" height="30">
+                        
+                            Python v&nbsp;ČR
+                        
+                    </a>
+                </p>
+            </div>
+
+            
+            <ol class="breadcrumb">
+                <li>
+                    <a href="/">
+                    Domů
+                    </a>
+                </li>
+                <li class="active">
+                    
+    Pro začátečníky
+
+                </li>
+            </ol>
+            
+
+            <div class="content">
+                
+    <h1>Učíme se Python</h1>
+    <ul class="lead">
+        <li>
+            Česká <strong>komunita je přátelská a živá</strong>. Vždy bude po ruce <strong>někdo, kdo ti pomůže</strong>.
+        </li>
+        <li>
+            <strong>Nebudeš mít problém <a href="/prace/">sehnat práci</a>.</strong> Pythonistů je nedostatek!
+        </li>
+        <li>
+            I kdyby weby vyšly z módy, Python nachází <strong>uplatnění v desítkách dalších oborů</strong>.
+        </li>
+    </ul>
+
+    <div class="row cartoon-container cartoon-hr">
+        <img class="cartoon" src="/static/images/learning-python.svg">
+    </div>
+
+    <h2 id="onlineneumim">Online materiály &ndash; neumím vůbec programovat</h2>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <p>
+                Následující materiály vznikly v rámci aktivit, které se snaží přiblížit <strong>IT ženám a ženy k IT</strong>. Jsou skvěle zpracované a může se z nich naučit programovat od úplných základů kdokoliv.
+            </p>
+
+            <div class="row online-courses">
+                <div class="col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-body">
+                            <img class="cartoon" src="/static/images/learning-python-general.svg">
+                            Chci umět obecně programovat
+                        </div>
+                        <div class="panel-footer">
+                            <a href="http://naucse.python.cz/course/pyladies/" class="btn btn-primary">Materiály od PyLadies</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-body">
+                            <img class="cartoon" src="/static/images/learning-python-web.svg">
+                            Chci vytvořit webovou stránku
+                        </div>
+                        <div class="panel-footer">
+                            <a href="http://tutorial.djangogirls.org/" class="btn btn-primary">Návod od Django Girls</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2 id="onlineumim">Online materiály &ndash; programovat trochu umím</h2>
+    <div class="columns">
+        <h3>
+            <i class="fa fa-map-signs"></i>
+            Přecházím z jiného jazyka
+        </h3>
+        <ul>
+            <!--
+                Vkládejte prosím pokud možno pouze návody a materiály pro Python 3
+            -->
+
+            <!-- České návody -->
+            <li><a href="http://learnxinyminutes.com/docs/cs-cz/python3/">Naučte se Python za X minut</a></li>
+            <li><a href="http://www.zdrojak.cz/clanky/jak-napisu-webovou-aplikaci-v-pythonu/">Jak přejít z PHP</a> (<a href="http://www.zdrojak.cz/clanky/jak-napisu-webovou-aplikaci-v-pythonu-2/">2. díl</a>)</li>
+
+            <!-- Anglické návody -->
+            <li><a href="https://speakerdeck.com/u/pydanny/p/intro-to-python">Úvod do Pythonu pro programátory</a> <i class="fa icon-english help" title="Anglicky"></i></li>
+            <li><a href="http://hyperpolyglot.org/scripting">Tahák na podobné konstrukce v PHP, Perlu, Pythonu a Ruby</a> <i class="fa icon-english help" title="Anglicky"></i></li>
+            <li><a href="http://blog.jmoz.co.uk/learning-python-the-pragmatic-way/">Pragmatické tipy na to jak začít a co použít</a> <i class="fa icon-english help" title="Anglicky"></i></li>
+            <li><a href="http://docs.python-guide.org/">Průvodce Python ekosystémem</a> <i class="fa icon-english help" title="Anglicky"></i></li>
+            <li><a href="https://docs.python.org/3/tutorial/">Oficiální návod k Pythonu</a> <i class="fa icon-english help" title="Anglicky"></i></li>
+            <li><a href="http://stephensugden.com/crash_into_python/">Rychlokurz Pythonu pro programátory</a> <i class="fa icon-english help" title="Anglicky"></i></li>
+        </ul>
+
+        <h3>
+            <i class="fa fa-university"></i>
+            Návody pro začátečníky
+        </h3>
+        <ul>
+            <!--
+                Vkládejte prosím pokud možno pouze návody a materiály pro Python 3
+            -->
+
+            <!-- České návody -->
+            <li><a href="http://diveintopython3.py.cz/index.html">Kniha Ponořme se do Pythonu 3</a> (<a href="http://knihy.nic.cz/files/nic/edice/mark_pilgrim_dip3_ver3.pdf">PDF</a>)</li>
+            <li><a href="http://howto.py.cz/">Učíme se&nbsp;programovat v&nbsp;jazyce Python&nbsp;3</a></li>
+            <li><a href="https://github.com/tomasbedrich/skoleni-python">Základy Pythonu 3, interaktivní materiály</a></li>
+
+            <!-- Anglické návody -->
+            <li><a href="http://net.tutsplus.com/tutorials/the-best-way-to-learn-python/">Seznam nejlepších materiálů</a> <i class="fa icon-english help" title="Anglicky"></i></li>
+            <li><a href="https://www.cbtnuggets.com/it-training/python-programming">Sada krátkých videí jako úvod do Pythonu</a> <i class="fa icon-english help" title="Anglicky"></i></li>
+            <li><a href="http://www.neckbeardrepublic.com/screencasts/">Sada screencastů k vylepšení dovedností s Pythonem</a> <i class="fa icon-english help" title="Anglicky"></i></li>
+            <li><a href="https://godjango.com/">Screencasty pro webový framework Django</a> <i class="fa icon-english help" title="Anglicky"></i></li>
+            <li><a href="https://docs.djangoproject.com/">Dokumentace k webovému frameworku Django</a> <i class="fa icon-english help" title="Anglicky"></i></li>
+            <li><a href="http://interactivepython.org/runestone/static/pythonds/index.html">Základní algoritmy - v Pythonu a interaktivně</a></li>
+            <li><a href="https://inventwithpython.com/blog/2012/07/09/16-common-python-runtime-errors-beginners-find/">Vysvětlení nejčastějších chyb začátečníků</a> <i class="fa icon-english help" title="Anglicky"></i></li>
+            <li><a href="https://mva.microsoft.com/search/SearchResults.aspx?q=python&amp;index=2&amp;lang=1029$1033">Různé úvodní lekce od Microsoft Virtual Academy</a> <i class="fa icon-english help" title="Anglicky"></i></li>
+            <li><a href="https://web.archive.org/web/20170912115918/http://jessenoller.com/good-to-great-python-reads/">Odkazy na vysvětlení zajímavých či pokročilých detailů jazyka</a> <i class="fa icon-english help" title="Anglicky"></i></li>
+
+            <!-- Návody, které mají hodnotu i přesto, že jsou pro Python 2 -->
+            <li><a href="http://newcoder.io/">Syntaxi už umím, co dál?</a> <i class="fa icon-english help" title="Anglicky"></i></li>
+            <li><a href="http://learnpythonthehardway.org/">Learn Python The Hard Way</a> <i class="fa icon-english help" title="Anglicky"></i></li>
+        </ul>
+
+        <h3>
+            <i class="fa fa-hand-pointer"></i>
+            Chci si to hned zkusit
+        </h3>
+        <ul>
+            <!--
+                Vkládejte prosím pokud možno pouze materiály pro Python 3
+            -->
+
+            <li><a href="https://www.umimeprogramovat.cz/programovani-v-pythonu">Python na Umíme programovat</a>
+            <li><a href="http://repl.it/">Python konzole v prohlížeči</a></li>
+            <li><a href="http://www.checkio.org">Programovací hra</a> <i class="fa icon-english help" title="Anglicky"></i></li>
+            <li><a href="https://www.codecademy.com/pro/intensive/programming-with-python">Python na Codecademy, interaktivní online kurz</a> <i class="fa icon-english help" title="Anglicky"></i></li>
+            <li><a href="https://www.codeschool.com/learn/python">Python na Code School, interaktivní online kurz</a> <i class="fa icon-english help" title="Anglicky"></i></li>
+            <li><a href="https://www.coursera.org/course/pythonlearn">Programming for Everybody, interaktivní online kurz</a> <i class="fa icon-english help" title="Anglicky"></i></li>
+            <li><a href="http://www.pythontutor.com/">Interaktivní vysvětlení toho, co se děje v kódu</a> <i class="fa icon-english help" title="Anglicky"></i></li>
+            <li><a href="https://www.codewars.com/?language=python">Codewars</a> <i class="fa icon-english help" title="Anglicky"></i></li>
+        </ul>
+
+        <h3>
+            <i class="fa fa-book"></i>
+            Knihy
+        </h3>
+        <p>
+            Díky <a href="https://books.pyvo.cz/">naší knihovničce</a> si můžeš zadarmo půjčit knihy o Pythonu. Na stránkách <a href="http://pythonbooks.revolunet.com/">Python Books</a> navíc najdeš seznam knih, které si můžeš zdarma číst online nebo si je rovnou stáhnout. Určitě to omrkni!
+        </p>
+
+        <h3>
+            <i class="fa fa-video"></i>
+            Přednášky
+        </h3>
+        <p>
+            Nahráváme přednášky ze <a href="/#akce">srazů</a> a <a href="https://www.youtube.com/user/pyvec/playlists">dáváme je na YouTube</a>. Na stránkách <a href="http://pyvideo.org/">pyvideo.org</a> najdeš přednášky z celého světa.
+        </p>
+
+        <h3>
+            <i class="fa fa-gavel"></i>
+            Konvence pro psaní kódu
+        </h3>
+        <ul>
+            <li><a href="https://pep8.org/">Style Guide for Python Code</a></li>
+            <li><a href="http://www.python.org/dev/peps/pep-0257/">Python Docstring Conventions</a></li>
+            <li><a href="https://google.github.io/styleguide/pyguide.html">Google Python Style Guide</a></li>
+        </ul>
+
+        <h3>
+            <i class="fa fa-server"></i>
+            Kam nahrát web napsaný v Pythonu?
+        </h3>
+        <ul>
+            <!--
+                Hostingy, na kterých je radost něco v Pythonu hostovat. Ne takové, kde se dají omylem spustit i Python skripty, nebo kde si člověk koupí VPS a může si tam nainstalovat co chce.
+            -->
+            <li><a href="https://rosti.cz/python-hosting/">Roští.cz</a></li>
+            <li><a href="https://www.heroku.com/">Heroku</a></li>
+            <li><a href="https://developers.google.com/appengine/">Google App Engine</a></li>
+            <li><a href="https://www.pythonanywhere.com/">PythonAnywhere</a></li>
+            <li><a href="https://www.alwaysdata.com/">AlwaysData</a></li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h2 id="kurzy">Kurzy</h2>
+    <div class="row courses">
+        
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-female"></i>
+                        Pro dámy
+                    </div>
+                    <ul class="list-group">
+                        
+                        <li class="list-group-item">
+                            <a href="http://pyladies.cz">
+                                Pravidelné srazy PyLadies
+                            </a>
+                        </li>
+                        
+                        <li class="list-group-item">
+                            <a href="http://djangogirls.org">
+                                Jednorázové workshopy Django Girls
+                            </a>
+                        </li>
+                        
+                        <li class="list-group-item">
+                            <a href="http://www.czechitas.cz">
+                                Workshopy Czechitas (v Pythonu jen některé)
+                            </a>
+                        </li>
+                        
+                        <li class="list-group-item">
+                            <a href="http://geekgirlscarrots.org">
+                                Workshopy Geek Girls Carrots v Ostravě (v Pythonu jen některé)
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-graduation-cap"></i>
+                        Pro studenty
+                    </div>
+                    <ul class="list-group">
+                        
+                        <li class="list-group-item">
+                            <a href="https://cw.fel.cvut.cz/wiki/courses/a4b99rph/prednasky/start">
+                                Kurz ČVUT FEL A4B99RPH
+                            </a>
+                        </li>
+                        
+                        <li class="list-group-item">
+                            <a href="http://is.muni.cz/vyhledavani/?search=jazyk+python+agenda%3Apr">
+                                Kurzy MU Brno
+                            </a>
+                        </li>
+                        
+                        <li class="list-group-item">
+                            <a href="https://portal.zcu.cz/StagPortletsJSR168/CleanUrl?urlid=prohlizeni-predmet-sylabus&amp;predmetZkrPrac=KKY&amp;predmetZkrPred=ITE">
+                                Kurz ZČU v Plzni KKY/ITE
+                            </a>
+                        </li>
+                        
+                        <li class="list-group-item">
+                            <a href="https://portal.zcu.cz/StagPortletsJSR168/CleanUrl?urlid=prohlizeni-predmet-sylabus&amp;predmetZkrPrac=KKY&amp;predmetZkrPred=APK">
+                                Kurz ZČU v Plzni KKY/APK
+                            </a>
+                        </li>
+                        
+                        <li class="list-group-item">
+                            <a href="http://bk.fit.cvut.cz/cz/predmety/00/00/00/00/00/00/01/29/14/p1291406.html">
+                                Kurz FIT ČVUT v Praze (BI-PYT)
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-child"></i>
+                        Pro mládež
+                    </div>
+                    <ul class="list-group">
+                        
+                        <li class="list-group-item">
+                            <a href="http://kapsa.cz/cs/krouzky-pro-deti#python">
+                                Kroužek na Praze 10
+                            </a>
+                        </li>
+                        
+                        <li class="list-group-item">
+                            <a href="https://www.programovanihrou.cz/">
+                                Kroužek v Lázně Toušeň
+                            </a>
+                        </li>
+                        
+                        <li class="list-group-item">
+                            <a href="http://www.czechitas.cz">
+                                Czechitas - kroužky a tábory pro různé věkové kategorie
+                            </a>
+                        </li>
+                        
+                        <li class="list-group-item">
+                            <a href="https://makeittoday.cz/courses_cz.html">
+                                Kroužky, workshopy a tábory makeITtoday
+                            </a>
+                        </li>
+                        
+                        <li class="list-group-item">
+                            <a href="https://www.digikids.cz">
+                                Kurzy v Praze pro děti 8-12 let
+                            </a>
+                        </li>
+                        
+                        <li class="list-group-item">
+                            <a href="https://vzdelanibudoucnosti.cz">
+                                Kurzy v Praze a online od 11-19 let
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-code"></i>
+                        Ostatní
+                    </div>
+                    <ul class="list-group">
+                        
+                        <li class="list-group-item">
+                            <a href="https://pythonweekend.cz/">
+                                Nepravidelné intenzivní Python kurzy kiwi.com
+                            </a>
+                        </li>
+                        
+                        <li class="list-group-item">
+                            <a href="https://pyworking.cz/">
+                                Celodenní workshopy a setkání pro Python začátečníky
+                            </a>
+                        </li>
+                        
+                        <li class="list-group-item">
+                            <a href="https://www.sedlakovi.org/kurzy/">
+                                Sedlákovi - různé kurzy související s Pythonem
+                            </a>
+                        </li>
+                        
+                        <li class="list-group-item">
+                            <a href="https://engeto.cz/python-akademie/">
+                                Engeto - Python akademie v Praze a Brně
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+    </div>
+    <div class="row">
+        <p class="call-to-action">
+            <a href="https://github.com/pyvec/python.cz/edit/master/pythoncz/static/data/beginners.yml" class="btn btn-default">
+                <i class="fa fa-edit"></i>
+                Přidat kurz
+            </a>
+        </p>
+    </div>
+
+    <h2 id="koucovani">Koučování</h2>
+
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <p>Aneb osobní konzultace, mentoring, doučování&hellip;</p>
+            <ul>
+                <li>
+                    Učíme Python:
+                    <a href="https://www.facebook.com/groups/800923800012580/">Facebook skupina</a>,
+                    <a href="https://groups.google.com/forum/#!forum/ucime-python">Google Groups</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+            </div>
+
+            <div class="row footer">
+            
+                <p class="col-sm-8">
+                    Stránky spravuje nezisková organizace <a href="http://pyvec.org">Pyvec</a>. Pište na <a
+                    href="mailto:info&#64;pyvec.org">info&#64;<!---->pyvec.org</a>, tweetujte na <a href="https://twitter.com/pyvec">@pyvec</a>.
+                    <br>
+                    Ilustrace kreslí <a href="http://honzajavorek.cz">Honza Javorek</a>.
+                    Doménu python.cz zapůjčil <a href="http://xnet.cz/">KRAXNET</a>.
+                    Děkujeme!
+                </p>
+                <p class="edit col-sm-4">
+                    <a href="https://github.com/pyvec/python.cz/edit/master/pythoncz/templates/beginners_cs.html" class="btn btn-default">
+                        <i class="fa fa-edit"></i>
+                        Upravit tuto stránku
+                    </a>
+                </p>
+            
+            </div>
+
+            <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+            <script src="/static/permalinks.js"></script>
+            
+        </div>
+    </body>
+</html>

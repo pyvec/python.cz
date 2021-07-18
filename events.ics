@@ -1,0 +1,170 @@
+BEGIN:VCALENDAR
+PRODID:ics.py - http://git.io/lLljaA
+VERSION:2.0
+BEGIN:VEVENT
+DTSTAMP:20210718T042118Z
+DTSTART:20211027T170000Z
+SUMMARY:(Olomoucké Pyvo – nepotvrzeno\; tradiční termín srazu)
+TRANSP:OPAQUE
+UID:olomouc-pyvo-2021-10-27@pyvo.cz
+CATEGORIES:tentative-date
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20210718T042118Z
+DTSTART:20210721T170000Z
+SUMMARY:(Pražské Pyvo – nepotvrzeno\; tradiční termín srazu)
+TRANSP:OPAQUE
+UID:praha-pyvo-2021-07-21@pyvo.cz
+CATEGORIES:tentative-date
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20210718T042118Z
+DTSTART:20211125T180000Z
+SUMMARY:(Brněnské Pyvo – nepotvrzeno\; tradiční termín srazu)
+TRANSP:OPAQUE
+UID:brno-pyvo-2021-11-25@pyvo.cz
+CATEGORIES:tentative-date
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20210718T042118Z
+DTSTART:20211215T180000Z
+SUMMARY:(Pražské Pyvo – nepotvrzeno\; tradiční termín srazu)
+TRANSP:OPAQUE
+UID:praha-pyvo-2021-12-15@pyvo.cz
+CATEGORIES:tentative-date
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20210718T042118Z
+DTSTART:20211229T180000Z
+SUMMARY:(Olomoucké Pyvo – nepotvrzeno\; tradiční termín srazu)
+TRANSP:OPAQUE
+UID:olomouc-pyvo-2021-12-29@pyvo.cz
+CATEGORIES:tentative-date
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20210718T042118Z
+DTSTART:20210915T170000Z
+SUMMARY:(Pražské Pyvo – nepotvrzeno\; tradiční termín srazu)
+TRANSP:OPAQUE
+UID:praha-pyvo-2021-09-15@pyvo.cz
+CATEGORIES:tentative-date
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20210718T042118Z
+DTSTART:20211117T180000Z
+SUMMARY:(Pražské Pyvo – nepotvrzeno\; tradiční termín srazu)
+TRANSP:OPAQUE
+UID:praha-pyvo-2021-11-17@pyvo.cz
+CATEGORIES:tentative-date
+END:VEVENT
+BEGIN:VEVENT
+GEO:49.605697;17.243809
+DTSTAMP:20210718T042118Z
+DTSTART:20210728T153000Z
+SUMMARY:Olomoucké Pyvo – SDR aneb Software-defined radio versus Python
+DESCRIPTION:Letní tématická odbočka "Softwarově definované rádio" a jak si\ns tím Python ví/neví rady. Je prostor pro lightning\ntalky a samozřejmě volná témata a povídání nejen o Python.\n\nLightning talky a jejich registraci najdete na\n[tinyurl.com/olopyvo-lightning-talky](https://tinyurl.com/olopyvo-lightning-talky).\nDěkujeme!\n\nTěšíme se na všechny!\n
+LOCATION:U Travise\, Mrštíkovo nám. 107/26\, 779 00 Olomouc\, Olomouc
+URL:https://pyvo.cz/olomouc-pyvo/2021-07/
+TRANSP:OPAQUE
+UID:olomouc-pyvo-2021-07-28@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20210718T042118Z
+DTSTART:20210929T170000Z
+SUMMARY:(Olomoucké Pyvo – nepotvrzeno\; tradiční termín srazu)
+TRANSP:OPAQUE
+UID:olomouc-pyvo-2021-09-29@pyvo.cz
+CATEGORIES:tentative-date
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20210718T042118Z
+DTSTART:20210826T170000Z
+SUMMARY:(Brněnské Pyvo – nepotvrzeno\; tradiční termín srazu)
+TRANSP:OPAQUE
+UID:brno-pyvo-2021-08-26@pyvo.cz
+CATEGORIES:tentative-date
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20210718T042118Z
+DTSTART:20211028T170000Z
+SUMMARY:(Brněnské Pyvo – nepotvrzeno\; tradiční termín srazu)
+TRANSP:OPAQUE
+UID:brno-pyvo-2021-10-28@pyvo.cz
+CATEGORIES:tentative-date
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20210718T042118Z
+DTSTART:20211124T180000Z
+SUMMARY:(Olomoucké Pyvo – nepotvrzeno\; tradiční termín srazu)
+TRANSP:OPAQUE
+UID:olomouc-pyvo-2021-11-24@pyvo.cz
+CATEGORIES:tentative-date
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20210718T042118Z
+DTSTART:20211110T170000Z
+SUMMARY:(Plzeňské Pyvo – nepotvrzeno\; tradiční termín srazu)
+TRANSP:OPAQUE
+UID:plzen-pyvo-2021-11-10@pyvo.cz
+CATEGORIES:tentative-date
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20210718T042118Z
+DTSTART:20210908T160000Z
+SUMMARY:(Plzeňské Pyvo – nepotvrzeno\; tradiční termín srazu)
+TRANSP:OPAQUE
+UID:plzen-pyvo-2021-09-08@pyvo.cz
+CATEGORIES:tentative-date
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20210718T042118Z
+DTSTART:20211020T170000Z
+SUMMARY:(Pražské Pyvo – nepotvrzeno\; tradiční termín srazu)
+TRANSP:OPAQUE
+UID:praha-pyvo-2021-10-20@pyvo.cz
+CATEGORIES:tentative-date
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20210718T042118Z
+DTSTART:20210930T170000Z
+SUMMARY:(Brněnské Pyvo – nepotvrzeno\; tradiční termín srazu)
+TRANSP:OPAQUE
+UID:brno-pyvo-2021-09-30@pyvo.cz
+CATEGORIES:tentative-date
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20210718T042118Z
+DTSTART:20210818T170000Z
+SUMMARY:(Pražské Pyvo – nepotvrzeno\; tradiční termín srazu)
+TRANSP:OPAQUE
+UID:praha-pyvo-2021-08-18@pyvo.cz
+CATEGORIES:tentative-date
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20210718T042118Z
+DTSTART:20211230T180000Z
+SUMMARY:(Brněnské Pyvo – nepotvrzeno\; tradiční termín srazu)
+TRANSP:OPAQUE
+UID:brno-pyvo-2021-12-30@pyvo.cz
+CATEGORIES:tentative-date
+END:VEVENT
+BEGIN:VEVENT
+GEO:49.207963;16.606721
+DTSTAMP:20210718T042118Z
+DTSTART:20210729T160000Z
+SUMMARY:Brněnské Pyvo – Grilovací I
+DESCRIPTION:Léto je tady a můžeme se opět vidět naživo!\nPojďme se stejně jako loni v létě potkat neformálně u grilu v Lužánkách.\nGril máme zarezervovaný od 18:00 do 22:00.\nVlastní zásoby s sebou! 🙂\n\n---\n\nSummer is here and we can meet face to face again!\nLet's have an informal barbecue in Lužánky\, same as the last summer.\nWe have the public grill booked for us form 18:00 till 22:00.\nBring your own supplies! 🙂\n
+LOCATION:Lužánky\, Veřejný gril při zastávce Pionýrská\, Brno
+URL:https://pyvo.cz/brno-pyvo/2021-07/
+TRANSP:OPAQUE
+UID:brno-pyvo-2021-07-29@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20210718T042118Z
+DTSTART:20210825T170000Z
+SUMMARY:(Olomoucké Pyvo – nepotvrzeno\; tradiční termín srazu)
+TRANSP:OPAQUE
+UID:olomouc-pyvo-2021-08-25@pyvo.cz
+CATEGORIES:tentative-date
+END:VEVENT
+END:VCALENDAR

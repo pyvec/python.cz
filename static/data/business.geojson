@@ -1,0 +1,1066 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Neuron soundware",
+                "url": "https://www.neuronsw.com",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4301578, 50.0599442]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "H2O.ai",
+                "url": "https://www.h2o.ai",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.452568, 50.092226]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Akamai",
+                "url": "https://www.akamai.com",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4006753, 50.0703272]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "CreativeDock",
+                "url": "https://creativedock.com/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+               "coordinates": [14.403246, 50.076407]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "CYAN Research & Development s.r.o.",
+                "url": "https://www.cyanrd.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+               "coordinates": [16.594788, 49.224163]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Twisto",
+                "url": "https://www.twisto.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.448897, 50.093668]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Exponea",
+                "url": "https://exponea.com/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [17.125383000000056, 48.145637]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Red Hat",
+                "url": "http://www.redhat.cz",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [16.5816069, 49.2261222]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Vaultier",
+                "url": "http://www.vaultier.org",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4319322, 50.0713247]
+            }
+        },
+         {
+            "type": "Feature",
+            "properties": {
+                "name": "Nanooq IT",
+                "url": "http://www.nanooq.eu/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4412558, 50.1005167]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Inuits",
+                "url": "https://www.inuits.eu/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.402740, 50.066360]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Y Soft",
+                "url": "https://www.ysoft.com/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [16.5805856, 49.2222800]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Economia",
+                "url": "http://economia.ihned.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4538628, 50.0912414]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Business Factory",
+                "url": "http://business-factory.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [16.6127981, 49.2007753]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "ROI Hunter",
+                "url": "http://www.roihunter.com/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [16.6127981, 49.2007753]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "ARMATURY Group a.s.",
+                "url": "http://www.armaturygroup.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [18.117507, 49.922203]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "AOW",
+                "url": "http://aow.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [16.5758983, 49.2182178]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "WebSupport",
+                "url": "https://www.websupport.sk/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [17.0734000, 48.1551500]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "WebExpo",
+                "url": "http://webexpo.net/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.402740, 50.066360]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Videoflot",
+                "url": "http://www.videoflot.com/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [16.5989164, 49.2099833]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Grand IT",
+                "url": "http://grandit.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4812706, 50.0713181]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "User Technologies",
+                "url": "http://usertechnologies.com/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4077361, 50.0970125]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Tabfoundry",
+                "url": "https://www.tabfoundry.com/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4070231, 50.0516553]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Kiwi.com",
+                "url": "http://kiwi.com",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [16.6007883, 49.1840633]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Seznam.cz",
+                "url": "https://kariera.seznam.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "MultiPoint",
+                "coordinates": [[14.4009400, 50.0710808], [18.2722244, 49.8162225], [16.5990161, 49.1718178]]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Scuk.cz",
+                "url": "http://www.scuk.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4211, 50.0872]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Scarfbot",
+                "url": "https://scarfbot.com/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.3937183, 50.0746403]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "PC HELP",
+                "url": "http://www.pchelp.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [15.8952006, 49.2172933]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Národní knihovna České republiky",
+                "url": "http://www.nkp.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4155778, 50.0864564]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Česká národní banka",
+                "url": "https://www.cnb.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4285386, 50.0870197]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Český Rozhlas",
+                "url": "http://www.rozhlas.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4345006, 50.0785892]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Mergado",
+                "url": "https://www.mergado.cz/prace",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [16.5858589, 49.2103950]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "IT4Innovations",
+                "url": "http://www.it4i.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [18.1560956, 49.8376314]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "CodeScale",
+                "url": "http://www.codescale.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4009383, 50.0694664]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "COEX",
+                "url": "https://www.coex.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4534092, 50.1017800]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "WalkSource",
+                "url": "https://www.walksource.com/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.2538889, 50.4236111]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Common Tongue",
+                "url": "http://www.commontongue.com/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4643847, 50.0766186]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "CZ.NIC",
+                "url": "http://www.nic.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4513181, 50.0791300]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "DIFFSolutions",
+                "url": "http://www.yottly.com/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4584328, 50.0492022]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Dynameyes",
+                "url": "https://dynameyes.com/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.5476861, 50.0728192]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Energomonitor",
+                "url": "https://www.energomonitor.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [17.9881464, 49.4765639]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Fragaria",
+                "url": "http://www.fragaria.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4226003, 50.0754761]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "ICFLIX",
+                "url": "http://www.icflix.com",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.0736344, 49.9654289]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Imper",
+                "url": "https://imper.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4092097, 50.0615613]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Investiční aukce",
+                "url": "http://www.investaukce.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [16.5727125, 49.2332925]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "IT Academy",
+                "url": "http://www.it-academy.sk/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [17.1261600, 48.1686100]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Vladimír Macek",
+                "url": "http://macek.sandbox.cz/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [15.0957467, 50.7451942]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Tomáš Ehrlich",
+                "url": "http://www.tomasehrlich.cz/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [16.616667, 49.2]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Creatiweb s.r.o.",
+                "url": "https://creatiweb.cz/",
+		"company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4477, 50.0772]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "CzechGlobe",
+                "url": "http://www.czechglobe.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [16.5930000, 49.1870000]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Věroš Kaplan",
+                "url": "http://veroskaplan.cz"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [16.62073, 49.19031]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Nubium Development SE",
+                "url": "http://www.nubium.cz",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4292935, 50.0809328]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "tcp cloud a.s.",
+                "url": "http://tcpcloud.eu",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4527403, 50.0919999]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "OpenGeoLabs s.r.o.",
+                "url": "http://opengeolabs.cz",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.5160186, 50.0324947]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Direct-services s.r.o.",
+                "url": "http://www.direct-services.cz",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [18.010309, 49.594368]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Leadhub s.r.o.",
+                "url": "http://www.leadhub.co/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4036089, 50.0751008]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Roští.cz, s.r.o.",
+                "url": "http://rosti.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [15.814811, 50.206445]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Miloň Krejča",
+                "url": "http://www.milonline.eu"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [15.2232711, 49.4309486]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Stories",
+                "url": "http://www.stories.bi/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4070231, 50.0516553]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Vojtěch Bartoš",
+                "url": "http://vojtech.me"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [16.2134464, 50.1236622]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "SparkTECH s.r.o.",
+                "url": "http://www.sparktech.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.341330, 50.088202]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Jan Šváger",
+                "url": "https://www.svager.cz"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.631337, 50.918289]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Petr Blahoš",
+                "url": "http://petr.blahos.com/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.6380850, 49.6401267]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+            "name": "EPAM",
+            "url": "https://www.epam.com",
+            "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4343922, 50.0506023]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Proboston Creative",
+                "url": "https://www.proboston.net",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4368203, 50.0770531]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "OLC Systems s.r.o.",
+                "url": "https://www.olc.cz",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [17.282280, 49.576409]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "DANTEM s.r.o.",
+                "url": "http://www.dantem.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "MultiPoint",
+                "coordinates": [[14.3755908, 50.0806400], [18.2618453, 49.8317611]]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Jack.cz",
+                "url": "http://www.jack.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4334178, 50.0896022]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "MSD IT Global Innovation Center s.r.o.",
+                "url": "http://www.msdit.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4099194, 50.0670106]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "NTK - Národní technická knihovna",
+                "url": "https://www.techlib.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.3905997, 50.1039000]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "SlushPool",
+                "url": "https://slushpool.com/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.47374, 50.10514]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "STOCKED s.r.o.",
+                "url": "https://www.stocked.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4722669, 50.0781181]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Atollon CS",
+                "url": "http://www.atollon.cz/",
+                "company": true
+
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [14.424799, 50.088100]
+            }
+        },
+	{
+            "type": "Feature",
+            "properties": {
+                "name": "LMC s.r.o.",
+                "url": "https://www.lmc.eu/cs/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4568872, 50.1028653]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "OKIN BPS",
+                "url": "https://okinbps.com/us/home/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [18.2923319, 49.8392964]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "AutoCont CZ a. s.",
+                "url": "http://www.autocont.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [18.2715000, 49.8410000]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "REMAK a.s.",
+                "url": "http://www.remak.eu/cs/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [18.1154847, 49.4607186]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Heureka",
+                "url": "https://www.heurekadevs.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "MultiPoint",
+                "coordinates": [[15.058695, 50.766428], [14.443173, 50.094377], [13.3818922, 49.7372414]]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "SpaceKnow",
+                "url": "https://spaceknow.com/",
+                "company": true
+            },
+            "geometry": {
+                "type": "MultiPoint",
+                "coordinates": [[14.4525094, 50.0924147]]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "BoxtrapSecurity",
+                "url": "https://www.boxtrapsecurity.com/",
+                "company": true
+            },
+            "geometry": {
+                "type": "MultiPoint",
+                "coordinates": [[14.4220517, 50.0823494]]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Monitora media",
+                "url": "https://monitora.cz/",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4092097, 50.0615613]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Josef Rousek",
+                "url": "https://rousek.name/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.4537655, 50.0714368]
+            }
+        },
+	{
+            "type": "Feature",
+            "properties": {
+                "name": "Oracle",
+                "url": "https://www.oracle.com",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.3753233, 50.0559844]
+            }
+        },
+	{
+            "type": "Feature",
+            "properties": {
+                "name": "Colpirio.com s.r.o.",
+                "url": "https://www.colpirio.com",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",                
+	        "coordinates": [16.602532, 49.200819]
+            }
+        },
+	{
+            "type": "Feature",
+            "properties": {
+                "name": "ICT & MEDIA s.r.o.",
+                "url": "https://www.ictmedia.cz",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",                
+	        "coordinates": [16.594788, 49.224163]
+            }
+        },
+	{
+            "type": "Feature",
+            "properties": {
+                "name": "REDAMP.cz",
+                "url": "https://www.redamp.cz",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",                
+	        "coordinates": [16.594788, 49.224163]
+            }
+        },
+	{
+            "type": "Feature",
+            "properties": {
+                "name": "Truly Scaled",
+                "url": "https://trulyscaled.com",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",                
+	        "coordinates": [14.4538687, 50.0696205]
+            }
+        },
+	{
+            "type": "Feature",
+            "properties": {
+                "name": "Orgis IT",
+                "url": "https://www.orgis.cz",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",                
+	        "coordinates": [13.3701336, 49.7315498]
+            }
+        },
+	{
+            "type": "Feature",
+            "properties": {
+                "name": "Medallia",
+                "url": "https://www.medallia.com",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",                
+	        "coordinates": [14.4216931, 50.0833064]
+            }
+        }
+    ]
+}
