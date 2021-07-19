@@ -1050,6 +1050,13 @@
 	        "coordinates": [13.3701336, 49.7315498]
             }
         },
+	    {
+            "type": "Feature",
+            "properties": {
+                "name": "SentinelOne",
+                "url": "https://www.sentinelone.com/",
+                "company": true
+            },
 	{
             "type": "Feature",
             "properties": {
