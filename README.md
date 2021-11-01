@@ -37,8 +37,8 @@ The site gets automatically deployed after any push to the `master` branch. It i
 
 -   **Domain:** bestowed by [KRAXNET](http://www.kraxnet.cz/)<br>
     Access: e-mail request to [KRAXNET](http://www.kraxnet.cz/)
--   **Analytics:** [Google Analytics](http://www.google.com/analytics/)<br>
-    Access: [@honzajavorek](http://github.com/honzajavorek), [@encukou](http://github.com/encukou), [@martinbilek](http://github.com/martinbilek), [@benabraham](http://github.com/benabraham)
+-   **Public Analytics:** [Simple Analytics](https://simpleanalytics.com/python.cz)<br>
+    Access: [@honzajavorek](http://github.com/honzajavorek)
 
 ## Authors & Contributions
 
