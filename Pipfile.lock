@@ -25,11 +25,11 @@
         },
         "cachelib": {
             "hashes": [
-                "sha256:80fa73dda398672329dab6c8e9e9bad03fd36dc4da40d911d7de308c91e8481e",
-                "sha256:df254f3b900dc8684d8ebdd146c731ddb45edc6233a6cf7e3e834c949f360726"
+                "sha256:e358f6f82cf633891f0dbd3996e300b4657716ac44b301df33b9cb2cfd6eea6d",
+                "sha256:efb94456a4cf91669c4b6e82833b43d20c45e3c2ba8384841854c79cc7175565"
             ],
             "index": "pypi",
-            "version": "==0.7.0"
+            "version": "==0.8.0"
         },
         "certifi": {
             "hashes": [
