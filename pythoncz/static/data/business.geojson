@@ -1085,6 +1085,18 @@
                 "type": "Point",                
 	        "coordinates": [14.4216931, 50.0833064]
             }
+        },
+	{
+            "type": "Feature",
+            "properties": {
+                "name": "Ataccama",
+                "url": "https://www.ataccama.com",
+                "company": true
+            },
+            "geometry": {
+                "type": "Point",                
+	        "coordinates": [14.46422, 50.09559]
+            }
         }
     ]
 }
