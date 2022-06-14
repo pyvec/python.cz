@@ -1083,19 +1083,31 @@
             },
             "geometry": {
                 "type": "Point",                
-	        "coordinates": [14.4216931, 50.0833064]
+	              "coordinates": [14.4216931, 50.0833064]
             }
-        },
-	{
+  },
+ 	{
             "type": "Feature",
             "properties": {
-                "name": "Ataccama",
-                "url": "https://www.ataccama.com",
+                "name": "Rossum",
+                "url": "https://www.rossum.ai",
                 "company": true
             },
             "geometry": {
                 "type": "Point",                
 	        "coordinates": [14.46422, 50.09559]
+            }
+  }, 
+  {
+            "type": "Feature",
+            "properties": {
+                "name": "Ataccama",
+                "url": "https://www.ataccama.com",
+            "company": true
+            },
+            "geometry": {
+                "type": "Point",  
+             "coordinates": [14.45096, 50.09214]
             }
         }
     ]
