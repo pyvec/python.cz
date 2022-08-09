@@ -131,7 +131,7 @@ def events_en():
 
 @app.route('/events.ics')
 def events_ical():
-    return Response(str(events.get_calendar()), mimetype='text/calendar')
+    return Response(events.get_calendar().serialize(), mimetype='text/calendar')
 
 
 @app.route('/zapojse/')
