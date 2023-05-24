@@ -1,3 +1,7 @@
+<h1 align="center">⚠️</h1>
+<h3 align="center">Tento projekt nemá aktuálně nikoho, kdo by se o něj staral</h3>
+<h4 align="center">Lákalo by tě python.cz udržovat, rozvíjet, nebo to celé předělat? <a href="https://docs.pyvec.org/operations/support.html#sit-kontaktu">Ozvi se na Slacku!</a></h4>
+<hr>
 
 # python.cz
 
