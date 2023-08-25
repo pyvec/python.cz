@@ -1,6 +1,6 @@
 # python.cz
 
-Czech Python community homepage.
+Czech Python community homepage on MkDocs.
 
 ## Status
 
