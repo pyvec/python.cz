@@ -1,11 +1,10 @@
 # Učíme se Python
 
--   Česká **komunita je přátelská a živá**. Vždy bude po ruce **někdo,
-    kdo ti pomůže**.
--   **Nebudeš mít problém [sehnat práci](/prace/).** Pythonistů je
-    nedostatek!
--   I kdyby weby vyšly z módy, Python nachází **uplatnění v desítkách
-    dalších oborů**.
+<div class="lead" markdown="1">
+Česká **komunita je přátelská a živá**. Vždy bude po ruce **někdo, kdo ti pomůže**.
+**Nebudeš mít problém [sehnat práci](/prace/).** Pythonistů je nedostatek!
+I kdyby weby vyšly z módy, Python nachází **uplatnění v desítkách dalších oborů**.
+</div>
 
 ## Online materiály – neumím vůbec programovat {: #onlineneumim }
 

@@ -1,0 +1,22 @@
+:root {
+  --md-primary-fg-color: #4b8bbe;
+  --md-accent-fg-color: #306998;
+  --md-primary-fg-color--dark: #306998;
+}
+
+.md-typeset h1 {
+  color: var(--md-default-fg-color);
+  font-weight: 700;
+  font-size: 2.5em;
+  margin-bottom: 1em;
+}
+
+.md-content {
+  padding-bottom: 2em;
+}
+
+.lead {
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 1.6em;
+}

@@ -1,10 +1,14 @@
 # Python a práce
 
+<div class="lead" markdown="1">
 Používá vůbec někdo Python? **Ano!** Jde o jazyk vhodný k výuce nebo
 skriptování, ale to neznamená, že jej nepoužívají firmy z celého světa a
 nepíšou se v něm rozsáhlé projekty.
+</div>
 
-Ve světě Python používají např. **Blender 3D, Google (YouTube!),
+## Python ve světě
+
+Python používají např. **Blender 3D, YouTube,
 Dropbox, Disqus, IBM, Instagram, Lucasfilm, Mozilla, NASA, Spotify, Walt
 Disney, [a mnoho dalších](https://www.python.org/about/success/)** –
 mimo jiné také spousta vědeckých organizací **včetně švýcarského
@@ -14,7 +18,7 @@ CERNu**.
 
 TODO
 
-## Jak najít práci? {:#poptavka}
+## Jak najít práci? {: #poptavka }
 
 -   Přijď na [sraz](/#akce) a poptej se tam.
 -   Sleduj všechny [diskusní kanály](/#komunikace), kde se nabídky
@@ -38,7 +42,7 @@ TODO
     ... (Víš o dalších? [Přidej
     odkaz!](https://github.com/pyvec/python.cz/edit/master/pythoncz/static/data/jobs.yml))
 
-## Jak najít Python programátory? {:#nabidka}
+## Jak najít Python programátory? {: #nabidka }
 
 -   Přijď na [sraz](/#akce) a poptej se tam. Promluv si s reálnými
     lidmi, nadchni je, zlákej je, zjisti jaké mají možnosti a požadavky.
@@ -47,8 +51,8 @@ TODO
     konference jsou jedinečnou příležitostí promluvit si s 400+ vývojáři
     z celé střední Evropy.
 -   Sepiš si inzerát a konkretizuj jej, aspoň do tvaru něčeho jako
-    *\"hledám nadšence/nájemného profíka na krátkodobý projekt ve stylu
-    CMS s galerií, nejspíš v Djangu, platím penězi\"*. Čím víc bude
+    *„hledám nadšence/nájemného profíka na krátkodobý projekt ve stylu
+    CMS s galerií, nejspíš v Djangu, platím penězi“*. Čím víc bude
     **lidsky od srdíčka** a čím méně to budou odrážky ve stylu
     poptáváme/nabízíme, tím více lidí to zaujme. **Nezapomeň napsat do
     jaké míry je možná práce na dálku.**
@@ -61,13 +65,13 @@ TODO
 -   Pošli inzerát na [globální nástěnku
     nabídek](https://www.python.org/community/jobs/howto/) – ta
     uveřejňuje nabídky zdarma, jen je potřeba se registrovat. Nabídka se
-    pak objeví i na Twitter účtu [\@pyjobo](https://twitter.com/pyjobo).
+    pak objeví i na Twitter účtu [@pyjobo](https://twitter.com/pyjobo).
     Inzeruj nabídku na pracovních serverech:
     [Jobs.cz](http://www.jobs.cz/prace/?q%5B%5D=python),
     [StartupJobs.cz](https://www.startupjobs.cz/nabidky/15/python-programmer),
     ...
 
-## Chci, aby bylo víc Pythonistů! {:#vic}
+## Chci, aby bylo víc Pythonistů! {: #vic }
 
 **My taky!** Máme na to dokonce [neziskovku Pyvec](http://pyvec.org/).
 Můžeš se [zapojit](/zapojse/) a s naší misí nám pomoci.
