@@ -1,6 +1,9 @@
 site_name: Python v ČR
 site_url: https://python.cz/
 
+repo_url: https://github.com/pyvec/python.cz
+repo_name: Upravit tyto stránky
+
 nav:
   - Ahoj!: index.md
   - Akce: akce.md
@@ -9,12 +12,33 @@ nav:
   - Zapoj se!: zapojse.md
 
 theme:
-  name: mkdocs
-  locale: cs
+  name: material
+  logo: images/logo.svg
+  favicon: images/favicon.ico
+  language: cs
+  palette:
+    primary: custom
+    accent: custom
+  font: false
+  features:
+    - navigation.tabs
+    - navigation.path
+    - toc.integrate
+    - content.action.edit
+  custom_dir: overrides
+  icon:
+    repo: fontawesome/brands/github
+  edit_uri: edit/main/docs/
 
 markdown_extensions:
   - toc:
-      toc_depth: '2-2'
+      toc_depth: 2-2
       permalink: '#'
       permalink_title: Odkaz na tuto sekci
   - attr_list
+  - md_in_html
+
+extra_css:
+  - css/extra.css
+
+plugins: []

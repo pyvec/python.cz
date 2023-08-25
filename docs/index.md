@@ -1,8 +1,10 @@
 # Python v ČR
 
-Python je moderní programovací jazyk. Je univerzální – pohání weby i rakety.
-Dobře se čte a dá se velice rychle naučit. Je skvělý pro výuku programování.
-Česká komunita je aktivní. Najdeš v ní pomoc, kamarády i práci.
+<div class="lead" markdown="1">
+Python je **moderní programovací jazyk**. Je **univerzální** – pohání weby i rakety.
+Dobře se čte a dá se velice **rychle naučit**. Je skvělý pro **výuku** programování.
+**Česká komunita** je aktivní. Najdeš v ní **pomoc, kamarády i práci**.
+</div>
 
 ## Kde nás najdeš
 

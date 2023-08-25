@@ -1,10 +1,12 @@
 # Akce
 
+<div class="lead" markdown="1">
 Srazy, konference, workshopy. Vše, co se v ČR děje kolem jazyka Python, na jednom místě.
+</div>
 
 [Chci uspořádat sraz v mém městě](https://docs.pyvec.org/guides/meetup.html)
 
-## Všechny akce {: #akce :}
+## Všechny akce {: #akce }
 
 -   **Pravidelné akce** lze přidat přes tzv.
     [iCal](https://cs.wikipedia.org/wiki/ICalendar) export. Ten může
@@ -16,5 +18,7 @@ Srazy, konference, workshopy. Vše, co se v ČR děje kolem jazyka Python, na je
     akcí, takže je poproste, ať vaši akci přidají, nebo napište na
     <info@pyvec.org>. První URL z popisu události se zde zobrazí jako
     odkaz.
+
+TODO
 
 [iCal na všechny akce](/events.ics)
