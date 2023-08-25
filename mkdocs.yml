@@ -1,0 +1,11 @@
+site_name: Python v ČR
+site_url: https://python.cz/
+nav:
+  - Ahoj!: index.md
+  - Akce: akce.md
+  - Pro začátečníky: zacatecnici.md
+  - Práce: prace.md
+  - Zapoj se!: prace.md
+theme:
+  name: mkdocs
+  locale: cs
