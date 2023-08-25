@@ -86,6 +86,6 @@ Značka _Kouč pomůže!_ znamená, že někdo navrhl,
 navrhnout jako kouč, napiš to do komentáře pod daný úkol a [přiřaď mu
 štítek](https://help.github.com/articles/applying-labels-to-issues-and-pull-requests/)
 
-TODO
+TODO - zrušit, možná udělat jen seznam organizací nebo repozitářů
 
 ![Přidat nápad](https://github.com/pyvec/zapojse/issues/new)

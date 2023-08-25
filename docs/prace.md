@@ -16,7 +16,7 @@ CERNu**.
 
 ## Python u nás
 
-TODO
+TODO - zrušit seznam, dát sem sponzory PyConu a nějaký text, možná odkazy na job boardy s filtrováním na python
 
 ## Jak najít práci? {: #poptavka }
 

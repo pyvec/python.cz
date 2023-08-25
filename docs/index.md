@@ -22,7 +22,7 @@ Dobře se čte a dá se velice **rychle naučit**. Je skvělý pro **výuku** pr
 
 ## Nejbližší akce
 
-TODO
+TODO - tohle je nejdůležitější část webu a musí být naprogramovaná a funkční
 
 ## Odkazy
 

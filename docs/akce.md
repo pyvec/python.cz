@@ -19,6 +19,6 @@ Srazy, konference, workshopy. Vše, co se v ČR děje kolem jazyka Python, na je
     <info@pyvec.org>. První URL z popisu události se zde zobrazí jako
     odkaz.
 
-TODO
+TODO - tohle je nejdůležitější část webu a musí být naprogramovaná a funkční
 
 [iCal na všechny akce](/events.ics)
