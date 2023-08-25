@@ -32,7 +32,3 @@ pip-log.txt
 /cache/
 .cache
 .pytest_cache/
-
-# Elsa
-_build/
-/talks-archive/
