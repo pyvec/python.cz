@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "pythoncz"
+version = "0.0.0"
+description = "Czech Python user group homepage"
+authors = ["Honza Javorek <mail@honzajavorek.cz>"]
+readme = "README.md"
+homepage = "https://python.cz/"
+repository = "https://github.com/honzajavorek/mkdocs-python.cz/"
+classifiers = ["Private :: Do Not Upload"]
+
+[tool.poetry.scripts]
+pythoncz = "pythoncz:main"
+
+[tool.poetry.dependencies]
+python = "3.11.*"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "7.4.0"
+
+[tool.pytest.ini_options]
+python_files = "test_*.py"
+testpaths = "tests"
+norecursedirs = "node_modules"
+addopts = "--ff"
+
+[build-system]
+requires = ["poetry-core>=1.5.0"]
+build-backend = "poetry.core.masonry.api"
