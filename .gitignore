@@ -32,3 +32,6 @@ pip-log.txt
 /cache/
 .cache
 .pytest_cache/
+
+# MkDocs
+/site/
