@@ -19,10 +19,11 @@ Intentionally not trying to achieve feature parity with existing python.cz websi
 ## TODO
 
 -   ~~port static content~~
--   customize the theme - https://www.mkdocs.org/user-guide/customizing-your-theme/#using-the-theme_dir
+-   ~~customize the theme~~
+-   events as a plugin
 -   fix absolute links and make them relative
 -   images
--   events as a plugin
+-   icons - https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#additional-icons
 -   localize the theme - https://www.mkdocs.org/user-guide/localizing-your-theme/
 -   legacy redirects
 -   english version
