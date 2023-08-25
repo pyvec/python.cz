@@ -22,7 +22,7 @@ theme:
   font: false
   features:
     - navigation.tabs
-    - navigation.path
+    - navigation.tabs.sticky
     - toc.integrate
     - content.action.edit
   custom_dir: overrides
