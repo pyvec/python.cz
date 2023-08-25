@@ -9,6 +9,8 @@ Czech Python community homepage.
 -   localize the theme - https://www.mkdocs.org/user-guide/localizing-your-theme/
 -   customize the theme - https://www.mkdocs.org/user-guide/customizing-your-theme/#using-the-theme_dir
 -   legacy redirects
+-   english version
+-   fix absolute links and make them relative
 
 ## License
 
