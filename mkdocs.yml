@@ -26,6 +26,8 @@ theme:
     - toc.integrate
     - content.action.edit
   custom_dir: overrides
+  static_templates:
+    - events.ics
   icon:
     repo: fontawesome/brands/github
   edit_uri: edit/main/docs/
@@ -39,7 +41,8 @@ markdown_extensions:
   - md_in_html
 
 hooks:
-  - hooks.py
+  - hooks/on_pre_build.py
+  - hooks/on_page_markdown.py
 
 extra_css:
   - css/extra.css

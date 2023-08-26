@@ -2,11 +2,12 @@ from datetime import date, datetime, timedelta
 import json
 from operator import itemgetter
 from pathlib import Path
+import re
+from functools import cache
+from zoneinfo import ZoneInfo
 
-import pytz
 import extruct
 import ics
-from mkdocs.config import Config
 import requests
 from strictyaml import load as load_yaml, Map, Str, Seq, Url
 
@@ -27,13 +28,14 @@ USER_AGENT = "python.cz (+https://python.cz)"
 TIMELINE_LIMIT_DAYS = 60
 
 
-def on_post_build(config: Config | None = None):
+@cache
+def fetch_events() -> list[dict]:
     cache_path = Path(".events_cache.json")
     try:
-        print(f"Loading events feeds from {cache_path}")
+        print(f"INFO    -  Loading events feeds from {cache_path}")
         data = json.loads(cache_path.read_text())
     except FileNotFoundError:
-        print("No cache")
+        print("INFO    -  No cache")
         yaml = Path("events_feeds.yml").read_text()
         data = []
         for feed in load_yaml(yaml, YAML_SCHEMA).data:
@@ -45,7 +47,7 @@ def on_post_build(config: Config | None = None):
             data.append(feed)
         cache_path.write_text(json.dumps(data, indent=2, ensure_ascii=False))
 
-    print("Parsing events")
+    print("INFO    -  Parsing events")
     events = []
     for feed in data:
         if feed["format"] == "icalendar":
@@ -65,7 +67,7 @@ def on_post_build(config: Config | None = None):
         else:
             raise ValueError(f"Unknown feed format {feed['format']!r}")
 
-    print("Filtering and sorting events")
+    print("INFO    -  Filtering and sorting events")
     today = date.today()
     timeline_limit = today + timedelta(days=TIMELINE_LIMIT_DAYS)
     events = sorted(
@@ -80,31 +82,43 @@ def on_post_build(config: Config | None = None):
         ),
         key=itemgetter("starts_at"),
     )
+    return events
+
+
+def generate_icalendar(events: list[dict]) -> str:
+    calendar = ics.Calendar()
     for event in events:
-        print(event["starts_at"], event["name"])
+        calendar.events.append(ics.Event(
+            summary=event['name'],
+            begin=event['starts_at'],
+            end=event['ends_at'],
+            location=event['location'],
+            url=event['url'],
+        ))
+    return calendar.serialize()
 
 
-def parse_icalendar(text: str):
+def parse_icalendar(text: str) -> list[dict]:
     return [
         dict(
             name=event.summary,
             starts_at=to_prague_tz(event.begin),
             ends_at=to_prague_tz(event.end) if event.end else None,
-            location_raw=event.location,
-            url=event.url,
+            location=event.location,
+            url=event.url if event.url else find_first_url(event.description),
         )
         for event in ics.Calendar(text).events
     ]
 
 
-def parse_json_dl(html: str, base_url: str):
+def parse_json_dl(html: str, base_url: str) -> list[dict]:
     data = extruct.extract(html, base_url, syntaxes=["json-ld"])
     return [
         dict(
             name=item["name"],
             starts_at=to_prague_tz(datetime.fromisoformat(item["startDate"])),
             ends_at=to_prague_tz(datetime.fromisoformat(item["endDate"])),
-            location_raw=parse_json_dl_location(item["location"]),
+            location=parse_json_dl_location(item["location"]),
             url=item["url"],
         )
         for item in data["json-ld"]
@@ -117,11 +131,18 @@ def parse_json_dl_location(location: dict[str, str]) -> str:
 
 
 def to_prague_tz(dt: datetime) -> datetime:
-    prague_tz = pytz.timezone("Europe/Prague")
+    prague_tz = ZoneInfo("Europe/Prague")
     if dt.tzinfo is None:
         return dt.replace(tzinfo=prague_tz)
     return dt.astimezone(prague_tz)
 
 
+def find_first_url(text: str) -> str | None:
+    if match := re.search(r'https?://[^\s"<]+', text or ''):
+        return match.group(0)
+    return None
+
+
 if __name__ == "__main__":
-    on_post_build()
+    from pprint import pprint
+    pprint(fetch_events(), depth=2)
