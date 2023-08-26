@@ -47,7 +47,7 @@ English speakers are welcome to most of our events.
 How can you address Czech software engineers working in Python with your
 **job offer**? Why is it **worth the effort**?
 
-### How to find Czech Python software engineers? {#offer}
+### How to find Czech Python software engineers? {: #offer }
 
 -   Attend a [meetup](/en/#meetups) and ask around. Speak to real
     people, get them hooked for your ideas, learn about their options
@@ -75,7 +75,7 @@ How can you address Czech software engineers working in Python with your
     [StartupJobs.cz](https://www.startupjobs.cz/nabidky/15/python-programmer){target="_blank"},
     ...
 
-### I wish more Czech Pythonistas would exist! {#more}
+### I wish more Czech Pythonistas would exist! {: #more }
 
 We too and it's also the main goal of [Pyvec](http://pyvec.org/), our
 nonprofit. Pyvec is dedicated to support all sorts of activities focused
