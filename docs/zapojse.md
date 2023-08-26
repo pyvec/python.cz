@@ -4,6 +4,10 @@
 Líbí se ti Python? **Pomoz nám ho rozšířit i mezi ostatní.** Můžeš nám poslat peníze, učit, přednášet, psát, organizovat, programovat, ale třeba i jen vymýšlet, co a jak by se dalo zlepšit. Máme práci pro každého!
 </div>
 
+<figure class="sm" markdown="1">
+![česká Python komunita](images/czech-python-user-group.svg)
+</figure>
+
 ## Proč?
 
 Python komunita je fajn jen díky tomu, že jsou v ní **lidi, kteří se nebojí přiložit ruku k dílu**. Všichni to děláme po večerech ve volném čase, z čirého nadšení. **Děláme to proto, že chceme, aby to bylo lepší i pro tebe.** Ať jsi profík nebo začátečník, z Prahy nebo z Karviné, můžeš nám pomoci. Odměnou ti budou kontakty, reference, zkušenosti.

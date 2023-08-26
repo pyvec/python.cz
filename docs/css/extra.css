@@ -15,6 +15,32 @@
   padding-bottom: 2em;
 }
 
+.md-typeset figure {
+  text-align: center;
+}
+
+.md-typeset figure img {
+  margin: 1em auto;
+}
+
+.md-typeset figure.md img {
+  max-width: 700px;
+}
+
+.md-typeset figure.sm img {
+  max-width: 400px;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo img {
+  margin: 0;
+  width: 100%;
+  max-width: 700px;
+}
+
 .lead {
   font-size: 1.2em;
   font-weight: 400;

@@ -6,6 +6,10 @@
 I kdyby weby vyšly z módy, Python nachází **uplatnění v desítkách dalších oborů**.
 </div>
 
+<figure class="sm" markdown="1">
+![Ilustrace hada s knížkou](images/learning-python.svg)
+</figure>
+
 ## Online materiály – neumím vůbec programovat {: #onlineneumim }
 
 Následující materiály vznikly v rámci aktivit, které se snaží přiblížit

@@ -6,6 +6,10 @@ skriptování, ale to neznamená, že jej nepoužívají firmy z celého světa 
 nepíšou se v něm rozsáhlé projekty.
 </div>
 
+<figure class="sm" markdown="1">
+![Ilustrace hada v kanceláři](images/jobs.svg)
+</figure>
+
 ## Python ve světě
 
 Python používají např. **Blender 3D, YouTube,
