@@ -23,7 +23,7 @@ Intentionally not trying to achieve feature parity with existing python.cz websi
 -   ~~events as a plugin~~
 -   ~~fix absolute links and make them relative~~
 -   ~~icons~~ (index is here: https://emojipedia.org/twitter)
--   images
+-   ~~images~~
 -   localize the theme - https://www.mkdocs.org/user-guide/localizing-your-theme/
 -   legacy redirects
 -   english version

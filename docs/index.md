@@ -1,10 +1,16 @@
-# Python v ČR
+<h1 class="logo">
+    <img alt="Python v ČR" src="images/python-logo.svg">
+</h1>
 
 <div class="lead" markdown="1">
 Python je **moderní programovací jazyk**. Je **univerzální** – pohání weby i rakety.
 Dobře se čte a dá se velice **rychle naučit**. Je skvělý pro **výuku** programování.
 **Česká komunita** je aktivní. Najdeš v ní **pomoc, kamarády i práci**.
 </div>
+
+<figure class="md" markdown="1">
+![česká Python komunita](images/czech-python-user-group.svg)
+</figure>
 
 ## Kde nás najdeš
 

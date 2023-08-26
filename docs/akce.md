@@ -4,6 +4,10 @@
 Srazy, konference, workshopy. Vše, co se v ČR děje kolem jazyka Python, na jednom místě.
 </div>
 
+<figure class="sm" markdown="1">
+![Ilustrace hada hrajícího na ukulele](images/ukulele.svg)
+</figure>
+
 [Chci uspořádat sraz v mém městě](https://docs.pyvec.org/guides/meetup.html)
 
 ## Všechny akce {: #akce }
@@ -36,8 +40,12 @@ Srazy, konference, workshopy. Vše, co se v ČR děje kolem jazyka Python, na je
         {% if event.location %}
             <br>{{ event.location }}
             <br>
-            <a href="https://mapy.cz/zakladni?q={{ event.location|urlencode }}" target="_blank" rel="noopener">Mapy.cz</a>
-            <a href="https://www.google.com/maps?q={{ event.location|urlencode }}" target="_blank" rel="noopener">Google Mapy</a>
+            <a href="https://mapy.cz/zakladni?q={{ event.location|urlencode }}" target="_blank" rel="noopener">
+                Mapy.cz
+            </a>
+            <a href="https://www.google.com/maps?q={{ event.location|urlencode }}" target="_blank" rel="noopener">
+                Google Mapy
+            </a>
         {% endif %}
     </li>
 {% endfor %}
