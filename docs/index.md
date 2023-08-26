@@ -22,21 +22,7 @@ Dobře se čte a dá se velice **rychle naučit**. Je skvělý pro **výuku** pr
 
 ## Nejbližší akce
 
-<ul>
-{% for event in events %}
-    <li>
-        <strong>
-            {% if event.url %}
-                <a href="{{ event.url }}">{{ event.name }}</a>
-            {% else %}
-                {{ event.name }}
-            {% endif %}
-        </strong>
-        <br>
-        {{ "{:%-d.%-m.%-Y}".format(event.starts_at) }}
-    </li>
-{% endfor %}
-</ul>
+Mrkni [sem](akce.md).
 
 ## Odkazy
 

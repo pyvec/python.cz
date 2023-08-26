@@ -23,7 +23,7 @@ Srazy, konference, workshopy. Vše, co se v ČR děje kolem jazyka Python, na je
 
 <ul>
 {% for event in events %}
-    <li>
+    <li{% if event.is_tentative %} class="tentative"{% endif %}>
         <strong>
             {% if event.url %}
                 <a href="{{ event.url }}">{{ event.name }}</a>
@@ -33,6 +33,12 @@ Srazy, konference, workshopy. Vše, co se v ČR děje kolem jazyka Python, na je
         </strong>
         <br>
         {{ "{:%-d.%-m.%-Y}".format(event.starts_at) }}
+        {% if event.location %}
+            <br>{{ event.location }}
+            <br>
+            <a href="https://mapy.cz/zakladni?q={{ event.location|urlencode }}" target="_blank" rel="noopener">Mapy.cz</a>
+            <a href="https://www.google.com/maps?q={{ event.location|urlencode }}" target="_blank" rel="noopener">Google Mapy</a>
+        {% endif %}
     </li>
 {% endfor %}
 </ul>

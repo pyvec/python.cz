@@ -25,11 +25,9 @@ YAML_SCHEMA = Seq(
 
 USER_AGENT = "python.cz (+https://python.cz)"
 
-TIMELINE_LIMIT_DAYS = 60
-
 
 @cache
-def fetch_events() -> list[dict]:
+def fetch_events(days_limit: int | None=None, past: bool = False) -> list[dict]:
     cache_path = Path(".events_cache.json")
     try:
         print(f"INFO    -  Loading events feeds from {cache_path}")
@@ -67,21 +65,25 @@ def fetch_events() -> list[dict]:
         else:
             raise ValueError(f"Unknown feed format {feed['format']!r}")
 
-    print("INFO    -  Filtering and sorting events")
-    today = date.today()
-    timeline_limit = today + timedelta(days=TIMELINE_LIMIT_DAYS)
-    events = sorted(
-        (
+    print("INFO    -  Sorting events")
+    return sorted(events, key=itemgetter("starts_at"))
+
+
+def filter_events(events: list[dict], days_limit: int | None=None, only_upcoming: bool = True, today: date | None = None) -> list[dict]:
+    today = today or date.today()
+    if only_upcoming:
+        events = [
             event
             for event in events
-            if (
-                event["starts_at"].date() >= today
-                or (event["ends_at"] and event["ends_at"].date() >= today)
-            )
-            and event["starts_at"].date() <= timeline_limit
-        ),
-        key=itemgetter("starts_at"),
-    )
+            if event["starts_at"].date() >= today
+            or (event["ends_at"] and event["ends_at"].date() >= today)
+        ]
+    if days_limit is not None:
+        events = [
+            event
+            for event in events
+            if event["starts_at"].date() <= today + timedelta(days=days_limit)
+        ]
     return events
 
 
@@ -94,6 +96,7 @@ def generate_icalendar(events: list[dict]) -> str:
             end=event['ends_at'],
             location=event['location'],
             url=event['url'],
+            categories=['tentative-date'] if event['is_tentative'] else [],
         ))
     return calendar.serialize()
 
@@ -106,6 +109,7 @@ def parse_icalendar(text: str) -> list[dict]:
             ends_at=to_prague_tz(event.end) if event.end else None,
             location=event.location,
             url=event.url if event.url else find_first_url(event.description),
+            is_tentative='tentative-date' in event.categories,
         )
         for event in ics.Calendar(text).events
     ]
@@ -120,6 +124,7 @@ def parse_json_dl(html: str, base_url: str) -> list[dict]:
             ends_at=to_prague_tz(datetime.fromisoformat(item["endDate"])),
             location=parse_json_dl_location(item["location"]),
             url=item["url"],
+            is_tentative=False,
         )
         for item in data["json-ld"]
         if item["@type"] == "Event" and base_url in item["url"]
