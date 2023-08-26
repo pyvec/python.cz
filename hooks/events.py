@@ -27,7 +27,7 @@ USER_AGENT = "python.cz (+https://python.cz)"
 
 
 @cache
-def fetch_events(days_limit: int | None=None, past: bool = False) -> list[dict]:
+def fetch_events(days_limit: int | None = None, past: bool = False) -> list[dict]:
     cache_path = Path(".events_cache.json")
     try:
         print(f"INFO    -  Loading events feeds from {cache_path}")
@@ -69,7 +69,12 @@ def fetch_events(days_limit: int | None=None, past: bool = False) -> list[dict]:
     return sorted(events, key=itemgetter("starts_at"))
 
 
-def filter_events(events: list[dict], days_limit: int | None=None, only_upcoming: bool = True, today: date | None = None) -> list[dict]:
+def filter_events(
+    events: list[dict],
+    days_limit: int | None = None,
+    only_upcoming: bool = True,
+    today: date | None = None,
+) -> list[dict]:
     today = today or date.today()
     if only_upcoming:
         events = [
@@ -90,14 +95,16 @@ def filter_events(events: list[dict], days_limit: int | None=None, only_upcoming
 def generate_icalendar(events: list[dict]) -> str:
     calendar = ics.Calendar()
     for event in events:
-        calendar.events.append(ics.Event(
-            summary=event['name'],
-            begin=event['starts_at'],
-            end=event['ends_at'],
-            location=event['location'],
-            url=event['url'],
-            categories=['tentative-date'] if event['is_tentative'] else [],
-        ))
+        calendar.events.append(
+            ics.Event(
+                summary=event["name"],
+                begin=event["starts_at"],
+                end=event["ends_at"],
+                location=event["location"],
+                url=event["url"],
+                categories=["tentative-date"] if event["is_tentative"] else [],
+            )
+        )
     return calendar.serialize()
 
 
@@ -109,7 +116,7 @@ def parse_icalendar(text: str) -> list[dict]:
             ends_at=to_prague_tz(event.end) if event.end else None,
             location=event.location,
             url=event.url if event.url else find_first_url(event.description),
-            is_tentative='tentative-date' in event.categories,
+            is_tentative="tentative-date" in event.categories,
         )
         for event in ics.Calendar(text).events
     ]
@@ -143,11 +150,12 @@ def to_prague_tz(dt: datetime) -> datetime:
 
 
 def find_first_url(text: str) -> str | None:
-    if match := re.search(r'https?://[^\s"<]+', text or ''):
+    if match := re.search(r'https?://[^\s"<]+', text or ""):
         return match.group(0)
     return None
 
 
 if __name__ == "__main__":
     from pprint import pprint
+
     pprint(fetch_events(), depth=2)

@@ -13,8 +13,10 @@ def on_page_markdown(
     config: Config,
     files: Files,
 ) -> str:
-    print(f'INFO    -  Rendering jinja on {page.file.src_path}')
+    print(f"INFO    -  Rendering jinja on {page.file.src_path}")
     env = Environment()
-    env.filters['urlencode'] = quote_plus
+    env.filters["urlencode"] = quote_plus
     template = env.from_string(markdown)
-    return template.render(events=filter_events(fetch_events(), days_limit=60, only_upcoming=True))
+    return template.render(
+        events=filter_events(fetch_events(), days_limit=60, only_upcoming=True)
+    )
