@@ -23,7 +23,7 @@ Srazy nebo workshopy dělají konkrétní lidé a Pyvec jim do toho nemluví - n
 -   Koučuj pro [PyLadies](http://pyladies.cz/).
 -   [Rozjeď kurz pro začátečníky podle našeho
     návodu](https://docs.pyvec.org/guides/beginners-course.html). Použij
-    a vylepšuj naše Open Source [materiály](/zacatecnici/#onlineneumim).
+    a vylepšuj naše Open Source [materiály](zacatecnici.md).
 -   Přečti si [tipy na koučování od Django
     Girls](https://coach.djangogirls.org/).
 
@@ -46,7 +46,7 @@ Srazy nebo workshopy dělají konkrétní lidé a Pyvec jim do toho nemluví - n
 -   Technické články piš např. na [Zdroják.cz](http://zdrojak.cz/).
     Redakce bude nadšená a ty budeš mít větší publikum.
 -   Python učíme podle Open Source
-    [materiálů](/zacatecnici/#onlineneumim). Můžeš nám pomoci je
+    [materiálů](zacatecnici.md). Můžeš nám pomoci je
     vylepšovat.
 -   Když se nám povede něco zorganizovat, snažíme se sepsat naše
     know-how do [komunitní dokumentace](https://docs.pyvec.org/). Chybí

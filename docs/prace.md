@@ -20,11 +20,11 @@ TODO - zrušit seznam, dát sem sponzory PyConu a nějaký text, možná odkazy 
 
 ## Jak najít práci? {: #poptavka }
 
--   Přijď na [sraz](/#akce) a poptej se tam.
--   Sleduj všechny [diskusní kanály](/#komunikace), kde se nabídky
+-   Přijď na [sraz](akce.md) a poptej se tam.
+-   Sleduj všechny [diskusní kanály](index.md), kde se nabídky
     objevují.
 -   Na zmíněné kanály aktivně napiš, že hledáš práci nebo stáž.
--   Zkus přímo oslovit [firmy výše](#kdo).
+-   Zkus přímo oslovit firmy výše.
 -   Sleduj Twitter účet [@pyjobo](https://twitter.com/pyjobo) a
     pročítej [globální nástěnku nabídek](https://www.python.org/jobs/)
     – inzeráty lze hledat [podle
@@ -44,7 +44,7 @@ TODO - zrušit seznam, dát sem sponzory PyConu a nějaký text, možná odkazy 
 
 ## Jak najít Python programátory? {: #nabidka }
 
--   Přijď na [sraz](/#akce) a poptej se tam. Promluv si s reálnými
+-   Přijď na [sraz](akce.md) a poptej se tam. Promluv si s reálnými
     lidmi, nadchni je, zlákej je, zjisti jaké mají možnosti a požadavky.
 -   Popros svou společnost, aby sponzorovala příští [PyCon
     CZ](http://cz.pycon.org/) nebo [PyCon SK](http://pycon.sk/). Obě
@@ -57,7 +57,7 @@ TODO - zrušit seznam, dát sem sponzory PyConu a nějaký text, možná odkazy 
     poptáváme/nabízíme, tím více lidí to zaujme. **Nezapomeň napsat do
     jaké míry je možná práce na dálku.**
 -   Napiš inzerát na diskuse django-cs a py.cz ([viz hlavní
-    stránka](/#komunikace)) a na [Facebookovou
+    stránka](index.md)) a na [Facebookovou
     skupinu](https://www.facebook.com/groups/pyonieri/). Čte je mnoho
     českých a slovenských Pythonistů.
 -   Nepřehlcuj žádnou z diskusí. Inzeráty jsou vítány, jsou zadarmo a
@@ -74,7 +74,7 @@ TODO - zrušit seznam, dát sem sponzory PyConu a nějaký text, možná odkazy 
 ## Chci, aby bylo víc Pythonistů! {: #vic }
 
 **My taky!** Máme na to dokonce [neziskovku Pyvec](http://pyvec.org/).
-Můžeš se [zapojit](/zapojse/) a s naší misí nám pomoci.
+Můžeš se [zapojit](zapojse.md) a s naší misí nám pomoci.
 
 Pokud zastupuješ nějakou firmu, můžeš nás **sponzorovat ([číslo
 účtu](https://www.fio.cz/scgi-bin/hermes/dz-transparent.cgi?ID_ucet=2600260438))**.

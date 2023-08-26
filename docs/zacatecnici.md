@@ -2,7 +2,7 @@
 
 <div class="lead" markdown="1">
 Česká **komunita je přátelská a živá**. Vždy bude po ruce **někdo, kdo ti pomůže**.
-**Nebudeš mít problém [sehnat práci](/prace/).** Pythonistů je nedostatek!
+**Nebudeš mít problém [sehnat práci](prace.md).** Pythonistů je nedostatek!
 I kdyby weby vyšly z módy, Python nachází **uplatnění v desítkách dalších oborů**.
 </div>
 
@@ -67,7 +67,7 @@ omrkni!
 
 ###  Přednášky
 
-Nahráváme přednášky ze [srazů](/#akce) a [dáváme je na YouTube](https://www.youtube.com/user/pyvec/playlists). Na stránkách
+Nahráváme přednášky ze [srazů](akce.md) a [dáváme je na YouTube](https://www.youtube.com/user/pyvec/playlists). Na stránkách
 [pyvideo.org](http://pyvideo.org/) najdeš přednášky z celého světa.
 
 ###  Konvence pro psaní kódu
