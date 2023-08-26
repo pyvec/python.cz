@@ -33,6 +33,10 @@ pip-log.txt
 .cache
 .pytest_cache/
 
-# Elsa
-_build/
-/talks-archive/
+# MkDocs
+/site/
+
+# custom
+.events_cache.json
+overrides/events.ics
+/talks_archive/
