@@ -46,6 +46,7 @@ markdown_extensions:
 hooks:
   - hooks/on_pre_build.py
   - hooks/on_page_markdown.py
+  - hooks/on_post_build.py
 
 extra_css:
   - css/extra.css
