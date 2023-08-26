@@ -26,9 +26,11 @@ Intentionally not trying to achieve feature parity with existing python.cz websi
 -   ~~images~~
 -   ~~legacy redirects~~
 -   ~~analytics~~
--   english version
--   social cards - https://squidfunk.github.io/mkdocs-material/setup/setting-up-social-cards/
--   logo should be on a white circle
+-   ~~english version~~
+-   ~~delete the old code~~
+-   keep tests which make sense and delete the rest
+-   nice to have: social cards - https://squidfunk.github.io/mkdocs-material/setup/setting-up-social-cards/
+-   nice to have: logo should be on a white circle
 
 ## License
 
