@@ -11,6 +11,10 @@
   margin-bottom: 1em;
 }
 
+.md-grid {
+  max-width: 50rem;
+}
+
 .md-content {
   padding-bottom: 2em;
 }
@@ -31,6 +35,31 @@
 .md-typeset figure.sm img {
   max-height: 250px;
   max-width: 400px;
+}
+
+.md-typeset button.center {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.md-typeset button a {
+  display: inline-block;
+  margin: 1em auto;
+  padding: 0.5em 1em;
+  background-color: var(--md-primary-fg-color);
+  color: #fff;
+}
+
+.md-typeset button a:hover,
+.md-typeset button a:focus,
+.md-typeset button a:active {
+  background-color: var(--md-accent-fg-color);
+  color: #fff;
+}
+
+.md-typeset h1 .headerlink {
+  display: none;
 }
 
 .logo {

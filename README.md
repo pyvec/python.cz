@@ -24,9 +24,9 @@ Intentionally not trying to achieve feature parity with existing python.cz websi
 -   ~~fix absolute links and make them relative~~
 -   ~~icons~~ (index is here: https://emojipedia.org/twitter)
 -   ~~images~~
--   legacy redirects
+-   ~~legacy redirects~~
+-   ~~analytics~~
 -   english version
--   analytics - https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/#custom-site-analytics
 -   social cards - https://squidfunk.github.io/mkdocs-material/setup/setting-up-social-cards/
 -   logo should be on a white circle
 
