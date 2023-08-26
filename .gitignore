@@ -39,3 +39,4 @@ pip-log.txt
 # custom
 .events_cache.json
 overrides/events.ics
+/talks_archive/
