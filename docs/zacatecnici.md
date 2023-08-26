@@ -15,7 +15,7 @@ programovat od úplných základů kdokoliv.
 -   [Materiály od PyLadies](http://naucse.python.cz/course/pyladies/)
 -   [Návod od Django Girls](http://tutorial.djangogirls.org/)
 
-## Online materiály – programovat trochu umím {#onlineumim}
+## Online materiály – programovat trochu umím {: #onlineumim }
 
 ###  Přecházím z jiného jazyka
 
