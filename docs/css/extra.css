@@ -24,10 +24,12 @@
 }
 
 .md-typeset figure.md img {
-  max-width: 700px;
+  max-height: 440px;
+  max-width: 704px;
 }
 
 .md-typeset figure.sm img {
+  max-height: 250px;
   max-width: 400px;
 }
 

@@ -24,7 +24,6 @@ Intentionally not trying to achieve feature parity with existing python.cz websi
 -   ~~fix absolute links and make them relative~~
 -   ~~icons~~ (index is here: https://emojipedia.org/twitter)
 -   ~~images~~
--   localize the theme - https://www.mkdocs.org/user-guide/localizing-your-theme/
 -   legacy redirects
 -   english version
 -   analytics - https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/#custom-site-analytics
