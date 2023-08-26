@@ -10,6 +10,7 @@ nav:
   - Pro začátečníky: zacatecnici.md
   - Práce: prace.md
   - Zapoj se!: zapojse.md
+  - English: en.md
 
 theme:
   name: material
@@ -21,9 +22,10 @@ theme:
     accent: custom
   font: false
   features:
+    - navigation.instant
+    - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky
-    - toc.integrate
     - content.action.edit
   custom_dir: overrides
   static_templates:

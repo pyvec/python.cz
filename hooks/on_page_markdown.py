@@ -13,6 +13,12 @@ def on_page_markdown(
     config: Config,
     files: Files,
 ) -> str:
+    # Unfortunately this is aparently the only way to hide the navigation
+    # on every page using the material theme. Solution described in
+    # https://github.com/squidfunk/mkdocs-material/issues/3686 breaks
+    # hamburger menu on small viewports.
+    page.meta["hide"] = ["toc", "navigation"]
+
     print(f"INFO    -  Rendering jinja on {page.file.src_path}")
     env = Environment()
     env.filters["urlencode"] = quote_plus

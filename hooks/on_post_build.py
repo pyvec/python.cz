@@ -8,6 +8,8 @@ def on_post_build(config: Config):
     print("INFO    -  Generating redirects")
     # https://developers.google.com/search/docs/advanced/crawling/301-redirects
     redirects = {
+        "en/jobs/index.html": "https://python.cz/en/",
+        "en/events/index.html": "https://python.cz/akce/",
         "pyladies/s001-install/index.html": "https://pyladies.cz/v1/s001-install/",
         "pyladies/s002-hello-world/index.html": "https://pyladies.cz/v1/s002-hello-world/",
         "pyladies/s003-looping/index.html": "https://pyladies.cz/v1/s003-looping/",

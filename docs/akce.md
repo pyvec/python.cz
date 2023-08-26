@@ -8,7 +8,9 @@ Srazy, konference, workshopy. Vše, co se v ČR děje kolem jazyka Python, na je
 ![Ilustrace hada hrajícího na ukulele](images/ukulele.svg)
 </figure>
 
+<button markdown="1">
 [Chci uspořádat sraz v mém městě](https://docs.pyvec.org/guides/meetup.html)
+</button>
 
 ## Všechny akce {: #akce }
 
@@ -51,4 +53,6 @@ Srazy, konference, workshopy. Vše, co se v ČR děje kolem jazyka Python, na je
 {% endfor %}
 </ul>
 
-[iCal na všechny akce](/events.ics)
+<button markdown="1">
+[iCalendar na všechny akce](/events.ics)
+</button>
