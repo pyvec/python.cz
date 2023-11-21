@@ -1417,21 +1417,6 @@
                     50.09214
                 ]
             }
-        },
-        {
-            "type":"Feature",
-            "properties":{
-                "name":"Pure Storage",
-                "url":"https://www.purestorage.com/",
-                "company":true
-            },
-            "geometry":{
-                "type":"Point",
-                "coordinates":[
-                    14.44641,
-                    50.09437
-                ]
-            }
         }
     ]
 }
