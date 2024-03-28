@@ -1,0 +1,20 @@
+job_boards:
+    # Pravidla:
+    #
+    #   * Pouze odkazy, které přímo filtrují Python.
+    #   * Pouze odkazy na české (maximálně slovenské) weby.
+    #   * Odkazy, které v době přidávání povedou na prázdné výsledky vyhledávání
+    #     (tzn. žádná nabídka práce v Pythonu) mají minimální šanci, že budou
+    #     schváleny.
+    #
+    -   name: StartupJobs.cz
+        url: 'https://www.startupjobs.cz/nabidky/15/python-programmer'
+
+    -   name: Jobs.cz
+        url: 'http://www.jobs.cz/prace/?q[]=python'
+
+knowledge_tests:
+    -   name: StartupJobs.cz
+        url: 'https://www.startupjobs.cz/test/python'
+    -   name: Toptal.com
+        url: 'http://www.toptal.com/python/interview-questions'

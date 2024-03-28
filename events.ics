@@ -1,0 +1,118 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:ics.py - http://git.io/lLljaA
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20240717T170000Z
+SUMMARY:(Pražské Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:praha-pyvo-2024-07-17@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:V dubnovém PyVu navážeme na minulou přednášku o strojovém učení\, a ukážeme si\, jak si natrénovat\nvlastní neuronovou síť pomocí knihoven Keras a TensorFlow.\n\nJakékoliv další přednášky či lightning talky jsou vítány! Pokud máte nápad na nějakou přednášku či\ntéma na příště\, můžete jej zapsat na [tomto odkazu](https://tinyurl.com/olopyvo-lightning-talky).\n\nMůžete se také přidat do [mailing listu Olomouckého Pyva](https://groups.google.com/forum/#!forum/olomoucke-pyvo)\na/nebo do kanálu [#pyvo-olomouc](https://pyvec.slack.com/archives/C7N6X4L5B) na\n[PyVec Slacku](https://pyvec.slack.com/)\, abyste měli vždy aktuální informace.\n\nDěkujeme a těšíme se na vaši účast!\n
+GEO:49.595289;17.248973
+LOCATION:Restaurace U Ptáka\, 8. května 453/14\, 779 00 Olomouc\, Olomouc
+DTSTART:20240418T160000Z
+SUMMARY:Olomoucké Pyvo – Strojové učení #4: jak si natrénovat neuronovou síť
+UID:olomouc-pyvo-2024-04-18@pyvo.cz
+URL:https://pyvo.cz/olomouc-pyvo/2024-04/
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20240508T160000Z
+SUMMARY:(Plzeňské Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:plzen-pyvo-2024-05-08@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20240425T170000Z
+SUMMARY:(Brněnské Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:brno-pyvo-2024-04-25@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20240619T170000Z
+SUMMARY:(Pražské Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:praha-pyvo-2024-06-19@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20240822T160000Z
+SUMMARY:(Olomoucké Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:olomouc-pyvo-2024-08-22@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20240515T170000Z
+SUMMARY:(Pražské Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:praha-pyvo-2024-05-15@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20240523T160000Z
+SUMMARY:(Olomoucké Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:olomouc-pyvo-2024-05-23@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20240718T160000Z
+SUMMARY:(Olomoucké Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:olomouc-pyvo-2024-07-18@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20240530T170000Z
+SUMMARY:(Brněnské Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:brno-pyvo-2024-05-30@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20240829T170000Z
+SUMMARY:(Brněnské Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:brno-pyvo-2024-08-29@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20240417T170000Z
+SUMMARY:(Pražské Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:praha-pyvo-2024-04-17@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20240620T160000Z
+SUMMARY:(Olomoucké Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:olomouc-pyvo-2024-06-20@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20240710T160000Z
+SUMMARY:(Plzeňské Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:plzen-pyvo-2024-07-10@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20240725T170000Z
+SUMMARY:(Brněnské Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:brno-pyvo-2024-07-25@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20240821T170000Z
+SUMMARY:(Pražské Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:praha-pyvo-2024-08-21@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20240627T170000Z
+SUMMARY:(Brněnské Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:brno-pyvo-2024-06-27@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Březnové pyvo\, poslední čtvrtek v měsíci v ArtBaru\, jako obvykle. 🙂 🍻\n\nPřednáška bude v angličtině.\n\n----\nMarch Pyvo\, last Thursday of the month at ArtBar\, as usual. 🙂 🍻\n\nThe talk will be in English.\n
+GEO:49.207792;16.603872
+LOCATION:ArtBar Druhý Pád\, Štefánikova 836/1\, Brno
+DTSTART:20240328T180000Z
+SUMMARY:Brněnské Pyvo – Obrazové
+UID:brno-pyvo-2024-03-28@pyvo.cz
+URL:https://pyvo.cz/brno-pyvo/2024-03/
+END:VEVENT
+END:VCALENDAR
