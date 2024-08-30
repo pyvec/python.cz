@@ -6,7 +6,7 @@ import re
 from functools import cache
 from zoneinfo import ZoneInfo
 
-import extruct
+import teemup
 import ics
 import requests
 from strictyaml import load as load_yaml, Map, Str, Seq, Url
@@ -123,18 +123,18 @@ def parse_icalendar(text: str) -> list[dict]:
 
 
 def parse_json_dl(html: str, base_url: str) -> list[dict]:
-    data = extruct.extract(html, base_url, syntaxes=["json-ld"])
+    response = requests.get(base_url)
+    events = teemup.parse(response.text)
     return [
         dict(
-            name=item["name"],
-            starts_at=to_prague_tz(datetime.fromisoformat(item["startDate"])),
-            ends_at=to_prague_tz(datetime.fromisoformat(item["endDate"])),
-            location=parse_json_dl_location(item["location"]),
-            url=item["url"],
+            name=event['title'],
+            starts_at=event['starts_at'],
+            ends_at=event['ends_at'],
+            location=event['venue'],
+            url=event['url'],
             is_tentative=False,
         )
-        for item in data["json-ld"]
-        if item["@type"] == "Event" and base_url in item["url"]
+        for event in events
     ]
 
 

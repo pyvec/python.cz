@@ -16,6 +16,7 @@ strictyaml = "1.7.3"
 ics = {version = "0.8.0.dev0", allow-prereleases = true}
 extruct = "0.16.0"
 requests = "2.31.0"
+teemup = "^1.0.3"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "7.4.0"
