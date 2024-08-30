@@ -2,6 +2,7 @@
 
 Czech Python community homepage on MkDocs.
 
+
 ## License
 
 [MIT](LICENSE)
