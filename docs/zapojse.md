@@ -92,4 +92,4 @@ navrhnout jako kouč, napiš to do komentáře pod daný úkol a [přiřaď mu
 
 TODO - zrušit, možná udělat jen seznam organizací nebo repozitářů
 
-![Přidat nápad](https://github.com/pyvec/zapojse/issues/new)
+[Přidat nápad](https://github.com/pyvec/zapojse/issues/new)
