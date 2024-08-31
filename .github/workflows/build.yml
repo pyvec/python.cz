@@ -14,4 +14,28 @@ jobs:
 
       - name: Install Poetry
         run: pipx install poetry
- 
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+          cache: poetry
+
+      - name: Install dependencies
+        run: poetry install
+
+      # - name: Test
+      #   run: poetry run pytest
+
+      - name: Build
+        run: poetry run mkdocs build
+        env:
+          PYTHONPATH: .
+
+      - if: ${{ github.ref == 'refs/heads/main' }}
+        name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          #cname: python.cz
