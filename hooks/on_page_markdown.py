@@ -4,7 +4,7 @@ from mkdocs.config import Config
 from mkdocs.structure.pages import Page
 from mkdocs.structure.files import Files
 
-from hooks.events import fetch_events, filter_events
+from events import fetch_events, filter_events
 
 
 def on_page_markdown(
