@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "pythoncz"
-version = "0.0.0"
 description = "Czech Python user group homepage"
 authors = ["Honza Javorek <mail@honzajavorek.cz>"]
 readme = "README.md"
 homepage = "https://python.cz/"
 repository = "https://github.com/honzajavorek/mkdocs-python.cz/"
 classifiers = ["Private :: Do Not Upload"]
+package-mode = false
+
 
 [tool.poetry.dependencies]
 python = "3.11.*"
