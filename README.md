@@ -1,13 +1,12 @@
 # python.cz
 
-Czech Python community homepage on MkDocs.
+Czech Python community homepage powered by [MkDocs](https://www.mkdocs.org/).
 
 # How to run (for development)
 
-1. clone repository
+1. Clone repository
 1. `poetry install`
-1. activate venv (created by poetry by itself, if it's not activated already)
-1. `PYTHONPATH=. mkdocs serve`
+1. `poetry run mkdocs serve`
 
 
 ## License
