@@ -29,8 +29,6 @@ jobs:
 
       - name: Build
         run: poetry run mkdocs build
-        env:
-          PYTHONPATH: .
 
       - if: ${{ github.ref == 'refs/heads/main' }}
         name: Deploy to GitHub Pages
