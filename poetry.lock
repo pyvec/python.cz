@@ -232,31 +232,6 @@ files = [
 ]
 
 [[package]]
-name = "extruct"
-version = "0.16.0"
-description = "Extract embedded metadata from HTML markup"
-category = "main"
-optional = false
-python-versions = "*"
-files = [
-    {file = "extruct-0.16.0-py2.py3-none-any.whl", hash = "sha256:2499ea9e7d22744745ca708acee9542a4aa231871620c4f65f869a1286e64aa8"},
-    {file = "extruct-0.16.0.tar.gz", hash = "sha256:d09cb3d86d149a276b277b3bd45b2b867ef3ec78bed9cd58ee0f2ae01ae670c4"},
-]
-
-[package.dependencies]
-html-text = ">=0.5.1"
-jstyleson = "*"
-lxml = "*"
-mf2py = "*"
-pyrdfa3 = "*"
-rdflib = {version = ">=6.0.0", markers = "python_version >= \"3.7\""}
-six = "*"
-w3lib = "*"
-
-[package.extras]
-cli = ["requests"]
-
-[[package]]
 name = "ghp-import"
 version = "2.1.0"
 description = "Copy your docs directly to the gh-pages branch."
@@ -273,43 +248,6 @@ python-dateutil = ">=2.8.1"
 
 [package.extras]
 dev = ["flake8", "markdown", "twine", "wheel"]
-
-[[package]]
-name = "html-text"
-version = "0.5.2"
-description = "Extract text from HTML"
-category = "main"
-optional = false
-python-versions = "*"
-files = [
-    {file = "html_text-0.5.2-py2.py3-none-any.whl", hash = "sha256:3f1e063f05eddf3e099a88f0440219c55fdc01c44f1291fe59c66e5228d7fc56"},
-    {file = "html_text-0.5.2.tar.gz", hash = "sha256:afd61bbb70651d494a8c32670a29b9140492eccc9690109857beae41c3093ded"},
-]
-
-[package.dependencies]
-lxml = "*"
-
-[[package]]
-name = "html5lib"
-version = "1.1"
-description = "HTML parser based on the WHATWG HTML specification"
-category = "main"
-optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
-files = [
-    {file = "html5lib-1.1-py2.py3-none-any.whl", hash = "sha256:0d78f8fde1c230e99fe37986a60526d7049ed4bf8a9fadbad5f00e22e58e041d"},
-    {file = "html5lib-1.1.tar.gz", hash = "sha256:b2e5b40261e20f354d198eae92afc10d750afb487ed5e50f9c4eaf07c184146f"},
-]
-
-[package.dependencies]
-six = ">=1.9"
-webencodings = "*"
-
-[package.extras]
-all = ["chardet (>=2.2)", "genshi", "lxml"]
-chardet = ["chardet (>=2.2)"]
-genshi = ["genshi"]
-lxml = ["lxml"]
 
 [[package]]
 name = "ics"
@@ -392,21 +330,6 @@ files = [
 ]
 
 [[package]]
-name = "isodate"
-version = "0.6.1"
-description = "An ISO 8601 date/time/duration parser and formatter"
-category = "main"
-optional = false
-python-versions = "*"
-files = [
-    {file = "isodate-0.6.1-py2.py3-none-any.whl", hash = "sha256:0751eece944162659049d35f4f549ed815792b38793f07cf73381c1c87cbed96"},
-    {file = "isodate-0.6.1.tar.gz", hash = "sha256:48c5881de7e8b0a0d648cb024c8062dc84e7b840ed81e864c7614fd3c127bde9"},
-]
-
-[package.dependencies]
-six = "*"
-
-[[package]]
 name = "jinja2"
 version = "3.1.2"
 description = "A very fast and expressive template engine."
@@ -423,17 +346,6 @@ MarkupSafe = ">=2.0"
 
 [package.extras]
 i18n = ["Babel (>=2.7)"]
-
-[[package]]
-name = "jstyleson"
-version = "0.0.2"
-description = "Library to parse JSON with js-style comments."
-category = "main"
-optional = false
-python-versions = "*"
-files = [
-    {file = "jstyleson-0.0.2.tar.gz", hash = "sha256:680003f3b15a2959e4e6a351f3b858e3c07dd3e073a0d54954e34d8ea5e1308e"},
-]
 
 [[package]]
 name = "lxml"
@@ -706,23 +618,6 @@ files = [
 ]
 
 [[package]]
-name = "mf2py"
-version = "1.1.3"
-description = "Python Microformats2 parser"
-category = "main"
-optional = false
-python-versions = ">=2.7"
-files = [
-    {file = "mf2py-1.1.3-py3-none-any.whl", hash = "sha256:8f9e2c147beadd56f8839644124c7d141d96e879319b9f50d02826c88766bf4d"},
-    {file = "mf2py-1.1.3.tar.gz", hash = "sha256:4241e91ed4b644dd666d9fbd2557ed86e5bb7399c196026f7b0a1f413b33f59f"},
-]
-
-[package.dependencies]
-BeautifulSoup4 = ">=4.6.0"
-html5lib = ">=1.0.1"
-requests = ">=2.18.4"
-
-[[package]]
 name = "mkdocs"
 version = "1.5.2"
 description = "Project documentation with Markdown."
@@ -903,21 +798,6 @@ markdown = ">=3.2"
 pyyaml = "*"
 
 [[package]]
-name = "pyparsing"
-version = "3.1.1"
-description = "pyparsing module - Classes and methods to define and execute parsing grammars"
-category = "main"
-optional = false
-python-versions = ">=3.6.8"
-files = [
-    {file = "pyparsing-3.1.1-py3-none-any.whl", hash = "sha256:32c7c0b711493c72ff18a981d24f28aaf9c1fb7ed5e9667c9e84e3db623bdbfb"},
-    {file = "pyparsing-3.1.1.tar.gz", hash = "sha256:ede28a1a32462f5a9705e07aea48001a08f7cf81a021585011deba701581a0db"},
-]
-
-[package.extras]
-diagrams = ["jinja2", "railroad-diagrams"]
-
-[[package]]
 name = "pyquery"
 version = "2.0.0"
 description = "A jquery-like library for python"
@@ -935,22 +815,6 @@ lxml = ">=2.1"
 
 [package.extras]
 test = ["pytest", "pytest-cov", "requests", "webob", "webtest"]
-
-[[package]]
-name = "pyrdfa3"
-version = "3.5.3"
-description = "pyRdfa Libray"
-category = "main"
-optional = false
-python-versions = "*"
-files = [
-    {file = "pyRdfa3-3.5.3-py3-none-any.whl", hash = "sha256:4da7ed49e8f524b573ed67e4f7bc7f403bff3be00546d7438fe263c924a91ccf"},
-    {file = "pyRdfa3-3.5.3.tar.gz", hash = "sha256:157663a92b87df345b6f69bde235dff5f797891608e12fe1e4fa8dad687131ae"},
-]
-
-[package.dependencies]
-html5lib = "*"
-rdflib = "*"
 
 [[package]]
 name = "pytest"
@@ -1063,28 +927,6 @@ files = [
 
 [package.dependencies]
 pyyaml = "*"
-
-[[package]]
-name = "rdflib"
-version = "7.0.0"
-description = "RDFLib is a Python library for working with RDF, a simple yet powerful language for representing information."
-category = "main"
-optional = false
-python-versions = ">=3.8.1,<4.0.0"
-files = [
-    {file = "rdflib-7.0.0-py3-none-any.whl", hash = "sha256:0438920912a642c866a513de6fe8a0001bd86ef975057d6962c79ce4771687cd"},
-    {file = "rdflib-7.0.0.tar.gz", hash = "sha256:9995eb8569428059b8c1affd26b25eac510d64f5043d9ce8c84e0d0036e995ae"},
-]
-
-[package.dependencies]
-isodate = ">=0.6.0,<0.7.0"
-pyparsing = ">=2.1.0,<4"
-
-[package.extras]
-berkeleydb = ["berkeleydb (>=18.1.0,<19.0.0)"]
-html = ["html5lib (>=1.0,<2.0)"]
-lxml = ["lxml (>=4.3.0,<5.0.0)"]
-networkx = ["networkx (>=2.0.0,<3.0.0)"]
 
 [[package]]
 name = "readtime"
@@ -1296,18 +1138,6 @@ socks = ["pysocks (>=1.5.6,!=1.5.7,<2.0)"]
 zstd = ["zstandard (>=0.18.0)"]
 
 [[package]]
-name = "w3lib"
-version = "2.1.2"
-description = "Library of web-related functions"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-files = [
-    {file = "w3lib-2.1.2-py3-none-any.whl", hash = "sha256:c4432926e739caa8e3f49f5de783f336df563d9490416aebd5d39fb896d264e7"},
-    {file = "w3lib-2.1.2.tar.gz", hash = "sha256:ed5b74e997eea2abe3c1321f916e344144ee8e9072a6f33463ee8e57f858a4b1"},
-]
-
-[[package]]
 name = "watchdog"
 version = "3.0.0"
 description = "Filesystem events monitoring"
@@ -1347,19 +1177,7 @@ files = [
 [package.extras]
 watchmedo = ["PyYAML (>=3.10)"]
 
-[[package]]
-name = "webencodings"
-version = "0.5.1"
-description = "Character encoding aliases for legacy web content"
-category = "main"
-optional = false
-python-versions = "*"
-files = [
-    {file = "webencodings-0.5.1-py2.py3-none-any.whl", hash = "sha256:a0af1213f3c2226497a97e2b3aa01a7e4bee4f403f95be16fc9acd2947514a78"},
-    {file = "webencodings-0.5.1.tar.gz", hash = "sha256:b36a1c245f2d304965eb4e0a82848379241dc04b865afcc4aab16748587e1923"},
-]
-
 [metadata]
 lock-version = "2.0"
 python-versions = "3.11.*"
-content-hash = "681aba0e549c066c44eb1621ee063f00bcd171dbc1b3783e7be6f6baa313173d"
+content-hash = "1227118ca0f1fd98c06ee678e853c28fd1c93a472b1d965629ecb1e4f0e88f60"
