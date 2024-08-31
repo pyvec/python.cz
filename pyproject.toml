@@ -27,7 +27,6 @@ norecursedirs = "node_modules"
 addopts = "--ff"
 
 [tool.black]
-target-versions = ["py311"]
 include = "\\.py$"
 exclude = "node_modules"
 
