@@ -1,15 +1,15 @@
-from datetime import date, datetime, timedelta
 import json
+import re
+from datetime import date, datetime, timedelta
+from functools import cache
 from operator import itemgetter
 from pathlib import Path
-import re
-from functools import cache
 from zoneinfo import ZoneInfo
 
-import teemup
 import ics
 import requests
-from strictyaml import load as load_yaml, Map, Str, Seq, Url
+import teemup
+from strictyaml import Map, Seq, Str, Url, load as load_yaml
 
 
 YAML_SCHEMA = Seq(
@@ -127,11 +127,11 @@ def parse_json_dl(html: str, base_url: str) -> list[dict]:
     events = teemup.parse(response.text)
     return [
         dict(
-            name=event['title'],
-            starts_at=event['starts_at'],
-            ends_at=event['ends_at'],
-            location=event['venue'],
-            url=event['url'],
+            name=event["title"],
+            starts_at=event["starts_at"],
+            ends_at=event["ends_at"],
+            location=event["venue"],
+            url=event["url"],
             is_tentative=False,
         )
         for event in events

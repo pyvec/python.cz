@@ -1,4 +1,5 @@
 from pathlib import Path
+
 from mkdocs.config import Config
 
 

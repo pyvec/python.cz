@@ -1,7 +1,7 @@
 from pathlib import Path
-from mkdocs.config import Config
 
 from events import fetch_events, generate_icalendar
+from mkdocs.config import Config
 
 
 def on_pre_build(config: Config):

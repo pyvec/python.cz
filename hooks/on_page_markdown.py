@@ -1,10 +1,10 @@
 from urllib.parse import quote_plus
-from jinja2 import Environment
-from mkdocs.config import Config
-from mkdocs.structure.pages import Page
-from mkdocs.structure.files import Files
 
 from events import fetch_events, filter_events
+from jinja2 import Environment
+from mkdocs.config import Config
+from mkdocs.structure.files import Files
+from mkdocs.structure.pages import Page
 
 
 def on_page_markdown(
