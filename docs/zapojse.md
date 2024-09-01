@@ -79,7 +79,9 @@ Srazy nebo workshopy dělají konkrétní lidé a Pyvec jim do toho nemluví - n
 ## Další nápady
 
 Pro organizaci jednorázových úkolů používáme
-[GitHub](https://github.com/pyvec/zapojse/). Když nic, tak aspoň
+[GitHub](https://github.com/pyvec/zapojse/) (viz Issues, můžeš tady [přidat svůj nápad](https://github.com/pyvec/zapojse/issues/new))
+
+Když nic, tak aspoň
 [hlasuj](https://github.com/blog/2119-add-reactions-to-pull-requests-issues-and-comments)
 nebo [přidej vlastní
 nápad](https://github.com/pyvec/zapojse/issues/new). Díky hlasům budeme
@@ -90,6 +92,3 @@ Značka _Kouč pomůže!_ znamená, že někdo navrhl,
 navrhnout jako kouč, napiš to do komentáře pod daný úkol a [přiřaď mu
 štítek](https://help.github.com/articles/applying-labels-to-issues-and-pull-requests/)
 
-TODO - zrušit, možná udělat jen seznam organizací nebo repozitářů
-
-[Přidat nápad](https://github.com/pyvec/zapojse/issues/new)
