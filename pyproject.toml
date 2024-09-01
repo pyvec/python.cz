@@ -1,0 +1,41 @@
+[tool.poetry]
+description = "Czech Python user group homepage"
+authors = ["Honza Javorek <mail@honzajavorek.cz>"]
+readme = "README.md"
+homepage = "https://python.cz/"
+repository = "https://github.com/honzajavorek/mkdocs-python.cz/"
+classifiers = ["Private :: Do Not Upload"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "3.11.*"
+mkdocs-material = "9.2.3"
+strictyaml = "1.7.3"
+ics = {version = "0.8.0.dev0", allow-prereleases = true}
+requests = "2.31.0"
+teemup = "1.0.3"
+mkdocs = "1.6.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "7.4.0"
+pytest-ruff = "0.4.1"
+
+[tool.pytest.ini_options]
+python_files = "test_*.py"
+testpaths = "tests"
+norecursedirs = "node_modules"
+addopts = "--ff --ruff --ruff-format"
+
+[tool.ruff]
+target-version = "py312"
+
+[tool.ruff.lint]
+extend-select = ["I"]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+lines-after-imports = 2
+
+[build-system]
+requires = ["poetry-core>=1.5.0"]
+build-backend = "poetry.core.masonry.api"

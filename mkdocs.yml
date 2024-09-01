@@ -1,0 +1,61 @@
+site_name: Python v ČR
+site_url: https://python.cz/
+
+repo_url: https://github.com/pyvec/python.cz
+repo_name: Upravit tyto stránky
+
+nav:
+  - Ahoj!: index.md
+  - Akce: akce.md
+  - Pro začátečníky: zacatecnici.md
+  - Práce: prace.md
+  - Zapoj se!: zapojse.md
+  - English: en.md
+
+theme:
+  name: material
+  logo: images/site-logo.svg
+  favicon: images/favicon.ico
+  language: cs
+  palette:
+    primary: custom
+    accent: custom
+  font: false
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - content.action.edit
+  custom_dir: overrides
+  static_templates:
+    - events.ics
+  icon:
+    repo: fontawesome/brands/github
+  edit_uri: edit/main/docs/
+
+markdown_extensions:
+  - toc:
+      toc_depth: 2-2
+      permalink: '#'
+      permalink_title: Odkaz na tuto sekci
+  - pymdownx.emoji:
+      emoji_index: !!python/name:pymdownx.emoji.twemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - attr_list
+  - md_in_html
+
+hooks:
+  - hooks/on_pre_build.py
+  - hooks/on_page_markdown.py
+  - hooks/on_post_build.py
+
+extra_css:
+  - css/extra.css
+
+plugins: []
+
+
+watch:
+  - docs
+  - hooks

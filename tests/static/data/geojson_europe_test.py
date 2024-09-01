@@ -10,16 +10,16 @@ BOUNDS = (
 )
 
 
-path = Path(__file__).parent / '../../../pythoncz/static/data/business.geojson'
+path = Path(__file__).parent / "../../../pythoncz/static/data/business.geojson"
 with path.open() as f:
-    features = json.load(f)['features']
+    features = json.load(f)["features"]
 assert len(features) > 0
 
 
-@pytest.mark.parametrize('feature', [
-    pytest.param(feature, id=feature['properties']['name'])
-    for feature in features
-])
+@pytest.mark.parametrize(
+    "feature",
+    [pytest.param(feature, id=feature["properties"]["name"]) for feature in features],
+)
 def test_geojson_coords_are_in_europe(feature):
     """Tests whether entries in GeoJSON are in Europe. If this test failed
     for you, it's very likely because you have
@@ -33,9 +33,9 @@ def test_geojson_coords_are_in_europe(feature):
     (which is Prague) in your GeoJSON entry.
     """
     # For Point, convert list of coords to nested list
-    geometry_type = feature['geometry']['type']
-    coords = feature['geometry']['coordinates']
-    places = [coords] if geometry_type == 'Point' else coords
+    geometry_type = feature["geometry"]["type"]
+    coords = feature["geometry"]["coordinates"]
+    places = [coords] if geometry_type == "Point" else coords
 
     for place_coords in places:
         for i, coord in enumerate(place_coords):

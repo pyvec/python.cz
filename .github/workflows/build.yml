@@ -1,0 +1,39 @@
+name: build
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 4 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Poetry
+        run: pipx install poetry
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+          cache: poetry
+
+      - name: Install dependencies
+        run: poetry install
+
+      # - name: Test
+      #   run: poetry run pytest
+
+      - name: Build
+        run: poetry run mkdocs build
+
+      - if: ${{ github.ref == 'refs/heads/main' }}
+        name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          #cname: python.cz
