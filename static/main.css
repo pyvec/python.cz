@@ -1,0 +1,725 @@
+
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    height: auto;
+}
+
+.container {
+    margin: 0 auto;
+    text-align: left;
+}
+
+.header,
+.marketing,
+.footer {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+hr {
+    margin: 4em 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+.title,
+.tasks .panel-body,
+.online-courses .panel-body {
+    font-family: 'Arbutus Slab', serif;
+}
+
+.content > h1,
+h2,
+h3 {
+    margin: 1.3em 0 1em 0;
+}
+
+.content > h1 {
+    text-align: center;
+    font-size: 400%;
+    margin-bottom: 1.5em;
+}
+
+.get-involved h2,
+.beginners h2,
+.jobs h2 {
+    text-align: center;
+}
+
+.boxes h2 {
+  text-align: left;
+}
+
+.boxes #organizuj h2 {
+  text-align: center;
+}
+
+.columns h3 {
+    margin-top: 2em;
+}
+
+.permalink-container {
+    position: relative;
+}
+
+a.permalink {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    visibility: hidden;
+    font-family: sans-serif;
+    margin-left: 0.1em;
+    padding: 0 0.3em;
+    text-decoration: none;
+    color: #d5d5d5;
+}
+
+h1[id]:hover .permalink,
+h2[id]:hover .permalink,
+h3[id]:hover .permalink,
+h4[id]:hover .permalink,
+h5[id]:hover .permalink,
+h6[id]:hover .permalink {
+    visibility: visible;
+}
+
+ul {
+    padding-left: 1.5em;
+}
+
+ul li {
+    list-style-type: none;
+    position: relative;
+    margin-bottom: 0.3em;
+}
+
+ul li:before {
+    content: '•';
+    position: absolute;
+    left: -1em;
+}
+
+.header {
+    padding-bottom: 1.5em;
+}
+
+.header .title {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 2em;
+    font-size: 1.5em;
+}
+
+.header .title a {
+    text-decoration: none;
+    color: #646464;
+}
+
+.header .title img {
+    vertical-align: text-top;
+    margin-right: 0.1em;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.logo img {
+    width: 100%;
+}
+
+ul.lead {
+    text-align: center;
+    padding: 0;
+}
+
+ul.lead li:before,
+ul.nav li:before,
+ul.list-group li:before,
+ul.events-list li:before {
+    display: none;
+}
+
+.box-body {
+    min-height: 18em;
+    padding: 1em 0;
+}
+
+.box-content {
+    min-height: 10em;
+}
+
+.box h2 {
+    margin: 0 0 0.5em 0;
+}
+
+.boxes {
+    margin: 2em 0;
+}
+
+.index .call-to-action, .beginners .call-to-action {
+    text-align: right;
+}
+
+.beginners .index .btn, .beginners .call-to-action .btn {
+    margin: 1em 0.5em 0 auto;
+}
+
+.jobs .call-to-action, .get-involved .call-to-action, .events .call-to-action {
+    text-align: center;
+}
+
+.jobs .call-to-action {
+    margin-top: -1em;
+}
+
+.jobs .call-to-action .btn {
+    margin: 0 auto;
+}
+
+.get-involved .call-to-action .btn {
+    margin: 1em auto;
+}
+
+.discussions {
+    margin: 0;
+}
+
+.discussions .list-group-item {
+    border: none;
+}
+
+i.fa {
+    margin-right: 0.3em;
+}
+
+h2 i.fa {
+    margin-right: 0.1em;
+}
+
+.footer {
+    margin-top: 2em;
+    padding: 2em 1em;
+    border-top: 1px solid #e5e5e5;
+}
+
+.footer p {
+    line-height: 2em;
+}
+
+.footer .edit {
+    text-align: right;
+}
+
+.footer .edit a {
+    text-align: left;
+}
+
+.columns {
+    margin: 4em 2em;
+
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+
+    -webkit-column-rule: 1px dotted #aaa;
+    -moz-column-rule: 1px dotted #aaa;
+    column-rule: 1px dotted #aaa;
+
+    -webkit-column-gap: 3em;
+    -moz-column-gap: 3em;
+    column-gap: 3em;
+}
+
+.columns-many {
+    -webkit-columns: 4;
+    -moz-columns: 4;
+    columns: 4;
+}
+
+.columns h2:first-of-type,
+.columns h3:first-of-type {
+    margin-top: 0;
+}
+
+.columns img {
+    width: 100%;
+}
+
+.help {
+    cursor: help;
+}
+
+i.fa.help {
+    margin-left: 0.3em;
+}
+
+img.img-small {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.tasks h3 {
+    text-align: center;
+    margin: 2em 0 2em 0;
+}
+
+.tasks .panel-body {
+    height: 120px;
+    overflow: hidden;
+    position: relative;
+}
+
+.tasks .panel-body .shadow {
+    position: absolute;
+    height: 20px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: inset 0px -15px 20px 0px rgba(255,255,255,1);
+}
+
+.tasks .panel-body,
+.online-courses .panel-body {
+    text-align: center;
+    font-size: 110%;
+}
+
+.tasks .panel-body a {
+    color: #333;
+    height: 70px;
+    width: 100%;
+    display: table;
+}
+
+.tasks .panel-body a span,
+.tasks .panel-body a strong {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.tasks .panel-footer {
+    text-align: right;
+}
+
+.tasks .votes {
+    margin-right: 1em;
+}
+
+.online-courses {
+    margin: 3em 0 1em 0;
+}
+
+.online-courses .panel {
+    text-align: center;
+}
+
+.jobs .thumbnail {
+    margin-top: 2em;
+}
+
+.jobs #map, .events #map {
+    height: 350px;
+}
+
+.cartoon {
+    display: block;
+    width: 100%;
+}
+
+.cartoon-container {
+    margin: 0 auto;
+    padding: 2em 0;
+    max-width: 768px;
+}
+
+.cartoon-hr {
+    padding-bottom: 4em;
+}
+
+.panel-body .cartoon {
+    margin: 0 auto 1.5em auto;
+    max-height: 10em;
+    width: auto;
+}
+
+.get-involved .cartoon {
+    margin-bottom: 2em;
+}
+
+img[src*="jobs.svg"] {
+    max-height: 400px;
+}
+
+.communication {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2em 0 0 0;
+}
+
+.communication-item {
+    display: block;
+    width: 10em;
+    height: 8em;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+li.communication-item::before {
+    display: none;
+}
+
+.communication-item a {
+    text-decoration: none;
+}
+
+.communication-item-icon {
+    font-size: 2.5em;
+    display: block;
+}
+
+.communication-item-icon i {
+    margin: 0;
+}
+
+.communication-item-caption {
+    display: block;
+}
+
+.label {
+    margin-right: 0.5em;
+}
+
+.issues, .issues-error {
+    margin: 2em 0;
+}
+
+.issues-error {
+    text-align: center;
+}
+
+.issues-error .fa {
+    font-size: 200%;
+    margin-bottom: 0.3em;
+}
+
+.issue {
+    padding: 0.5em 0.5em 0.5em 2em;
+    margin: 0.5em 0;
+    border-bottom: #F5F5F5 1px solid;
+    position: relative;
+}
+
+.issue h3 {
+    font-size: inherit;
+    font-family: inherit;
+    margin: 0.3em 0 0.5em 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.issue-title a {
+    color: #333;
+}
+
+.issue-title::before {
+    content: "\00a0";
+    width: 2em;
+    background: linear-gradient(
+      to right,
+      rgba(255,255,255,0) 0%,
+      rgba(255,255,255,1) 100%
+    );
+    position: absolute;
+    right: 0.5em;
+}
+
+.issue-icon {
+    color: #6CC644;
+    font-size: 1.5em;
+    position: absolute;
+    left: 0;
+    top: 0.7em;
+}
+
+.issue-repo {
+    line-height: 0.7em;
+    font-size: 0.7em;
+    display: table; /* trick to have a 'block' as wide as content */
+}
+
+.issue-repo-specific .issue-title {
+    line-height: 1.3em;
+}
+
+.issue-general .issue-title {
+    line-height: 2em;
+}
+
+a.issue-repo,
+a.issue-repo:hover,
+a.issue-repo:focus,
+.issue-details .label-default,
+.issue-details a.label-default:hover,
+.issue-details a.label-default:focus {
+    color: #777;
+}
+
+.issue-details .label-default {
+    background-color: #F5F5F5;
+}
+
+.issue-details a.label-default:hover,
+.issue-details a.label-default:focus {
+    background-color: #E5E5E5;
+}
+
+.label-pyladies {
+    background-color: #FF8181;
+}
+.label-sprint-idea {
+    background-color: #FBCA04;
+    color: black;
+}
+
+i.icon-english {
+    display: inline-block;
+    width: 1.3em;
+    border-radius: 0.4em;
+    background: url("./images/uk-flag.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
+i.icon-english::before {
+    content: "\00a0";
+}
+
+.notice {
+    background: #337ab7;
+    color: #fff;
+    padding: 0.5em;
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 0.5em;
+}
+
+.notice a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.pagenotfound {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.pagenotfound img {
+    width: 50%;
+}
+
+.events .lead,
+.events-index h2 {
+    text-align: center;
+}
+
+.events-index h3 {
+    text-align: left;
+}
+
+.events .cartoon {
+    height: 10em;
+}
+
+.events .content h2,
+.events .content p,
+.events-month {
+    text-align: center;
+}
+
+.events-list,
+.events-list li {
+    padding: 0;
+    margin: 0;
+}
+
+.events-month {
+    padding-bottom: 0.3em;
+    border-bottom: 1px #eee solid;
+}
+
+.events-list .event {
+    margin-bottom: 2em;
+}
+
+.event-datetime {
+    color: #337ab7;
+    display: block;
+    text-align: center;
+    border: 1px #337ab7 solid;
+    border-radius: 0.3em;
+    min-width: 8em;  /* sized for "WEDNESDAY" */
+    padding: 0.3em 1em 1em 1em;
+}
+
+.event-day,
+.event-time {
+    display: block;
+}
+
+.event-day {
+    font-size: 230%;
+}
+
+.event-weekday {
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    min-width: 4.5em;
+}
+
+.event h4 {
+    font-size: inherit;
+    font-family: inherit;
+    margin: 0.3em 0 0.5em 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.event-title, a.event-title {
+    line-height: 2em;
+}
+
+.event-title::before {
+    content: "\00a0";
+    width: 2em;
+    background: linear-gradient(
+      to right,
+      rgba(255,255,255,0) 0%,
+      rgba(255,255,255,1) 100%
+    );
+    position: absolute;
+    right: 0;
+}
+
+.event-feed {
+    line-height: 0.7em;
+    font-size: 0.7em;
+    display: table; /* trick to have a 'block' as wide as content */
+}
+
+.event-feed,
+.event-feed a,
+.event-feed a:hover,
+.event-feed a:focus {
+    color: #777;
+}
+
+.events .content p.event-location,
+.events .content p.event-map-links {
+    text-align: left;
+    font-size: 90%;
+    margin: 0;
+    margin-bottom: 0.1em;
+}
+
+.event-map-links a {
+    margin-right: 0.5em;
+}
+
+.event-tentative,
+.event-tentative a,
+.event-tentative a:hover,
+.event-tentative a:focus,
+.event-tentative .event-feed,
+.event-tentative .event-datetime {
+    color: #AAA;
+    border-color: #AAA;
+}
+
+.event-tentative .event-datetime {
+    padding-bottom: 0.5em;
+}
+
+.event-tentative .event-day {
+    font-size: 180%;
+}
+
+.event-tentative .event-weekday,
+.event-tentative .event-time {
+    display: inline;
+}
+
+.meetups {
+    margin: 2em 0;
+}
+
+.meetups-city {
+    text-align: center;
+    font-size: 120%;
+}
+
+.meetups-city a {
+    display: inline-block;
+    line-height: 2.5em;
+    padding-left: 3em;
+    margin: 0.5em 0;
+    background: url("./images/pyvo.png");
+    background-size: 2em;
+    background-repeat: no-repeat;
+}
+
+
+@media only screen and (max-width: 992px) {
+    .boxes {
+        margin: 0;
+        padding: 0;
+    }
+
+    .columns {
+        margin: 0;
+
+        -webkit-columns: 1;
+        -moz-columns: 1;
+        columns: 1;
+    }
+
+    .columns-many {
+        margin: 4em 2em;
+
+        -webkit-columns: 3;
+        -moz-columns: 3;
+        columns: 3;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .columns-many {
+        -webkit-columns: 2;
+        -moz-columns: 2;
+        columns: 2;
+    }
+
+    .discussions {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .pagenotfound img {
+        width: 80%;
+    }
+}

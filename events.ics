@@ -1,0 +1,130 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:ics.py - http://git.io/lLljaA
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20241120T180000Z
+SUMMARY:(Pražské Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:praha-pyvo-2024-11-20@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20250115T180000Z
+SUMMARY:(Pražské Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:praha-pyvo-2025-01-15@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20250227T180000Z
+SUMMARY:(Brněnské Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:brno-pyvo-2025-02-27@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20241121T170000Z
+SUMMARY:(Olomoucké Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:olomouc-pyvo-2024-11-21@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20241218T180000Z
+SUMMARY:(Pražské Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:praha-pyvo-2024-12-18@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20240918T170000Z
+SUMMARY:(Pražské Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:praha-pyvo-2024-09-18@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20241024T160000Z
+SUMMARY:(Olomoucké Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:olomouc-pyvo-2024-10-24@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20241031T180000Z
+SUMMARY:(Brněnské Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:brno-pyvo-2024-10-31@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20240911T160000Z
+SUMMARY:(Plzeňské Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:plzen-pyvo-2024-09-11@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20241113T170000Z
+SUMMARY:(Plzeňské Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:plzen-pyvo-2024-11-13@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20250220T170000Z
+SUMMARY:(Olomoucké Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:olomouc-pyvo-2025-02-20@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20241016T170000Z
+SUMMARY:(Pražské Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:praha-pyvo-2024-10-16@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20241219T170000Z
+SUMMARY:(Olomoucké Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:olomouc-pyvo-2024-12-19@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20250108T170000Z
+SUMMARY:(Plzeňské Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:plzen-pyvo-2025-01-08@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20241226T180000Z
+SUMMARY:(Brněnské Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:brno-pyvo-2024-12-26@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20240919T160000Z
+SUMMARY:(Olomoucké Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:olomouc-pyvo-2024-09-19@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20250219T180000Z
+SUMMARY:(Pražské Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:praha-pyvo-2025-02-19@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20240926T170000Z
+SUMMARY:(Brněnské Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:brno-pyvo-2024-09-26@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20241128T180000Z
+SUMMARY:(Brněnské Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:brno-pyvo-2024-11-28@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20250123T170000Z
+SUMMARY:(Olomoucké Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:olomouc-pyvo-2025-01-23@pyvo.cz
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:tentative-date
+DTSTART:20250130T180000Z
+SUMMARY:(Brněnské Pyvo – nepotvrzeno\; tradiční termín srazu)
+UID:brno-pyvo-2025-01-30@pyvo.cz
+END:VEVENT
+END:VCALENDAR

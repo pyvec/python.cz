@@ -1,0 +1,19 @@
+feeds:
+  - name: Pyvo
+    url: https://pyvo.cz/
+    ical: https://pyvo.cz/api/pyvo.ics
+  - name: PyWorking
+    url: https://pyworking.cz/
+    ical: https://pyworking.cz/workshops.ics
+
+## Meetup.com iCal is not available, see https://github.com/pyvec/python.cz/issues/557
+#  - name: PyWorking Sessions
+#    url: https://pyworking.cz/
+#    ical: https://www.meetup.com/pyworking/events/ical/
+#  - name: PyData Prague
+#    url: https://www.meetup.com/PyData-Prague/
+#    ical: https://www.meetup.com/PyData-Prague/events/ical/
+
+  - name: Czech Python Events
+    url: https://calendar.google.com/calendar/embed?src=kfdeelic1a13jsp7jvai861vfs%40group.calendar.google.com&ctz=Europe%2FPrague
+    ical: https://calendar.google.com/calendar/ical/kfdeelic1a13jsp7jvai861vfs%40group.calendar.google.com/public/basic.ics
