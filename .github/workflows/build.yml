@@ -22,8 +22,8 @@ jobs:
       - name: Install dependencies
         run: poetry install
 
-      # - name: Test
-      #   run: poetry run pytest
+      - name: Test
+        run: poetry run pytest
 
       - name: Build
         run: poetry run mkdocs build
