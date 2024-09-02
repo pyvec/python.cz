@@ -3,7 +3,7 @@ description = "Czech Python user group homepage"
 authors = ["Honza Javorek <mail@honzajavorek.cz>"]
 readme = "README.md"
 homepage = "https://python.cz/"
-repository = "https://github.com/honzajavorek/mkdocs-python.cz/"
+repository = "https://github.com/pyvec/python.cz/"
 classifiers = ["Private :: Do Not Upload"]
 package-mode = false
 
