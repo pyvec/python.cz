@@ -40,7 +40,7 @@ Dobře se čte a dá se velice **rychle naučit**. Je skvělý pro **výuku** pr
 
 ## Odkazy
 
--   [PyLadies CZ](https://pyladies.cz/) - TODO
+-   [PyLadies CZ](https://pyladies.cz/) - Česká větev mezinárodní iniciativy PyLadies. (Nejen) Prostřednictvím kurzů programování v Pythonu pomáháme ženám otevřít dveře do IT. 
 -   [Blog](http://blog.python.cz/) - Díky blogu se **dovíš o všem, co se v české Python komunitě zrovna děje**. A co je nejlepší – můžeš klidně přidat svůj vlastní článek!
 -   [PyCon CZ](http://cz.pycon.org/) - Česká Python konference! Pomoz nám s přípravami, propagací, zkus si přihlásit přednášku nebo workshop, sponzoruj nás, nebo prostě jen přijď a akci si užij!
 -   [Knihovna](https://books.pyvo.cz/) - Máme knihovničku s literaturou o Pythonu a podobných technologiích. Knihy si lze **zdarma půjčit** – ozvi se a přijď si knížku vyzvednout na nejbližším [srazu](akce.md). Mimochodem, [Python Books](http://pythonbooks.revolunet.com/) znáš, že?
