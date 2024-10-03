@@ -14,8 +14,8 @@
   format: json-dl
 
 - name: PyData Prague
-  site_url: https://www.meetup.com/PyData-Prague/
-  url: https://www.meetup.com/PyData-Prague/events/
+  site_url: https://www.meetup.com/pydata-prague/
+  url: https://www.meetup.com/pydata-prague/events/
   format: json-dl
 
 - name: Czech Python Events
