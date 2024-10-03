@@ -8,12 +8,12 @@ classifiers = ["Private :: Do Not Upload"]
 package-mode = false
 
 [tool.poetry.dependencies]
-python = "3.11.*"
+python = "~3.11"
 mkdocs-material = "9.2.3"
 strictyaml = "1.7.3"
 ics = {version = "0.8.0.dev0", allow-prereleases = true}
 requests = "2.32.3"
-teemup = "1.0.3"
+teemup = "1.1.0"
 mkdocs = "1.6.1"
 
 [tool.poetry.group.dev.dependencies]
