@@ -13,8 +13,8 @@ mkdocs-material = "9.5.39"
 strictyaml = "1.7.3"
 ics = {version = "0.8.0.dev0", allow-prereleases = true}
 requests = "2.32.3"
-teemup = "1.1.0"
 mkdocs = "1.6.1"
+teemup = "1.1.1"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "8.3.2"
