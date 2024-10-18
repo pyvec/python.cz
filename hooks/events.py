@@ -55,11 +55,11 @@ def fetch_events(days_limit: int | None = None, past: bool = False) -> list[dict
                     for event_data in parse_icalendar(feed["data"])
                 ]
             )
-        elif feed["format"] == "json-dl":
+        elif feed["format"] == "meetupcom":
             events.extend(
                 [
                     dict(feed=feed, **event_data)
-                    for event_data in parse_json_dl(feed["data"], feed["url"])
+                    for event_data in parse_meetupcom(feed["data"], feed["url"])
                 ]
             )
         else:
@@ -115,22 +115,22 @@ def parse_icalendar(text: str) -> list[dict]:
             starts_at=to_prague_tz(event.begin),
             ends_at=to_prague_tz(event.end) if event.end else None,
             location=event.location,
-            url=event.url if event.url else find_first_url(event.description),
+            url=event.url if event.url else find_first_url(event.description or ""),
             is_tentative="tentative-date" in event.categories,
         )
         for event in ics.Calendar(text).events
     ]
 
 
-def parse_json_dl(html: str, base_url: str) -> list[dict]:
+def parse_meetupcom(html: str, base_url: str) -> list[dict]:
     response = requests.get(base_url)
-    events = teemup.parse(response.text)
+    events: list[teemup.Event] = teemup.parse(response.text)
     return [
         dict(
             name=event["title"],
             starts_at=event["starts_at"],
             ends_at=event["ends_at"],
-            location=event["venue"],
+            location=parse_meetupcom_venue(event["venue"]) if event["venue"] else None,
             url=event["url"],
             is_tentative=False,
         )
@@ -138,8 +138,18 @@ def parse_json_dl(html: str, base_url: str) -> list[dict]:
     ]
 
 
-def parse_json_dl_location(location: dict[str, str]) -> str:
-    return f"{location['name']}, {location['address']['streetAddress']}, {location['address']['addressLocality']}, {location['address']['addressCountry']}"
+def parse_meetupcom_venue(location: teemup.Venue) -> str:
+    return ", ".join(
+        filter(
+            None,
+            [
+                location["name"],
+                location["address"],
+                location["city"],
+                location["country"],
+            ],
+        )
+    )
 
 
 def to_prague_tz(dt: datetime) -> datetime:

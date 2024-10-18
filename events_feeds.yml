@@ -11,12 +11,12 @@
 - name: PyWorking Sessions
   site_url: https://pyworking.cz/
   url: https://www.meetup.com/pyworking/events/
-  format: json-dl
+  format: meetupcom
 
 - name: PyData Prague
   site_url: https://www.meetup.com/pydata-prague/
   url: https://www.meetup.com/pydata-prague/events/
-  format: json-dl
+  format: meetupcom
 
 - name: Czech Python Events
   site_url: https://calendar.google.com/calendar/embed?src=kfdeelic1a13jsp7jvai861vfs%40group.calendar.google.com&ctz=Europe%2FPrague
