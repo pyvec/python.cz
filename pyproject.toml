@@ -18,7 +18,7 @@ teemup = "1.2.1"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "8.4.0"
-pytest-ruff = "0.4.1"
+pytest-ruff = "0.5"
 
 [tool.pytest.ini_options]
 python_files = "test_*.py"
