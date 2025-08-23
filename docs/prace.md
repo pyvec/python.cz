@@ -18,10 +18,6 @@ Disney, [a mnoho dalších](https://www.python.org/about/success/)** –
 mimo jiné také spousta vědeckých organizací **včetně švýcarského
 CERNu**.
 
-## Python u nás
-
-TODO - zrušit seznam, dát sem sponzory PyConu a nějaký text, možná odkazy na job boardy s filtrováním na python
-
 ## Jak najít práci? {: #poptavka }
 
 -   Přijď na [sraz](akce.md) a poptej se tam.
