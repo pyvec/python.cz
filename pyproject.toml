@@ -12,7 +12,7 @@ python = "~3.11"
 mkdocs-material = "9.7.0"
 strictyaml = "1.7.3"
 ics = {version = "0.8.0.dev0", allow-prereleases = true}
-requests = "2.32.4"
+requests = "2.33.0"
 mkdocs = "1.6.1"
 teemup = "1.2.1"
 
