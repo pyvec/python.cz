@@ -36,6 +36,9 @@ CERNu**.
     [StartupJobs.cz](https://www.startupjobs.cz/nabidky/15/python-programmer),
     ... (Víš o dalších? [Přidej
     odkaz!](https://github.com/pyvec/python.cz/edit/master/pythoncz/static/data/jobs.yml))
+-   Projdi si [katalog Python freelancerů na
+    NaVolneNoze.cz](https://navolnenoze.cz/katalog/python/) – můžeš
+    přímo oslovit nezávislé profesionály.
 -   Odzkoušej si své znalosti v testech:
     [StartupJobs.cz](https://www.startupjobs.cz/test/python),
     [Toptal.com](http://www.toptal.com/python/interview-questions),
